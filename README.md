@@ -1,1 +1,1 @@
-# mvvm-study
+# MVVM 패턴
