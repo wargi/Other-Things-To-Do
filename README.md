@@ -35,8 +35,8 @@
 | | 1 | [Triangle Output 1](https://github.com/wargi/Etc/blob/master/Algorithm/Chapter1.md) | 190215 |
 | | 2 | [Triangle Output 2](https://github.com/wargi/Etc/blob/master/Algorithm/Chapter2.md) | 190215 |
 | | 3 | [Triangle Output 3](https://github.com/wargi/Etc/blob/master/Algorithm/Chapter3.md) | 190216 |
-| | 4 | [소수 판별](https://github.com/wargi/Etc/blob/master/Algorithm/Chapter3.md) | 190216 |
-| | 5 | []() | - |
+| | 4 | [소수 판별](https://github.com/wargi/Etc/blob/master/Algorithm/Chapter4.md) | 190216 |
+| | 5 | [Output in Reverse](https://github.com/wargi/Etc/blob/master/Algorithm/Chapter5.md) | 190216 |
 | | 6 | []() | - |
 | | 7 | []() | - |
 | | 8 | []() | - |
