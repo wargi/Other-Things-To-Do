@@ -34,7 +34,7 @@
 | **알고리즘** | ---------------- | -------------------------- | ----------------- |
 | | 1 | [Triangle Output 1](https://github.com/wargi/Etc/blob/master/Algorithm/Chapter1.md) | 190215 |
 | | 2 | [Triangle Output 2](https://github.com/wargi/Etc/blob/master/Algorithm/Chapter2.md) | 190215 |
-| | 3 | []() | - |
+| | 3 | [Triangle Output 3](https://github.com/wargi/Etc/blob/master/Algorithm/Chapter3.md) | 190216 |
 | | 4 | []() | - |
 | | 5 | []() | - |
 | | 6 | []() | - |
