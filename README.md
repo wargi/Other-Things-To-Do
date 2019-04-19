@@ -38,7 +38,7 @@
 | | 4 | [소수 판별](https://github.com/wargi/Etc/blob/master/Algorithm/Chapter4.md) | 190218 |
 | | 5 | [Output in Reverse](https://github.com/wargi/Etc/blob/master/Algorithm/Chapter5.md) | 190219 |
 | | 6 | [Max Value](https://github.com/wargi/Etc/blob/master/Algorithm/Chapter6.md) | 190219 |
-| | 7 | []() | - |
+| | 7 | [Second Minimum](https://github.com/wargi/Etc/blob/master/Algorithm/Chapter7.md) | 190220 |
 | | 8 | []() | - |
 | | 9 | []() | - |
 | | 10 | []() | - |
