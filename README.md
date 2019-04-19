@@ -39,6 +39,6 @@
 | | 5 | [Output in Reverse](https://github.com/wargi/Etc/blob/master/Algorithm/Chapter5.md) | 190219 |
 | | 6 | [Max Value](https://github.com/wargi/Etc/blob/master/Algorithm/Chapter6.md) | 190219 |
 | | 7 | [Second Minimum](https://github.com/wargi/Etc/blob/master/Algorithm/Chapter7.md) | 190220 |
-| | 8 | []() | - |
+| | 8 | [Score Calculation](https://github.com/wargi/Etc/blob/master/Algorithm/Chapter8.md) | 190220 |
 | | 9 | []() | - |
 | | 10 | []() | - |
