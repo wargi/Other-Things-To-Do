@@ -32,13 +32,13 @@
 | | 9 | []() | - |
 | | 10 | []() | - |
 | **알고리즘** | Question | -------------------------- | ----------------- |
-| | 1 | [Triangle Output 1](https://github.com/wargi/Etc/blob/master/Algorithm/Chapter1.md) | 190215 |
-| | 2 | [Triangle Output 2](https://github.com/wargi/Etc/blob/master/Algorithm/Chapter2.md) | 190215 |
-| | 3 | [Triangle Output 3](https://github.com/wargi/Etc/blob/master/Algorithm/Chapter3.md) | 190218 |
-| | 4 | [소수 판별](https://github.com/wargi/Etc/blob/master/Algorithm/Chapter4.md) | 190218 |
-| | 5 | [Output in Reverse](https://github.com/wargi/Etc/blob/master/Algorithm/Chapter5.md) | 190219 |
-| | 6 | [Max Value](https://github.com/wargi/Etc/blob/master/Algorithm/Chapter6.md) | 190219 |
-| | 7 | [Second Minimum](https://github.com/wargi/Etc/blob/master/Algorithm/Chapter7.md) | 190220 |
-| | 8 | [Score Calculation](https://github.com/wargi/Etc/blob/master/Algorithm/Chapter8.md) | 190220 |
-| | 9 | []() | - |
-| | 10 | []() | - |
+| | Loop | [Triangle Output 1](https://github.com/wargi/Etc/blob/master/Algorithm/Chapter1.md) | 190215 |
+| | - | [Triangle Output 2](https://github.com/wargi/Etc/blob/master/Algorithm/Chapter2.md) | 190215 |
+| | - | [Triangle Output 3](https://github.com/wargi/Etc/blob/master/Algorithm/Chapter3.md) | 190218 |
+| | - | [소수 판별](https://github.com/wargi/Etc/blob/master/Algorithm/Chapter4.md) | 190218 |
+| | Arrays | [Output in Reverse](https://github.com/wargi/Etc/blob/master/Algorithm/Chapter5.md) | 190219 |
+| | - | [Max Value](https://github.com/wargi/Etc/blob/master/Algorithm/Chapter6.md) | 190219 |
+| | - | [Second Minimum](https://github.com/wargi/Etc/blob/master/Algorithm/Chapter7.md) | 190220 |
+| | - | [Score Calculation](https://github.com/wargi/Etc/blob/master/Algorithm/Chapter8.md) | 190220 |
+| | - | [Card Game](https://github.com/wargi/Etc/blob/master/Algorithm/Chapter9.md) | 190221 |
+| | - | []() | - |
