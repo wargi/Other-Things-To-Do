@@ -41,4 +41,4 @@
 | | - | [Second Minimum](https://github.com/wargi/Etc/blob/master/Algorithm/Chapter7.md) | 190220 |
 | | - | [Score Calculation](https://github.com/wargi/Etc/blob/master/Algorithm/Chapter8.md) | 190220 |
 | | - | [Card Game](https://github.com/wargi/Etc/blob/master/Algorithm/Chapter9.md) | 190221 |
-| | - | [Dice Game](https://github.com/wargi/Etc/blob/master/Algorithm/Chapter9.md) | 190221 |
+| | - | [Dice Game](https://github.com/wargi/Etc/blob/master/Algorithm/Chapter10.md) | 190221 |
