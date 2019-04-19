@@ -1,7 +1,7 @@
 # Other Things To Do
 > - Swift 외에 개발자로써 쌓아야할 기본 지식들을 공부하고 정리하는 공간입니다.
 
-| Subject | Chapter | Title | Date | 
+| Subject | Chapter | Title | Date |
 | :---: | :---: | :---: | :---: |
 | **네트워크** | ---------------- | -------------------------- | ----------------- |
 | | 1 | [네트워크 기초 지식](https://github.com/wargi/Etc/blob/master/Network/Chapter1.md) | 190225 |
@@ -31,13 +31,13 @@
 | | 8 | []() | - |
 | | 9 | []() | - |
 | | 10 | []() | - |
-| **알고리즘** | ---------------- | -------------------------- | ----------------- |
+| **알고리즘** | Question | -------------------------- | ----------------- |
 | | 1 | [Triangle Output 1](https://github.com/wargi/Etc/blob/master/Algorithm/Chapter1.md) | 190215 |
 | | 2 | [Triangle Output 2](https://github.com/wargi/Etc/blob/master/Algorithm/Chapter2.md) | 190215 |
-| | 3 | [Triangle Output 3](https://github.com/wargi/Etc/blob/master/Algorithm/Chapter3.md) | 190216 |
-| | 4 | [소수 판별](https://github.com/wargi/Etc/blob/master/Algorithm/Chapter4.md) | 190216 |
-| | 5 | [Output in Reverse](https://github.com/wargi/Etc/blob/master/Algorithm/Chapter5.md) | 190216 |
-| | 6 | []() | - |
+| | 3 | [Triangle Output 3](https://github.com/wargi/Etc/blob/master/Algorithm/Chapter3.md) | 190218 |
+| | 4 | [소수 판별](https://github.com/wargi/Etc/blob/master/Algorithm/Chapter4.md) | 190218 |
+| | 5 | [Output in Reverse](https://github.com/wargi/Etc/blob/master/Algorithm/Chapter5.md) | 190219 |
+| | 6 | [Max Value](https://github.com/wargi/Etc/blob/master/Algorithm/Chapter6.md) | 190219 |
 | | 7 | []() | - |
 | | 8 | []() | - |
 | | 9 | []() | - |
