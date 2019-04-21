@@ -50,5 +50,5 @@
 | | - | [Offset](https://github.com/wargi/Etc/blob/master/Algorithm/Chapter16.md) | 190226 |
 | | - | [Verification Number](https://github.com/wargi/Etc/blob/master/Algorithm/Chapter17.md) | 190227 |
 | | - | [Box Coloring](https://github.com/wargi/Etc/blob/master/Algorithm/Chapter18.md) | 190227 |
-| | - | [](https://github.com/wargi/Etc/blob/master/Algorithm/Chapter19.md) | 190228 |
+| | - | [GCD LCM](https://github.com/wargi/Etc/blob/master/Algorithm/Chapter19.md) | 190228 |
 | | - | [](https://github.com/wargi/Etc/blob/master/Algorithm/Chapter20.md) | 190228 |
