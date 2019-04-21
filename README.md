@@ -43,7 +43,7 @@
 | | - | [Card Game](https://github.com/wargi/Etc/blob/master/Algorithm/Chapter9.md) | 190221 |
 | | - | [Dice Game](https://github.com/wargi/Etc/blob/master/Algorithm/Chapter10.md) | 190221 |
 | | - | [Number Pyramid](https://github.com/wargi/Etc/blob/master/Algorithm/Chapter11.md) | 190222 |
-| | - | [Dice Game](https://github.com/wargi/Etc/blob/master/Algorithm/Chapter12.md) | 190222 |
-| | - | [Dice Game](https://github.com/wargi/Etc/blob/master/Algorithm/Chapter13.md) | 190225 |
-| | - | [Dice Game](https://github.com/wargi/Etc/blob/master/Algorithm/Chapter14.md) | 190225 |
+| | - | [Array 1](https://github.com/wargi/Etc/blob/master/Algorithm/Chapter12.md) | 190222 |
+| | - | [Array ](https://github.com/wargi/Etc/blob/master/Algorithm/Chapter13.md) | 190225 |
+| | - | [Array ](https://github.com/wargi/Etc/blob/master/Algorithm/Chapter14.md) | 190225 |
 | | - | [Dice Game](https://github.com/wargi/Etc/blob/master/Algorithm/Chapter15.md) | 190226 |
