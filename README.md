@@ -35,10 +35,15 @@
 | | Loop | [Triangle Output 1](https://github.com/wargi/Etc/blob/master/Algorithm/Chapter1.md) | 190215 |
 | | - | [Triangle Output 2](https://github.com/wargi/Etc/blob/master/Algorithm/Chapter2.md) | 190215 |
 | | - | [Triangle Output 3](https://github.com/wargi/Etc/blob/master/Algorithm/Chapter3.md) | 190218 |
-| | - | [소수 판별](https://github.com/wargi/Etc/blob/master/Algorithm/Chapter4.md) | 190218 |
+| | - | [Prime Number](https://github.com/wargi/Etc/blob/master/Algorithm/Chapter4.md) | 190218 |
 | | Arrays | [Output in Reverse](https://github.com/wargi/Etc/blob/master/Algorithm/Chapter5.md) | 190219 |
 | | - | [Max Value](https://github.com/wargi/Etc/blob/master/Algorithm/Chapter6.md) | 190219 |
 | | - | [Second Minimum](https://github.com/wargi/Etc/blob/master/Algorithm/Chapter7.md) | 190220 |
 | | - | [Score Calculation](https://github.com/wargi/Etc/blob/master/Algorithm/Chapter8.md) | 190220 |
 | | - | [Card Game](https://github.com/wargi/Etc/blob/master/Algorithm/Chapter9.md) | 190221 |
 | | - | [Dice Game](https://github.com/wargi/Etc/blob/master/Algorithm/Chapter10.md) | 190221 |
+| | - | [Number Pyramid](https://github.com/wargi/Etc/blob/master/Algorithm/Chapter11.md) | 190222 |
+| | - | [Dice Game](https://github.com/wargi/Etc/blob/master/Algorithm/Chapter12.md) | 190222 |
+| | - | [Dice Game](https://github.com/wargi/Etc/blob/master/Algorithm/Chapter13.md) | 190225 |
+| | - | [Dice Game](https://github.com/wargi/Etc/blob/master/Algorithm/Chapter14.md) | 190225 |
+| | - | [Dice Game](https://github.com/wargi/Etc/blob/master/Algorithm/Chapter15.md) | 190226 |
