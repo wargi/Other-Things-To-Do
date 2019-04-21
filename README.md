@@ -47,8 +47,8 @@
 | | - | [Array 2](https://github.com/wargi/Etc/blob/master/Algorithm/Chapter13.md) | 190225 |
 | | - | [Array 3](https://github.com/wargi/Etc/blob/master/Algorithm/Chapter14.md) | 190225 |
 | | Brute Force | [Car](https://github.com/wargi/Etc/blob/master/Algorithm/Chapter15.md) | 190226 |
-| | Offset | [](https://github.com/wargi/Etc/blob/master/Algorithm/Chapter16.md) | 190226 |
-| | - | [](https://github.com/wargi/Etc/blob/master/Algorithm/Chapter17.md) | 190227 |
+| | - | [Offset](https://github.com/wargi/Etc/blob/master/Algorithm/Chapter16.md) | 190226 |
+| | - | [Verification Number](https://github.com/wargi/Etc/blob/master/Algorithm/Chapter17.md) | 190227 |
 | | - | [](https://github.com/wargi/Etc/blob/master/Algorithm/Chapter18.md) | 190227 |
 | | - | [](https://github.com/wargi/Etc/blob/master/Algorithm/Chapter19.md) | 190228 |
 | | - | [](https://github.com/wargi/Etc/blob/master/Algorithm/Chapter20.md) | 190228 |
