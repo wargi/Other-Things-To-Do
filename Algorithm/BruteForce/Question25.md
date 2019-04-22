@@ -57,22 +57,67 @@
 #include <stdio.h>
 
 int main() {
-  int stopNumber, i ,j, cnt = 0;
-  int car [5];
+  int size, unitX, unitY, range;
   
-  scanf("%d", &stopNumber);
-  for(i = 0; i < 5; i++) {
-    scanf("%d", &car[i]);
-  }
+  scanf("%d", &size);
+  int map[size][size];
+  scanf("%d %d %d", &unitX, &unitY, &range);
   
-  for(i = 0; i < 5; i++) {
-    if (stopNumber == car[i]) {
-     cnt++; 
+  for (int i = 0; i < size; i++) {
+    for (int j = 0; j < size; j++) {
+      map[i][j] = 0;
+      // top
+      if(unitX - 2 == i && unitY - 1 == j) {
+        map[i][j] = 1;
+      }
+      // bottom
+      if(unitX == i && unitY - 1 == j) {
+        map[i][j] = 1;
+      }
+      // left
+      if(unitX - 1 == i && unitY - 2 == j) {
+        map[i][j] = 1;
+      }
+      // right
+      if(unitX - 1 == i && unitY == j) {
+        map[i][j] = 1;
+      }
     }
   }
   
-  printf("%d", cnt);
+  for(int k = 2; k <= range; k++) {
+    for (int i = 0; i < size; i++) {
+      for (int j = 0; j < size; j++) {
+        // top
+        if(map[i][j] != 0 && map[i-1][j] == 0 && i - 1 >= 0 && map[i][j] != k) {
+          map[i-1][j] = k;
+        }
+        // bottom
+        if(map[i][j] != 0 && map[i+1][j] == 0 && i + 1 < size && map[i][j] != k) {
+          map[i+1][j] = k;
+        }
+        // left
+        if(map[i][j] != 0 && map[i][j-1] == 0 && j - 1 >= 0 && map[i][j] != k) {
+          map[i][j-1] = k;
+        }
+        // right
+        if(map[i][j] != 0 && map[i][j+1] == 0 && j + 1 < size && map[i][j] != k) {
+          map[i][j+1] = k;
+        }
+      }
+    }
+  }
   
+  for (int i = 0; i < size; i++) {
+    for (int j = 0; j < size; j++) {
+      if(i == unitX -1 && j == unitY - 1) {
+        printf("x ");
+        continue;
+      }
+      printf("%d ", map[i][j]);
+    }
+    printf("\n");
+  }
   return 0;
 }
 ```
