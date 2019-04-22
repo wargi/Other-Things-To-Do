@@ -36,7 +36,7 @@
 | | - | [Triangle Output 2](https://github.com/wargi/Etc/blob/master/Algorithm/MultipleLoops/Question2.md) | 190215 |
 | | - | [Triangle Output 3](https://github.com/wargi/Etc/blob/master/Algorithm/MultipleLoops/Question3.md) | 190218 |
 | | - | [Prime Number](https://github.com/wargi/Etc/blob/master/Algorithm/MultipleLoops/Question4.md) | 190218 |
-| | Arrays | [Output in Reverse](https://github.com/wargi/Etc/blob/master/Algorithm/Question5.md) | 190219 |
+| | Arrays | [Output in Reverse](https://github.com/wargi/Etc/blob/master/Algorithm/Arrays/Question5.md) | 190219 |
 | | - | [Maximum Number](https://github.com/wargi/Etc/blob/master/Algorithm/Arrays/Question6.md) | 190219 |
 | | - | [Second Minimum Number](https://github.com/wargi/Etc/blob/master/Algorithm/Arrays/Question7.md) | 190220 |
 | | - | [Score Calculation](https://github.com/wargi/Etc/blob/master/Algorithm/Arrays/Question8.md) | 190220 |
@@ -46,7 +46,7 @@
 | | - | [Array 1](https://github.com/wargi/Etc/blob/master/Algorithm/Arrays/Question12.md) | 190222 |
 | | - | [Array 2](https://github.com/wargi/Etc/blob/master/Algorithm/Arrays/Question13.md) | 190225 |
 | | - | [Array 3](https://github.com/wargi/Etc/blob/master/Algorithm/Arrays/Question14.md) | 190225 |
-| | Brute Force | [Car](https://github.com/wargi/Etc/blob/master/Algorithm/Question15.md) | 190226 |
+| | Brute Force | [Car](https://github.com/wargi/Etc/blob/master/Algorithm/BruteForce/Question15.md) | 190226 |
 | | - | [Offset](https://github.com/wargi/Etc/blob/master/Algorithm/BruteForce/Question16.md) | 190226 |
 | | - | [Verification Number](https://github.com/wargi/Etc/blob/master/Algorithm/BruteForce/Question17.md) | 190227 |
 | | - | [Box Coloring](https://github.com/wargi/Etc/blob/master/Algorithm/BruteForce/Question18.md) | 190227 |

@@ -1,4 +1,4 @@
-# Second Minimum #
+# Second Minimum Number #
 
 ## 1. 문제
 - 두 번째 최소값이 몇 번째 수인지를 구하는 프로그램을 작성하시오. 
