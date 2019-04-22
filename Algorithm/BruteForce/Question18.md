@@ -1,7 +1,7 @@
 # Box Coloring #
 
 ## 1. 문제
-![box](/Users/sojeong/Project/Etc/Algorithm/image/box.png)
+![box](./image/box.png)
 
 - 면이 6개인 상자가 있다.
 - 이를 여러 가지 색으로 칠하려 하는데, 단 조건이 있다.
