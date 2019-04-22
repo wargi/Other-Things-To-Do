@@ -55,5 +55,5 @@
 | | - | [Flip The Matrix](https://github.com/wargi/Etc/blob/master/Algorithm/BruteForce/Question21.md) | 190304 |
 | | - | [Flip The Matrix 2](https://github.com/wargi/Etc/blob/master/Algorithm/BruteForce/Question22.md) | 190304 |
 | | - | [Max Of Array](https://github.com/wargi/Etc/blob/master/Algorithm/BruteForce/Question23.md) | 190305 |
-| | - | [](https://github.com/wargi/Etc/blob/master/Algorithm/BruteForce/Question24.md) | 190305 |
+| | - | [Rook](https://github.com/wargi/Etc/blob/master/Algorithm/BruteForce/Question24.md) | 190305 |
 | | - | [](https://github.com/wargi/Etc/blob/master/Algorithm/BruteForce/Question25.md) | 190306 |
