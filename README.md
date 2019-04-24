@@ -31,7 +31,7 @@
 | | 8 | []() | - |
 | | 9 | []() | - |
 | | 10 | []() | - |
-| **알고리즘** | Question | -------------------------- | ----------------- |
+| **알고리즘** | ---------------- | -------------------------- | ----------------- |
 | | Multiple Loops | [Triangle Output 1](https://github.com/wargi/Etc/blob/master/Algorithm/MultipleLoops/Question1.md) | 190215 |
 | | - | [Triangle Output 2](https://github.com/wargi/Etc/blob/master/Algorithm/MultipleLoops/Question2.md) | 190215 |
 | | - | [Triangle Output 3](https://github.com/wargi/Etc/blob/master/Algorithm/MultipleLoops/Question3.md) | 190218 |
@@ -59,6 +59,7 @@
 | | - | [Attack Range](https://github.com/wargi/Etc/blob/master/Algorithm/BruteForce/Question25.md) | 190306 |
 | | - | [Color Paper](https://github.com/wargi/Etc/blob/master/Algorithm/BruteForce/Question26.md) | 190306 |
 | | - | [Mine](https://github.com/wargi/Etc/blob/master/Algorithm/BruteForce/Question27.md) | 190307 |
-| | - | [](https://github.com/wargi/Etc/blob/master/Algorithm/BruteForce/Question28.md) | 190307 |
+| | - | [Class President
+](https://github.com/wargi/Etc/blob/master/Algorithm/BruteForce/Question28.md) | 190307 |
 | | - | [](https://github.com/wargi/Etc/blob/master/Algorithm/BruteForce/Question29.md) | 190308 |
 | | - | [](https://github.com/wargi/Etc/blob/master/Algorithm/BruteForce/Question30.md) | 190308 |
