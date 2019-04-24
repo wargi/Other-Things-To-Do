@@ -59,7 +59,6 @@
 | | - | [Attack Range](https://github.com/wargi/Etc/blob/master/Algorithm/BruteForce/Question25.md) | 190306 |
 | | - | [Color Paper](https://github.com/wargi/Etc/blob/master/Algorithm/BruteForce/Question26.md) | 190306 |
 | | - | [Mine](https://github.com/wargi/Etc/blob/master/Algorithm/BruteForce/Question27.md) | 190307 |
-| | - | [Class President
-](https://github.com/wargi/Etc/blob/master/Algorithm/BruteForce/Question28.md) | 190307 |
-| | - | [](https://github.com/wargi/Etc/blob/master/Algorithm/BruteForce/Question29.md) | 190308 |
+| | - | [Class President](https://github.com/wargi/Etc/blob/master/Algorithm/BruteForce/Question28.md) | 190307 |
+| | - | [A Representative Value](https://github.com/wargi/Etc/blob/master/Algorithm/BruteForce/Question29.md) | 190308 |
 | | - | [](https://github.com/wargi/Etc/blob/master/Algorithm/BruteForce/Question30.md) | 190308 |
