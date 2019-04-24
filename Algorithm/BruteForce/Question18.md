@@ -53,7 +53,7 @@ YES
 NO
 ```
 
-## 6. 코드
+## 10. 코드
 
 ```c++
 #include <stdio.h>

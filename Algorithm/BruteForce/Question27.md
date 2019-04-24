@@ -61,7 +61,7 @@
 game over
 ```
 
-## 6. 코드
+## 8. 코드
 
 ```c++
 #include <stdio.h>
