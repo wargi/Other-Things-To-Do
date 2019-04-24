@@ -7,7 +7,7 @@
 
 - 그림-1은 1번, 2번, 3번 세 장의 색종이가 순서대로 놓인 상태를 보여준다.
 
-  ![Color](./image/color.jpg)
+  ![Color](./image/Color.jpg)
 
 - 그림-1
 
