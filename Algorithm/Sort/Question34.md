@@ -36,12 +36,13 @@ const int MAX = 10000;
 int main() {
   int data[MAX], size;
   
+  // 정렬 전 배열 입력
   scanf("%d", &size);
-  
   for(int i = 0; i < size; i++) {
     scanf("%d", &data[i]);
   }
   
+  // 정렬
   for(int i = 0; i < size; i++) {
     int inx = i;
     for(int j = i; j < size; j++) {
@@ -55,6 +56,12 @@ int main() {
     data[i] = data[inx];
     data[inx] = temp;
   }
+  
+  // 정렬 결과
+  for(int i = 0; i < size; i++) {
+    printf("%d ", data[i]);
+  }
+  
   return 0;
 }
 ```
