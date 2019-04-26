@@ -65,5 +65,5 @@
 | | - | [Tetris](https://github.com/wargi/Etc/blob/master/Algorithm/BruteForce/Question31.md) | 190311 |
 | | - | [Seat](https://github.com/wargi/Etc/blob/master/Algorithm/BruteForce/Question32.md) | 190311 |
 | | - | [Baseball Game](https://github.com/wargi/Etc/blob/master/Algorithm/BruteForce/Question33.md) | 190312 |
-| | - | [](https://github.com/wargi/Etc/blob/master/Algorithm/BruteForce/Question29.md) | 190312 |
-| | - | [](https://github.com/wargi/Etc/blob/master/Algorithm/BruteForce/Question30.md) | 190313 |
+| | Sort | [Selection Sort](https://github.com/wargi/Etc/blob/master/Algorithm/Sort/Question34.md) | 190312 |
+| | - | [](https://github.com/wargi/Etc/blob/master/Algorithm/Sort/Question35.md) | 190313 |
