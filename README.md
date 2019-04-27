@@ -69,6 +69,6 @@
 | | - | [Insertion Sort](https://github.com/wargi/Etc/blob/master/Algorithm/Sort/Question35.md) | 190313 |
 | | - | [](https://github.com/wargi/Etc/blob/master/Algorithm/Sort/Question36.md) | 190313 |
 | | - | [Find The Kth Largest Number](https://github.com/wargi/Etc/blob/master/Algorithm/Sort/Question37.md) | 190314 |
-| | Basic Number Theory | [](https://github.com/wargi/Etc/blob/master/Algorithm/BruteForce/Question38.md) | 190314 |
-| | - | [](https://github.com/wargi/Etc/blob/master/Algorithm/Sort/Question36.md) | 190315 |
-| | - | [](https://github.com/wargi/Etc/blob/master/Algorithm/Sort/Question37.md) | 190315 |
+| | Basic Number Theory | [Next Number](https://github.com/wargi/Etc/blob/master/Algorithm/BasicNumberTheory/Question38.md) | 190314 |
+| | - | [](https://github.com/wargi/Etc/blob/master/Algorithm/BasicNumberTheory/Question39.md) | 190315 |
+| | - | [](https://github.com/wargi/Etc/blob/master/Algorithm/BasicNumberTheory/Question40.md) | 190315 |
