@@ -1,32 +1,55 @@
-# Offset
+# Bingo
 
 ## 1. 문제
-- 5x5 2차원 배열이 주어질 때 어떤 원소가 상하좌우에 있는 원소보다 작을 때 해당 위치에 * 을 표시하는 프로그램을 작성하시오.
-- 경계선에 있는 수는 상하좌우 중 존재하는 원소만을 비교한다.
+- 빙고 게임은 다음과 같은 방식으로 이루어진다.
+
+- 먼저 아래와 같이 25개의 칸으로 이루어진 빙고판에 1부터 25까지 자연수를 한 칸에 하나씩 쓴다.
+
+  ![Bingo](./image/Bingo.gif)
+
+- 다음은 사회자가 부르는 수를 차례로 지워나간다.
+
+- 예를 들어 5, 10, 7이 불렸다면 이 세 수를 지운 뒤 빙고판의 모습은 다음과 같다.
+
+  ![Bingo2](./image/Bingo2.gif)
+
+- 차례로 수를 지워가다가 같은 가로줄, 세로줄 또는 대각선 위에 있는 5개의 모든 수가 지워지는 경우 그 줄에 선을 긋는다.
+
+  ![Bingo3](./image/Bingo3.gif)
+
+- 이러한 선이 세 개 이상 그어지는 순간 "빙고"라고 외치는데, 가장 먼저 외치는 사람이 게임의 승자가 된다.
+
+  ![Bingo4](./image/Bingo4.gif)
+
+- 철수는 친구들과 빙고 게임을 하고 있다.
+
+- 철수가 빙고판에 쓴 수들과 사회자가 부르는 수의 순서가 주어질 때, 사회자가 몇 번째 수를 부른 후 철수가 "빙고"를 외치게 되는지를 출력하는 프로그램을 작성하시오.
 
 ## 2. 입력
-- 5x5 행렬의 정보가 25 개의 수로 주어진다.
-- 각 수는 0 에서 9 사이 수이다.
+- 첫째 줄부터 다섯째 줄까지 빙고판에 쓰여진 수가 가장 위 가로줄부터 차례대로 한 줄에 다섯 개씩 빈 칸을 사이에 두고 주어진다.
+- 여섯째 줄부터 열째 줄까지 사회자가 부르는 수가 차례대로 한 줄에 다섯 개씩 빈 칸을 사이에 두고 주어진다.
+- 빙고판에 쓰여진 수와 사회자가 부르는 수는 각각 1부터 25까지의 수가 한 번씩 사용된다.
 
 ## 3. 출력
-- *를 포함한 행렬을 출력예의 형식으로 출력한다.
+- 첫째 줄에 사회자가 몇 번째 수를 부른 후 철수가 "빙고"를 외치게 되는지 출력한다.
 
 ## 4. 예제 입력
 ```
-3 4 1 4 9
-2 9 4 5 8
-9 0 8 2 1
-7 0 2 8 4
-2 7 2 1 4
+11 12 2 24 10
+16 1 13 3 25
+6 20 5 21 17
+19 4 8 14 9
+22 15 7 23 18
+5 10 7 16 2
+4 22 8 17 13
+3 18 1 6 25
+12 19 23 14 21
+11 24 9 20 15
 ```
 
 ## 5. 예제 출력
 ```
-3 4 * 4 9 
-* 9 4 5 8 
-9 0 8 2 * 
-7 0 2 8 4 
-* 7 2 * 4 
+15
 ```
 
 ## 6. 코드
@@ -34,59 +57,62 @@
 #include <stdio.h>
 
 int main() {
-  int stopNumber, i ,j, cnt;
-  int numArr[5][5];
+  int i, j, bingoNumber, row, col, lDiagonal, rdiagonal;
+  int bingArr[5][5];
+  int bingoCount = 0;
+  int bingoLine = 3;
+  int chulsuLine = 0;
 
   for(i = 0; i < 5; i++) {
     for(j = 0; j < 5; j++) {
-      scanf("%d", &numArr[i][j]);
+      scanf("%d", &bingArr[i][j]);
     }
   }
   
-  for(i = 0; i < 5; i++) {
-    for(j = 0; j < 5; j++) {
-      cnt = 0;
-      // Top
-      if (i != 0) {
-        
-        if (numArr[i][j] < numArr[i-1][j]) cnt++;
-      }
-      // Bottom
-      if (i != 4) {
-        if (numArr[i][j] < numArr[i+1][j]) cnt++;
-      }
-      // Left
-      if (j != 0) {
-        if (numArr[i][j] < numArr[i][j-1]) cnt++;
-      }
-      // Right
-      if (j != 4) {
-        if (numArr[i][j] < numArr[i][j+1]) cnt++;
-      }
-      
-      if((i == 0 || i == 4) && (j == 0 || j == 4)) {
-        if (cnt == 2) {
-          printf("* ");
-        } else {
-          printf("%d ", numArr[i][j]);
-        }
-      } else if(i == 0 || j == 0 || i == 4 || j == 4) {
-        if (cnt == 3) {
-          printf("* ");
-        } else {
-          printf("%d ", numArr[i][j]);
-        }
-      } else {
-        if (cnt == 4) {
-          printf("* ");
-        } else {
-          printf("%d ", numArr[i][j]);
+  while(bingoLine > chulsuLine) {
+    scanf("%d", &bingoNumber);
+    bingoCount++;
+    chulsuLine = 0; lDiagonal = 0; rdiagonal = 0;
+    
+    for(i = 0; i < 5; i++) {
+      for(j = 0; j < 5; j++) {
+        if (bingoNumber == bingArr[i][j]) {
+          bingArr[i][j] = 0;
         }
       }
     }
-    printf("\n");
+    
+    for(i = 0; i < 5; i++) {
+      row = 0; col = 0;
+      for(j = 0; j < 5; j++) {
+        if (i == j && bingArr[i][j] == 0) {
+          lDiagonal++;
+        }
+        if (i + j == 4 && bingArr[i][j] == 0) {
+          rdiagonal++;
+        }
+        if (bingArr[i][j] == 0) {
+          row++;
+        }
+        if (bingArr[j][i] == 0) {
+          bingArr[j][i] = 0;
+          col++;
+        }
+      }
+      if (row == 5 && col == 5) {
+        chulsuLine += 2;
+      } else if (row == 5 || col == 5) {
+        chulsuLine += 1;
+      }
+    }
+    if (lDiagonal == 5 && rdiagonal == 5) {
+      chulsuLine += 2;
+    } else if (lDiagonal == 5 || rdiagonal == 5) {
+      chulsuLine += 1;
+    }
   }
-
+  
+  printf("%d", bingoCount);
   return 0;
 }
 ```
