@@ -65,10 +65,10 @@
 | | - | [Tetris](https://github.com/wargi/Etc/blob/master/Algorithm/BruteForce/Question31.md) | 190311 |
 | | - | [Seat](https://github.com/wargi/Etc/blob/master/Algorithm/BruteForce/Question32.md) | 190311 |
 | | - | [Baseball Game](https://github.com/wargi/Etc/blob/master/Algorithm/BruteForce/Question33.md) | 190312 |
-| | Sort | [Selection Sort](https://github.com/wargi/Etc/blob/master/Algorithm/Sort/Question34.md) | 190312 |
-| | - | [Insertion Sort](https://github.com/wargi/Etc/blob/master/Algorithm/Sort/Question35.md) | 190313 |
-| | - | [](https://github.com/wargi/Etc/blob/master/Algorithm/Sort/Question36.md) | 190313 |
-| | - | [Find The Kth Largest Number](https://github.com/wargi/Etc/blob/master/Algorithm/Sort/Question37.md) | 190314 |
-| | Basic Number Theory | [Next Number](https://github.com/wargi/Etc/blob/master/Algorithm/BasicNumberTheory/Question38.md) | 190314 |
-| | - | [](https://github.com/wargi/Etc/blob/master/Algorithm/BasicNumberTheory/Question39.md) | 190315 |
-| | - | [](https://github.com/wargi/Etc/blob/master/Algorithm/BasicNumberTheory/Question40.md) | 190315 |
+| | Sort | [Selection Sort](https://github.com/wargi/Etc/blob/master/Algorithm/Sort/Question1.md) | 190312 |
+| | - | [Insertion Sort](https://github.com/wargi/Etc/blob/master/Algorithm/Sort/Question2.md) | 190313 |
+| | - | [](https://github.com/wargi/Etc/blob/master/Algorithm/Sort/Question3.md) | 190313 |
+| | - | [Find The Kth Largest Number](https://github.com/wargi/Etc/blob/master/Algorithm/Sort/Question4.md) | 190314 |
+| | Basic Number Theory | [Next Number](https://github.com/wargi/Etc/blob/master/Algorithm/BasicNumberTheory/Question1.md) | 190314 |
+| | - | [Bee Hive](https://github.com/wargi/Etc/blob/master/Algorithm/BasicNumberTheory/Question2.md) | 190315 |
+| | - | [](https://github.com/wargi/Etc/blob/master/Algorithm/BasicNumberTheory/Question3.md) | 190315 |
