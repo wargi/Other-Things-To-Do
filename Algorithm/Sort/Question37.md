@@ -1,98 +1,68 @@
-# Box Coloring #
+# Find The Kth Largest Number #
 
 ## 1. 문제
-![box](./image/box.png)
-
-- 면이 6개인 상자가 있다.
-- 이를 여러 가지 색으로 칠하려 하는데, 단 조건이 있다.
-- 인접한 면에 같은 색깔을 칠하면 안 된다는 것이다.
-- 여러 가지 색깔이 주어졌을 때, 그 색깔들로 조건을 만족하여 상자의 모든 면을 칠할 수 있는지 판별하는 프로그램을 작성하시오.
+- N개의 자연수가 주어질 때, 이 자연수들 중에서 k번째로 큰 수를 찾는 프로그램을 작성하시오.
+- 만약 k=1 이라면, 가장 큰 수를 찾으면 된다.
 
 ## 2. 입력
-- 첫째 줄: 색깔의 개수 N ( 1 <= N <= 1,000 )
-- 둘째 줄: 색깔을 나타내는 N개의 숫자가 주어진다.
-- 색깔은 양의 정수로 이루어져 있고, 1부터 N까지의 범위의 수이다.
+- 첫째 줄: 자연수 N, k가 주어진다. (1 ≤ N ≤ 100,000, 1 ≤ k ≤ 10) 
+- 둘째 줄: N개의 자연수가 주어진다.
 
 ## 3. 출력
-- 조건을 만족하면서 상자를 칠할 수 있으면 “YES”, 아니면 “NO”를 출력한다.
+- 첫 번째 줄에 k번째 수를 출력한다.
 
 ## 4. 예제 입력
 ```
-6
-1 2 1 2 1 3
+10 3
+1 5 2 3 8 4 7 3 2 10
 ```
 
 ## 5. 예제 출력
 ```
-NO
+7
 ```
 
 ## 6. 예제 입력
 
 ```
-6
-1 2 3 4 5 6
+5 4
+5 5 1 2 3
 ```
 
 ## 7. 예제 출력
 
 ```
-YES
+2
 ```
 
-## 8. 예제 입력
-
-```
-8
-1 2 2 2 1 1 1 3
-```
-
-## 9. 예제 출력
-
-```
-NO
-```
-
-## 10. 코드
+## 8. 코드
 
 ```c++
 #include <stdio.h>
 
 int main() {
-  
-  int size, box[6], count = 0, cnt = 0;
-  
-  
-  scanf("%d", &size);
-  int color[size];
-  int colorN[size];
+  int size, k, idx, temp;
+  scanf("%d %d", &size, &k);
+  int numArr[size];
   
   for(int i = 0; i < size; i++) {
-    scanf("%d", &color[i]);
-    colorN[i] = 0;
+    scanf("%d", &numArr[i]);
   }
   
-  for(int i = 0; i < size; i ++) {
-    colorN[color[i] - 1] += 1;
-  }
-  
-  
-  
-  for(int i = 0; i < size; i++) {
-    if(colorN[i] > 0) {
-      count++;
-      if(colorN[i] > 1) {
-        cnt++;
+  for(int i = 0; i < k; i++) {
+    idx = i;
+    for(int j = i + 1; j < size; j++) {
+      if(numArr[idx] < numArr[j]) {
+        idx = j;
       }
     }
+    temp = numArr[idx];
+    numArr[idx] = numArr[i];
+    numArr[i] = temp;
   }
   
-  if (count > 5 || cnt > 2 || (cnt > 1 && count == 4) || (cnt > 0 && count == 5)) {
-    printf("YES");
-  } else {
-    printf("NO");
-  }
-  
+  printf("%d", numArr[k - 1]);
+
   return 0;
 }
 ```
