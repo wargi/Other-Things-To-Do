@@ -72,3 +72,8 @@
 | | Basic Number Theory | [Next Number](https://github.com/wargi/Etc/blob/master/Algorithm/BasicNumberTheory/Question1.md) | 190314 |
 | | - | [Bee Hive](https://github.com/wargi/Etc/blob/master/Algorithm/BasicNumberTheory/Question2.md) | 190315 |
 | | - | [Fibonacci](https://github.com/wargi/Etc/blob/master/Algorithm/BasicNumberTheory/Question3.md) | 190315 |
+| | - | [PROSJEK](https://github.com/wargi/Etc/blob/master/Algorithm/BasicNumberTheory/Question4.md) | 190318 |
+| | - | [](https://github.com/wargi/Etc/blob/master/Algorithm/BasicNumberTheory/Question5.md) | 190318 |
+| | - | [](https://github.com/wargi/Etc/blob/master/Algorithm/BasicNumberTheory/Question6.md) | 190319 |
+| | - | [](https://github.com/wargi/Etc/blob/master/Algorithm/BasicNumberTheory/Question7.md) | 190319 |
+| | - | [](https://github.com/wargi/Etc/blob/master/Algorithm/BasicNumberTheory/Question8.md) | 190320 |
