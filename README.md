@@ -67,3 +67,8 @@
 | | - | [Baseball Game](https://github.com/wargi/Etc/blob/master/Algorithm/BruteForce/Question33.md) | 190312 |
 | | Sort | [Selection Sort](https://github.com/wargi/Etc/blob/master/Algorithm/Sort/Question34.md) | 190312 |
 | | - | [Insertion Sort](https://github.com/wargi/Etc/blob/master/Algorithm/Sort/Question35.md) | 190313 |
+| | - | [](https://github.com/wargi/Etc/blob/master/Algorithm/Sort/Question36.md) | 190313 |
+| | - | [](https://github.com/wargi/Etc/blob/master/Algorithm/Sort/Question37.md) | 190314 |
+| | Basic Number Theory | [](https://github.com/wargi/Etc/blob/master/Algorithm/BruteForce/Question38.md) | 190314 |
+| | - | [](https://github.com/wargi/Etc/blob/master/Algorithm/Sort/Question36.md) | 190315 |
+| | - | [](https://github.com/wargi/Etc/blob/master/Algorithm/Sort/Question37.md) | 190315 |

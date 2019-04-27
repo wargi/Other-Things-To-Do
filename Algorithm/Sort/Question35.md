@@ -1,92 +1,80 @@
-# Offset
+# Insetion Sort
 
-## 1. 문제
-- 5x5 2차원 배열이 주어질 때 어떤 원소가 상하좌우에 있는 원소보다 작을 때 해당 위치에 * 을 표시하는 프로그램을 작성하시오.
-- 경계선에 있는 수는 상하좌우 중 존재하는 원소만을 비교한다.
+## 1. 개념
+- 삽입 정렬은 아직 정렬되지 않은 임의의 데이터를 이미 정렬된 부분의 적절한 위치에 삽입해 가며 정렬하는 방식이다.
+- 그러면 삽입 정렬의 동작 과정을 [그림 8-2]의 데이터를 이용해서 살펴보자.
 
-## 2. 입력
-- 5x5 행렬의 정보가 25 개의 수로 주어진다.
-- 각 수는 0 에서 9 사이 수이다.
+## 2. 동작 방식
 
-## 3. 출력
-- *를 포함한 행렬을 출력예의 형식으로 출력한다.
+- 빈 배열
 
-## 4. 예제 입력
-```
-3 4 1 4 9
-2 9 4 5 8
-9 0 8 2 1
-7 0 2 8 4
-2 7 2 1 4
-```
+  ![Insertion](./image/Insertion.jpg)
 
-## 5. 예제 출력
-```
-3 4 * 4 9 
-* 9 4 5 8 
-9 0 8 2 * 
-7 0 2 8 4 
-* 7 2 * 4 
-```
+- 두 번째 데이터 11과 바로 앞에 위치한 15의 크기를 비교한다. 두 번째 데이터가 작으므로 15를 한 칸 뒤로 보내고 11을 15 앞에 위치시킨다.
 
-## 6. 코드
+  ![Insertion2](./image/Insertion2.jpg)
+
+- 세 번째 데이터인 1과 앞에 위치한 11, 15의 크기를 비교한다. 1이 가장 작으므로 11과 15를 한 칸씩 뒤로 보내고 1을 가장 앞에 위치시킨다.
+
+  ![Insertion3](./image/Insertion3.jpg)
+
+- 네 번째 데이터인 3과 앞에 위치한 1, 11, 15의 크기를 비교한다. 3은 1보다 크고 11, 15보다 작으므로 11과 15를 한 칸씩 뒤로 보내고 3을 11 앞에 위치시킨다.
+
+  ![Insertion4](./image/Insertion4.jpg)
+
+- 마지막 데이터인 8과 앞에 위치한 1, 3, 11, 15의 크기를 비교한다. 1, 3보다 크고 11, 15보다 작으므로 11과 15를 한 칸씩 뒤로 보내고 8을 11 앞에 위치시킨다.
+
+  ![Insertion5](./image/Insertion5.jpg)
+
+- 데이터들에 대한 정렬이 완료된다.
+
+  ![Insertion6](./image/Insertion6.jpg)
+
+## 3. 코드
 ```c++
 #include <stdio.h>
+const int MAX = 10000;
 
 int main() {
-  int stopNumber, i ,j, cnt;
-  int numArr[5][5];
-
-  for(i = 0; i < 5; i++) {
-    for(j = 0; j < 5; j++) {
-      scanf("%d", &numArr[i][j]);
-    }
+  int data[MAX], size;
+  
+  // 정렬 전 배열 입력
+  scanf("%d", &size);
+  for(int i = 0; i < size; i++) {
+    scanf("%d", &data[i]);
   }
   
-  for(i = 0; i < 5; i++) {
-    for(j = 0; j < 5; j++) {
-      cnt = 0;
-      // Top
-      if (i != 0) {
-        
-        if (numArr[i][j] < numArr[i-1][j]) cnt++;
+  // 정렬
+  for(int i = 0; i < size; i++) {
+    for(int j = i; j >= 1; j--) {
+      if(data[j - 1] > data[j]) {
+        int temp;
+        temp = data[j - 1];
+        data[j - 1] = data[j];
+        data[j] = temp;
       }
-      // Bottom
-      if (i != 4) {
-        if (numArr[i][j] < numArr[i+1][j]) cnt++;
-      }
-      // Left
-      if (j != 0) {
-        if (numArr[i][j] < numArr[i][j-1]) cnt++;
-      }
-      // Right
-      if (j != 4) {
-        if (numArr[i][j] < numArr[i][j+1]) cnt++;
-      }
-      
-      if((i == 0 || i == 4) && (j == 0 || j == 4)) {
-        if (cnt == 2) {
-          printf("* ");
-        } else {
-          printf("%d ", numArr[i][j]);
-        }
-      } else if(i == 0 || j == 0 || i == 4 || j == 4) {
-        if (cnt == 3) {
-          printf("* ");
-        } else {
-          printf("%d ", numArr[i][j]);
-        }
-      } else {
-        if (cnt == 4) {
-          printf("* ");
-        } else {
-          printf("%d ", numArr[i][j]);
-        }
-      }
+      else break;
     }
-    printf("\n");
+    
+    int temp;
+    temp = data[i];
+    data[i] = data[inx];
+    data[inx] = temp;
   }
-
+  
+  // 정렬 결과
+  for(int i = 0; i < size; i++) {
+    printf("%d ", data[i]);
+  }
+  
   return 0;
 }
 ```
+
+## 4. 시간복잡도
+
+- Θ (n 제곱)
+
+## 5. 출처
+
+- [네이버 지식백과](https://terms.naver.com/entry.nhn?docId=2270436&cid=51173&categoryId=51173)

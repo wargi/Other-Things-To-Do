@@ -69,3 +69,7 @@ int main() {
 ## 4. 시간 복잡도
 
 -  Θ (n 제곱) 
+
+## 5. 출처
+
+- [네이버 지식백과](https://terms.naver.com/entry.nhn?docId=2270435&cid=51173&categoryId=51173)
