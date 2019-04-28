@@ -77,3 +77,8 @@
 | | - | [Combination Pascal](https://github.com/wargi/Etc/blob/master/Algorithm/BasicNumberTheory/Question6.md) | 190319 |
 | | - | [LCM](https://github.com/wargi/Etc/blob/master/Algorithm/BasicNumberTheory/Question7.md) | 190319 |
 | | - | [Stree Tree](https://github.com/wargi/Etc/blob/master/Algorithm/BasicNumberTheory/Question8.md) | 190320 |
+| | - | [Fraction Sum](https://github.com/wargi/Etc/blob/master/Algorithm/BasicNumberTheory/Question9.md) | 190320 |
+| | - | [](https://github.com/wargi/Etc/blob/master/Algorithm/BasicNumberTheory/Question10.md) | 190321 |
+| | - | [](https://github.com/wargi/Etc/blob/master/Algorithm/BasicNumberTheory/Question11.md) | 190321 |
+| | - | [](https://github.com/wargi/Etc/blob/master/Algorithm/BasicNumberTheory/Question12.md) | 190322 |
+| | - | [](https://github.com/wargi/Etc/blob/master/Algorithm/BasicNumberTheory/Question13.md) | 190322 |
