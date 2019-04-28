@@ -75,5 +75,5 @@
 | | - | [PROSJEK](https://github.com/wargi/Etc/blob/master/Algorithm/BasicNumberTheory/Question4.md) | 190318 |
 | | - | [Sequence Sum](https://github.com/wargi/Etc/blob/master/Algorithm/BasicNumberTheory/Question5.md) | 190318 |
 | | - | [Combination Pascal](https://github.com/wargi/Etc/blob/master/Algorithm/BasicNumberTheory/Question6.md) | 190319 |
-| | - | [](https://github.com/wargi/Etc/blob/master/Algorithm/BasicNumberTheory/Question7.md) | 190319 |
+| | - | [LCM](https://github.com/wargi/Etc/blob/master/Algorithm/BasicNumberTheory/Question7.md) | 190319 |
 | | - | [](https://github.com/wargi/Etc/blob/master/Algorithm/BasicNumberTheory/Question8.md) | 190320 |
