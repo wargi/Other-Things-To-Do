@@ -81,4 +81,4 @@
 | | - | [Find Prime](https://github.com/wargi/Etc/blob/master/Algorithm/BasicNumberTheory/Question10.md) | 190321 |
 | | - | [Fmtt Alpha](https://github.com/wargi/Etc/blob/master/Algorithm/BasicNumberTheory/Question11.md) | 190321 |
 | | - | [P Factorization](https://github.com/wargi/Etc/blob/master/Algorithm/BasicNumberTheory/Question12.md) | 190322 |
-| | - | [](https://github.com/wargi/Etc/blob/master/Algorithm/BasicNumberTheory/Question13.md) | 190322 |
+| | - | [Chebyshev Theorem](https://github.com/wargi/Etc/blob/master/Algorithm/BasicNumberTheory/Question13.md) | 190322 |
