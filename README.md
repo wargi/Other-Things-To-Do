@@ -83,7 +83,7 @@
 | | - | [P Factorization](https://github.com/wargi/Etc/blob/master/Algorithm/BasicNumberTheory/Question12.md) | 190322 |
 | | - | [Chebyshev Theorem](https://github.com/wargi/Etc/blob/master/Algorithm/BasicNumberTheory/Question13.md) | 190322 |
 | | String | [Calculator](https://github.com/wargi/Etc/blob/master/Algorithm/String/Question1.md) | 190325 |
-| | - | [](https://github.com/wargi/Etc/blob/master/Algorithm/String/Question2.md) | 190325 |
+| | - | [Case Conversion](https://github.com/wargi/Etc/blob/master/Algorithm/String/Question2.md) | 190325 |
 | | - | [](https://github.com/wargi/Etc/blob/master/Algorithm/String/Question3.md) | 190326 |
 | | - | [](https://github.com/wargi/Etc/blob/master/Algorithm/String/Question4.md) | 190326 |
 | | - | [](https://github.com/wargi/Etc/blob/master/Algorithm/String/Question5.md) | 190327 |
