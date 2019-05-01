@@ -89,4 +89,4 @@
 | | - | [Sort Strings](https://github.com/wargi/Etc/blob/master/Algorithm/String/Question5.md) | 190327 |
 | | - | [Investigate String Containment Relationship](https://github.com/wargi/Etc/blob/master/Algorithm/String/Question6.md) | 190327 |
 | | - | [Palindrome Survey](https://github.com/wargi/Etc/blob/master/Algorithm/String/Question7.md) | 190328 |
-| | - | [](https://github.com/wargi/Etc/blob/master/Algorithm/String/Question8.md) | 190328 |
+| | - | [String Compression](https://github.com/wargi/Etc/blob/master/Algorithm/String/Question8.md) | 190328 |

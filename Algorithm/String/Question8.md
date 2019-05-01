@@ -1,31 +1,30 @@
-# Spoil The Assignment
+# String Compression
 
 ## 1. 문제
 
-- 철수는 영희를 괴롭히는 것을 매우 좋아한다.
-- 오늘도 철수는 영희를 어떻게 괴롭힐지 고민을 하다가, 영희가 최근에 작성하고 있던 문서가 떠올랐다.
-- 이에 철수는 영희의 문서를 망쳐놓기로 결심한다.
-- 바로 띄어쓰기를 모두 제거해버리는 것이다.
-- 영희의 문서를 확인한 철수는, 띄어쓰기가 너무 많아 직접 모두 제거할 수는 없다는 것을 깨닫고 도움을 요청했다.
-- 영희의 문서가 주어질 때, 띄어쓰기를 모두 제거하는 프로그램을 작성하시오.
+- 문자열의 길이가 굉장히 길 경우, 이를 압축하여 짧게 만들어야 할 때가 종종 있다.
+- 이 문제에서는 문자열이 주어졌을 때, 다음과 같은 방법으로 압축한 결과를 출력하는 프로그램을 작성한다.
+- 예를 들어, 문자열이 AAABBBBBCCCCDDDDEFFF 라고 하자.
+- 이 문자열을 압축하면, 연속으로 같은 문자가 나오는 부분에, 그 문자가 몇번 나왔는지를 적어줌으로써 압축한다.
+- 즉, 이 문자열은 3A5B4C4DE3F 로 압축된다. E는 1개밖에 없기 때문에 따로 1을 적어주지 않는다.
 
 ## 2. 입력
-- 첫째 줄: 영희의 문서가 주어진다.
-- 영희의 문서는 한 줄 짜리 문자열이며, 문서의 길이는 100,000을 넘지 않는다.  
+- 첫 번째 줄: 압축하고자 하는 문자열이 주어진다.
+- 문자열의 길이는 1000보다 작다. 문자열에 구성된 알파벳은 대문자다.  
 
 ## 3. 출력
 
-- 문자열의 띄어쓰기를 모두 제거한 결과를 출력한다.
+- 문자열을 압축한 결과를 출력한다.
 
 
 ## 4. 예제 입력
 ```
-Please do not touch anything
+AAABBBBBCCCCDDDDEFFF
 ```
 
 ## 5. 예제 출력
 ```
-Pleasedonottouchanything
+3A5B4C4DE3F
 ```
 
 ## 6. 코드
@@ -35,14 +34,21 @@ Pleasedonottouchanything
 #include <string.h>
 
 int main() {
-  char arr[1000];
-  fgets(arr,1000,stdin);
-  int size = strlen(arr);
-
+  char a[1000], b[1000];
+  scanf("%s", a);
+  int size = strlen(a);
+  
   for(int i = 0; i < size; i++) {
-    if(arr[i] == ' ') continue;
-    printf("%c", arr[i]);
+    int cnt = 1;
+    for(int j = i + 1; j < size; j++) {
+      if(a[i] != a[j]) break;
+      cnt++;
+    }
+    i = i + cnt - 1;
+    if(cnt > 1) printf("%d%c", cnt, a[i]);
+    else printf("%c", a[i]);
   }
+
   return 0;
 }
 ```
