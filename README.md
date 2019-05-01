@@ -87,3 +87,6 @@
 | | - | [Spoil The Assignment](https://github.com/wargi/Etc/blob/master/Algorithm/String/Question3.md) | 190326 |
 | | - | [Flip The String](https://github.com/wargi/Etc/blob/master/Algorithm/String/Question4.md) | 190326 |
 | | - | [Sort Strings](https://github.com/wargi/Etc/blob/master/Algorithm/String/Question5.md) | 190327 |
+| | - | [Investigate String Containment Relationship](https://github.com/wargi/Etc/blob/master/Algorithm/String/Question6.md) | 190327 |
+| | - | [](https://github.com/wargi/Etc/blob/master/Algorithm/String/Question7.md) | 190328 |
+| | - | [](https://github.com/wargi/Etc/blob/master/Algorithm/String/Question8.md) | 190328 |
