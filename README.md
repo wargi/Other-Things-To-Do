@@ -91,4 +91,4 @@
 | | - | [Palindrome Survey](https://github.com/wargi/Etc/blob/master/Algorithm/String/Question7.md) | 190328 |
 | | - | [String Compression](https://github.com/wargi/Etc/blob/master/Algorithm/String/Question8.md) | 190328 |
 | | - | [High Digit Plus](https://github.com/wargi/Etc/blob/master/Algorithm/String/Question9.md) | 190329 |
-| | - | [](https://github.com/wargi/Etc/blob/master/Algorithm/String/Question10.md) | 190329 |
+| | - | [High Digit Minus](https://github.com/wargi/Etc/blob/master/Algorithm/String/Question10.md) | 190329 |
