@@ -1,48 +1,60 @@
-# Spoil The Assignment
+# Mountain
 
 ## 1. 문제
 
-- 철수는 영희를 괴롭히는 것을 매우 좋아한다.
-- 오늘도 철수는 영희를 어떻게 괴롭힐지 고민을 하다가, 영희가 최근에 작성하고 있던 문서가 떠올랐다.
-- 이에 철수는 영희의 문서를 망쳐놓기로 결심한다.
-- 바로 띄어쓰기를 모두 제거해버리는 것이다.
-- 영희의 문서를 확인한 철수는, 띄어쓰기가 너무 많아 직접 모두 제거할 수는 없다는 것을 깨닫고 도움을 요청했다.
-- 영희의 문서가 주어질 때, 띄어쓰기를 모두 제거하는 프로그램을 작성하시오.
+- 봉우리가 여러개인 산 모양을 출력한다.
+- 산 모양은 그림과 같고 좌우 대칭이다.
+
+![Mountain](./image/Mountain.jpg)
 
 ## 2. 입력
-- 첫째 줄: 영희의 문서가 주어진다.
-- 영희의 문서는 한 줄 짜리 문자열이며, 문서의 길이는 100,000을 넘지 않는다.  
+- 첫 번째 줄에 숫자를 입력 받는다.
+- 숫자의 크기는 20보다 작은 자연수이다.
 
 ## 3. 출력
 
-- 문자열의 띄어쓰기를 모두 제거한 결과를 출력한다.
+- 출력 예의 형식으로 출력한다.
 
 
 ## 4. 예제 입력
 ```
-Please do not touch anything
+3
 ```
 
 ## 5. 예제 출력
 ```
-Pleasedonottouchanything
+1213121
 ```
 
-## 6. 코드
+## 6. 예제 입력
+
+```
+5
+```
+
+## 7. 예제 출력
+
+```
+1213121412131215121312141213121
+```
+
+## 8. 코드
 
 ```c++
 #include <stdio.h>
-#include <string.h>
+int getMountain(int n) {
+  if(n == 1) printf("1");
+  else {
+    getMountain(n-1);
+    printf("%d", n);
+    getMountain(n-1);
+  }
+}
 
 int main() {
-  char arr[1000];
-  fgets(arr,1000,stdin);
-  int size = strlen(arr);
-
-  for(int i = 0; i < size; i++) {
-    if(arr[i] == ' ') continue;
-    printf("%c", arr[i]);
-  }
+  int num;
+  scanf("%d", &num);
+  getMountain(num);
   return 0;
 }
 ```
