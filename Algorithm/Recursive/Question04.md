@@ -1,7 +1,7 @@
-# Palindrome Survey
+# Palindrome
 
 ## 1. 문제
-- 문자열이 주어질 때, 이것이 팰린드롬인지 조사하는 프로그램을 작성하시오.
+- 재귀함수를 이용하여 문자열이 주어질 때, 이것이 팰린드롬인지 조사하는 프로그램을 작성하시오.
 - 팰린드롬이란, 앞으로 읽을 때와 뒤로 읽을 때의 결과가 같은 문자열을 말한다.  
 
 ## 2. 입력
@@ -39,24 +39,28 @@ NO
 #include <stdio.h>
 #include <string.h>
 
-int main() {
-  char a[1000], b[1000];
-  bool flag = true;
-  
-  scanf("%s", a);
-  int size = strlen(a);
-  
-  for(int i = 0; i < size; i++) {
-    b[i] = a[size - i - 1];
+bool isPalindrome(char myString[], int start, int end) {
+  if(start >= end) return true;
+  else {
+    if(myString[start] == myString[end]) {
+      return isPalindrome(myString, start + 1, end - 1);
+    } else return false;
   }
-  
-  for(int i = 0; i < size; i++) {
-    if(a[i] != b[i]) flag = false;
-  }
-  
-  if(flag) printf("YES");
-  else printf("NO");
+}
 
+int main() {
+
+  char myString[1000];
+  
+  scanf("%s", myString);
+  int length = strlen(myString);
+  
+  if(isPalindrome(myString, 0, length - 1)) {
+    printf("Yes");
+  } else {
+    printf("No");
+  }
+  
   return 0;
 }
 ```
