@@ -65,7 +65,8 @@
 | | - | [Tetris](https://github.com/wargi/Etc/blob/master/Algorithm/BruteForce/Question17.md) | 190311 |
 | | - | [Seat](https://github.com/wargi/Etc/blob/master/Algorithm/BruteForce/Question18.md) | 190311 |
 | | - | [Baseball Game](https://github.com/wargi/Etc/blob/master/Algorithm/BruteForce/Question19.md) | 190312 |
-| | - | [Getting Permutations](https://github.com/wargi/Etc/blob/master/Algorithm/Recursive/Question08.md) | 190411 |
+| | - | [Getting Permutations](https://github.com/wargi/Etc/blob/master/Algorithm/BruteForce/Question20.md) | 190411 |
+| | - | [Tobin](https://github.com/wargi/Etc/blob/master/Algorithm/BruteForce/Question21.md) | 190412 |
 | | Sort | [Selection Sort](https://github.com/wargi/Etc/blob/master/Algorithm/Sort/Question1.md) | 190312 |
 | | - | [Insertion Sort](https://github.com/wargi/Etc/blob/master/Algorithm/Sort/Question2.md) | 190313 |
 | | - | [Bubble Sort](https://github.com/wargi/Etc/blob/master/Algorithm/Sort/Question3.md) | 190313 |
@@ -101,4 +102,4 @@
 | | - | [Factorial](https://github.com/wargi/Etc/blob/master/Algorithm/Recursive/Question05.md) | 190408 |
 | | - | [Binary](https://github.com/wargi/Etc/blob/master/Algorithm/Recursive/Question06.md) | 190409 |
 | | - | [Mountain](https://github.com/wargi/Etc/blob/master/Algorithm/Recursive/Question07.md) | 190410 |
-| | - | [](https://github.com/wargi/Etc/blob/master/Algorithm/Recursive/Question09.md) | 190412 |
+
