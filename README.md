@@ -93,7 +93,7 @@
 | | - | [High Digit Plus](https://github.com/wargi/Etc/blob/master/Algorithm/String/Question9.md) | 190329 |
 | | - | [High Digit Minus](https://github.com/wargi/Etc/blob/master/Algorithm/String/Question10.md) | 190329 |
 | | - | [High Digit Multiple](https://github.com/wargi/Etc/blob/master/Algorithm/String/Question11.md) | 190401 |
-| | Recursive | [Factorial](https://github.com/wargi/Etc/blob/master/Algorithm/Recursive/Question12.md) | 190402 |
-| | - | [](https://github.com/wargi/Etc/blob/master/Algorithm/String/Question13.md) | 190403 |
-| | - | [](https://github.com/wargi/Etc/blob/master/Algorithm/String/Question14.md) | 190404 |
-| | - | [](https://github.com/wargi/Etc/blob/master/Algorithm/String/Question15.md) | 190405 |
+| | Recursive | [Factorial](https://github.com/wargi/Etc/blob/master/Algorithm/Recursive/Question1.md) | 190402 |
+| | - | [](https://github.com/wargi/Etc/blob/master/Algorithm/String/Question2.md) | 190403 |
+| | - | [](https://github.com/wargi/Etc/blob/master/Algorithm/String/Question3.md) | 190404 |
+| | - | [](https://github.com/wargi/Etc/blob/master/Algorithm/String/Question4.md) | 190405 |
