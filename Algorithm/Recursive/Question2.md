@@ -1,41 +1,53 @@
-# Case Conversion
+# Binary
 
 ## 1. 문제
-- 문자열이 주어질 때, 대문자는 소문자로, 소문자는 대문자로 바꾸는 프로그램을 작성하시오. 알파벳이 아닌 문자는 그대로 유지한다. 
+- 숫자를 입력 받아 이진수로 출력하는 프로그램을 작성하시오.
 
 ## 2. 입력
-- 첫 번째 줄에 문자열이 주어진다. ( 1 ≤ 문자열의 길이 ≤ 1,000 )  
+- 첫 번째 줄: 숫자를 입력 받는다. 숫자의 크기는 1,000보다 작거나 같다.
 
 ## 3. 출력
 
-- 문자열 내의 대문자는 소문자로, 소문자는 대문자로 바꾼 결과를 출력한다.
+- 첫째 줄에 숫자를 이진수로 바꾸어 출력한다.
 
 ## 4. 예제 입력
 ```
-hELLO wORLD!
+14
 ```
 
 ## 5. 예제 출력
 ```
-Hello World!
+1110
 ```
 
-## 6. 코드
+## 6. 예제 입력
+
+```
+31
+```
+
+## 7. 예제 출력
+
+```
+11111
+```
+
+## 8. 코드
 
 ```c++
 #include <stdio.h>
-#include <string.h>
+int getBinary(int n) {
+  if(n == 1) return 1;
+  else {
+    return (n%2) + (10 * getBinary(n/2));
+  }
+}
 
 int main() {
-
-  char arr[1000];
-  fgets(arr,1000,stdin);
-  int size = strlen(arr);
-  for(int i = 0; i < size; i++) {
-    if(int(arr[i]) > 96 && int(arr[i]) < 123) arr[i] = int(arr[i] - 32);
-    else if(int(arr[i]) > 64 && int(arr[i]) < 91) arr[i] = int(arr[i] + 32);
-    printf("%c", arr[i]);
-  }
+  int num;
+  scanf("%d", &num);
+  
+  printf("%d", getBinary(num));
   return 0;
 }
 ```
