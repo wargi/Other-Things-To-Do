@@ -1,53 +1,64 @@
-# Binary
+# Investigate String Containment Relationship
 
 ## 1. 문제
-- 숫자를 입력 받아 이진수로 출력하는 프로그램을 작성하시오.
+
+- 문자열 A와 B가 주어질 때, 문자열 B가 문자열 A에 포함되어 있는지를 조사하는 프로그램을 작성하시오.
+- 단, 문자열 A와 B에는 알파벳으로만 이루어져 있으며, 공백은 포함되지 않는다고 가정한다.  
 
 ## 2. 입력
-- 첫 번째 줄: 숫자를 입력 받는다. 숫자의 크기는 1,000보다 작거나 같다.
+- 첫 번째 줄: 문자열 A, 두 번째줄에 문자열 B가 주어진다.
+- 각각의 길이는 1,000을 넘지 않는다.  
 
 ## 3. 출력
 
-- 첫째 줄에 숫자를 이진수로 바꾸어 출력한다.
+- 문자열 B가 문자열 A에 포함되면 YES, 아니면 NO를 출력한다.
+
 
 ## 4. 예제 입력
 ```
-14
+Watermelon
+melon
 ```
 
-## 5. 예제 출력
-```
-1110
-```
-
-## 6. 예제 입력
+## 5. 예제출력
 
 ```
-31
+YES
 ```
 
-## 7. 예제 출력
-
-```
-11111
-```
-
-## 8. 코드
+## 6. 코드
 
 ```c++
 #include <stdio.h>
-int getBinary(int n) {
-  if(n == 1) return 1;
-  else {
-    return (n%2) + (10 * getBinary(n/2));
-  }
-}
+#include <string.h>
 
 int main() {
-  int num;
-  scanf("%d", &num);
+  bool isSame = false;
+  char strA[1000];
+  char strB[1000];
   
-  printf("%d", getBinary(num));
+  scanf("%s %s", strA, strB);
+  
+  int sizeA = strlen(strA);
+  int sizeB = strlen(strB);
+  
+  for(int i = 0; i <= sizeA - sizeB; i++) {
+    bool flag = true;
+    for(int j = 0; j < sizeB; j++) {
+      if (strA[i+j] != strB[j]) {
+        flag = false;
+        break;
+      }
+    }
+    if(flag) isSame = true;
+  }
+  
+  if(isSame) {
+    printf("YES");
+  } else {
+    printf("NO");
+  }
+  
   return 0;
 }
 ```

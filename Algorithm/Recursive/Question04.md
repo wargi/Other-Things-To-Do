@@ -1,60 +1,62 @@
-# Mountain
+# Palindrome Survey
 
 ## 1. 문제
-
-- 봉우리가 여러개인 산 모양을 출력한다.
-- 산 모양은 그림과 같고 좌우 대칭이다.
-
-![Mountain](./image/Mountain.jpg)
+- 문자열이 주어질 때, 이것이 팰린드롬인지 조사하는 프로그램을 작성하시오.
+- 팰린드롬이란, 앞으로 읽을 때와 뒤로 읽을 때의 결과가 같은 문자열을 말한다.  
 
 ## 2. 입력
-- 첫 번째 줄에 숫자를 입력 받는다.
-- 숫자의 크기는 20보다 작은 자연수이다.
+- 첫 번째 줄: 문자열이 주어진다. ( 1 ≤ 문자열의 길이 ≤ 1,000 )  
 
 ## 3. 출력
 
-- 출력 예의 형식으로 출력한다.
-
+- 입력된 문자열이 팰린드롬이면 YES, 아니면 NO를 출력한다.
 
 ## 4. 예제 입력
 ```
-3
+abcba
 ```
 
 ## 5. 예제 출력
 ```
-1213121
+YES
 ```
 
 ## 6. 예제 입력
 
 ```
-5
+abcbd
 ```
 
 ## 7. 예제 출력
 
 ```
-1213121412131215121312141213121
+NO
 ```
 
 ## 8. 코드
 
 ```c++
 #include <stdio.h>
-int getMountain(int n) {
-  if(n == 1) printf("1");
-  else {
-    getMountain(n-1);
-    printf("%d", n);
-    getMountain(n-1);
-  }
-}
+#include <string.h>
 
 int main() {
-  int num;
-  scanf("%d", &num);
-  getMountain(num);
+  char a[1000], b[1000];
+  bool flag = true;
+  
+  scanf("%s", a);
+  int size = strlen(a);
+  
+  for(int i = 0; i < size; i++) {
+    b[i] = a[size - i - 1];
+  }
+  
+  for(int i = 0; i < size; i++) {
+    if(a[i] != b[i]) flag = false;
+  }
+  
+  if(flag) printf("YES");
+  else printf("NO");
+
   return 0;
 }
 ```
