@@ -1,33 +1,26 @@
-# Binary Search #
+# Quadratic Equation #
 
 ## 1. 문제
-- n개의 오름차순으로 정렬된 숫자가 주어지고, 그 후 q개의 질문이 주어진다.
-- 각각의 질문은 특정 숫자가 n개의 숫자 내에 존재하는지를 판별하는 것이다.
-- 모든 q개의 질문에 대하여 답을 하는 프로그램을 작성하시오.  
+- 2차식 f(x) = x*x+ x 가 있고, 숫자 a가 주어진다.
+- 우리는 f(x) = a 를 만족하는 x의 값을 찾고 싶지만, 보통 이 값은 정수로 떨어지지 않는 경우가 많다.
+- 예를 들어, f(x) = 20 을 풀고자 한다면, x = 4이기 때문에 이는 정수이지만, f(x) = 103 을 풀고자 한다면 이는 x = 9.6612... 로써 정수가 아니다.
+- 이 문제에서는 x의 정수부분이 얼마인지를 구하는 프로그램을 작성하시오.
+- 예를 들어, f(x) = 103 을 풀고자 한다면, x = 9.6612... 이기 때문에 정수부분은 9가 된다.
 
 ## 2. 입력
-- 첫 번째 줄에 숫자의 개수 n, 그리고 질문의 개수 q가 주어진다 ( 1 ≤ n ≤ 100,000, 1 ≤ q ≤ 100,000)
-- 이는 오름차순으로 정렬되어 주어진다.
-- 두 번째 줄에 n개의 숫자가 주어진다.
-- 세 번째 줄에 q개의 질문이 주어진다.
-- 각 수는 21억보다 작은 정수다.
+- 첫 번째 줄: 숫자 a가 주어진다. ( 1 ≤ a ≤ 1,000,000,000,000,000,000 )  
 
 ## 3. 출력
-- 각 질문에 대하여 숫자가 존재하면 YES, 아니면 NO를 한 줄에 하나씩 출력한다.
+- f(x) = a 를 만족하는 x의 정수부분을 출력한다.  
 
 ## 4. 예제 입력
 ```
-10 4
-1 2 4 8 10 11 12 14 15 19
-4 5 8 17
+103
 ```
 
 ## 5. 예제 출력
 ```
-YES
-NO
-YES
-NO
+9
 ```
 
 ## 6. 코드
@@ -35,34 +28,24 @@ NO
 ```c++
 #include <stdio.h>
 
-bool binarySearch(int arr[], int start, int end, int value) {
-  if(start > end) return true;
-  else if(start == end) {
-    if(arr[start] == value) return false;
-    else return true;
-  } else {
-    int mid = (start + end) / 2;
-    
-    if(arr[mid] == value) return false;
-    else if(arr[mid] > value) return binarySearch(arr,start,mid-1,value);
-    else return binarySearch(arr,mid+1,end,value);
+int binarySearch(int start, int end, long long int value) {
+  if(start > end) return end;
+  else {
+    long long int mid = (start + end) / 2;
+    long long int sum = mid * mid + mid;
+    if(sum == value) return mid;
+    else if(sum > value) return binarySearch(start,mid-1,value);
+    else return binarySearch(mid+1,end,value);
   }
 }
 
 int main() {
-  int n, m;
-  bool isEmpty;
-  int qArr[100000], aArr[100000];
+  long long int n;
+  scanf("%lld", &n);
   
-  scanf("%d %d", &n, &m);
-  for(int i = 0; i < n; i++) scanf("%d", &qArr[i]);
-  for(int i = 0; i < m; i++) scanf("%d", &aArr[i]);
+  int k = binarySearch(1,1000000000,n);
+  printf("%d", k);
   
-  for(int i = 0; i < m; i++) {
-    isEmpty = binarySearch(qArr,0,n-1,aArr[i]);
-    if(isEmpty) printf("NO\n");
-    else printf("YES\n");
-  }
   return 0;
 }
 ```
