@@ -1,33 +1,35 @@
-# Binary Search #
+# Tree Cutting #
 
 ## 1. 문제
-- n개의 오름차순으로 정렬된 숫자가 주어지고, 그 후 q개의 질문이 주어진다.
-- 각각의 질문은 특정 숫자가 n개의 숫자 내에 존재하는지를 판별하는 것이다.
-- 모든 q개의 질문에 대하여 답을 하는 프로그램을 작성하시오.  
+- 얼마전에 큰맘 먹고 새로운 절단기를 구입한 목수 윤성이는 나무 M미터가 필요하다.
+- 절단기는 다음과 같이 동작한다.
+- 먼저, 윤성이는 절단기에 높이 H를 지정해야 한다.
+- 높이를 지정하면 톱날이 땅으로부터 H미터 위로 올라간다.
+- 그 다음, 한 줄에 연속해있는 나무를 모두 절단해버린다.
+- 따라서, 높이가 H보다 큰 나무는 H 위의 부분이 잘릴 것이고, 낮은 나무는 잘리지 않을 것이다.
+- 예를 들어, 한 줄에 연속해있는 나무의 높이가 20, 15, 10, 17이라고 하자.
+- 상근이가 높이를 15로 지정했다면, 나무를 자른 뒤의 높이는 15, 15, 10, 15가 될 것이고, 윤성이는 길이가 5인 나무와 2인 나무를 들고 집에 갈 것이다. (총 7미터를 집에 들고 간다)
+- 목수 윤성이는 과유불급을 좌우명으로 삼고 있기에 나무를 필요한 만큼만 가져가려고 한다.
+- 이때 적어도 M미터의 나무를 가져가기 위해서 절단기에 설정할 수 있는 높이의 최대값을 구하는 프로그램을 작성하라.
 
 ## 2. 입력
-- 첫 번째 줄에 숫자의 개수 n, 그리고 질문의 개수 q가 주어진다 ( 1 ≤ n ≤ 100,000, 1 ≤ q ≤ 100,000)
-- 이는 오름차순으로 정렬되어 주어진다.
-- 두 번째 줄에 n개의 숫자가 주어진다.
-- 세 번째 줄에 q개의 질문이 주어진다.
-- 각 수는 21억보다 작은 정수다.
+- 첫째 줄: 나무의 수 N, 윤성이가 집으로 가져가려고 하는 나무의 길이 M (1 ≤ N ≤ 1,000,000, 1 ≤ M ≤ 2,000,000,000)
+- 둘째 줄: 나무의 높이가 주어진다.
+- 나무의 높이의 합은 항상 M을 넘기 때문에, 윤성이는 집에 필요한 나무를 항상 가져갈 수 있다.
+- 높이는 1,000,000,000보다 작거나 같은 자연수이다. 
 
 ## 3. 출력
-- 각 질문에 대하여 숫자가 존재하면 YES, 아니면 NO를 한 줄에 하나씩 출력한다.
+- 적어도 M미터의 나무를 집에 가져가기 위해서 절단기에 설정할 수 있는 높이의 최대값을 출력한다.
 
 ## 4. 예제 입력
 ```
-10 4
-1 2 4 8 10 11 12 14 15 19
-4 5 8 17
+4 7
+20 15 10 17
 ```
 
 ## 5. 예제 출력
 ```
-YES
-NO
-YES
-NO
+15
 ```
 
 ## 6. 코드
@@ -35,34 +37,32 @@ NO
 ```c++
 #include <stdio.h>
 
-bool binarySearch(int arr[], int start, int end, int value) {
-  if(start > end) return true;
-  else if(start == end) {
-    if(arr[start] == value) return false;
-    else return true;
-  } else {
-    int mid = (start + end) / 2;
-    
-    if(arr[mid] == value) return false;
-    else if(arr[mid] > value) return binarySearch(arr,start,mid-1,value);
-    else return binarySearch(arr,mid+1,end,value);
-  }
-}
-
 int main() {
-  int n, m;
-  bool isEmpty;
-  int qArr[100000], aArr[100000];
+  int n, m, max = -1, value;
+  int arr[1000000];
   
   scanf("%d %d", &n, &m);
-  for(int i = 0; i < n; i++) scanf("%d", &qArr[i]);
-  for(int i = 0; i < m; i++) scanf("%d", &aArr[i]);
-  
-  for(int i = 0; i < m; i++) {
-    isEmpty = binarySearch(qArr,0,n-1,aArr[i]);
-    if(isEmpty) printf("NO\n");
-    else printf("YES\n");
+  for(int i = 0; i < n; i++) {
+    scanf("%d", &arr[i]);
+    if(max < arr[i]) max = arr[i];
   }
+  
+  int start = 1, end = max;
+  
+  while(start <= end) {
+    int mid = (start + end) / 2;
+    long long int sum = 0;
+    
+    for(int i = 0; i < n; i++) {
+      if(arr[i] - mid > 0) sum = sum + arr[i] - mid;
+    }
+    
+    if(sum >= m) value = mid;
+    if(sum >= m) start = mid + 1;
+    else end = mid - 1;
+  }
+  printf("%d", value);
+
   return 0;
 }
 ```
