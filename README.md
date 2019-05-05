@@ -106,4 +106,4 @@
 | | - | [Factorial](https://github.com/wargi/Etc/blob/master/Algorithm/Recursive/Question05.md) | 190408 |
 | | - | [Binary](https://github.com/wargi/Etc/blob/master/Algorithm/Recursive/Question06.md) | 190409 |
 | | - | [Mountain](https://github.com/wargi/Etc/blob/master/Algorithm/Recursive/Question07.md) | 190410 |
-| | Search | [](https://github.com/wargi/Etc/blob/master/Algorithm/Search/Question01.md) | 190419 |
+| | Search | [Binary Search](https://github.com/wargi/Etc/blob/master/Algorithm/Search/Question01.md) | 190419 |
