@@ -73,7 +73,7 @@
 | | - | [Insertion Sort](https://github.com/wargi/Etc/blob/master/Algorithm/Sort/Question02.md) | 190313 |
 | | - | [Bubble Sort](https://github.com/wargi/Etc/blob/master/Algorithm/Sort/Question03.md) | 190313 |
 | | - | [Merge Sort](https://github.com/wargi/Etc/blob/master/Algorithm/Sort/Question04.md) | 190417 |
-| | - | [Quick Sort](https://github.com/wargi/Etc/blob/master/Algorithm/Sort/Question6.md) | 190418 |
+| | - | [Quick Sort](https://github.com/wargi/Etc/blob/master/Algorithm/Sort/Question05.md) | 190418 |
 | | - | [Find The Kth Largest Number](https://github.com/wargi/Etc/blob/master/Algorithm/Sort/Question06.md) | 190314 |
 | | Basic Number Theory | [Next Number](https://github.com/wargi/Etc/blob/master/Algorithm/BasicNumberTheory/Question1.md) | 190314 |
 | | - | [Bee Hive](https://github.com/wargi/Etc/blob/master/Algorithm/BasicNumberTheory/Question2.md) | 190315 |
