@@ -108,7 +108,7 @@
 | | - | [Mountain](https://github.com/wargi/Etc/blob/master/Algorithm/Recursive/Question07.md) | 190410 |
 | | Search | [Binary Search](https://github.com/wargi/Etc/blob/master/Algorithm/Search/Question01.md) | 190419 |
 | | - | [Number Box](https://github.com/wargi/Etc/blob/master/Algorithm/Search/Question02.md) | 190422 |
-| | - | [](https://github.com/wargi/Etc/blob/master/Algorithm/Search/Question03.md) | 190423 |
+| | - | [Number Count](https://github.com/wargi/Etc/blob/master/Algorithm/Search/Question03.md) | 190423 |
 | | - | [](https://github.com/wargi/Etc/blob/master/Algorithm/Search/Question04.md) | 190424 |
 | | - | [](https://github.com/wargi/Etc/blob/master/Algorithm/Search/Question05.md) | 190425 |
 | | - | [](https://github.com/wargi/Etc/blob/master/Algorithm/Search/Question06.md) | 190426 |
