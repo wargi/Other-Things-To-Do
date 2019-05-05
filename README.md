@@ -68,7 +68,7 @@
 | | - | [Getting Permutations](https://github.com/wargi/Etc/blob/master/Algorithm/BruteForce/Question20.md) | 190411 |
 | | - | [Tobin](https://github.com/wargi/Etc/blob/master/Algorithm/BruteForce/Question21.md) | 190412 |
 | | - | [Division](https://github.com/wargi/Etc/blob/master/Algorithm/BruteForce/Question22.md) | 190415 |
-| | - | [](https://github.com/wargi/Etc/blob/master/Algorithm/BruteForce/Question23.md) | 190416 |
+| | - | [Inequal](https://github.com/wargi/Etc/blob/master/Algorithm/BruteForce/Question23.md) | 190416 |
 | | Sort | [Selection Sort](https://github.com/wargi/Etc/blob/master/Algorithm/Sort/Question1.md) | 190312 |
 | | - | [Insertion Sort](https://github.com/wargi/Etc/blob/master/Algorithm/Sort/Question2.md) | 190313 |
 | | - | [Bubble Sort](https://github.com/wargi/Etc/blob/master/Algorithm/Sort/Question3.md) | 190313 |
