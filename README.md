@@ -69,12 +69,12 @@
 | | - | [Tobin](https://github.com/wargi/Etc/blob/master/Algorithm/BruteForce/Question21.md) | 190412 |
 | | - | [Division](https://github.com/wargi/Etc/blob/master/Algorithm/BruteForce/Question22.md) | 190415 |
 | | - | [Inequal](https://github.com/wargi/Etc/blob/master/Algorithm/BruteForce/Question23.md) | 190416 |
-| | Sort | [Selection Sort](https://github.com/wargi/Etc/blob/master/Algorithm/Sort/Question1.md) | 190312 |
-| | - | [Insertion Sort](https://github.com/wargi/Etc/blob/master/Algorithm/Sort/Question2.md) | 190313 |
-| | - | [Bubble Sort](https://github.com/wargi/Etc/blob/master/Algorithm/Sort/Question3.md) | 190313 |
-| | - | [Merge Sort](https://github.com/wargi/Etc/blob/master/Algorithm/Sort/Question5.md) | 190417 |
+| | Sort | [Selection Sort](https://github.com/wargi/Etc/blob/master/Algorithm/Sort/Question01.md) | 190312 |
+| | - | [Insertion Sort](https://github.com/wargi/Etc/blob/master/Algorithm/Sort/Question02.md) | 190313 |
+| | - | [Bubble Sort](https://github.com/wargi/Etc/blob/master/Algorithm/Sort/Question03.md) | 190313 |
+| | - | [Merge Sort](https://github.com/wargi/Etc/blob/master/Algorithm/Sort/Question04.md) | 190417 |
 | | - | [Quick Sort](https://github.com/wargi/Etc/blob/master/Algorithm/Sort/Question6.md) | 190418 |
-| | - | [Find The Kth Largest Number](https://github.com/wargi/Etc/blob/master/Algorithm/Sort/Question4.md) | 190314 |
+| | - | [Find The Kth Largest Number](https://github.com/wargi/Etc/blob/master/Algorithm/Sort/Question06.md) | 190314 |
 | | Basic Number Theory | [Next Number](https://github.com/wargi/Etc/blob/master/Algorithm/BasicNumberTheory/Question1.md) | 190314 |
 | | - | [Bee Hive](https://github.com/wargi/Etc/blob/master/Algorithm/BasicNumberTheory/Question2.md) | 190315 |
 | | - | [Fibonacci](https://github.com/wargi/Etc/blob/master/Algorithm/BasicNumberTheory/Question3.md) | 190315 |
