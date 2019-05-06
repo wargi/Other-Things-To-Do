@@ -112,3 +112,8 @@
 | | - | [Two Solutions](https://github.com/wargi/Etc/blob/master/Algorithm/Search/Question04.md) | 190424 |
 | | - | [Quadratic Equation](https://github.com/wargi/Etc/blob/master/Algorithm/Search/Question05.md) | 190425 |
 | | - | [Tree Cutting](https://github.com/wargi/Etc/blob/master/Algorithm/Search/Question06.md) | 190426 |
+| | - | [NN Tap](https://github.com/wargi/Etc/blob/master/Algorithm/Search/Question07.md) | 190429 |
+| | - | [](https://github.com/wargi/Etc/blob/master/Algorithm/Search/Question08.md) | 190430 |
+| | - | [](https://github.com/wargi/Etc/blob/master/Algorithm/Search/Question09.md) | 190501 |
+| Stack | - | [](https://github.com/wargi/Etc/blob/master/Algorithm/Stack/Question01.md) | 190502 |
+| | - | [](https://github.com/wargi/Etc/blob/master/Algorithm/Stack/Question02.md) | 190503 |
