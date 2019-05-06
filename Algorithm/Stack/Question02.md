@@ -1,68 +1,111 @@
-# Tree Cutting #
+# Plate #
 
 ## 1. 문제
-- 얼마전에 큰맘 먹고 새로운 절단기를 구입한 목수 윤성이는 나무 M미터가 필요하다.
-- 절단기는 다음과 같이 동작한다.
-- 먼저, 윤성이는 절단기에 높이 H를 지정해야 한다.
-- 높이를 지정하면 톱날이 땅으로부터 H미터 위로 올라간다.
-- 그 다음, 한 줄에 연속해있는 나무를 모두 절단해버린다.
-- 따라서, 높이가 H보다 큰 나무는 H 위의 부분이 잘릴 것이고, 낮은 나무는 잘리지 않을 것이다.
-- 예를 들어, 한 줄에 연속해있는 나무의 높이가 20, 15, 10, 17이라고 하자.
-- 상근이가 높이를 15로 지정했다면, 나무를 자른 뒤의 높이는 15, 15, 10, 15가 될 것이고, 윤성이는 길이가 5인 나무와 2인 나무를 들고 집에 갈 것이다. (총 7미터를 집에 들고 간다)
-- 목수 윤성이는 과유불급을 좌우명으로 삼고 있기에 나무를 필요한 만큼만 가져가려고 한다.
-- 이때 적어도 M미터의 나무를 가져가기 위해서 절단기에 설정할 수 있는 높이의 최대값을 구하는 프로그램을 작성하라.
+- 접시가 a, b, c, d 가 있고, 알파벳 순으로 한쪽이 막혀 있는 세척기에 들어간다고 할 때, b a c d 순으로 꺼내기 위해서는 push, push, pop, pop, push, pop, push, pop을 하면 된다.
+- 세척기에서 꺼내는 순서가 주어질 때 그 동작을 출력하는 프로그램을 작성하시오.
+- 만약 주어진 순서대로 접시를 꺼낼 수 없다면 “impossible”을 출력한다.
 
 ## 2. 입력
-- 첫째 줄: 나무의 수 N, 윤성이가 집으로 가져가려고 하는 나무의 길이 M (1 ≤ N ≤ 1,000,000, 1 ≤ M ≤ 2,000,000,000)
-- 둘째 줄: 나무의 높이가 주어진다.
-- 나무의 높이의 합은 항상 M을 넘기 때문에, 윤성이는 집에 필요한 나무를 항상 가져갈 수 있다.
-- 높이는 1,000,000,000보다 작거나 같은 자연수이다. 
+- 첫째 줄: 소문자 알파벳이 주어진다.
+- 중복된 소문자 알파벳은 입력되지 않는다.
+- 알파벳 소문자는 26개이다.  
 
 ## 3. 출력
-- 적어도 M미터의 나무를 집에 가져가기 위해서 절단기에 설정할 수 있는 높이의 최대값을 출력한다.
+- 접시를 꺼내는 것이 가능한 경우 push, pop의 순서를 출력한다.
+- 이것이 불가능하다면 impossible을 출력한다.  
 
 ## 4. 예제 입력
 ```
-4 7
-20 15 10 17
+bacd
 ```
 
 ## 5. 예제 출력
 ```
-15
+push
+push
+pop
+pop
+push
+pop
+push
+pop
 ```
 
-## 6. 코드
+## 6. 예제 입력
+
+```
+dabc
+```
+
+## 7. 예제 출력
+
+```
+impossible
+```
+
+## 8. 코드
 
 ```c++
 #include <stdio.h>
+#include <string.h>
+
+struct Stack {
+  char arr[27];
+  int top = -1;
+  int topIndex;
+  int numArr[10000], cnt = 0;
+  
+  void push() {
+    numArr[cnt++] = 1;
+    top++;
+  }
+  
+  char pop() {
+    numArr[cnt++] = 0;
+    top--;
+  }
+};
 
 int main() {
-  int n, m, max = -1, value;
-  int arr[1000000];
+  char alpha[29];
+  int alphaLength, cnt = 0;
   
-  scanf("%d %d", &n, &m);
-  for(int i = 0; i < n; i++) {
-    scanf("%d", &arr[i]);
-    if(max < arr[i]) max = arr[i];
+  Stack p1;
+  
+  for(int i = 0; i < 26; i++) {
+    p1.arr[i] = 97 + i;
   }
   
-  int start = 1, end = max;
+  scanf("%s", alpha);
+  alphaLength = strlen(alpha);
   
-  while(start <= end) {
-    int mid = (start + end) / 2;
-    long long int sum = 0;
-    
-    for(int i = 0; i < n; i++) {
-      if(arr[i] - mid > 0) sum = sum + arr[i] - mid;
+  for(int i = 0; i < alphaLength;) {
+    if(p1.top > -1 && alpha[i] == p1.arr[p1.topIndex]) {
+      p1.pop();
+      if(p1.top > -1) p1.topIndex--;
+      i++;
+      continue;
+    } else if(alpha[i] == p1.arr[cnt]) {
+      p1.push();
+      p1.pop();
+      i++;
+    } else {
+      p1.push();
+      p1.topIndex = cnt;
     }
-    
-    if(sum >= m) value = mid;
-    if(sum >= m) start = mid + 1;
-    else end = mid - 1;
+    if(cnt < alphaLength) cnt++;
+    else if(p1.arr[p1.topIndex] != alpha[i]) break;
   }
-  printf("%d", value);
-
+  
+  if(p1.top == -1) {
+    for(int i = 0; i < p1.cnt; i++) {
+      if(p1.numArr[i] == 1) printf("push\n");
+      else printf("pop\n");
+    }
+  } else {
+    printf("impossible");
+  }
+   
   return 0;
 }
 ```

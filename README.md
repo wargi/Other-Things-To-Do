@@ -116,4 +116,4 @@
 | | - | [Non-Duplicated Section](https://github.com/wargi/Etc/blob/master/Algorithm/Search/Question08.md) | 190430 |
 | | - | [Union of Section](https://github.com/wargi/Etc/blob/master/Algorithm/Search/Question09.md) | 190501 |
 | | Stack | [Stack](https://github.com/wargi/Etc/blob/master/Algorithm/Stack/Question01.md) | 190502 |
-| | - | [](https://github.com/wargi/Etc/blob/master/Algorithm/Stack/Question02.md) | 190503 |
+| | - | [Plate](https://github.com/wargi/Etc/blob/master/Algorithm/Stack/Question02.md) | 190503 |
