@@ -1,51 +1,132 @@
-# Quadratic Equation #
+# Stack #
 
 ## 1. 문제
-- 2차식 f(x) = x*x+ x 가 있고, 숫자 a가 주어진다.
-- 우리는 f(x) = a 를 만족하는 x의 값을 찾고 싶지만, 보통 이 값은 정수로 떨어지지 않는 경우가 많다.
-- 예를 들어, f(x) = 20 을 풀고자 한다면, x = 4이기 때문에 이는 정수이지만, f(x) = 103 을 풀고자 한다면 이는 x = 9.6612... 로써 정수가 아니다.
-- 이 문제에서는 x의 정수부분이 얼마인지를 구하는 프로그램을 작성하시오.
-- 예를 들어, f(x) = 103 을 풀고자 한다면, x = 9.6612... 이기 때문에 정수부분은 9가 된다.
+- 이 문제에서는 스택을 구현한다. 스택은 다음 세 개의 연산을 지원한다.
+  - Push X : 스택에 정수 X를 push한다. 만약 스택이 꽉 차서 push를 할 수 없다면, “Overflow”를 출력한다.
+  - Pop : 스택에서 정수 하나를 pop한다. 만약 스택이 비어있어서 pop을 할 수 없다면, “Underflow”를 출력한다.
+  - Top : 스택의 top에 있는 정수를 출력한다. 만약 스택이 비어있다면 “NULL”을 출력한다.
+
+- 크기가 n인 스택에 m개의 연산을 하는 프로그램을 작성하시오. 입력의 편의를 위해서 Push는 “1”, Pop은 “2”, Top은 “3”으로 표현한다.
 
 ## 2. 입력
-- 첫 번째 줄: 숫자 a가 주어진다. ( 1 ≤ a ≤ 1,000,000,000,000,000,000 )  
+
+- 첫째 줄: 스택의 크기 n, 연산의 개수 m이 주어진다. ( 1 <= n <= 100, 1 <= m <= 1,000 )
+- 두 번째 줄부터 연산이 주어진다.
+- 1은 Push, 2는 Pop, 3은 Top 연산을 의미한다.  
 
 ## 3. 출력
-- f(x) = a 를 만족하는 x의 정수부분을 출력한다.  
+- 연산의 결과를 출력한다.
 
 ## 4. 예제 입력
 ```
-103
+4 10
+1 1
+1 2
+1 3
+2
+3
+1 4
+1 5
+3
+1 6
+3
 ```
 
 ## 5. 예제 출력
 ```
-9
+2
+5
+Overflow
+5
 ```
 
-## 6. 코드
+## 6. 예제 입력
+
+```
+4 11
+1 1
+1 2
+1 4
+3
+2
+3
+2
+3
+2
+3
+2
+```
+
+## 7. 예제 출력
+
+```
+4
+2
+1
+NULL
+Underflow
+```
+
+## 8. 코드
 
 ```c++
 #include <stdio.h>
 
-int binarySearch(int start, int end, long long int value) {
-  if(start > end) return end;
-  else {
-    long long int mid = (start + end) / 2;
-    long long int sum = mid * mid + mid;
-    if(sum == value) return mid;
-    else if(sum > value) return binarySearch(start,mid-1,value);
-    else return binarySearch(mid+1,end,value);
+struct Stack {
+  int arr[100];
+  int len = 0;
+  int stackSize;
+  
+  void create(int size) {
+    stackSize = size;
   }
-}
+  
+  void push(int num) {
+    if(len >= stackSize) {
+      printf("Overflow\n");
+    }
+    else {
+      arr[len++] = num;
+    }
+  }
+  
+  void pop() {
+    if(len <= 0) {
+      printf("Underflow\n");
+    }
+    else {
+      arr[len--];
+    }
+  }
+  
+  void top() {
+    if(len <= 0) {
+      printf("NULL\n");
+    } else {
+      printf("%d\n", arr[len-1]);
+    }
+  }
+};
 
 int main() {
-  long long int n;
-  scanf("%lld", &n);
+  Stack s1;
+  int n, m;
   
-  int k = binarySearch(1,1000000000,n);
-  printf("%d", k);
+  scanf("%d %d", &n, &m);
+  s1.create(n);
   
+  for(int i = 0; i < m; i++) {
+    int s;
+    scanf("%d", &s);
+    
+    if(s == 1) {
+      int x;
+      scanf("%d", &x);
+      s1.push(x);
+    } else if(s == 2) s1.pop();
+      else s1.top();
+  }
+
   return 0;
 }
 ```
