@@ -117,3 +117,7 @@
 | | - | [Union of Section](https://github.com/wargi/Etc/blob/master/Algorithm/Search/Question09.md) | 190501 |
 | | Stack | [Stack](https://github.com/wargi/Etc/blob/master/Algorithm/Stack/Question01.md) | 190502 |
 | | - | [Plate](https://github.com/wargi/Etc/blob/master/Algorithm/Stack/Question02.md) | 190503 |
+| | - | [Parentheses](https://github.com/wargi/Etc/blob/master/Algorithm/Stack/Question03.md) | 190507 |
+| | - | [The Value in Parentheses](https://github.com/wargi/Etc/blob/master/Algorithm/Stack/Question04.md) | 190508 |
+| | - | [](https://github.com/wargi/Etc/blob/master/Algorithm/Stack/Question05.md) | 190509 |
+| | - | [](https://github.com/wargi/Etc/blob/master/Algorithm/Stack/Question06.md) | 190510 |
