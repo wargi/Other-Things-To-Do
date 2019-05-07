@@ -1,111 +1,169 @@
-# Plate #
+# The Value in Parentheses #
 
 ## 1. 문제
-- 접시가 a, b, c, d 가 있고, 알파벳 순으로 한쪽이 막혀 있는 세척기에 들어간다고 할 때, b a c d 순으로 꺼내기 위해서는 push, push, pop, pop, push, pop, push, pop을 하면 된다.
-- 세척기에서 꺼내는 순서가 주어질 때 그 동작을 출력하는 프로그램을 작성하시오.
-- 만약 주어진 순서대로 접시를 꺼낼 수 없다면 “impossible”을 출력한다.
+- 4개의 기호 ‘(’, ‘)’, ‘[’, ‘]’를 이용해서 만들어지는 괄호열 중에서 올바른 괄호열이란 다음과 같이 정의된다.
+- 한 쌍의 괄호로만 이루어진 ‘()’와 ‘[]’는 올바른 괄호열이다.
+- 만일 X가 올바른 괄호열이면 ‘(X)’이나 ‘[X]’도 모두 올바른 괄호열이 된다.
+- X와 Y 모두 올바른 괄호열이라면 이들을 결합한 XY도 올바른 괄호열이 된다.
+- 예를 들어 ‘(()[[]])’나 ‘(())[][]’ 는 올바른 괄호열이지만 ‘([)]’ 나 ‘(()()[]’ 은 모두 올바른 괄호열이 아니다.
+- 우리는 어떤 올바른 괄호열 X에 대하여 그 괄호열의 값(괄호값)을 아래와 같이 정의하고 값(X)로 표시한다.
+  1. ‘()’ 인 괄호열의 값은 2이다.
+  2. ‘[]’ 인 괄호열의 값은 3이다.
+  3. ‘(X)’ 의 괄호값은 2×값(X) 으로 계산된다.
+  4. ‘[X]’ 의 괄호값은 3×값(X) 으로 계산된다.
+  5. 올바른 괄호열 X와 Y가 결합된 XY의 괄호값은 값(XY)= 값(X)+값(Y) 로 계산된다.
+
+- 예를 들어 ‘(()[[]])([])’ 의 괄호값을 구해보자.
+- ‘()[[]]’ 의 괄호값이 2 + 3×3=11 이므로 ‘(()[[ ]])’의 괄호값은 2×11=22 이다.
+- 그리고 ‘([])’의 값은 2×3=6 이므로 전체 괄호열의 값은 22 + 6 = 28 이다.
+- 여러분이 풀어야 할 문제는 주어진 괄호열을 읽고 그 괄호값을 앞에서 정의한대로 계산하여 출력하는 것이다.
 
 ## 2. 입력
-- 첫째 줄: 소문자 알파벳이 주어진다.
-- 중복된 소문자 알파벳은 입력되지 않는다.
-- 알파벳 소문자는 26개이다.  
+
+- 첫째 줄: 괄호열을 나타내는 문자열(스트링)이 주어진다.
+- 단 그 길이는 1 이상, 30 이하이다.  
 
 ## 3. 출력
-- 접시를 꺼내는 것이 가능한 경우 push, pop의 순서를 출력한다.
-- 이것이 불가능하다면 impossible을 출력한다.  
+- 첫째 줄에 그 괄호열의 값을 나타내는 정수를 출력한다.
+- 만일 입력이 올바르지 못한 괄호열이면 반드시 0을 출력해야 한다.
 
 ## 4. 예제 입력
 ```
-bacd
+(()[[]])([])
 ```
 
 ## 5. 예제 출력
 ```
-push
-push
-pop
-pop
-push
-pop
-push
-pop
+28
 ```
 
-## 6. 예제 입력
-
-```
-dabc
-```
-
-## 7. 예제 출력
-
-```
-impossible
-```
-
-## 8. 코드
+## 6. 코드
 
 ```c++
 #include <stdio.h>
 #include <string.h>
 
+const int MAX = 100000;
+
 struct Stack {
-  char arr[27];
-  int top = -1;
-  int topIndex;
-  int numArr[10000], cnt = 0;
+  int data[MAX];
+  int capacity;
+  int top;
   
-  void push() {
-    numArr[cnt++] = 1;
-    top++;
+  void create(int size) {
+    capacity = size;
+    top = -1;
   }
   
-  char pop() {
-    numArr[cnt++] = 0;
+  void push(int c) {
+    if(capacity <= top) printf("Overflow");
+    else {
+      data[++top] = c;
+    }
+  }
+  
+  void pop() {
     top--;
+  }
+  
+  int peek() {
+    return data[top]; 
   }
 };
 
 int main() {
-  char alpha[29];
-  int alphaLength, cnt = 0;
+  char equal[100];
+  int equalArr[100];
+  int size, result = 0;
+  Stack s1;
   
-  Stack p1;
   
-  for(int i = 0; i < 26; i++) {
-    p1.arr[i] = 97 + i;
-  }
+  scanf("%s", equal);
+  s1.create(100);
+  size = strlen(equal);
   
-  scanf("%s", alpha);
-  alphaLength = strlen(alpha);
-  
-  for(int i = 0; i < alphaLength;) {
-    if(p1.top > -1 && alpha[i] == p1.arr[p1.topIndex]) {
-      p1.pop();
-      if(p1.top > -1) p1.topIndex--;
-      i++;
-      continue;
-    } else if(alpha[i] == p1.arr[cnt]) {
-      p1.push();
-      p1.pop();
-      i++;
+  for(int i = 0; i < size; i++) {
+    if(equal[i] == '(') {
+      equalArr[i] = -1;
+    } else if(equal[i] == '[') {
+      equalArr[i] = -11;
+    } else if(equal[i] == ')') {
+      equalArr[i] = -2;
     } else {
-      p1.push();
-      p1.topIndex = cnt;
+      equalArr[i] = -12;
     }
-    if(cnt < alphaLength) cnt++;
-    else if(p1.arr[p1.topIndex] != alpha[i]) break;
   }
   
-  if(p1.top == -1) {
-    for(int i = 0; i < p1.cnt; i++) {
-      if(p1.numArr[i] == 1) printf("push\n");
-      else printf("pop\n");
+  for(int i = 0; i < size; i++) {
+    if(equalArr[i] == -1 || equalArr[i] == -11) {
+      s1.push(equalArr[i]);
+    } else {
+      if(s1.top == -1) {
+        result = 0;
+        break;
+      } else if(equalArr[i] == -2) {
+        if(s1.peek() == -1) {
+          s1.pop();
+          s1.push(2);
+        } else {
+          if(s1.peek() == -11) {
+            result = 0;
+            break;
+          } else {
+            int val = 0;
+            while(s1.top > -1) {
+              if(s1.peek() == -1) {
+                val *= 2;
+                s1.pop();
+                s1.push(val);
+                break;
+              } else {
+                val += s1.peek();
+                s1.pop();
+              }
+            }
+          }
+        }
+      } else if(equalArr[i] == -12) {
+        if(s1.peek() == -11) {
+          s1.pop();
+          s1.push(3);
+        } else {
+          if(s1.peek() == -1) {
+            result = 0;
+            break;
+          } else {
+            int val = 0;
+            while(s1.top > -1) {
+              if(s1.peek() == -11) {
+                val *= 3;
+                s1.pop();
+                s1.push(val);
+                break;
+              } else {
+                val += s1.peek();
+                s1.pop();
+              }
+            }
+          }
+        }
+      }
     }
-  } else {
-    printf("impossible");
   }
-   
+  
+  while (s1.top > -1) {
+    if (s1.peek() == -11 || s1.peek() == -1 || s1.peek() == -12 || s1.peek() == -2) {
+      result = 0;
+      break;
+    } else {
+      result += s1.peek();
+    
+      s1.pop();
+    }
+  }
+  
+  printf("%d", result);
+
   return 0;
 }
 ```
