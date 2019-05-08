@@ -1,132 +1,95 @@
-# Stack #
+# Tower #
 
 ## 1. 문제
-- 이 문제에서는 스택을 구현한다. 스택은 다음 세 개의 연산을 지원한다.
-  - Push X : 스택에 정수 X를 push한다. 만약 스택이 꽉 차서 push를 할 수 없다면, “Overflow”를 출력한다.
-  - Pop : 스택에서 정수 하나를 pop한다. 만약 스택이 비어있어서 pop을 할 수 없다면, “Underflow”를 출력한다.
-  - Top : 스택의 top에 있는 정수를 출력한다. 만약 스택이 비어있다면 “NULL”을 출력한다.
-
-- 크기가 n인 스택에 m개의 연산을 하는 프로그램을 작성하시오. 입력의 편의를 위해서 Push는 “1”, Pop은 “2”, Top은 “3”으로 표현한다.
+- KOI 통신연구소는 레이저를 이용한 새로운 비밀 통신 시스템 개발을 위한 실험을 하고 있다.
+- 실험을 위하여 일직선 위에 N개의 높이가 서로 다른 탑을 수평 직선의 왼쪽부터 오른쪽 방향으로 차례로 세우고, 각 탑의 꼭대기에 레이저 송신기를 설치하였다.
+- 모든 탑의 레이저 송신기는 레이저 신호를 지표면과 평행하게 수평 직선의 왼쪽 방향으로 발사하고, 탑의 기둥 모두에는 레이저 신호를 수신하는 장치가 설치되어 있다.
+- 하나의 탑에서 발사된 레이저 신호는 가장 먼저 만나는 단 하나의 탑에서만 수신이 가능하다.
+- 예를 들어 높이가 6, 9, 5, 7, 4인 다섯 개의 탑이 수평 직선에 일렬로 서 있고, 모든 탑에서는 주어진 탑 순서의 반대 방향(왼쪽 방향)으로 동시에 레이저 신호를 발사한다고 하자.
+- 그러면, 높이가 4인 다섯 번째 탑에서 발사한 레이저 신호는 높이가 7인 네 번째 탑이 수신을 하고, 높이가 7인 네 번째 탑의 신호는 높이가 9인 두 번째 탑이, 높이가 5인 세 번째 탑의 신호도 높이가 9인 두 번째 탑이 수신을 한다.
+- 높이가 9인 두 번째 탑과 높이가 6인 첫 번째 탑이 보낸 레이저 신호는 어떤 탑에서도 수신을 하지 못한다.
+- 탑들의 개수 N과 탑들의 높이가 주어질 때, 각 각의 탑에서 발사한 레이저 신호를 어느 탑에서 수신하는지를 알아내는 프로그램을 작성하라.
 
 ## 2. 입력
 
-- 첫째 줄: 스택의 크기 n, 연산의 개수 m이 주어진다. ( 1 <= n <= 100, 1 <= m <= 1,000 )
-- 두 번째 줄부터 연산이 주어진다.
-- 1은 Push, 2는 Pop, 3은 Top 연산을 의미한다.  
+- 첫째 줄: 탑의 수를 나타내는 정수 N이 주어진다. (1 <= N <= 500000)
+- 둘째 줄: N개의 탑들의 높이가 직선상에 놓인 순서대로 하나의 빈칸을 사이에 두고 주어진다. (1 <= 높이 <= 100,000,000)
 
 ## 3. 출력
-- 연산의 결과를 출력한다.
+- 첫째 줄에 주어진 탑들의 순서대로 각각의 탑들에서 발사한 레이저 신호를 수신한 탑들의 번호를 하나의 빈칸을 사이에 두고 출력한다.
+- 만약 레이저 신호를 수신하는 탑이 존재하지 않으면 0을 출력한다.
 
 ## 4. 예제 입력
 ```
-4 10
-1 1
-1 2
-1 3
-2
-3
-1 4
-1 5
-3
-1 6
-3
+5
+6 9 5 7 4
 ```
 
 ## 5. 예제 출력
 ```
-2
-5
-Overflow
-5
+0 0 2 2 4
 ```
 
-## 6. 예제 입력
-
-```
-4 11
-1 1
-1 2
-1 4
-3
-2
-3
-2
-3
-2
-3
-2
-```
-
-## 7. 예제 출력
-
-```
-4
-2
-1
-NULL
-Underflow
-```
-
-## 8. 코드
+## 6. 코드
 
 ```c++
 #include <stdio.h>
 
+int arr[500000];
+int indexArr[500000];
+
 struct Stack {
-  int arr[100];
-  int len = 0;
-  int stackSize;
+  int top = -1;
   
-  void create(int size) {
-    stackSize = size;
-  }
-  
-  void push(int num) {
-    if(len >= stackSize) {
-      printf("Overflow\n");
-    }
-    else {
-      arr[len++] = num;
+  void push(int n) {
+    if (top == -1) {
+      indexArr[++top] = n;
+    } else if(arr[indexArr[top]] >= arr[n]) {
+      indexArr[++top] = n;
+    } else {
+      while(arr[indexArr[top]] < arr[n]) {
+        if(top == -1) break;
+        if(top == 0) {
+          arr[indexArr[top]] = -1;
+          pop();
+        } else {
+          arr[indexArr[top]] = indexArr[top-1];
+          pop();
+        }
+      }
+      indexArr[++top] = n;
     }
   }
   
   void pop() {
-    if(len <= 0) {
-      printf("Underflow\n");
-    }
-    else {
-      arr[len--];
-    }
+    top--;
   }
   
-  void top() {
-    if(len <= 0) {
-      printf("NULL\n");
+  int topNumber() {
+    if(top == -1) {
+      return -1;
     } else {
-      printf("%d\n", arr[len-1]);
+      return arr[top];
     }
   }
 };
 
 int main() {
-  Stack s1;
-  int n, m;
+  int n;
+  Stack p1;
+  scanf("%d", &n);
   
-  scanf("%d %d", &n, &m);
-  s1.create(n);
+  arr[n] = 100000001;
   
-  for(int i = 0; i < m; i++) {
-    int s;
-    scanf("%d", &s);
-    
-    if(s == 1) {
-      int x;
-      scanf("%d", &x);
-      s1.push(x);
-    } else if(s == 2) s1.pop();
-      else s1.top();
+  for(int i = 0; i <= n; i++) {
+    scanf("%d", &arr[i]);
+    p1.push(i);
   }
-
+  
+  for(int i = 0; i < n; i++) {
+    printf("%d ", arr[i] + 1);
+  }
+  
   return 0;
 }
 ```
