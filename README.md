@@ -120,4 +120,4 @@
 | | - | [Parentheses](https://github.com/wargi/Etc/blob/master/Algorithm/Stack/Question03.md) | 190507 |
 | | - | [The Value in Parentheses](https://github.com/wargi/Etc/blob/master/Algorithm/Stack/Question04.md) | 190508 |
 | | - | [Tower](https://github.com/wargi/Etc/blob/master/Algorithm/Stack/Question05.md) | 190509 |
-| | - | [](https://github.com/wargi/Etc/blob/master/Algorithm/Stack/Question06.md) | 190510 |
+| | - | [Largest Rectangle in The Histogram](https://github.com/wargi/Etc/blob/master/Algorithm/Stack/Question06.md) | 190510 |
