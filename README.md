@@ -4,7 +4,7 @@
 | Subject | Chapter | Title | Date |
 | :---: | :---: | :---: | :---: |
 | **네트워크** | ---------------- | -------------------------- | ----------------- |
-| | 1 | [네트워크 기초 지식](https://github.com/wargi/Etc/blob/master/Network/Chapter1.md) | 190225 |
+| | 1 | [네트워크 기초 지식](https://github.com/wargi/Etc/blob/master/Network/Chapter1.md) | 190515 |
 | | 2 | [신호의 전송과 충돌](https://github.com/wargi/Etc/blob/master/Network/Chapter2.md) | - |
 | | 3 | [IP 어드레싱](https://github.com/wargi/Etc/blob/master/Network/Chapter3.md) | - |
 | | 4 | [라우팅](https://github.com/wargi/Etc/blob/master/Network/Chapter4.md) | - |
@@ -121,3 +121,4 @@
 | | - | [The Value in Parentheses](https://github.com/wargi/Etc/blob/master/Algorithm/Stack/Question04.md) | 190508 |
 | | - | [Tower](https://github.com/wargi/Etc/blob/master/Algorithm/Stack/Question05.md) | 190509 |
 | | - | [Largest Rectangle in The Histogram](https://github.com/wargi/Etc/blob/master/Algorithm/Stack/Question06.md) | 190510 |
+| | Queue | [Queue](https://github.com/wargi/Etc/blob/master/Algorithm/Queue/Question01.md) | 190502 |
