@@ -121,4 +121,4 @@
 | | - | [The Value in Parentheses](https://github.com/wargi/Etc/blob/master/Algorithm/Stack/Question04.md) | 190508 |
 | | - | [Tower](https://github.com/wargi/Etc/blob/master/Algorithm/Stack/Question05.md) | 190509 |
 | | - | [Largest Rectangle in The Histogram](https://github.com/wargi/Etc/blob/master/Algorithm/Stack/Question06.md) | 190510 |
-| | Queue | [Queue](https://github.com/wargi/Etc/blob/master/Algorithm/Queue/Question01.md) | 190502 |
+| | Queue | [Queue](https://github.com/wargi/Etc/blob/master/Algorithm/Queue/Question01.md) | 190513 |
