@@ -33,94 +33,113 @@
 | | 10 | []() | - |
 | **알고리즘** | ---------------- | -------------------------- | ----------------- |
 | | Multiple Loops | [Triangle Output 1](https://github.com/wargi/Etc/blob/master/Algorithm/MultipleLoops/Question1.md) | 190215 |
-| | - | [Triangle Output 2](https://github.com/wargi/Etc/blob/master/Algorithm/MultipleLoops/Question2.md) | 190215 |
-| | - | [Triangle Output 3](https://github.com/wargi/Etc/blob/master/Algorithm/MultipleLoops/Question3.md) | 190218 |
+| | - | [Triangle Output 2](https://github.com/wargi/Etc/blob/master/Algorithm/MultipleLoops/Question2.md) | 190216 |
+| | - | [Triangle Output 3](https://github.com/wargi/Etc/blob/master/Algorithm/MultipleLoops/Question3.md) | 190217 |
 | | - | [Prime Number](https://github.com/wargi/Etc/blob/master/Algorithm/MultipleLoops/Question4.md) | 190218 |
 | | Arrays | [Output in Reverse](https://github.com/wargi/Etc/blob/master/Algorithm/Arrays/Question1.md) | 190219 |
-| | - | [Maximum Number](https://github.com/wargi/Etc/blob/master/Algorithm/Arrays/Question2.md) | 190219 |
-| | - | [Second Minimum Number](https://github.com/wargi/Etc/blob/master/Algorithm/Arrays/Question3.md) | 190220 |
-| | - | [Score Calculation](https://github.com/wargi/Etc/blob/master/Algorithm/Arrays/Question4.md) | 190220 |
-| | - | [Card Game](https://github.com/wargi/Etc/blob/master/Algorithm/Arrays/Question5.md) | 190221 |
-| | - | [Dice Game](https://github.com/wargi/Etc/blob/master/Algorithm/Arrays/Question6.md) | 190221 |
-| | - | [Number Pyramid](https://github.com/wargi/Etc/blob/master/Algorithm/Arrays/Question7.md) | 190222 |
-| | - | [Array 1](https://github.com/wargi/Etc/blob/master/Algorithm/Arrays/Question8.md) | 190222 |
-| | - | [Array 2](https://github.com/wargi/Etc/blob/master/Algorithm/Arrays/Question9.md) | 190225 |
-| | - | [Array 3](https://github.com/wargi/Etc/blob/master/Algorithm/Arrays/Question10.md) | 190225 |
-| | Brute Force | [Car](https://github.com/wargi/Etc/blob/master/Algorithm/BruteForce/Question1.md) | 190226 |
-| | - | [Offset](https://github.com/wargi/Etc/blob/master/Algorithm/BruteForce/Question2.md) | 190226 |
-| | - | [Verification Number](https://github.com/wargi/Etc/blob/master/Algorithm/BruteForce/Question3.md) | 190227 |
-| | - | [Box Coloring](https://github.com/wargi/Etc/blob/master/Algorithm/BruteForce/Question4.md) | 190227 |
-| | - | [GCD LCM](https://github.com/wargi/Etc/blob/master/Algorithm/BruteForce/Question5.md) | 190228 |
-| | - | [Eightnine](https://github.com/wargi/Etc/blob/master/Algorithm/BruteForce/Question6.md) | 190228 |
-| | - | [Flip The Matrix](https://github.com/wargi/Etc/blob/master/Algorithm/BruteForce/Question7.md) | 190304 |
-| | - | [Flip The Matrix 2](https://github.com/wargi/Etc/blob/master/Algorithm/BruteForce/Question8.md) | 190304 |
-| | - | [Max Of Array](https://github.com/wargi/Etc/blob/master/Algorithm/BruteForce/Question9.md) | 190305 |
-| | - | [Rook](https://github.com/wargi/Etc/blob/master/Algorithm/BruteForce/Question10.md) | 190305 |
-| | - | [Attack Range](https://github.com/wargi/Etc/blob/master/Algorithm/BruteForce/Question11.md) | 190306 |
-| | - | [Color Paper](https://github.com/wargi/Etc/blob/master/Algorithm/BruteForce/Question12.md) | 190306 |
-| | - | [Mine](https://github.com/wargi/Etc/blob/master/Algorithm/BruteForce/Question13.md) | 190307 |
-| | - | [Class President](https://github.com/wargi/Etc/blob/master/Algorithm/BruteForce/Question14.md) | 190307 |
-| | - | [A Representative Value](https://github.com/wargi/Etc/blob/master/Algorithm/BruteForce/Question15.md) | 190308 |
-| | - | [Bingo](https://github.com/wargi/Etc/blob/master/Algorithm/BruteForce/Question16.md) | 190308 |
-| | - | [Tetris](https://github.com/wargi/Etc/blob/master/Algorithm/BruteForce/Question17.md) | 190311 |
-| | - | [Seat](https://github.com/wargi/Etc/blob/master/Algorithm/BruteForce/Question18.md) | 190311 |
-| | - | [Baseball Game](https://github.com/wargi/Etc/blob/master/Algorithm/BruteForce/Question19.md) | 190312 |
-| | - | [Getting Permutations](https://github.com/wargi/Etc/blob/master/Algorithm/BruteForce/Question20.md) | 190411 |
-| | - | [Tobin](https://github.com/wargi/Etc/blob/master/Algorithm/BruteForce/Question21.md) | 190412 |
-| | - | [Division](https://github.com/wargi/Etc/blob/master/Algorithm/BruteForce/Question22.md) | 190415 |
-| | - | [Inequal](https://github.com/wargi/Etc/blob/master/Algorithm/BruteForce/Question23.md) | 190416 |
-| | Sort | [Selection Sort](https://github.com/wargi/Etc/blob/master/Algorithm/Sort/Question01.md) | 190312 |
-| | - | [Insertion Sort](https://github.com/wargi/Etc/blob/master/Algorithm/Sort/Question02.md) | 190313 |
-| | - | [Bubble Sort](https://github.com/wargi/Etc/blob/master/Algorithm/Sort/Question03.md) | 190313 |
-| | - | [Merge Sort](https://github.com/wargi/Etc/blob/master/Algorithm/Sort/Question04.md) | 190417 |
-| | - | [Quick Sort](https://github.com/wargi/Etc/blob/master/Algorithm/Sort/Question05.md) | 190418 |
-| | - | [Find The Kth Largest Number](https://github.com/wargi/Etc/blob/master/Algorithm/Sort/Question06.md) | 190314 |
-| | Basic Number Theory | [Next Number](https://github.com/wargi/Etc/blob/master/Algorithm/BasicNumberTheory/Question1.md) | 190314 |
-| | - | [Bee Hive](https://github.com/wargi/Etc/blob/master/Algorithm/BasicNumberTheory/Question2.md) | 190315 |
-| | - | [Fibonacci](https://github.com/wargi/Etc/blob/master/Algorithm/BasicNumberTheory/Question3.md) | 190315 |
-| | - | [PROSJEK](https://github.com/wargi/Etc/blob/master/Algorithm/BasicNumberTheory/Question4.md) | 190318 |
-| | - | [Sequence Sum](https://github.com/wargi/Etc/blob/master/Algorithm/BasicNumberTheory/Question5.md) | 190318 |
-| | - | [Combination Pascal](https://github.com/wargi/Etc/blob/master/Algorithm/BasicNumberTheory/Question6.md) | 190319 |
-| | - | [LCM](https://github.com/wargi/Etc/blob/master/Algorithm/BasicNumberTheory/Question7.md) | 190319 |
-| | - | [Stree Tree](https://github.com/wargi/Etc/blob/master/Algorithm/BasicNumberTheory/Question8.md) | 190320 |
-| | - | [Fraction Sum](https://github.com/wargi/Etc/blob/master/Algorithm/BasicNumberTheory/Question9.md) | 190320 |
-| | - | [Find Prime](https://github.com/wargi/Etc/blob/master/Algorithm/BasicNumberTheory/Question10.md) | 190321 |
-| | - | [Fmtt Alpha](https://github.com/wargi/Etc/blob/master/Algorithm/BasicNumberTheory/Question11.md) | 190321 |
-| | - | [P Factorization](https://github.com/wargi/Etc/blob/master/Algorithm/BasicNumberTheory/Question12.md) | 190322 |
-| | - | [Chebyshev Theorem](https://github.com/wargi/Etc/blob/master/Algorithm/BasicNumberTheory/Question13.md) | 190322 |
-| | String | [Calculator](https://github.com/wargi/Etc/blob/master/Algorithm/String/Question1.md) | 190325 |
-| | - | [Case Conversion](https://github.com/wargi/Etc/blob/master/Algorithm/String/Question2.md) | 190325 |
-| | - | [Spoil The Assignment](https://github.com/wargi/Etc/blob/master/Algorithm/String/Question3.md) | 190326 |
-| | - | [Flip The String](https://github.com/wargi/Etc/blob/master/Algorithm/String/Question4.md) | 190326 |
-| | - | [Sort Strings](https://github.com/wargi/Etc/blob/master/Algorithm/String/Question5.md) | 190327 |
-| | - | [Investigate String Containment Relationship](https://github.com/wargi/Etc/blob/master/Algorithm/String/Question6.md) | 190327 |
-| | - | [Palindrome Survey](https://github.com/wargi/Etc/blob/master/Algorithm/String/Question7.md) | 190328 |
-| | - | [String Compression](https://github.com/wargi/Etc/blob/master/Algorithm/String/Question8.md) | 190328 |
-| | - | [High Digit Plus](https://github.com/wargi/Etc/blob/master/Algorithm/String/Question9.md) | 190329 |
-| | - | [High Digit Minus](https://github.com/wargi/Etc/blob/master/Algorithm/String/Question10.md) | 190329 |
-| | - | [High Digit Multiple](https://github.com/wargi/Etc/blob/master/Algorithm/String/Question11.md) | 190401 |
-| | Recursive | [Exponentiation](https://github.com/wargi/Etc/blob/master/Algorithm/Recursive/Question01.md) | 190402 |
-| | - | [N to M](https://github.com/wargi/Etc/blob/master/Algorithm/Recursive/Question02.md) | 190403 |
-| | - | [Sum Of Each Digit](https://github.com/wargi/Etc/blob/master/Algorithm/Recursive/Question03.md) | 190404 |
-| | - | [Palindrome Survey](https://github.com/wargi/Etc/blob/master/Algorithm/Recursive/Question04.md) | 190405 |
-| | - | [Factorial](https://github.com/wargi/Etc/blob/master/Algorithm/Recursive/Question05.md) | 190408 |
-| | - | [Binary](https://github.com/wargi/Etc/blob/master/Algorithm/Recursive/Question06.md) | 190409 |
-| | - | [Mountain](https://github.com/wargi/Etc/blob/master/Algorithm/Recursive/Question07.md) | 190410 |
-| | Search | [Binary Search](https://github.com/wargi/Etc/blob/master/Algorithm/Search/Question01.md) | 190419 |
-| | - | [Number Box](https://github.com/wargi/Etc/blob/master/Algorithm/Search/Question02.md) | 190422 |
-| | - | [Number Count](https://github.com/wargi/Etc/blob/master/Algorithm/Search/Question03.md) | 190423 |
-| | - | [Two Solutions](https://github.com/wargi/Etc/blob/master/Algorithm/Search/Question04.md) | 190424 |
-| | - | [Quadratic Equation](https://github.com/wargi/Etc/blob/master/Algorithm/Search/Question05.md) | 190425 |
-| | - | [Tree Cutting](https://github.com/wargi/Etc/blob/master/Algorithm/Search/Question06.md) | 190426 |
-| | - | [NN Table](https://github.com/wargi/Etc/blob/master/Algorithm/Search/Question07.md) | 190429 |
-| | - | [Non-Duplicated Section](https://github.com/wargi/Etc/blob/master/Algorithm/Search/Question08.md) | 190430 |
-| | - | [Union of Section](https://github.com/wargi/Etc/blob/master/Algorithm/Search/Question09.md) | 190501 |
-| | Stack | [Stack](https://github.com/wargi/Etc/blob/master/Algorithm/Stack/Question01.md) | 190502 |
-| | - | [Plate](https://github.com/wargi/Etc/blob/master/Algorithm/Stack/Question02.md) | 190503 |
-| | - | [Parentheses](https://github.com/wargi/Etc/blob/master/Algorithm/Stack/Question03.md) | 190507 |
-| | - | [The Value in Parentheses](https://github.com/wargi/Etc/blob/master/Algorithm/Stack/Question04.md) | 190508 |
-| | - | [Tower](https://github.com/wargi/Etc/blob/master/Algorithm/Stack/Question05.md) | 190509 |
-| | - | [Largest Rectangle in The Histogram](https://github.com/wargi/Etc/blob/master/Algorithm/Stack/Question06.md) | 190510 |
-| | Queue | [Queue](https://github.com/wargi/Etc/blob/master/Algorithm/Queue/Question01.md) | 190513 |
-| | - | [Circular Queue](https://github.com/wargi/Etc/blob/master/Algorithm/Queue/Question02.md) | 190514 |
-| | Tree | [Tree Traversal](https://github.com/wargi/Etc/blob/master/Algorithm/Tree/Question01.md) | 190516 |
+| | - | [Maximum Number](https://github.com/wargi/Etc/blob/master/Algorithm/Arrays/Question2.md) | 190220 |
+| | - | [Second Minimum Number](https://github.com/wargi/Etc/blob/master/Algorithm/Arrays/Question3.md) | 190221 |
+| | - | [Score Calculation](https://github.com/wargi/Etc/blob/master/Algorithm/Arrays/Question4.md) | 190222 |
+| | - | [Card Game](https://github.com/wargi/Etc/blob/master/Algorithm/Arrays/Question5.md) | 190225 |
+| | - | [Dice Game](https://github.com/wargi/Etc/blob/master/Algorithm/Arrays/Question6.md) | 190226 |
+| | - | [Number Pyramid](https://github.com/wargi/Etc/blob/master/Algorithm/Arrays/Question7.md) | 190227 |
+| | - | [Array 1](https://github.com/wargi/Etc/blob/master/Algorithm/Arrays/Question8.md) | 190228 |
+| | - | [Array 2](https://github.com/wargi/Etc/blob/master/Algorithm/Arrays/Question9.md) | 190304 |
+| | - | [Array 3](https://github.com/wargi/Etc/blob/master/Algorithm/Arrays/Question10.md) | 190305 |
+| | Brute Force | [Car](https://github.com/wargi/Etc/blob/master/Algorithm/BruteForce/Question1.md) | 190306 |
+| | - | [Offset](https://github.com/wargi/Etc/blob/master/Algorithm/BruteForce/Question2.md) | 190307 |
+| | - | [Verification Number](https://github.com/wargi/Etc/blob/master/Algorithm/BruteForce/Question3.md) | 190308 |
+| | - | [Box Coloring](https://github.com/wargi/Etc/blob/master/Algorithm/BruteForce/Question4.md) | 190311 |
+| | - | [GCD LCM](https://github.com/wargi/Etc/blob/master/Algorithm/BruteForce/Question5.md) | 190312 |
+| | - | [Eightnine](https://github.com/wargi/Etc/blob/master/Algorithm/BruteForce/Question6.md) | 190313 |
+| | - | [Flip The Matrix](https://github.com/wargi/Etc/blob/master/Algorithm/BruteForce/Question7.md) | 190314 |
+| | - | [Flip The Matrix 2](https://github.com/wargi/Etc/blob/master/Algorithm/BruteForce/Question8.md) | 190315 |
+| | - | [Max Of Array](https://github.com/wargi/Etc/blob/master/Algorithm/BruteForce/Question9.md) | 190318 |
+| | - | [Rook](https://github.com/wargi/Etc/blob/master/Algorithm/BruteForce/Question10.md) | 190319 |
+| | - | [Attack Range](https://github.com/wargi/Etc/blob/master/Algorithm/BruteForce/Question11.md) | 190320 |
+| | - | [Color Paper](https://github.com/wargi/Etc/blob/master/Algorithm/BruteForce/Question12.md) | 190321 |
+| | - | [Mine](https://github.com/wargi/Etc/blob/master/Algorithm/BruteForce/Question13.md) | 190322 |
+| | - | [Class President](https://github.com/wargi/Etc/blob/master/Algorithm/BruteForce/Question14.md) | 190325 |
+| | - | [A Representative Value](https://github.com/wargi/Etc/blob/master/Algorithm/BruteForce/Question15.md) | 190326 |
+| | - | [Bingo](https://github.com/wargi/Etc/blob/master/Algorithm/BruteForce/Question16.md) | 190327 |
+| | - | [Tetris](https://github.com/wargi/Etc/blob/master/Algorithm/BruteForce/Question17.md) | 190328 |
+| | - | [Seat](https://github.com/wargi/Etc/blob/master/Algorithm/BruteForce/Question18.md) | 190329 |
+| | - | [Baseball Game](https://github.com/wargi/Etc/blob/master/Algorithm/BruteForce/Question19.md) | 190401 |
+| | - | [Getting Permutations](https://github.com/wargi/Etc/blob/master/Algorithm/BruteForce/Question20.md) | 190402 |
+| | - | [Tobin](https://github.com/wargi/Etc/blob/master/Algorithm/BruteForce/Question21.md) | 190403 |
+| | - | [Division](https://github.com/wargi/Etc/blob/master/Algorithm/BruteForce/Question22.md) | 190404 |
+| | - | [Inequal](https://github.com/wargi/Etc/blob/master/Algorithm/BruteForce/Question23.md) | 190405 |
+| | Sort | [Selection Sort](https://github.com/wargi/Etc/blob/master/Algorithm/Sort/Question01.md) | 190408 |
+| | - | [Insertion Sort](https://github.com/wargi/Etc/blob/master/Algorithm/Sort/Question02.md) | 190409 |
+| | - | [Bubble Sort](https://github.com/wargi/Etc/blob/master/Algorithm/Sort/Question03.md) | 190410 |
+| | - | [Merge Sort](https://github.com/wargi/Etc/blob/master/Algorithm/Sort/Question04.md) | 190411 |
+| | - | [Quick Sort](https://github.com/wargi/Etc/blob/master/Algorithm/Sort/Question05.md) | 190412 |
+| | - | [Find The Kth Largest Number](https://github.com/wargi/Etc/blob/master/Algorithm/Sort/Question06.md) | 190415 |
+| |  | [Find The Kth Largest Number](https://github.com/wargi/Etc/blob/master/Algorithm/Sort/Question06.md) |  |
+| | Basic Number Theory | [Next Number](https://github.com/wargi/Etc/blob/master/Algorithm/BasicNumberTheory/Question1.md) | 190416 |
+| | - | [Bee Hive](https://github.com/wargi/Etc/blob/master/Algorithm/BasicNumberTheory/Question2.md) | 190417 |
+| | - | [Fibonacci](https://github.com/wargi/Etc/blob/master/Algorithm/BasicNumberTheory/Question3.md) | 190418 |
+| | - | [PROSJEK](https://github.com/wargi/Etc/blob/master/Algorithm/BasicNumberTheory/Question4.md) | 190419 |
+| | - | [Sequence Sum](https://github.com/wargi/Etc/blob/master/Algorithm/BasicNumberTheory/Question5.md) | 190422 |
+| | - | [Combination Pascal](https://github.com/wargi/Etc/blob/master/Algorithm/BasicNumberTheory/Question6.md) | 190423 |
+| | - | [LCM](https://github.com/wargi/Etc/blob/master/Algorithm/BasicNumberTheory/Question7.md) | 190424 |
+| | - | [Stree Tree](https://github.com/wargi/Etc/blob/master/Algorithm/BasicNumberTheory/Question8.md) | 190425 |
+| | - | [Fraction Sum](https://github.com/wargi/Etc/blob/master/Algorithm/BasicNumberTheory/Question9.md) | 190426 |
+| | - | [Find Prime](https://github.com/wargi/Etc/blob/master/Algorithm/BasicNumberTheory/Question10.md) | 190429 |
+| | - | [Fmtt Alpha](https://github.com/wargi/Etc/blob/master/Algorithm/BasicNumberTheory/Question11.md) | 190430 |
+| | - | [P Factorization](https://github.com/wargi/Etc/blob/master/Algorithm/BasicNumberTheory/Question12.md) | 190501 |
+| | - | [Chebyshev Theorem](https://github.com/wargi/Etc/blob/master/Algorithm/BasicNumberTheory/Question13.md) | 190502 |
+| | String | [Calculator](https://github.com/wargi/Etc/blob/master/Algorithm/String/Question1.md) | 190503 |
+| | - | [Case Conversion](https://github.com/wargi/Etc/blob/master/Algorithm/String/Question2.md) | 190507 |
+| | - | [Spoil The Assignment](https://github.com/wargi/Etc/blob/master/Algorithm/String/Question3.md) | 190508 |
+| | - | [Flip The String](https://github.com/wargi/Etc/blob/master/Algorithm/String/Question4.md) | 190509 |
+| | - | [Sort Strings](https://github.com/wargi/Etc/blob/master/Algorithm/String/Question5.md) | 190510 |
+| | - | [Investigate String Containment Relationship](https://github.com/wargi/Etc/blob/master/Algorithm/String/Question6.md) | 190513 |
+| | - | [Palindrome Survey](https://github.com/wargi/Etc/blob/master/Algorithm/String/Question7.md) | 190514 |
+| | - | [String Compression](https://github.com/wargi/Etc/blob/master/Algorithm/String/Question8.md) | 190515 |
+| | - | [High Digit Plus](https://github.com/wargi/Etc/blob/master/Algorithm/String/Question9.md) | 190516 |
+| | - | [High Digit Minus](https://github.com/wargi/Etc/blob/master/Algorithm/String/Question10.md) | 190517 |
+| | - | [High Digit Multiple](https://github.com/wargi/Etc/blob/master/Algorithm/String/Question11.md) | 190520 |
+| | Recursive | [Exponentiation](https://github.com/wargi/Etc/blob/master/Algorithm/Recursive/Question01.md) | 190521 |
+| | - | [N to M](https://github.com/wargi/Etc/blob/master/Algorithm/Recursive/Question02.md) | 190522 |
+| | - | [Sum Of Each Digit](https://github.com/wargi/Etc/blob/master/Algorithm/Recursive/Question03.md) | 190523 |
+| | - | [Palindrome Survey](https://github.com/wargi/Etc/blob/master/Algorithm/Recursive/Question04.md) | 190524 |
+| | - | [Factorial](https://github.com/wargi/Etc/blob/master/Algorithm/Recursive/Question05.md) | 190527 |
+| | - | [Binary](https://github.com/wargi/Etc/blob/master/Algorithm/Recursive/Question06.md) | 190528 |
+| | - | [Mountain](https://github.com/wargi/Etc/blob/master/Algorithm/Recursive/Question07.md) | 190529 |
+| |  | [Mountain](https://github.com/wargi/Etc/blob/master/Algorithm/Recursive/Question07.md) |  |
+| |  | [Mountain](https://github.com/wargi/Etc/blob/master/Algorithm/Recursive/Question07.md) |  |
+| | Search | [Binary Search](https://github.com/wargi/Etc/blob/master/Algorithm/Search/Question01.md) | 190530 |
+| | - | [Number Box](https://github.com/wargi/Etc/blob/master/Algorithm/Search/Question02.md) | 190531 |
+| | - | [Number Count](https://github.com/wargi/Etc/blob/master/Algorithm/Search/Question03.md) | 190603 |
+| | - | [Two Solutions](https://github.com/wargi/Etc/blob/master/Algorithm/Search/Question04.md) | 190604 |
+| | - | [Quadratic Equation](https://github.com/wargi/Etc/blob/master/Algorithm/Search/Question05.md) | 190605 |
+| | - | [Tree Cutting](https://github.com/wargi/Etc/blob/master/Algorithm/Search/Question06.md) | 190606 |
+| | - | [NN Table](https://github.com/wargi/Etc/blob/master/Algorithm/Search/Question07.md) | 190607 |
+| | - | [Non-Duplicated Section](https://github.com/wargi/Etc/blob/master/Algorithm/Search/Question08.md) | 190610 |
+| | - | [Union of Section](https://github.com/wargi/Etc/blob/master/Algorithm/Search/Question09.md) | 190611 |
+| | Stack | [Stack](https://github.com/wargi/Etc/blob/master/Algorithm/Stack/Question01.md) | 190612 |
+| | - | [Plate](https://github.com/wargi/Etc/blob/master/Algorithm/Stack/Question02.md) | 190613 |
+| | - | [Parentheses](https://github.com/wargi/Etc/blob/master/Algorithm/Stack/Question03.md) | 190614 |
+| | - | [The Value in Parentheses](https://github.com/wargi/Etc/blob/master/Algorithm/Stack/Question04.md) | 190617 |
+| | - | [Tower](https://github.com/wargi/Etc/blob/master/Algorithm/Stack/Question05.md) | 190618 |
+| | - | [Largest Rectangle in The Histogram](https://github.com/wargi/Etc/blob/master/Algorithm/Stack/Question06.md) | 190619 |
+| | Queue | [Queue](https://github.com/wargi/Etc/blob/master/Algorithm/Queue/Question01.md) | 190620 |
+| | - | [Circular Queue](https://github.com/wargi/Etc/blob/master/Algorithm/Queue/Question02.md) | 190621 |
+| | - | [전염병](https://github.com/wargi/Etc/blob/master/Algorithm/Queue/Question03.md) | 190624 |
+| | Tree | [Tree Traversal](https://github.com/wargi/Etc/blob/master/Algorithm/Tree/Question01.md) | 190625 |
+| |  | [공통 조상 찾기](https://github.com/wargi/Etc/blob/master/Algorithm/Tree/Question02.md) | 190626 |
+| |  | [트리의 높이](https://github.com/wargi/Etc/blob/master/Algorithm/Tree/Question03.md) | 190627 |
+| |  | [트리에서의 거리](https://github.com/wargi/Etc/blob/master/Algorithm/Tree/Question04.md) | 190628 |
+| |  |  |  |
+| | Dynamic Programing | [Tree Traversal](https://github.com/wargi/Etc/blob/master/Algorithm/Tree/Question01.md) | 190625 |
+| |  | [Tree Traversal](https://github.com/wargi/Etc/blob/master/Algorithm/Tree/Question01.md) |  |
+| |  | [Tree Traversal](https://github.com/wargi/Etc/blob/master/Algorithm/Tree/Question01.md) |  |
+| |  |  |  |
+| |  |  |  |
+| |  |  |  |
+| |  |  |  |
+| |  |  |  |
+| |  |  |  |
+| |  |  |  |
+| |  |  |  |
