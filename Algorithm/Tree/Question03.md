@@ -1,35 +1,40 @@
 # 트리의 높이
 
 ## 1. 문제
-- 루트가 0인 이진트리가 주어질 때, 이를 전위순회, 중위순회, 후위순회한 결과를 각각 출력하는 프로그램을 작성하시오.
-- 아래 그림은 이진트리의 예제와, 이 이진트리를 전위순회, 중위순회, 후위순회 한 결과를 나타낸다.
+- 트리의 높이는 루트로부터 가장 멀리 떨어진 노드와의 거리로 정의된다.
+- 예를 들어, 아래의 트리에서 0번 노드가 루트라고 하면, 7번 노드까지의 거리가 가장 멀고, 그 거리는 3이다.
+- 따라서 이 트리의 높이는 3이 된다.
+
+![그림](./image/tree_height.png)
+
+- 트리가 주어질 때, 그 트리의 높이를 출력하는 프로그램을 작성하시오.
 
 ## 2. 입력
 
-- 첫 번째 줄: 트리의 노드 개수 n이 주어진다. ( 1 ≤ n ≤ 100 )
-- 두 번째 줄부터 트리의 정보가 주어진다.
-- 각 줄은 3개의 숫자 a, b, c로 이루어지며, 그 의미는 노드 a의 왼쪽 자식노드가 b, 오른쪽 자식노드가 c라는 뜻이다.
-- 자식노드가 존재하지 않을 경우에는 -1이 주어진다.
+- 첫 번째 줄에 트리의 노드 개수 n, 그리고 루트노드의 번호 r이 주어진다.
+- ( 1 ≤ n ≤ 100, 0 ≤ r ≤ n - 1 )
+- 두 번째 줄부터 트리의 간선 정보가 주어진다.
+- 각 줄은 2개의 숫자 a, b로 이루어지며, 이는 a번 노드와 b번 노드가 연결되어 있다는 뜻이다.
+- 각 노드의 번호는 0 ~ n-1까지 존재한다. 또한, 연결이 되지않은 노드는 없다. 
 
 ## 3. 출력
-- 첫 번째 줄에 전위순회, 두 번째 줄에 중위순회, 세 번째 줄에 후위순회를 한 결과를 출력한다.
+- 트리의 높이를 출력한다.
 
 ## 4. 예제 입력
 ```
-6
-0 1 2
-1 3 4
-2 -1 5
-3 -1 -1
-4 -1 -1
-5 -1 -1
+8 0
+0 1
+0 2
+1 3
+1 4
+1 5
+2 6
+6 7
 ```
 
 ## 5. 예제 출력
 ```
-0 1 3 4 2 5
-3 1 4 0 2 5
-3 4 1 5 2 0
+3
 ```
 
 ## 6. 코드
@@ -37,74 +42,45 @@
 ```c++
 #include <stdio.h>
 
-const int MAX = 100;
+const int MAX = 10000;
+int size, root;
+int max = -2141245125;
 
 struct Tree {
-  int left;
-  int right;
+  int connect[1000];
+  int count = 0;
+  int height;
+  int parent;
 };
 
-Tree tree[MAX];
+Tree t[1000];
 
-void preOrder(int x) {
-  if(tree[x].left == -1 && tree[x].right == -1) {
-    printf("%d ", x);
+void getTreetHeight(int n, int height) {
+  if (t[n].count == 0) {
+    return;
   }
-  else {
-    // root -> left -> right
-    printf("%d ", x);
-    if(tree[x].left != -1) preOrder(tree[x].left);
-    if(tree[x].right != -1) preOrder(tree[x].right);
-  }
-}
-
-void inOrder(int x) {
-  if(tree[x].left == -1 && tree[x].right == -1) printf("%d ", x);
-  else {
-    // left -> root -> right
-    if(tree[x].left != -1) inOrder(tree[x].left);
-    printf("%d ", x);
-    if(tree[x].right != -1) inOrder(tree[x].right);
-  }
-}
-
-void postOrder(int x) {
-  if(tree[x].left == -1 && tree[x].right == -1) printf("%d ", x);
-  else {
-    // left -> right -> root
-    if(tree[x].left != -1) postOrder(tree[x].left);
-    if(tree[x].right != -1) postOrder(tree[x].right);
-    printf("%d ", x);
+  
+  if(height > max) max = height;
+  for(int i = 0; i < t[n].count; i++) {
+    if (t[n].parent != t[n].connect[i]) {
+      t[t[n].connect[i]].parent = n;
+      getTreetHeight(t[n].connect[i], height + 1);
+    }
   }
 }
 
 int main() {
-  int n;
-  int pNode;
+  scanf("%d %d", &size, &root);
   
-  scanf("%d", &n);
-  
-  for(int i = 0; i < n; i++) {
-    int a, b, c;
-    scanf("%d %d %d", &a, &b, &c);
-    
-    if(i == 0) pNode = a;
-    
-    tree[a].left = b;
-    tree[a].right = c;
+  for(int i = 0; i < size - 1; i++) {
+    int left, right;
+    scanf("%d %d", &left, &right);
+    t[left].connect[t[left].count++] = right;
+    t[right].connect[t[right].count++] = left;
   }
+  if (size == 1) max = 0;
+  else getTreetHeight(root, 0);
   
-  // 전위순회
-  preOrder(pNode);
-  printf("\n");
-  
-  // 중위순회
-  inOrder(pNode);
-  printf("\n");
-  
-  // 후위순회
-  postOrder(pNode);
-  
-  return 0;
+  printf("%d", max);
 }
 ```
