@@ -1,30 +1,30 @@
 # Parentheses #
 
 ## 1. 문제
-- 괄호 문자열(Parenthesis String, PS)은 두 개의 괄호 기호인 ‘(’ 와 ‘)’ 만으로 구성되어 있는 문자열이다.
-- 그 중에서 괄호의 모양이 바르게 구성된 문자열을 올바른 괄호 문자열(Valid PS, VPS)이라고 부른다.
-- 한 쌍의 괄호 기호로 된 “( )” 문자열은 기본 VPS 이라고 부른다.
-- 만일 x 가 VPS 라면 이것을 하나의 괄호에 넣은 새로운 문자열 “(x)”도 VPS 가 된다.
-- 그리고 두 VPS x 와 y를 접합(concatenation)시킨 새로운 문자열 xy도 VPS 가 된다.
-- 예를 들어 “(())()”와 “((()))” 는 VPS 이지만 “(()(”, “(())()))” , 그리고 “(()” 는 모두 VPS 가 아닌 문자열이다.
-- 여러분은 입력으로 주어진 괄호 문자열이 VPS 인지 아닌지를 판단해서 그 결과를 YES 와 NO 로 나태내야 한다.
+- 철수네 마을에는 갑자기 전염병이 유행하기 시작하였다.
+- 이 전염병은 전염이 매우 강해서, 이웃한 마을끼리는 전염되는 것을 피할 수 없다.
+- 철수네 마을은 1번부터 N번까지 번호가 매겨져 있다. 
+- 철수네 마을의 구조는 꽤나 복잡한데, i번 마을에서 출발하면 i * 2 번 마을에 갈 수 있고, 또한 i / 3(i를 3으로 나눈 몫) 번째 마을에도 갈 수 있다.
+- 전염병은 사람에 의하여 옮는 것으로 알려져 있다.
+- 따라서 i번 마을에 전염병이 돌게 되면, i * 2 번 마을과 i / 3(i를 3으로 나눈 몫) 번 마을 역시 전염병이 돌게 된다.
+- K번 마을이 가장 처음으로 전염병이 돌기 시작했을 때, 전염병이 돌지 않는 마을의 개수를 구하는 프로그램을 작성하시오.
 
 ## 2. 입력
 
-- 첫째 줄: 괄호 문자열이 한 줄에 주어진다.
-- 하나의 괄호 문자열의 길이는 2 이상 50 이하이다.  
+- 첫째 줄에 전체 마을의 개수 N과, 처음으로 전염병이 돌기 시작한 마을 번호 K가 주어진다.
+- ( 1 ≤ N, K ≤ 100,000 )  
 
 ## 3. 출력
-- 만일 입력 괄호 문자열이 올바른 괄호 문자열(VPS)이면 “YES”, 아니면 “NO”를 한 줄에 하나씩 차례대로 출력해야 한다.
+- 전염병이 돌지 않는 마을의 개수를 출력한다.
 
 ## 4. 예제 입력
 ```
-(())())
+10 3
 ```
 
 ## 5. 예제 출력
 ```
-NO
+4
 ```
 
 ## 6. 코드
@@ -32,33 +32,37 @@ NO
 ```c++
 #include <stdio.h>
 
-struct Stack {
-  int n = 0;
-  void push() {
-    n++;
+const int MAX = 500000;
+
+void queue(int arr[], int start, int size) {
+  if (start >= size || arr[start] == 1) {
+    return;
+  } else if (start > 0) {
+    arr[start] = 1;
+    int mok = start / 3;
+    
+    queue(arr, start * 2, size);
+    queue(arr, mok, size);
+    return;
   }
-  
-  void pop() {
-    n--;
-  }
-};
+}
 
 int main() {
-  char ps[50];
-  Stack p;
+  int size, start, count = 0;
+  int arr[MAX];
   
-  scanf("%s", ps);
+  scanf("%d %d", &size, &start);
+
+  queue(arr, start, size + 1);
   
-  for(int i = 0; i < 50; i++) {
-    if(ps[i] == '(') p.push();
-    else if(ps[i] == ')') p.pop();
-    
-    if(p.n < 0) break;
+  for(int i = 1; i <= size; i++) {
+    if (arr[i] == 0) {
+      count++;
+    }
   }
   
-  if(p.n == 0) printf("YES");
-  else printf("NO");
-  
+  printf("%d", count);
+
   return 0;
 }
 ```
