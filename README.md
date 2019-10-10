@@ -75,7 +75,7 @@
 | | - | [Merge Sort](https://github.com/wargi/Etc/blob/master/Algorithm/Sort/Question04.md) | 190411 |
 | | - | [Quick Sort](https://github.com/wargi/Etc/blob/master/Algorithm/Sort/Question05.md) | 190412 |
 | | - | [Find The Kth Largest Number](https://github.com/wargi/Etc/blob/master/Algorithm/Sort/Question06.md) | 190415 |
-| |  | [Find The Kth Largest Number](https://github.com/wargi/Etc/blob/master/Algorithm/Sort/Question06.md) |  |
+| |  |  |  |
 | | Basic Number Theory | [Next Number](https://github.com/wargi/Etc/blob/master/Algorithm/BasicNumberTheory/Question1.md) | 190416 |
 | | - | [Bee Hive](https://github.com/wargi/Etc/blob/master/Algorithm/BasicNumberTheory/Question2.md) | 190417 |
 | | - | [Fibonacci](https://github.com/wargi/Etc/blob/master/Algorithm/BasicNumberTheory/Question3.md) | 190418 |
@@ -107,8 +107,8 @@
 | | - | [Factorial](https://github.com/wargi/Etc/blob/master/Algorithm/Recursive/Question05.md) | 190527 |
 | | - | [Binary](https://github.com/wargi/Etc/blob/master/Algorithm/Recursive/Question06.md) | 190528 |
 | | - | [Mountain](https://github.com/wargi/Etc/blob/master/Algorithm/Recursive/Question07.md) | 190529 |
-| |  | [Mountain](https://github.com/wargi/Etc/blob/master/Algorithm/Recursive/Question07.md) |  |
-| |  | [Mountain](https://github.com/wargi/Etc/blob/master/Algorithm/Recursive/Question07.md) |  |
+| |  |  |  |
+| |  |  |  |
 | | Search | [Binary Search](https://github.com/wargi/Etc/blob/master/Algorithm/Search/Question01.md) | 190530 |
 | | - | [Number Box](https://github.com/wargi/Etc/blob/master/Algorithm/Search/Question02.md) | 190531 |
 | | - | [Number Count](https://github.com/wargi/Etc/blob/master/Algorithm/Search/Question03.md) | 190603 |
@@ -131,7 +131,7 @@
 | |  | [공통 조상 찾기](https://github.com/wargi/Etc/blob/master/Algorithm/Tree/Question02.md) | 190626 |
 | |  | [트리의 높이](https://github.com/wargi/Etc/blob/master/Algorithm/Tree/Question03.md) | 190627 |
 | |  | [트리에서의 거리](https://github.com/wargi/Etc/blob/master/Algorithm/Tree/Question04.md) | 190628 |
-| | Dynamic Programing | [Tree Traversal](https://github.com/wargi/Etc/blob/master/Algorithm/Tree/Question01.md) | 190625 |
+| | Dynamic Programing | [Tree Traversal](https://github.com/wargi/Etc/blob/master/Algorithm/Tree/Question01.md) | 190629 |
 | |                     |                                                              |                   |
 |              |                     |                                                              |                   |
 |              |                     |                                                              |  |
