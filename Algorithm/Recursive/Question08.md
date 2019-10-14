@@ -1,39 +1,27 @@
-# Getting Permutations
+# 거듭 제곱 구하기 L
 
 ## 1. 문제
 
-- 서로 다른 n개의 원소들 중에서 r개만을 뽑아 일렬로 나열하는 것을 순열이라 한다.
-- 예를 들어, 3개의 원소 a, b, c 중에서 2개만을 뽑아 나열하면 ab, ac, ba, bc, ca, cb 의 6가지 경우가 있다.
-- n과 r이 주어질 때, n개의 소문자 중에서 r개만을 뽑아 나열하는 모든 경우를 출력하는 프로그램을 작성하시오.
-- 단, a부터 시작하여 연속으로 n개의 알파벳을 갖고 있다고 하자.  
+- n과 m이 주어질 때, n의 m승을 구하는 프로그램을 작성하시오.
+- 단, n의 m승의 값이 커질 수 있기 때문에, 정답을 10,007 으로 나눈 나머지를 출력한다.
 
 ## 2. 입력
-- 첫 번째 줄: n과 r이 주어진다. ( 1 ≤ n ≤ 10, 0 ≤ r ≤ min(n, 7) ) 
+- 첫 번째 줄에 숫자 n과 m이 주어진다.
+- ( 1 ≤ n ≤ 100, 1 ≤ m ≤ 1,000,000,000,000,000,000 )  
 
 ## 3. 출력
 
-- 각 줄에 n개의 소문자 중에서 r개만을 뽑아 나열하는 경우를 사전순으로 나열한 결과를 출력한다.
+- 첫째 줄에 n의 m승을 10,007 으로 나눈 나머지를 출력한다.
 
 
 ## 4. 예제 입력
 ```
-4 2
+3 4
 ```
 
 ## 5. 예제 출력
 ```
-ab
-ac
-ad
-ba
-bc
-bd
-ca
-cb
-cd
-da
-db
-dc
+81
 ```
 
 ## 6. 코드
@@ -41,30 +29,27 @@ dc
 ```c++
 #include <stdio.h>
 
-int n, r;
-char arr[20];
-bool boolArr[20];
-
-void getAlpha(int x) {
-  if(x >= r) {
-    printf("%s\n", arr);
+long long int pow(long long int n, long long int m) {
+  if (m == 1) return n;
+  long long int x = pow(n, m/2);
+  long long int temp;
+  
+  if ((m % 2) == 1) {
+    temp = n * x * x % 10007;
   } else {
-    for(int i = 0; i < n; i++) {
-      char alpha = i + 'a';
-      if(boolArr[i] == false) {
-        arr[x] = alpha;
-        boolArr[i] = true;
-        getAlpha(x+1);
-        boolArr[i] = false;
-        arr[x] = 0;
-      }
-    }
+    temp = x * x % 10007;
   }
+  
+  return temp;
 }
 
+
 int main() {
-  scanf("%d %d", &n, &r);
-  getAlpha(0);
+  long long int n;
+  long long int m;
+  
+  scanf("%lld %lld", &n, &m);
+  printf("%lld", pow(n, m));
   
   return 0;
 }
