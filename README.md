@@ -131,10 +131,10 @@
 | | - | [공통 조상 찾기](https://github.com/wargi/Etc/blob/master/Algorithm/Tree/Question02.md) | 190626 |
 | | - | [트리의 높이](https://github.com/wargi/Etc/blob/master/Algorithm/Tree/Question03.md) | 190627 |
 | | - | [트리에서의 거리](https://github.com/wargi/Etc/blob/master/Algorithm/Tree/Question04.md) | 190628 |
-| | Dynamic Programing | [연속부분 최대합](https://github.com/wargi/Etc/blob/master/Algorithm/DP/Question01.md) | 190704 |
-| | - | [숫자 만들기](https://github.com/wargi/Etc/blob/master/Algorithm/DP/Question02.md) | 190705 |
-|              |                     |                                                              |                   |
-|              |                     |                                                              |  |
+| | Dynamic Programing | [연속부분 최대합](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/DP/Question1.md) | 190704 |
+| | - | [숫자 만들기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/DP/Question2.md) | 190705 |
+|              | - | [직사각형의 합](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/DP/Question3.md) | 190708 |
+|              | - | [숫자 만들기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/DP/Question4.md) | 190709 |
 | |  |  |  |
 | |  |  |  |
 | |  |  |  |
