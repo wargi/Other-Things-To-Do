@@ -75,7 +75,7 @@
 | | - | [Merge Sort](https://github.com/wargi/Etc/blob/master/Algorithm/Sort/Question04.md) | 190411 |
 | | - | [Quick Sort](https://github.com/wargi/Etc/blob/master/Algorithm/Sort/Question05.md) | 190412 |
 | | - | [Find The Kth Largest Number](https://github.com/wargi/Etc/blob/master/Algorithm/Sort/Question06.md) | 190415 |
-| | - | [합병정렬 구현하기](https://github.com/wargi/Etc/blob/master/Algorithm/Sort/Question10.md) | 190701 |
+| | - | [합병정렬 구현하기](https://github.com/wargi/Etc/blob/master/Algorithm/Sort/Question07.md) | 190703 |
 | | Basic Number Theory | [Next Number](https://github.com/wargi/Etc/blob/master/Algorithm/BasicNumberTheory/Question1.md) | 190416 |
 | | - | [Bee Hive](https://github.com/wargi/Etc/blob/master/Algorithm/BasicNumberTheory/Question2.md) | 190417 |
 | | - | [Fibonacci](https://github.com/wargi/Etc/blob/master/Algorithm/BasicNumberTheory/Question3.md) | 190418 |
