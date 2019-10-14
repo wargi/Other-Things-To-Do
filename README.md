@@ -134,7 +134,7 @@
 | | Dynamic Programing | [연속부분 최대합](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/DP/Question1.md) | 190704 |
 | | - | [숫자 만들기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/DP/Question2.md) | 190705 |
 |              | - | [직사각형의 합](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/DP/Question3.md) | 190708 |
-|              | - | [숫자 만들기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/DP/Question4.md) | 190709 |
+|              | - | [구슬 게임](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/DP/Question4.md) |  |
 | |  |  |  |
 | |  |  |  |
 | |  |  |  |
