@@ -1,27 +1,52 @@
-# High Digit Plus
+# Good Seq
 
 ## 1. 문제
 
-- 두 자연수가 주어질 때 그들의 덧셈을 계산하는 프로그램을 작성하시오.
-- 각 수는 1 이상 10^100(10의 100 거듭제곱) 미만의 범위를 가진다. 
+- 숫자 1, 2, 3으로만 이루어지는 수열이 있다.
+
+- 임의의 길이의 인접한 두 개의 부분 수열이 동일한 것 이 있으면, 그 수열을 나쁜 수열이라고 부른다.
+
+- 그렇지 않은 수열은 좋은 수열이다.
+
+- 다음은 나쁜 수열의 예이다.
+
+  **33**
+
+  3**2121**323
+
+  **123123**213
+
+  다음은 좋은 수열의 예이다.
+
+  2
+
+  32
+
+  32123
+
+  1232123
+
+- 길이가 N인 좋은 수열들을 N자리의 정수로 보아 그중 가장 작은 수를 나타내는 수열을 구하는 프로그램 을 작성하라.
+
+- 예를 들면, 1213121과 2123212는 모두 좋은 수열이지만 그 중에서 작은 수를 나타내는 수 열 1213121이다.
 
 ## 2. 입력
-- 첫 번째 줄과 두 번째 줄에 각각 하나의 자연수가 주어진다.  
+- 입력은 숫자 N하나로 이루어진다. N은 1 이상 80 이하이다.
 
 ## 3. 출력
 
-- 첫 번째 줄에 덧셈의 결과를 출력한다.
+- 첫 번째 줄에 1, 2, 3으로만 이루어져 있는 길이가 N인 좋은 수열들 중에서 가장 작은 수를 나타내 는 수열만 출력한다.
+- 수열을 이루는 1, 2, 3들 사이에는 빈칸을 두지 않는다.
 
 
 ## 4. 예제 입력
 ```
-123112981293812938139
-1298928491101221811
+7
 ```
 
 ## 5. 예제 출력
 ```
-124411909784914159950
+1213121
 ```
 
 ## 6. 코드
@@ -30,30 +55,64 @@
 #include <stdio.h>
 #include <string.h>
 
+int n;
+int arr[100000];
+bool isPrint = false;
+
+bool goodseq(int size) {
+  int start = size - 1, end = size;
+  bool isSame = true;
+  
+  for(int i = 1; i <= size / 2; i++) {
+    int left[100], right[100], count = 0;
+    int leftValue = 0, rightValue = 0;
+    
+    for(int j = start - i; j < end - i; j++) {
+      left[count++] = arr[j];
+    }
+    
+    count = 0;
+    
+    for(int j = start; j < end; j++) {
+      right[count++] = arr[j];
+    }
+    
+    for(int j = 0; j < count; j++) {
+      leftValue = (10 * leftValue)  + left[j];
+      rightValue = (10 * rightValue) + right[j];
+    }
+    
+    if(leftValue == rightValue) return false;
+    start--;
+  }
+  return true;
+}
+
+void createGoodSeq(int idx) {
+  if (n == idx) {
+    isPrint = true;
+    return;
+  }
+  
+  for(int i = 1; i <= 3; i++) {
+    arr[idx] = i;
+    if(goodseq(idx+1)) {
+      createGoodSeq(idx+1);
+    }
+    if (isPrint) return;
+  }
+}
+
 int main() {
-  char a[100], b[100], c[100];
-  int aSize, bSize, sum = 0, cnt = 0, max;
-  scanf("%s %s", a, b);
-  aSize = strlen(a); bSize = strlen(b);
   
-  if(aSize >= bSize) max = aSize;
-  else max = bSize;
+  scanf("%d", &n);
   
-  c[aSize + 1] = '\0';
-  for(int i = 1; ; i++) {
-    if(max - i + 1 <= 0 && sum == 0) break;
-    if(aSize - i > -1 && bSize - i > -1) sum += int(a[aSize - i]) + int(b[bSize - i]) - 96;
-    else if(aSize - i > -1) sum += int(a[aSize - i]) - 48;
-    else if(bSize - i > -1) sum += int(b[bSize - i]) - 48;
-    c[i - 1] = 48 + (sum % 10);
-    sum = sum / 10;
-    cnt = i;
-  }
+  arr[0] = 1;
   
-  for(int i = 0; i < cnt; i++) {
-    printf("%c", c[cnt - i - 1]);
-  }
+  createGoodSeq(1);
   
+  for(int i = 0; i < n; i++) printf("%d", arr[i]);
+
   return 0;
 }
 ```
