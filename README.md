@@ -135,11 +135,11 @@
 | | - | [숫자 만들기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/DP/Question2.md) | 190705 |
 |              | - | [직사각형의 합](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/DP/Question3.md) | 190708 |
 |              | - | [구슬 게임](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/DP/Question4.md) | 190709 |
-| |  |  |  |
-| |  |  |  |
-| |  |  |  |
-| |  |  |  |
-| |  |  |  |
+| |  | [카드 놀이](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/DP/Question5.md) | 190710 |
+| |  | [버튼 누르기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/DP/Question6.md) | 190711 |
+| |  | [직사각형 배치의 경우의 수](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/DP/Question7.md) | 190712 |
+| |  | [제곱 수의 합](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/DP/Question8.md) | 190715 |
+| |  | [자원 채취](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/DP/Question9.md) | 190716 |
 | |  |  |  |
 | |  |  |  |
 | |  |  |  |
