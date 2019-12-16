@@ -1,96 +1,133 @@
-# 공통 조상 찾기
+# 2색 칠하기
 
 ## 1. 문제
-- 트리의 노드 X에 대하여 “조상"을 정의할 수 있다.
-- X의 “조상"이란, 루트까지 올라가는 중에 만나는 모든 노드를 말한다.
-- 예를 들어, 아래와 같이 트리가 주어질 경우, 노드 8의 “조상"은 노드 0, 노드 2, 노드 6이 된다.
+- 2색 칠하기란, 다음 두 조건을 만족하면서 그래프의 정점을 모두 색칠할 수 있는지 묻는 문제이다.
+- 2개의 색이 존재한다.
+- 인접한 두 정점은 색깔이 다르다.
+- 그래프가 주어질 때, 2색 칠하기가 가능한지 출력하는 프로그램을 작성하시오.
+- 예를 들어, 아래의 그래프는 2색 칠하기가 가능한 그래프이며, 정점을 색칠한 결과는 다음과 같다.
 
 ![그림](./image/tree_distance.png)
 
-- 두 노드 X, Y의 공통 조상이란, X와 Y가 공통으로 갖는 조상을 말한다.
-- 예를 들어, 노드 7과 노드 10의 공통조상은 노드 2, 노드 0이 된다.
-- 가장 가까운 공통 조상이란, X와 Y가 공통으로 갖는 조상들 중에서 X, Y와 가장 가까운 조상을 말한다.
-- 예를 들어, 노드 7과 노드 10의 가장 가까운 공통 조상은 노드 2가 된다.
-- 트리가 주어지고, 두 노드 X, Y가 주어질 때, 가장 가까운 공통 조상을 찾는 프로그램을 작성하시오.
-
 ## 2. 입력
 
-- 첫 번째 줄에 트리의 노드 개수 n, 두 노드 X, Y의 번호가 주어진다.
-- ( 1 ≤ X, Y ≤ n ≤ 1000 )
-- 두 번째 줄부터 트리의 간선 정보가 주어진다.
-- 각 줄은 2개의 숫자 a, b로 이루어지며, 이는 노드 a가 노드 b의 부모노드라는 것을 의미한다.
-- 루트는 노드 0이라고 가정한다.  
+- 첫째 줄에 정점의 개수 N과 간선의 개수 M이 주어진다. ( 1 ≤ N ≤ 10,000, 1 ≤ M ≤ 100,000 )
+- 둘째 줄부터 간선의 정보가 주어진다.
+- 각 줄은 두 개의 숫자 a, b로 이루어져 있으며, 이는 정점 a와 정점 b가 연결되어 있다는 의미이다.(0 ≤ a, b ≤ N-1)
 
 ## 3. 출력
-- 두 노드 X, Y의 공통 조상을 출력한다.
+- 주어진 그래프에 대하여 2색 칠하기를 할 수 있으면 YES, 할 수 없으면 NO를 출력한다.
 
 ## 4. 예제 입력
 ```
-11 7 10
+9 10
 0 1
 0 2
-1 3
-1 4
+0 3
 1 5
-2 6
-2 10
+2 5
+3 4
+5 6
+5 8
 6 7
-6 8
-6 9
+7 8
 ```
 
 ## 5. 예제 출력
 ```
-2
+YES
 ```
 
-## 6. 코드
+## 6. 예제 입력
+
+```
+9 11
+0 1
+0 2
+0 3
+1 5
+2 5
+3 4
+4 5
+5 6
+5 8
+6 7
+7 8
+```
+
+## 7. 예제 출력
+
+```
+NO
+```
+
+## 8. 코드
 
 ```c++
 #include <stdio.h>
+#include <iostream>
+#include <queue>
+#include <algorithm>
+#include <vector>
 
-const int MAX = 5000;
+using namespace std;
 
-int par[1111];
-int height[1111];
+const int MAX = 10000;
 
-int findh(int n){
-  int ret=0;
-  while(n!=par[n]){
-    n=par[n];
-    ret++;
+vector <int> arr[MAX];
+queue <int> graph;
+int check[MAX];
+bool result = true;
+int n, m;
+
+void BFS() {
+  
+  graph.push(0);
+  check[0] = 1;
+  
+  while(!graph.empty()) {
+    int current = graph.front();
+    graph.pop();
+    
+    for(int i = 0; i < arr[current].size(); i++) {
+      int y = arr[current][i];
+      
+      if(check[y] == 0) {
+        graph.push(y);
+        if (check[current] == 1) {
+          check[y] = 2;
+        } else {
+          check[y] = 1;
+        }
+      } else {
+        if(check[current] == check[y]) {
+          result = false;
+          break;
+        }
+      }
+    }
   }
-  return ret;
 }
 
-int main(){
-  int n, x, y;
-  scanf("%d %d %d",&n,&x,&y);
-  for(int i=0;i<n-1;i++){
-    int a,b;
-    scanf("%d %d",&a,&b);
-    par[b]=a;
-  }
-  par[0]=0;
-  for(int i=0;i<n;i++){
-    height[i] = findh(i);
+int main() {
+  scanf("%d %d", &n, &m);
+  
+  for(int i = 0; i < m; i++) {
+    int o, p;
+    scanf("%d %d", &o, &p);
+    
+    arr[o].push_back(p);
+    arr[p].push_back(o);
   }
   
-  if(height[x]>height[y]){
-    while(height[x]!=height[y]){
-      x=par[x];
-    }
-  }
-  else if(height[y]>height[x]){
-    while(height[x]!=height[y]){
-      y=par[y];
-    }
+  BFS();
+  
+  if (result) {
+    printf("YES");
+  } else {
+    printf("NO");
   }
   
-  while(x!=y){
-    x=par[x];
-    y=par[y];
-  }
-  printf("%d",x);
+  return 0;
 }
 ```
