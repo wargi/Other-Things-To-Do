@@ -144,8 +144,10 @@
 | | - | [두 문자열 사이의 거리](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/DP/Question11.md) | 190718 |
 | | - | [팰린드롬 만들기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/DP/Question12.md) | 190719 |
 | | DFS & BFS | [깊이 우선 탐색](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/DFS&BFS/Question01.md) | 190801 |
-| | - | [2색 칠하기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/DFS&BFS/Question02.md) | 190805 |
+| | DFS | [2색 칠하기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/DFS&BFS/Question02.md) | 190805 |
 | | - | [이분 그래프 판별](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/DFS&BFS/Question03.md) | 190809 |
 | | - | [웜 바이러스](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/DFS&BFS/Question04.md) | 190813 |
 | | - | [단지 번호 붙이기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/DFS&BFS/Question05.md) | 190815 |
+| | BFS | [너비 우선 탐색](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/DFS&BFS/Question06.md) | 190819 |
+| | - |  |  |
 
