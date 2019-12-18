@@ -43,61 +43,28 @@
 
 ```c++
 #include <stdio.h>
-#include <algorithm>
 #include <iostream>
+#include <algorithm>
 #include <vector>
-#include <queue>
 
 using namespace std;
 
-const int MAX = 60;
-bool visited[MAX][MAX];
+const int MAX = 100;
+
 int arr[MAX][MAX];
-int dx[4] = {-1, 1, 0, 0};
-int dy[4] = {0, 0, -1, 1};
-vector<int> visitedArr;
-queue<int> QueueX;
-queue<int> QueueY;
+bool visited[MAX][MAX];
+vector <int> bArr;
 int n, cnt = 0;
 
-void BFS() {
-  for(int i = 0; i < n; i++) {
-    for(int j = 0; j < n; j++) {
-      int current = arr[i][j];
-      
-      if(current == 1 && !visited[i][j]) {
-        QueueX.push(i);
-        QueueY.push(j);
-        visited[i][j] = true;
-        
-        while(!QueueX.empty()) {
-          cnt++;
-          
-          int currentX = QueueX.front();
-          int currentY = QueueY.front();
-          QueueX.pop();
-          QueueY.pop();
-          
-        for(int i=0; i<4; i++) {
-          int nx, ny;
-          nx = currentX + dx[i];
-          ny = currentY + dy[i];
-          
-          if(nx < n && nx > -1 && ny < n && ny > -1) {
-            if(arr[nx][ny] == 1 && !visited[nx][ny]) {
-              QueueX.push(nx);
-              QueueY.push(ny);
-              visited[nx][ny] = true;
-            }
-            }
-          }
-        }
-      }
-      if(cnt > 0) {
-        visitedArr.push_back(cnt);
-        cnt = 0;
-      }
-    }
+void DFS(int x, int y) {
+  if(!visited[x][y] && arr[x][y] == 1) {
+    cnt++;
+    visited[x][y] = true;
+    
+    if (x - 1 >= 0) { DFS(x-1, y); }
+    if (y - 1 >= 0) { DFS(x, y-1); }
+    if (x + 1 < n) { DFS(x+1, y); }
+    if (y + 1 < n) { DFS(x, y+1); }
   }
 }
 
@@ -110,14 +77,22 @@ int main() {
     }
   }
   
-  BFS();
+  for(int i = 0; i < n; i++) {
+    for(int j = 0; j < n; j++) {
+      DFS(i,j);
+      if (cnt > 0) {
+        bArr.push_back(cnt);
+        cnt = 0;
+      }
+    }
+  }
   
-  sort(visitedArr.begin(), visitedArr.end());
+  printf("%d\n", bArr.size());
   
-  printf("%d\n", visitedArr.size());
+  sort(bArr.begin(), bArr.end());
   
-  for(int i = 0; i < visitedArr.size(); i++) {
-    printf("%d\n", visitedArr[i]);
+  for(int i = 0; i < bArr.size(); i++) {
+    printf("%d\n", bArr[i]);
   }
 
   return 0;

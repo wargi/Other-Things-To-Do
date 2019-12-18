@@ -46,33 +46,24 @@
 #include <algorithm>
 #include <iostream>
 #include <vector>
-#include <queue>
 
 using namespace std;
 
 const int MAX = 1000;
-vector <int> arr[MAX];
-queue <int> Queue;
-bool visited[MAX];
-int n, m, cnt = 0;
 
-void BFS() {
+vector <int>arr[MAX];
+bool visited[MAX];
+int n, m, z = 0;
+
+void DFS(int x) {
   
-  Queue.push(1);
-  visited[1] = true;
+  visited[x] = true;
   
-  while(!Queue.empty()) {
-    int current = Queue.front();
-    Queue.pop();
-    cnt++;
+  for(int i = 0; i < arr[x].size(); i++) {
+    int y = arr[x][i];
     
-    for(int i = 0; i < arr[current].size(); i ++) {
-      int next = arr[current][i];
-      
-      if(!visited[next]) {
-        Queue.push(next);
-        visited[next] = true;
-      }
+    if(!visited[y]) {
+      DFS(y);
     }
   }
 }
@@ -90,12 +81,17 @@ int main() {
   
   for(int i = 1; i <= n; i++) {
     sort(arr[i].begin(), arr[i].end());
+    
   }
   
-  BFS();
+  DFS(1);
   
-  printf("%d", cnt - 1);
-
+  for(int i = 0; i <= n; i++) {
+    if(visited[i]) z++;
+  }
+  
+  printf("%d", z - 1);
+  
   return 0;
 }
 ```

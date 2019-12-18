@@ -54,43 +54,34 @@ No
 
 ```c++
 #include <stdio.h>
+#include <algorithm>
 #include <iostream>
 #include <vector>
-#include <algorithm>
-#include <queue>
 
 using namespace std;
 
-const int MAX = 1000;
+const int MAX = 10000;
 
 vector <int> arr[MAX];
-queue <int> Queue;
 int visited[MAX];
+bool check = true;
 int n, m;
 
-bool result = true;
-
-void BFS() {
-  Queue.push(1);
-  visited[1] = 1;
+void DFS(int x, int prev) {
+  if (prev == 1) {
+    visited[x] = 2;
+  } else {
+    visited[x] = 1;
+  }
   
-  while(!Queue.empty()) {
-    int current = Queue.front();
-    Queue.pop();
+  for(int i = 0; i < arr[x].size(); i++) {
+    int y = arr[x][i];
     
-    for(int i = 0; i < arr[current].size(); i++) {
-      int next = arr[current][i];
-      
-      if(visited[next] == 0) {
-        Queue.push(next);
-        
-        if(visited[current] == 1) {
-          visited[next] = 2;
-        } else {
-          visited[next] = 1;
-        }
-      } else if(visited[next] == visited[current]) {
-        result = false;
+    if(visited[y] == 0) {
+      DFS(y, visited[x]);
+    } else {
+      if(visited[x] == visited[y]) {
+        check = false;
         break;
       }
     }
@@ -112,14 +103,14 @@ int main() {
     sort(arr[i].begin(), arr[i].end());
   }
   
-  BFS();
+  DFS(1, 2);
 
-  if(result) {
+  if(check) {
     printf("Yes");
   } else {
     printf("No");
   }
-  
+
   return 0;
 }
 ```
