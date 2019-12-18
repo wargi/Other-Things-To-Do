@@ -7,7 +7,7 @@
 - 그래프가 주어질 때, 2색 칠하기가 가능한지 출력하는 프로그램을 작성하시오.
 - 예를 들어, 아래의 그래프는 2색 칠하기가 가능한 그래프이며, 정점을 색칠한 결과는 다음과 같다.
 
-![그림](/Users/sojeong/Project/Etc/Algorithm/DFS&BFS/Image/graph.png)
+![graph](https://user-images.githubusercontent.com/35207245/70919422-2eab0600-2064-11ea-832a-9be7aa572219.png)
 
 ## 2. 입력
 
