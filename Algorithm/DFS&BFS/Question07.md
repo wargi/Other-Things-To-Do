@@ -65,34 +65,45 @@ NO
 
 ```c++
 #include <stdio.h>
-#include <algorithm>
 #include <iostream>
+#include <queue>
+#include <algorithm>
 #include <vector>
 
 using namespace std;
 
-const int MAX = 10000000;
+const int MAX = 10000;
 
 vector <int> arr[MAX];
-int visited[MAX];
-bool check = true;
+queue <int> graph;
+int check[MAX];
+bool result = true;
 int n, m;
 
-void DFS(int x, int prev) {
-  if (prev == 1) {
-     visited[x] = 2;
-  } else {
-    visited[x] = 1;
-  }
+void BFS() {
   
-  for(int i = 0; i < arr[x].size(); i++) {
-    int y = arr[x][i];
-    if(visited[y] == 0) {
-      DFS(y, visited[x]);
-    } else {
-      if(visited[y] == visited[x]) {
-        check = false;
-        break;
+  graph.push(0);
+  check[0] = 1;
+  
+  while(!graph.empty()) {
+    int current = graph.front();
+    graph.pop();
+    
+    for(int i = 0; i < arr[current].size(); i++) {
+      int y = arr[current][i];
+      
+      if(check[y] == 0) {
+        graph.push(y);
+        if (check[current] == 1) {
+          check[y] = 2;
+        } else {
+          check[y] = 1;
+        }
+      } else {
+        if(check[current] == check[y]) {
+          result = false;
+          break;
+        }
       }
     }
   }
@@ -109,13 +120,9 @@ int main() {
     arr[p].push_back(o);
   }
   
-  for(int i = 0; i < n; i++) {
-    sort(arr[i].begin(), arr[i].end());
-  }
+  BFS();
   
-  DFS(0, 2);
-
-  if(check) {
+  if (result) {
     printf("YES");
   } else {
     printf("NO");
