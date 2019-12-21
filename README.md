@@ -152,6 +152,6 @@
 | | - | [2색 칠하기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/DFS&BFS/Question07.md) | 190822 |
 | | - | [이분 그래프 판별](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/DFS&BFS/Question08.md) | 190827 |
 | | - | [웜 바이러스](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/DFS&BFS/Question09.md) | 190830 |
-| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/DFS&BFS/Question10.md) | 190902 |
+| | - | [미로 찾기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/DFS&BFS/Question10.md) | 190902 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/DFS&BFS/Question11.md) | 190906 |
 

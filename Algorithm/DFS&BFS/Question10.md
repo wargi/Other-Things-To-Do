@@ -5,7 +5,7 @@
 - 이 때, (N-1, 0) 에서 출발하여 (0, M-1) 까지 도착하는 최단거리를 출력하는 프로그램을 작성하시오.
 - 아래 그림에 대하여 S에서 E까지 가는 최단거리는 22이다.
 
-![tree_height](https://user-images.githubusercontent.com/35207245/71095133-701bec80-21ef-11ea-8b38-7fe8c550cc4a.png)
+![미로](https://user-images.githubusercontent.com/35207245/71300626-debc9e00-23d9-11ea-9e64-4be7ea7c7757.png)
 
 ## 2. 입력
 
@@ -39,5 +39,58 @@
 ## 6. 코드
 
 ```c++
+#include <stdio.h>
+#include <algorithm>
+#include <iostream>
+#include <queue>
+#include <vector>
 
+using namespace std;
+
+const int MAX = 1100;
+queue <int> queueX;
+queue <int> queueY;
+int visited[MAX][MAX];
+int arr[MAX][MAX];
+int n, m;
+int nextXArr[4] = {0, 0, 1, -1};
+int nextYArr[4] = {1, -1, 0, 0};
+
+int main() {
+  scanf("%d %d", &n, &m);
+  for(int i = 0; i < n; i++) {
+    for(int j = 0; j < m; j++) {
+      scanf("%d", &arr[i][j]);
+    }
+  }
+
+  queueX.push(n-1);
+  queueY.push(0);
+  visited[n-1][0] = 1;
+
+  while(!queueX.empty()) {
+    int currentX = queueX.front();
+    int currentY = queueY.front();
+    queueX.pop();
+    queueY.pop();
+    
+
+    for(int i = 0; i < 4; i++) {
+      int nx = currentX + nextXArr[i];
+      int ny = currentY + nextYArr[i];
+      
+      if(nx > -1 && nx < n && ny > -1 && ny < m) {
+        if(visited[nx][ny] == 0 && arr[nx][ny] == 0) {
+          queueX.push(nx);
+          queueY.push(ny);
+          visited[nx][ny] = visited[currentX][currentY] + 1;
+        }
+      }
+    }
+
+  }
+  printf("%d", visited[0][m-1] - 1);
+
+  return 0;
+}
 ```
