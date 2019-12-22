@@ -33,5 +33,49 @@
 ## 6. 코드
 
 ```c++
+#include <stdio.h>
+#include <algorithm>
+#include <iostream>
+#include <queue>
 
+using namespace std;
+
+const int MAX = 2100000;
+bool visited[MAX];
+queue <int> group;
+queue <int> qu;
+int value, result, current = 0;
+
+int main() {
+  scanf("%d", &value);
+  
+  qu.push(1);
+  group.push(0);
+  visited[1] = true;
+  
+  while(current != value) {
+    current = qu.front();
+    result = group.front();
+    qu.pop();
+    group.pop();
+    
+    int div = current / 3;
+    int mul = current * 2;
+    
+    if(mul <= 199998 && !visited[mul]) {
+      qu.push(mul);
+      group.push(result + 1);
+       visited[mul] = true;
+    }
+    if(div > 0 && !visited[div]) {
+      qu.push(div);
+      group.push(result + 1);
+       visited[div] = true;
+    }
+  }
+  
+  printf("%d", result);
+
+  return 0;
+}
 ```
