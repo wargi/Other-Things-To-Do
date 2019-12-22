@@ -154,6 +154,6 @@
 | | - | [웜 바이러스](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/DFS&BFS/Question09.md) | 190830 |
 | | - | [미로 찾기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/DFS&BFS/Question10.md) | 190902 |
 | | - | [단지 번호 붙이기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/DFS&BFS/Question11.md) | 190906 |
-| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/DFS&BFS/Question12.md) | 190910 |
-| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/DFS&BFS/Question13.md) | 190912 |
+| | - | [이상한 계산기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/DFS&BFS/Question12.md) | 190910 |
+| | - | [전염병](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/DFS&BFS/Question13.md) | 190912 |
 

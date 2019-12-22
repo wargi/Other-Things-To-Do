@@ -29,5 +29,46 @@
 ## 6. 코드
 
 ```c++
+#include <stdio.h>
+#include <iostream>
+#include <algorithm>
+#include <queue>
+#include <vector>
 
+using namespace std;
+
+const int MAX = 100001;
+queue <int> Queue;
+bool visited[MAX];
+int n, m, cnt = 0;
+
+int main() {
+  scanf("%d %d", &n, &m);
+  
+  Queue.push(m);
+  visited[m] = true;
+  
+  while(!Queue.empty()) {
+    cnt++;
+    int current = Queue.front();
+    Queue.pop();
+    
+    int mul = current * 2;
+    int div = current / 3;
+    
+    if(mul <= n && !visited[mul]) {
+      Queue.push(mul);
+      visited[mul] = true;
+    }
+    
+    if (div >= 1 && !visited[div]) {
+      Queue.push(div);
+      visited[div] = true;
+    }
+  }
+
+  printf("%d", n - cnt);
+  
+  return 0;
+}
 ```
