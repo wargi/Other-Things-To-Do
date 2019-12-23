@@ -64,5 +64,82 @@
 ## 8. 코드
 
 ```c++
+#include <stdio.h>
+#include <algorithm>
+#include <iostream>
+#include <queue>
+#include <vector>
 
+using namespace std;
+
+
+const int MAX = 1100;
+
+queue <int> queueX;
+queue <int> queueY;
+queue <bool> isBreak;
+int visited[MAX][MAX];
+bool check[MAX][MAX];
+bool bCheck[MAX][MAX];
+int map[MAX][MAX];
+int nextXArr[4] = {1, 0, -1, 0};
+int nextYArr[4] = {0, -1, 0, 1};
+int n, m;
+
+int main() {
+  scanf("%d %d", &n, &m);
+  
+  for(int i = 0; i < n; i++) {
+    for(int j = 0; j < m; j++) {
+      scanf("%d", &map[i][j]);
+    }
+  }
+  
+  queueX.push(n-1);
+  queueY.push(0);
+  check[n-1][0] = true;
+  isBreak.push(false);
+  visited[n-1][0] = 1;
+  
+  while(!visited[0][m-1]) {
+    int currentX = queueX.front();
+    int currentY = queueY.front();
+    int currentBreak = isBreak.front();
+    queueX.pop();
+    queueY.pop();
+    isBreak.pop();
+    
+    for(int i = 0; i < 4; i++) {
+      int nx = currentX + nextXArr[i];
+      int ny = currentY + nextYArr[i];
+      if(nx > -1 && nx < n && ny > -1 && ny < m) {
+        if(currentBreak) {
+          if(!check[nx][ny] && !bCheck[nx][ny] && map[nx][ny] == 0) {
+            queueX.push(nx);
+            queueY.push(ny);
+            isBreak.push(true);
+            visited[nx][ny] = visited[currentX][currentY] + 1;
+            bCheck[nx][ny] = true;
+          }
+        } else {
+          if(!check[nx][ny]) {
+            if(map[nx][ny]) {
+              isBreak.push(true);
+            } else {
+              isBreak.push(false);
+            }
+            queueX.push(nx);
+            queueY.push(ny);
+            visited[nx][ny] = visited[currentX][currentY] + 1;
+            check[nx][ny] = true;
+          }
+        }
+      }
+    }
+  }
+  
+  printf("%d", visited[0][m-1] - 1);
+
+  return 0;
+}
 ```
