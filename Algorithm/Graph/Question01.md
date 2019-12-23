@@ -45,5 +45,61 @@
 ## 6. 코드
 
 ```c++
+#include <stdio.h>
+#include <vector>
+#include <algorithm>
 
+using namespace std;
+
+const int MAX = 11000000;
+
+vector <int>graph[MAX];
+bool check[MAX];
+int table[MAX];
+int n, m, start, end2;
+
+int main() {
+  scanf("%d %d", &n, &m);
+  
+  for(int i = 0; i < m; i++) {
+    int a, b;
+    scanf("%d %d", &a, &b);
+    
+    graph[a].push_back(b);
+    graph[b].push_back(a);
+  }
+  
+  scanf("%d %d", &start, &end2);
+  
+  for(int i = 0; i < n; i++) {
+    table[i] = 9999999;
+    sort(graph[i].begin(), graph[i].end());
+  }
+  
+  table[start] = 0;
+  
+  for(int i = 0; i < n; i++) {
+    int minValue = 9999999, minIndex = -1;
+    
+    for(int j = 0; j < n; j++) {
+      if(!check[j] && minValue > table[j]) {
+        minValue = table[j];
+        minIndex = j;
+      }
+    }
+    
+    check[minIndex] = true;
+    
+    for(int j = 0; j < graph[minIndex].size(); j++) {
+      int node2 = graph[minIndex][j];
+      if(table[node2] > table[minIndex] + 1) {
+        table[node2] = table[minIndex] + 1;
+      }
+    }
+  }
+  
+  printf("%d", table[end2]);
+  
+  return 0;
+}
 ```
