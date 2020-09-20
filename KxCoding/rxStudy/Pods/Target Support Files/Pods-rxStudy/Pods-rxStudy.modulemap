@@ -1,6 +1,0 @@
-framework module Pods_rxStudy {
-  umbrella header "Pods-rxStudy-umbrella.h"
-
-  export *
-  module * { export * }
-}

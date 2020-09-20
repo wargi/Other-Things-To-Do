@@ -9,17 +9,6 @@
 | | 3 | [IP 어드레싱](https://github.com/wargi/Etc/blob/master/Network/Chapter3.md) | - |
 | | 4 | [라우팅](https://github.com/wargi/Etc/blob/master/Network/Chapter4.md) | - |
 | | 5 | [커넥션과 포트 번호](https://github.com/wargi/Etc/blob/master/Network/Chapter5.md) | - |
-| **자료구조** | ---------------- | -------------------------- | ----------------- |
-| | 1 | []() | - |
-| | 2 | []() | - |
-| | 3 | []() | - |
-| | 4 | []() | - |
-| | 5 | []() | - |
-| | 6 | []() | - |
-| | 7 | []() | - |
-| | 8 | []() | - |
-| | 9 | []() | - |
-| | 10 | []() | - |
 | **운영체제** | ---------------- | -------------------------- | ----------------- |
 | | 1 | []() | - |
 | | 2 | []() | - |
@@ -160,4 +149,6 @@
 | | Graph | [최단 거리](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/Graph/Question01.md) | 190919 |
 | | - | [특정 최단 거리](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/Graph/Question02.md) | 190924 |
 | | - | [파티](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/Graph/Question03.md) | 190927 |
+| 알고리즘 | ---------------- | 2020년 | ----------------- |
+|  | 기본기 | [Find the tail](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/기본기/Question1.md) |  |
 
