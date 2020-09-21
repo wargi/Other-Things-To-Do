@@ -151,4 +151,6 @@
 | | - | [파티](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/Graph/Question03.md) | 190927 |
 | 알고리즘 | ---------------- | 2020년 | ----------------- |
 |  | 기본기 | [Find the tail](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/기본기/Question1.md) |  |
+|  | - | [문자의 수](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/기본기/Question2.md) |  |
+|  |  |  |  |
 
