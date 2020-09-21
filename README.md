@@ -150,7 +150,8 @@
 | | - | [특정 최단 거리](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/Graph/Question02.md) | 190924 |
 | | - | [파티](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/Graph/Question03.md) | 190927 |
 | 알고리즘 | ---------------- | 2020년 | ----------------- |
-|  | 기본기 | [Find the tail](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/기본기/Question1.md) |  |
-|  | - | [문자의 수](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/기본기/Question2.md) |  |
-|  |  |  |  |
+|  | 기본기 | [Find the tail](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/기본기/Question1.md) | 200915 |
+|  | - | [문자의 수](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/기본기/Question2.md) | 200915 |
+|  |  | [문장에 'A' 추가하기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/기본기/Question3.md) | 200916 |
+|  |  | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/기본기/Question4.md) | 200916 |
 
