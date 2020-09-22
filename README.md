@@ -152,6 +152,6 @@
 | 알고리즘 | ---------------- | 2020년 | ----------------- |
 |  | 기본기 | [Find the tail](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/기본기/Question1.md) | 200915 |
 |  | - | [문자의 수](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/기본기/Question2.md) | 200915 |
-|  |  | [문장에 'A' 추가하기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/기본기/Question3.md) | 200916 |
-|  |  | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/기본기/Question4.md) | 200916 |
+|  | - | [문장에 'A' 추가하기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/기본기/Question3.md) | 200916 |
+|  | - | [두 배열의 합](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/기본기/Question4.md) | 200916 |
 
