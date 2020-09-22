@@ -1,55 +1,49 @@
-# GCD LCM #
+# 문자 제거하기 #
 
 ## 1. 문제
-- 두 개의 자연수를 입력받아 최대공약수(GCD)와 최소공배수(LCM)를 출력하는 프로그램을 작성하시오.  
+- 믄장 하나와 인덱스를 하나 입력받고 해당하는 문자를 제거한 후에 출력해주세요.
 
 ## 2. 입력
-- 첫째 줄: 두 개의 자연수가 주어진다.
-- 이 둘은 10,000 이하의 자연수이며 사이에 한 칸의 공백이 주어진다.
+- 첫째 줄: 한 개의 문장이 주어진다.
+- 둘째 줄: 지울 인덱스의 번호가 주어진다.
 
 ## 3. 출력
-- 첫째 줄에는 입력으로 주어진 두 수의 최대공약수를, 둘째 줄에는 입력으로 주어진 두 수의 최소공배수를 출력한다.
+- 해당하는 인덱스를 삭제 후에 결과 값 출력.
 
 ## 4. 예제 입력
 ```
-24 18
+hello!swift
+5
 ```
 
 ## 5. 예제 출력
 ```
-6
-72
+helloswift
 ```
 
 ## 6. 코드
 ```c++
-#include <stdio.h>
+#include <iostream>
+using namespace std;
 
-int main() {
+int main()
+{
+    char someStr[11];
+    int n, cnt = 0;
 
-  int a, b, i, cntGCD, cntLCM;
-  
-  scanf("%d %d", &a, &b);
-  
-  for(i = 1; i <= a; i++ ) {
-    if (a % i == 0 && b % i == 0) {
-      cntGCD = i;
+    cin >> someStr >> n;
+
+    for (int i = 0; i < 11; i++) {
+        if (someStr[i] == '\0') break;
+        cnt++;
     }
-  }
-  
-  i = 1;
-  while(true) {
-    
-    if((a * i) % b == 0) {
-      i = a * i;
-      break;
-    }
-    i++;
-  }
-  
-  printf("%d\n", cntGCD);
-  printf("%d", i);
 
-  return 0;
+    char temp;
+
+    for (int i = n; i < cnt; i++) {
+        someStr[i] = someStr[i+1];
+    }
+
+    cout << someStr;
 }
 ```
