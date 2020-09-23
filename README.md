@@ -156,4 +156,6 @@
 |  | - | [두 배열의 합](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/기본기/Question4.md) | 200922 |
 | | - | [문자 제거하기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/기본기/Question5.md) | 200922 |
 | | - | [배열의 합 구하기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/기본기/Question6.md) | 200922 |
+| | - | [문장에 'W' 찾기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/기본기/Question7.md) | 200923 |
+| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/기본기/Question8.md) | 200923 |
 
