@@ -1,126 +1,91 @@
-# Rook #
+# 배열의 좌표 찾기 #
 
 ## 1. 문제
-- 체스에서 룩이라는 기물은 막혀있지만 않으면 룩의 위치에서 같은 행, 같은 열에 해당하는 칸 중 하나로 한 번 이동할 수 있다.
-
-- 단, 특정 칸이 막혀있다면 그 칸에서부터 더 나아갈 수는 없다.
-
-- 만약 룩이 아래 그림과 같이 5행 4열에 존재하고 같은 행열에 기물이 없다면 5행이나 4열에 존재하는 칸 중 어디로든 갈 수 있다.
-
-- 예를 들어, 5행 2열 혹은 1행 4열로 움직일 수 있다. 
-
-- 차례에 주어진 이동 횟수는 한 번이므로 이동이 완료되었다면 상대방의 차례로 넘어간다.
-
-  ![alt text](./image/rook.jpg)
-
-- 체스는 킹만 잡히면 지게 되는 게임이다.
-
-- 그 중에서도 알랩이는 룩으로 인해 게임을 지는 것을 극도로 싫어한다!
-
-- 현재 차례가 상대의 차례일 때, 주어진 체스판의 상태에서 알랩이의 킹이 상대방의 룩에게 잡힐 가능성이 있는지 알아보자.
+- 6개의 숫자를 입력받고, 2 x 3 사이즈의 배열을 채워주세요.
+- 그리고, 배열의 값 중에 max값의 좌표와 min값의 좌표를 리턴해주세요.
 
 ## 2. 입력
-- 8줄에 걸쳐 8x8 체스판의 상태가 주어진다.
-- 이때 0은 기물이 없는 상태이고, 1은 알랩이의 킹을 의미하고, 2는 상대의 룩을 의미하며 3은 그 외 다른 기물들을 의미한다.
-- 킹은 하나만 존재하며, 상대의 룩은 최대 2개까지 있을 수 있다.
-- 그 외 기물들은 최대 29개까지 있을 수 있다.
+- 6개의 숫자를 입력받는다.
 
 ## 3. 출력
-- 킹이 룩에게 잡힐 가능성이 있으면 1, 아니면 0을 출력한다.
+- 첫째 줄: max값의 좌표를 출력
+- 둘째 줄: min값의 좌표를 출력
 
 ## 4. 예제 입력
 ```
-0 3 0 0 0 0 0 0
-3 1 0 0 0 0 2 0
-0 3 0 0 0 0 0 0
-0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0
+1 2 3 4 5 6
 ```
 
 ## 5. 예제 출력
 ```
-1
+(1,2)
+(0,0)
 ```
 
 ## 6. 예제 입력
 
 ```
-0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0
-0 3 3 0 0 0 0 0
-3 0 1 0 3 0 2 0
-0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0
+2 4 9 1 6 5
 ```
 
 ## 7. 예제 출력
 
 ```
-0
+(0,2)
+(1,0)
 ```
 
 ## 8. 코드
 
 ```c++
-#include <stdio.h>
+#include <iostream>
+using namespace std;
 
-int main() {
-  int kingX, kingY, cnt = 0, i, j;
-  int numArr[9][9];
-  
-  for(i = 0; i < 8; i++) {
-    for(j = 0; j < 8; j++) {
-      scanf("%d", &numArr[i][j]);
-      if (1 == numArr[i][j]) {
-        kingX = i;
-        kingY = j;
-      }
+int arr[2][3];
+
+void getMax(int* dy, int* dx) {
+    int max = arr[*dy][*dx];
+
+    for (int i = 0; i < 2; i++) {
+        for (int j = 0; j < 3; j++) {
+            if (max < arr[i][j]) {
+                *dx = j;
+                *dy = i;
+                max = arr[i][j];
+            }
+        }
     }
-  }
-  //top
-  for(i = kingX - 1; i >= 0; i --) {
-    if (numArr[i][kingY] == 3) {
-      break;
-    } else if (numArr[i][kingY] == 2) {
-      cnt = 1;
-      break;
+}
+
+void getMin(int* dy, int* dx) {
+    int min = arr[*dy][*dx];
+
+    for (int i = 0; i < 2; i++) {
+        for (int j = 0; j < 3; j++) {
+            if (min > arr[i][j]) {
+                *dx = j;
+                *dy = i;
+                min = arr[i][j];
+            }
+        }
     }
-  }
-  //bottom
-  for(i = kingX + 1; i < 9; i ++) {
-    if (numArr[i][kingY] == 3 && cnt == 0) {
-      break;
-    } else if (numArr[i][kingY] == 2) {
-      cnt = 1;
-      break;
+}
+
+int main()
+{
+    for (int i = 0; i < 2; i++) {
+        for (int j = 0; j < 3; j++) {
+            cin >> arr[i][j];
+        }
     }
-  }
-  //left
-  for(i = kingY - 1; i >= 0; i --) {
-    if (numArr[kingX][i] == 3 && cnt == 0) {
-      break;
-    } else if (numArr[kingX][i] == 2) {
-      cnt = 1;
-      break;
-    }
-  }
-  //bottom
-  for(i = kingY + 1; i < 9; i ++) {
-    if (numArr[kingX][i] == 3 && cnt == 0) {
-      break;
-    } else if (numArr[kingX][i] == 2) {
-      cnt = 1;
-      break;
-    }
-  }
-  
-  printf("%d", cnt);
-  
-  return 0;
+
+    int minX = 0, minY = 0;
+    int maxX = 0, maxY = 0;
+     
+    getMax(&maxY, &maxX);
+    getMin(&minY, &minX);
+
+    cout << "(" << maxY << "," << maxX << ")" << "\n";
+    cout << "(" << minY << "," << minX << ")";
 }
 ```
