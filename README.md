@@ -160,4 +160,6 @@
 | | - | [2중 for문](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/기본기/Question8.md) | 200923 |
 | | - | [알파벳 찾기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/기본기/Question9.md) | 200924 |
 | | - | [배열의 좌표 찾기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/기본기/Question10.md) | 200924 |
+| | - | [배열의 곱 구하기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/기본기/Question11.md) | 200925 |
+| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/기본기/Question12.md) | 200925 |
 
