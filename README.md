@@ -165,5 +165,5 @@
 | | - | [문장에서 인덱스 찾기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/기본기/Question13.md) | 200926 |
 | | - | [배열 색칠하기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/기본기/Question14.md) | 200926 |
 | | - | [두 개의 문자 찾기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/기본기/Question15.md) | 200927 |
-| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/기본기/Question16.md) | 200927 |
+| | - | [3중 for](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/기본기/Question16.md) | 200927 |
 
