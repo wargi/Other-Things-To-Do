@@ -163,5 +163,5 @@
 | | - | [배열의 곱 구하기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/기본기/Question11.md) | 200925 |
 | | - | [글자 바꾸기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/기본기/Question12.md) | 200925 |
 | | - | [문장에서 인덱스 찾기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/기본기/Question13.md) | 200926 |
-| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/기본기/Question14.md) | 200926 |
+| | - | [배열 색칠하기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/기본기/Question14.md) | 200926 |
 
