@@ -167,5 +167,5 @@
 | | - | [두 개의 문자 찾기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/기본기/Question15.md) | 200927 |
 | | - | [3중 for](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/기본기/Question16.md) | 200927 |
 | | - | [해당 인덱스부터 숫자 찾기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/기본기/Question17.md) | 200928 |
-| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/기본기/Question18.md) | 200928 |
+| | - | [마스킹 된 부분의 합 구하기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/기본기/Question18.md) | 200928 |
 
