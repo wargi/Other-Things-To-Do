@@ -1,71 +1,76 @@
-# Getting Permutations
+# 배열에서 숫자 찾기
 
 ## 1. 문제
 
-- 서로 다른 n개의 원소들 중에서 r개만을 뽑아 일렬로 나열하는 것을 순열이라 한다.
-- 예를 들어, 3개의 원소 a, b, c 중에서 2개만을 뽑아 나열하면 ab, ac, ba, bc, ca, cb 의 6가지 경우가 있다.
-- n과 r이 주어질 때, n개의 소문자 중에서 r개만을 뽑아 나열하는 모든 경우를 출력하는 프로그램을 작성하시오.
-- 단, a부터 시작하여 연속으로 n개의 알파벳을 갖고 있다고 하자.  
+```
+아래의 2차원 배열(3x3)을 하드코딩 해주세요.
+3 5 9
+4 2 1
+5 1 5
+```
+
+
+
+- 숫자 세 개를 각 각 입력받아주세요.
+- 세 개의 입력받은 숫자가 위의 2차원 배열에 존재하는지 출력해주세요.
 
 ## 2. 입력
-- 첫 번째 줄: n과 r이 주어진다. ( 1 ≤ n ≤ 10, 0 ≤ r ≤ min(n, 7) ) 
+- 첫 번째 줄: 숫자 세 개를 각 각 입력받아주세요.
 
 ## 3. 출력
 
-- 각 줄에 n개의 소문자 중에서 r개만을 뽑아 나열하는 경우를 사전순으로 나열한 결과를 출력한다.
+- 입력받은 숫자가 배열에 존재하는지를 출력해주세요.
 
 
 ## 4. 예제 입력
 ```
-4 2
+1 2 7
 ```
 
 ## 5. 예제 출력
 ```
-ab
-ac
-ad
-ba
-bc
-bd
-ca
-cb
-cd
-da
-db
-dc
+1:존재
+2:존재
+7:미발견
 ```
 
 ## 6. 코드
 
 ```c++
-#include <stdio.h>
+#include <iostream>
+using namespace std;
 
-int n, r;
-char arr[20];
-bool boolArr[20];
+int arr[3][3] = {
+    3, 5, 9,
+    4, 2, 1,
+    5, 1, 5
+};
 
-void getAlpha(int x) {
-  if(x >= r) {
-    printf("%s\n", arr);
-  } else {
-    for(int i = 0; i < n; i++) {
-      char alpha = i + 'a';
-      if(boolArr[i] == false) {
-        arr[x] = alpha;
-        boolArr[i] = true;
-        getAlpha(x+1);
-        boolArr[i] = false;
-        arr[x] = 0;
-      }
+void isExist(int n) {
+    bool flag = false;
+    for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < 3; j++) {
+            if (arr[i][j] == n) flag = true;
+        }
     }
-  }
+
+    if (flag) cout << n << ":존재";
+    else cout << n << ":미발견";
 }
 
-int main() {
-  scanf("%d %d", &n, &r);
-  getAlpha(0);
-  
-  return 0;
+int main()
+{
+    int n, m, o;
+
+    cin >> n >> m >> o;
+
+    isExist(n);
+    cout << "\n";
+    
+    isExist(m);
+    cout << "\n";
+    
+    isExist(o);
+    cout << "\n";
 }
 ```

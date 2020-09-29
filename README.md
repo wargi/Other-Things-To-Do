@@ -169,5 +169,7 @@
 | | - | [해당 인덱스부터 숫자 찾기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/기본기/Question17.md) | 200927 |
 | | - | [마스킹 된 부분의 합 구하기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/기본기/Question18.md) | 200928 |
 | | - | [2차원 배열 위치 찾기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/기본기/Question19.md) | 200929 |
-| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/기본기/Question20.md) | 200929 |
+| | - | [배열에서 숫자 찾기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/기본기/Question20.md) | 200929 |
+| | Basic 2 | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/기본기/Question21.md) | 200930 |
+| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/기본기/Question22.md) | 200930 |
 
