@@ -166,6 +166,8 @@
 | | - | [배열 색칠하기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/기본기/Question14.md) | 200926 |
 | | - | [두 개의 문자 찾기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/기본기/Question15.md) | 200927 |
 | | - | [3중 for](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/기본기/Question16.md) | 200927 |
-| | - | [해당 인덱스부터 숫자 찾기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/기본기/Question17.md) | 200928 |
+| | - | [해당 인덱스부터 숫자 찾기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/기본기/Question17.md) | 200927 |
 | | - | [마스킹 된 부분의 합 구하기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/기본기/Question18.md) | 200928 |
+| | - | [2차원 배열 위치 찾기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/기본기/Question19.md) | 200929 |
+| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/기본기/Question20.md) | 200929 |
 
