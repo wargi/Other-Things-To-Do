@@ -9,17 +9,6 @@
 | | 3 | [IP 어드레싱](https://github.com/wargi/Etc/blob/master/Network/Chapter3.md) | - |
 | | 4 | [라우팅](https://github.com/wargi/Etc/blob/master/Network/Chapter4.md) | - |
 | | 5 | [커넥션과 포트 번호](https://github.com/wargi/Etc/blob/master/Network/Chapter5.md) | - |
-| **운영체제** | ---------------- | -------------------------- | ----------------- |
-| | 1 | []() | - |
-| | 2 | []() | - |
-| | 3 | []() | - |
-| | 4 | []() | - |
-| | 5 | []() | - |
-| | 6 | []() | - |
-| | 7 | []() | - |
-| | 8 | []() | - |
-| | 9 | []() | - |
-| | 10 | []() | - |
 | **알고리즘** | ---------------- | -------------------------- | ----------------- |
 | | Multiple Loops | [Triangle Output 1](https://github.com/wargi/Etc/blob/master/Algorithm/MultipleLoops/Question1.md) | 190215 |
 | | - | [Triangle Output 2](https://github.com/wargi/Etc/blob/master/Algorithm/MultipleLoops/Question2.md) | 190216 |
@@ -170,6 +159,6 @@
 | | - | [마스킹 된 부분의 합 구하기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/기본기/Question18.md) | 200928 |
 | | - | [2차원 배열 위치 찾기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/기본기/Question19.md) | 200929 |
 | | - | [배열에서 숫자 찾기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/기본기/Question20.md) | 200929 |
-| | Basic 2 | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/기본기/Question21.md) | 200930 |
-| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/기본기/Question22.md) | 200930 |
+| | Basic 2 | [마스크 배열의 비어있는 곳 찾기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/기본기/Question21.md) | 200930 |
+| | - | [마스킹 처리 후 값 찾기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/기본기/Question22.md) | 200930 |
 
