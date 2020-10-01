@@ -161,4 +161,6 @@
 | | - | [배열에서 숫자 찾기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/기본기/Question20.md) | 200929 |
 | | Basic 2 | [마스크 배열의 비어있는 곳 찾기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/기본기/Question21.md) | 200930 |
 | | - | [마스킹 처리 후 값 찾기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/기본기/Question22.md) | 200930 |
+| | - | [알파뱃의 총 개수 찾기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/기본기/Question23.md) | 201001 |
+| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic/Question1.md) | 201001 |
 
