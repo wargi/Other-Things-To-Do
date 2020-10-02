@@ -163,4 +163,6 @@
 | | - | [마스킹 처리 후 값 찾기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/기본기/Question22.md) | 200930 |
 | | - | [알파뱃의 총 개수 찾기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/기본기/Question23.md) | 201001 |
 | | - | [인기투표](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic/Question1.md) | 201001 |
+| | - | [7로 바꾸어 출력하기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic/Question2.md) | 201002 |
+| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic/Question3.md) | 201002 |
 

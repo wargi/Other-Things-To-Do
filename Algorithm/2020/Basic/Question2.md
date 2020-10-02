@@ -1,28 +1,27 @@
-# 문자의 수
+# 7로 바꾸어 출력하기
 
 ## 1. 문제
-- 4x4 2차원 배열이 주어질 때 문자 2개를 입력받아 각각 입력받은 문자가 몇 개인지 출력하는 프로그램을 작성하시오.
+```
+아래의 배열을 하드코딩 해주세요.
+3 5 4 2 6 6 5
+```
+
+- 마스킹 배열을 입력받고, 마스킹된 부분은 7로 아닌 부분은 0으로 출력하기.
 
 ## 2. 입력
-- 4x4 행렬의 정보가 16 개의 문자로 주어진다.
-- 그 후, 문자 2개를 입력받는다.
-- 각 문자는 A 에서 Z 사이 이다.
+- 1차원 배열(1x7)을 입력 받는다.
 
 ## 3. 출력
-- 입력받은 문자들의 개 수를 출력한다.
+- 마스킹된 부분을 7로 바꾸어 출력한다.
 
 ## 4. 예제 입력
 ```
-ABKT
-KFCF
-BBQQ
-TPZF
-B F
+0 1 1 0 1 1 0
 ```
 
 ## 5. 예제 출력
 ```
-6
+0770770
 ```
 
 ## 6. 코드
@@ -30,29 +29,20 @@ B F
 #include <iostream>
 using namespace std;
 
-char arr[4][5];
-
-int getCount(char n) {
-    int cnt = 0;
-
-    for (int i = 0; i < 4; i++) {
-        for (int j = 0; j < 4; j++) if (arr[i][j] == n) cnt++;
-    }
-
-    return cnt;
-}
+int vect[7] = { 3, 5, 4, 2, 6, 6, 5 };
 
 int main()
 {
-  	for(int i = 0; i < 4; i++) {
-      for(int j = 0; j < 4; j++) {
-        cin >> arr[i][j];
-      }
-    }
-  
-    char n, m;
-    cin >> n >> m;
+    int bit[7];
+    
 
-    cout << getCount(n) + getCount(m);
+    for (int i = 0; i < 7; i++) {
+        cin >> bit[i];
+    }
+
+    for (int i = 0; i < 7; i++) {
+        if (bit[i] == 1) cout << "7";
+        else cout << "0";
+    }
 }
 ```
