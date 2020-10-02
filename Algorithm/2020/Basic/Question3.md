@@ -1,24 +1,23 @@
-# 문장에 'A' 추가하기 #
+# 비밀번호 맞추기 #
 
 ## 1. 문제
-- 문장과 인덱스를 입력받고 해당하는 인덱스에 'A'를 추가해주세요.
+- 숫자로 된 1차원 배열(1x4)에 비밀번호 '1665'가 저장되어 있습니다.
+- 1차원 배열(1x4)를 입력받고 비밀번호가 일치하면 "pass", 아니라면 "fail"을 출력해주세요.
 
 ## 2. 입력
-- 첫째 줄: 문장이 주어진다.
-- 둘째 줄: 삽입할 인덱스 번호가 주어진다.
+- 첫째 줄: 1차원 배열(1x4)를 입력받는다.
 
 ## 3. 출력
-- 해당 인덱스 위치에 삽입한 문자열을 출력
+- 비밀번호가 일치하면 "pass", 아니라면 "fail"을 출력해주세요.
 
 ## 4. 예제 입력
 ```
-show
-2
+1 6 6 5
 ```
 
 ## 5. 예제 출력
 ```
-shAow
+pass
 ```
 
 ## 6. 코드
@@ -26,34 +25,22 @@ shAow
 #include <iostream>
 using namespace std;
 
+int pass[4] = { 1, 6, 6, 5 };
+
+int isSame(int n[4]) {
+    for (int i = 0; i < 4; i++) {
+        if (pass[i] != n[i]) return 0;
+    }
+
+    return 1;
+}
+
 int main()
 {
-    char someString[7];
-    char temp;
-    int n;
-    cin >> someString >> n;
+    int input[4];
+    for (int i = 0; i < 4; i++) cin >> input[i];
 
-    int cnt = 0;
-
-    for (int i = 0; i < 6; i++) {
-        if (someString[i] == '\0') break;
-        cnt++;
-    }
-
-    for (int i = n; i < cnt + 1; i++) {
-        if (n == i) {
-            temp = someString[i];
-            someString[i] = 'A';
-        }
-        else {
-            char x = temp;
-            temp = someString[i];
-            someString[i] = x;
-        }
-    }
-
-    someString[cnt + 1] = '\0';
-
-    cout << someString;
+    if (isSame(input) == 1) cout << "pass";
+    else cout << "fail";
 }
 ```
