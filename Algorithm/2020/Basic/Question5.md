@@ -1,49 +1,83 @@
-# 문자 제거하기 #
+# 컬러 찾기 #
 
 ## 1. 문제
-- 믄장 하나와 인덱스를 하나 입력받고 해당하는 문자를 제거한 후에 출력해주세요.
+```
+아래에 2차원 배열(2x6)을 하드코딩 해주세요.
+3 55 42
+-5 -9 -10
+```
+
+- 2차원 배열(2x2)를 입력받고, 입력받은 2차원 배열(2x2)의 각 인덱스의 값이 위의 하드코딩한 2차원 배열(2x6)에 
+- 존재한다면 Y를 출력, 아니라면 N을 출력해주세요.
 
 ## 2. 입력
-- 첫째 줄: 한 개의 문장이 주어진다.
-- 둘째 줄: 지울 인덱스의 번호가 주어진다.
+- 2차원 배열(2x2)를 입력받아주세요.
 
 ## 3. 출력
-- 해당하는 인덱스를 삭제 후에 결과 값 출력.
+- 존재한다면 Y출력, 아니라면 N을 출력해주세요.
 
 ## 4. 예제 입력
 ```
-hello!swift
-5
+1 10
+55 -5
 ```
 
 ## 5. 예제 출력
 ```
-helloswift
+N N
+Y Y
 ```
 
-## 6. 코드
+## 6. 예제 입력
+
+```
+42 43
+-7 -9
+```
+
+## 7. 예제 출력
+
+```
+Y N
+N Y
+```
+
+## 8. 코드
+
 ```c++
 #include <iostream>
 using namespace std;
 
+int map[2][3] = {
+    3, 55, 42,
+    -5, -9, -10
+};
+
+int isCheck(int n) {
+    for (int i = 0; i < 2; i++) {
+        for (int j = 0; j < 3; j++) {
+            if (map[i][j] == n) return 1;
+        }
+    }
+    return 0;
+}
+
 int main()
 {
-    char someStr[11];
-    int n, cnt = 0;
+    int pix[2][2];
 
-    cin >> someStr >> n;
-
-    for (int i = 0; i < 11; i++) {
-        if (someStr[i] == '\0') break;
-        cnt++;
+    for (int i = 0; i < 2; i++) {
+        for (int j = 0; j < 2; j++) {
+            cin >> pix[i][j];
+        }
     }
 
-    char temp;
-
-    for (int i = n; i < cnt; i++) {
-        someStr[i] = someStr[i+1];
+    for (int i = 0; i < 2; i++) {
+        for (int j = 0; j < 2; j++) {
+            if (isCheck(pix[i][j]) == 1) cout << "Y ";
+            else cout << "N ";
+        }
+        cout << "\n";
     }
-
-    cout << someStr;
 }
 ```
