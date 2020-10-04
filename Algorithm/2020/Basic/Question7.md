@@ -1,63 +1,80 @@
-# 문장에 'W' 찾기 #
+# 마스킹 배열 숫자 찾기 #
 
 ## 1. 문제
-- 세 문장을 입력받고 문장들 중에 W가 존재하는지 확인.
+```
+아래의 2차원 배열(3x3)을 하드 코딩해주세요.
+3 1 9
+7 2 1 
+1 0 8
+```
+
+- 마스킹 배열(3x3)을 입력 받고, 3에서 5사이의 수가 존재 한다면 "발견", 존재 하지 않는다면 "미발견"을 출력해주세요.
 
 ## 2. 입력
-- 세 문장을 입력받는다.
+- 마스킹 배열(3x3)을 입력 받는다.
 
 ## 3. 출력
-- 존재하면 O, 존재하지 않으면 X를 출력한다.
+- 3에서 5사이의 수가 존재 한다면 "발견", 존재 하지 않는다면 "미발견"을 출력해주세요.
 
 ## 4. 예제 입력
 ```
-SANGWOOK
-PARK
-WARGI
+1 1 1
+1 0 0
+1 0 0
 ```
 
 ## 5. 예제 출력
 ```
-O
+발견
 ```
 
 ## 6. 예제 입력
 
 ```
-HELLO
-iOS
-2021
+0 0 1
+0 0 1
+1 1 1
 ```
 
 ## 7. 예제 출력
 
 ```
-X
+미발견
 ```
 
 ## 8. 코드
 
 ```c++
 #include <iostream>
+#include <cstring>
 using namespace std;
 
-int main()
-{
-    char someStr[3][11];
+int arr[3][3] = {
+    3, 1, 9,
+    7, 2, 1,
+    1, 0, 8
+};
 
-    bool flag = false;
-    for (int i = 0; i < 3; i++) cin >> someStr[i];
-
+int check(int n[3][3]) {
     for (int i = 0; i < 3; i++) {
-        for (int j = 0; j < 10; j++) {
-            if ('W' == someStr[i][j]) {
-                flag = true;
-                break;
-            }
+        for (int j = 0; j < 3; j++) {
+            if (arr[i][j] >= 3 && arr[i][j] <= 5 && n[i][j] == 1) return 1;
         }
     }
 
-    if (flag) cout << "O";
-    else cout << "X";
+    return 0;
+}
+
+int main()
+{
+    int mask[3][3];
+    for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < 3; j++) {
+            cin >> mask[i][j];
+        }
+    }
+
+    if (check(mask) == 1) cout << "발견";
+    else cout << "미발견";
 }
 ```
