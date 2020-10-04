@@ -166,5 +166,7 @@
 | | - | [7로 바꾸어 출력하기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic/Question2.md) | 201002 |
 | | - | [비밀번호 맞추기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic/Question3.md) | 201002 |
 | | - | [칼로리 계산](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic/Question4.md) | 201003 |
-| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic/Question5.md) | 201003 |
+| | - | [컬러 찾기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic/Question5.md) | 201003 |
+| | - | [마스킹 된 배열에서 min값과 index 찾기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic/Question6.md) | 201004 |
+| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic/Question7.md) | 201004 |
 
