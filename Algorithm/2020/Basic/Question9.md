@@ -1,55 +1,63 @@
-# 알파벳 찾기
+# 오프셋 찾기
 
 ## 1. 문제
-- 아래의 배열처럼 2차 배열을 하드코딩 해주세요.
+- 아래의 2차원 배열(5x5)을 하드코딩 해주세요.
 
 ```
-R L F
-Q K E
-P J D
-O I C
-N H B
-M G A
+A B C D E
+F G H I J
+K L M N O
+P Q R S T
+U V W X Y
 ```
 
-- 그리고, 좌표(y, x)를 입력받고, 해당하는 곳의 알파벳을 출력해주세요.
+- 문자 한 개를 입력받아주세요. 그 후에 입력받은 문자가 'M'과 얼마나 떨어져 있는지 출력해주세요.
 
 ## 2. 입력
-- 좌표(y, x)로 두 개의 숫자를 입력받는다.
+- 문자 한 개를 입력받는다.
 
 ## 3. 출력
-- 해당하는 좌표의 알파벳을 출력해주세요.
+- 입력받은 문자가 'M'과 얼마나 떨어져 있는지 출력해주세요.
 
 ## 4. 예제 입력
 ```
-2 0
+F
 ```
 
 ## 5. 예제 출력
 ```
-P
+-1,-2
 ```
 
 ## 6. 코드
 
 ```c++
 #include <iostream>
+#include <cstring>
 using namespace std;
 
 int main()
 {
-    char alpha[6][3];
-    char start = 'A';
+    char alpha[5][6] = {
+    "ABCDE",
+    "FGHIJ",
+    "KLMNO",
+    "PQRST",
+    "UVWXY"
+    };
 
-    for (int i = 2; i >= 0; i--) {
-        for (int j = 5; j >= 0; j--) {
-            alpha[j][i] = char(start++);
+    char ch;
+    cin >> ch;
+    int dy, dx;
+    for (int i = 0; i < 5; i++) {
+        for (int j = 0; j < 5; j++) {
+            if (ch == alpha[i][j]) {
+                dy = i - 2;
+                dx = j - 2;
+            }
         }
     }
 
-    int n, m;
-    cin >> n >> m;
-
-    cout << alpha[n][m];
+    cout << dy << "," << dx;
 }
 ```
