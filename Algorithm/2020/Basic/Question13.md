@@ -1,72 +1,58 @@
-# 문장에서 인덱스 찾기 #
+# 동명이인 #
 
 ## 1. 문제
-- 대문자로 구성된 문장을 입력받아주세요.
-- 그 중, 사전순으로 가장 뒤에 나오는 인덱스와 가장 앞에 나오는 인덱스를 찾아 출력해주세요.
+- 두 명의 이름을 입력받고, 이름이 같으면 "동명", 아니라면 "남남"으로 출력해주세요.
 
 ## 2. 입력
-- 첫째 줄: 대문자로 구성된 문장을 입력받습니다.
+- 두 명의 이름을 입력받습니다.
 
 ## 3. 출력
-- 첫째 줄: 사전순으로 제일 큰 알파벳의 인덱스를 출력한다.
-- 둘째 줄: 사전순으로 제일 작은 알파벳의 인덱스를 출력한다.
+- 이름이 같으면 "동명", 아니라면 "남남"으로 출력해주세요.
 
 ## 4. 예제 입력
 ```
-PARKSW
+park
+sang
 ```
 
 ## 5. 예제 출력
 ```
-5
-1
+남남
 ```
 
 ## 6. 예제 입력
 
 ```
-SWIFT
+wargi
+wargi
 ```
 
 ## 7. 예제 출력
 
 ```
-1
-3
+동명
 ```
 
 ## 8. 코드
 
 ```c++
 #include <iostream>
+#include <cstring>
 using namespace std;
 
-int main()
-{
-    char someAlpha[11];
-    int cnt = 0;
-    int maxIndex = 0, minIndex = 0;
+bool isSame(char lv[100], char rv[100]) {
+	if (!strcmp(lv, rv)) return true;
+	else return false;
+}
 
-    cin >> someAlpha;
+int main() {
+	char leftX[100];
+	char rightX[100];
+	cin >> leftX >> rightX;
 
-    for (int i = 0; i < 11; i++) {
-        if (someAlpha[i] == '\0') break;
-        cnt++;
-    }
-    
-    char max = someAlpha[0], min = someAlpha[0];
-    for (int i = 1; i < cnt; i++) {
-        if (max < someAlpha[i]) {
-            max = someAlpha[i];
-            maxIndex = i;
-        }
+	if (isSame(leftX, rightX)) cout << "동명";
+	else cout << "남남";
 
-        if (min > someAlpha[i]) {
-            min = someAlpha[i];
-            minIndex = i;
-        }
-    }
-
-    cout << maxIndex << "\n" << minIndex;
+	return  0;
 }
 ```
