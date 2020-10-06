@@ -1,30 +1,32 @@
-# 글자 바꾸기
+# 합격자 발표일
 
 ## 1. 문제
-- 한 개의 문장을 입력받고, a와 b의 변수에 각 각 문자를 입력받아 주세요.
-- 그리고, 문장에서 a와 같은 문자를 찾고 a의 문자를 b로 변경해주세요.
+- 아래에 합격자 명단 1차 배열(1x6)을 하드코딩 해주세요.
+
+```
+3 7 4 1 2 6
+```
+
+- 수험생 명단을 2차원 배열(2x2)로 입력 받고, 입력 받은 숫자를 합격자 명단과 대조해보고 합격이라면 "OK", 아니라면 "NO"로 출력해주세요.
 
 ## 2. 입력
-- 첫 번째 줄: 문장을 입력받는다.
+- 2차원 배열(2x2)로 입력 받는다.
 
-- 두 번째 줄: 바꿀 문자를 입력받는다.
-
-- 세 번째 줄: 변경할 문자를 입력받는다.
 
 
 ## 3. 출력
-- 변경된 결과를 출력한다.
+- 합격 결과를 출력한다.
 
 ## 4. 예제 입력
 ```
-sangwook
-o
-u
+1 2
+4 8
 ```
 
 ## 5. 예제 출력
 ```
-sangwuuk
+OK OK
+OK NO
 ```
 
 ## 6. 코드
@@ -32,22 +34,29 @@ sangwuuk
 #include <iostream>
 using namespace std;
 
-int main()
-{
-    char someStr[11], n, m;
-    int cnt = 0;
+int vect[6] = { 3, 7, 4, 1, 2, 6 };
+int univer[2][2];
 
-    cin >> someStr >> n >> m;
+int main() {
 
-    for (int i = 0; i < 11; i++) {
-        if (someStr[i] == '\0') break;
-        cnt++;
-    }
+	for (int i = 0; i < 2; i++) {
+		for (int j = 0; j < 2; j++) {
+			cin >> univer[i][j];
+		}
+	}
 
-    for (int i = 0; i < cnt; i++) {
-        if (someStr[i] == n) someStr[i] = m;
-    }
+	for (int i = 0; i < 2; i++) {
+		for (int j = 0; j < 2; j++) {
+			int flag = 0;
+			for (int k = 0; k < 6; k++) {
+				if (vect[k] == univer[i][j]) flag = 1;
+			}
+			if (flag) cout << "OK ";
+			else cout << "NO ";
+		}
+		cout << "\n";
+	}
 
-    cout << someStr;
+	return  0;
 }
 ```
