@@ -172,5 +172,5 @@
 | | - | [마스킹 된 값 더하기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic/Question8.md) | 201005 |
 | | - | [오프셋 찾기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic/Question9.md) | 201005 |
 | | - | [Favorite Menu](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic/Question10.md) | 201006 |
-| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic/Question11.md) | 201006 |
+| | - | [범위 값 더하기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic/Question11.md) | 201006 |
 
