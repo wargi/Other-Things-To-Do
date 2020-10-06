@@ -1,38 +1,39 @@
-# 배열의 좌표 찾기 #
+# Favorite Menu #
 
 ## 1. 문제
-- 6개의 숫자를 입력받고, 2 x 3 사이즈의 배열을 채워주세요.
-- 그리고, 배열의 값 중에 max값의 좌표와 min값의 좌표를 리턴해주세요.
+```T
+아래의 1차원(1x4) 배열을 하드코딩 해주세요.
+M T K C
+```
+
+- 문자 하나를 입력 받고, 해당 문자가 하드코딩 배열에 있으면 "발견", 없으면 "미발견"
 
 ## 2. 입력
-- 6개의 숫자를 입력받는다.
+- 문자 하나를 입력받는다.
 
 ## 3. 출력
-- 첫째 줄: max값의 좌표를 출력
-- 둘째 줄: min값의 좌표를 출력
+- 입력받은 문자가 하드코딩 배열에 있으면 "발견", 없으면 "미발견"
 
 ## 4. 예제 입력
 ```
-1 2 3 4 5 6
+K
 ```
 
 ## 5. 예제 출력
 ```
-(1,2)
-(0,0)
+발견
 ```
 
 ## 6. 예제 입력
 
 ```
-2 4 9 1 6 5
+F
 ```
 
 ## 7. 예제 출력
 
 ```
-(0,2)
-(1,0)
+미발견
 ```
 
 ## 8. 코드
@@ -41,51 +42,22 @@
 #include <iostream>
 using namespace std;
 
-int arr[2][3];
+char vect[5] = "MTKC";
 
-void getMax(int* dy, int* dx) {
-    int max = arr[*dy][*dx];
-
-    for (int i = 0; i < 2; i++) {
-        for (int j = 0; j < 3; j++) {
-            if (max < arr[i][j]) {
-                *dx = j;
-                *dy = i;
-                max = arr[i][j];
-            }
-        }
-    }
+bool isExit(char ch) {
+	for (int i = 0; i < ch; i++) {
+		if (ch == vect[i]) return true;
+	}
+	return false;
 }
 
-void getMin(int* dy, int* dx) {
-    int min = arr[*dy][*dx];
+int main() {
+	char ch;
+	cin >> ch;
 
-    for (int i = 0; i < 2; i++) {
-        for (int j = 0; j < 3; j++) {
-            if (min > arr[i][j]) {
-                *dx = j;
-                *dy = i;
-                min = arr[i][j];
-            }
-        }
-    }
-}
+	if (isExit(ch)) cout << "발견";
+	else cout << "미발견";
 
-int main()
-{
-    for (int i = 0; i < 2; i++) {
-        for (int j = 0; j < 3; j++) {
-            cin >> arr[i][j];
-        }
-    }
-
-    int minX = 0, minY = 0;
-    int maxX = 0, maxY = 0;
-     
-    getMax(&maxY, &maxX);
-    getMin(&minY, &minX);
-
-    cout << "(" << maxY << "," << maxX << ")" << "\n";
-    cout << "(" << minY << "," << minX << ")";
+	return  0;
 }
 ```
