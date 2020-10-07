@@ -174,5 +174,7 @@
 | | - | [Favorite Menu](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic/Question10.md) | 201006 |
 | | - | [범위 값 더하기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic/Question11.md) | 201006 |
 | | - | [합격자 발표일](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic/Question12.md) | 201007 |
-| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic/Question13.md) | 201007 |
+| | - | [동명이인](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic/Question13.md) | 201007 |
+| | - | [보물 찾기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic/Question14.md) | 201008 |
+| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic/Question15.md) | 201008 |
 
