@@ -1,66 +1,48 @@
-# 두 개의 문자 찾기 #
+# 카드 종류 #
 
 ## 1. 문제
-- ```
-  //두 문장을 하드 코딩 해주세요 !
-  HELLO,
-  SWIFT!
-  ```
+- 카드 배열(1x11)을 입력받고 몇 가지 종류의 카드가 있는지 출력해주세요.
 
-- 두 문자를 입력 받고, 위의 문장에 입력받은 문자가 있다면 존재, 없다면 없음을 출력해주세요.
+## 2. 힌트
+- DAT(Direct Address Table)을 이용해보자.
 
-## 2. 입력
-- 첫째 줄: 두 개의 문자를 입력받는다.
-
-## 3. 출력
-- 첫째 줄에는 첫번째 문자가 있는지를 출력하고, 마찬가지로 두 번째 줄에도 두 번째 문자가 있는지를 출력하시오.
+## 3. 입/출력
+- 11개의 문자를 입력받고, 몇 가지의 종류가 있는지 출력한다.
 
 ## 4. 예제 입력
 ```
-P W
+ABCDACABCDE
 ```
 
 ## 5. 예제 출력
 ```
-P : 없음
-W : 존재
+5개
 ```
 
 ## 6. 코드
 ```c++
 #include <iostream>
+#include <cstring>
 using namespace std;
-
-char arr[2][7] = {
-    "HELLO,",
-    "SWIFT!"
-};
-
-bool isExist(char n) {
-    bool check = false;
-
-    for (int i = 0; i < 2; i++) {
-        for (int j = 0; j < 6; j++) {
-            if (arr[i][j] == n) {
-                check = true;
-                break;
-            }
-        }
-    }
-
-    return check;
-}
-
 
 int main()
 {
-    char n, m;
-    cin >> n >> m;
+    char cardList[16];
+    int check[1000] = { 0 };
+    cin >> cardList;
 
-    if (isExist(n)) printf("%c : 존재\n",n);
-    else printf("%c : 없음", n);
+    int n = strlen(cardList);
 
-    if (isExist(m)) printf("%c : 존재", m);
-    else printf("%c : 없음", m);
+    for (int i = 0; i < n; i++) {
+        check[cardList[i]]++;
+    }
+
+    int cnt = 0;
+    for (int i = 0; i < 1000; i++) {
+        if (check[i] > 0) cnt++;
+    }
+
+    cout << cnt << "개";
 }
+
 ```
