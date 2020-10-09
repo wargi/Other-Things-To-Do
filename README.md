@@ -168,7 +168,7 @@
 | | - | [칼로리 계산](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic/Question4.md) | 201003 |
 | | - | [컬러 찾기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic/Question5.md) | 201003 |
 | | - | [마스킹 된 배열에서 min값과 index 찾기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic/Question6.md) | 201004 |
-| 10 | - | [마스킹 배열 숫자 찾기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic/Question7.md) | 201004 |
+|  | - | [마스킹 배열 숫자 찾기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic/Question7.md) | 201004 |
 | | - | [마스킹 된 값 더하기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic/Question8.md) | 201005 |
 | | - | [오프셋 찾기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic/Question9.md) | 201005 |
 | | - | [Favorite Menu](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic/Question10.md) | 201006 |
@@ -177,4 +177,6 @@
 | | - | [동명이인](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic/Question13.md) | 201007 |
 | | - | [보물 찾기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic/Question14.md) | 201008 |
 | | - | [카드 종류](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic/Question15.md) | 201008 |
+| | - | [직원 찾기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic/Question16.md) | 201009 |
+| 20 | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic/Question17.md) | 201009 |
 
