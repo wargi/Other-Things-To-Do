@@ -178,5 +178,5 @@
 | | - | [보물 찾기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic/Question14.md) | 201008 |
 | | - | [카드 종류](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic/Question15.md) | 201008 |
 | | - | [직원 찾기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic/Question16.md) | 201009 |
-| 20 | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic/Question17.md) | 201009 |
+| 20 | - | [없는 숫자 찾기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic/Question17.md) | 201009 |
 
