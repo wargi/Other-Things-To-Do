@@ -180,7 +180,7 @@
 | | - | [직원 찾기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic/Question16.md) | 201009 |
 |  | - | [없는 숫자 찾기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic/Question17.md) | 201009 |
 |  | - | [빈도수 높은 알파벳 찾기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic/Question18.md) | 201010 |
-|  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic/Question19.md) | 201010 |
+|  | - | [블랙 리스트](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic/Question19.md) | 201010 |
 |  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic/Question20.md) | 201011 |
 |  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic/Question21.md) | 201011 |
 |  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic/Question22.md) | 201012 |
