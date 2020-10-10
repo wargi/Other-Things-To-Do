@@ -178,5 +178,15 @@
 | | - | [보물 찾기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic/Question14.md) | 201008 |
 | | - | [카드 종류](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic/Question15.md) | 201008 |
 | | - | [직원 찾기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic/Question16.md) | 201009 |
-| 20 | - | [없는 숫자 찾기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic/Question17.md) | 201009 |
+|  | - | [없는 숫자 찾기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic/Question17.md) | 201009 |
+|  | - | [빈도수 높은 알파벳 찾기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic/Question18.md) | 201010 |
+|  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic/Question19.md) | 201010 |
+|  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic/Question20.md) | 201011 |
+|  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic/Question21.md) | 201011 |
+|  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic/Question22.md) | 201012 |
+|  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic/Question23.md) | 201012 |
+|  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic/Question1.md) | 201013 |
+|  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic/Question2.md) | 201013 |
+|  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic/Question3.md) | 201014 |
+|  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic/Question4.md) | 201014 |
 
