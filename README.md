@@ -184,7 +184,7 @@
 |  | - | [알파벳 정렬하기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic/Question20.md) | 201011 |
 |  | - | [기차에서 가족 찾기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic/Question21.md) | 201011 |
 |  | - | [층 수 찾기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic/Question22.md) | 201012 |
-|  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic/Question23.md) | 201012 |
+|  | - | [카운팅 수 찾기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic/Question23.md) | 201012 |
 |  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic/Question1.md) | 201013 |
 |  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic/Question2.md) | 201013 |
 |  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic/Question3.md) | 201014 |
