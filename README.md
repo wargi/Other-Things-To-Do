@@ -182,8 +182,8 @@
 |  | - | [빈도수 높은 알파벳 찾기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic/Question18.md) | 201010 |
 |  | - | [블랙 리스트](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic/Question19.md) | 201010 |
 |  | - | [알파벳 정렬하기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic/Question20.md) | 201011 |
-|  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic/Question21.md) | 201011 |
-|  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic/Question22.md) | 201012 |
+|  | - | [기차에서 가족 찾기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic/Question21.md) | 201011 |
+|  | - | [층 수 찾기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic/Question22.md) | 201012 |
 |  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic/Question23.md) | 201012 |
 |  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic/Question1.md) | 201013 |
 |  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic/Question2.md) | 201013 |
