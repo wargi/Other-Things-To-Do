@@ -186,7 +186,7 @@
 |  | - | [층 수 찾기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic/Question22.md) | 201012 |
 |  | - | [카운팅 수 찾기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic/Question23.md) | 201012 |
 |  | - | [가족 찾기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate/Question1.md) | 201013 |
-|  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate/Question2.md) | 201013 |
+|  | - | [도플갱어](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate/Question2.md) | 201013 |
 |  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate/Question3.md) | 201014 |
 |  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate/Question4.md) | 201014 |
 |  | Intermediate | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate/Question5.md) | 201015 |
