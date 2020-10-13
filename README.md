@@ -185,8 +185,17 @@
 |  | - | [기차에서 가족 찾기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic/Question21.md) | 201011 |
 |  | - | [층 수 찾기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic/Question22.md) | 201012 |
 |  | - | [카운팅 수 찾기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic/Question23.md) | 201012 |
-|  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic/Question1.md) | 201013 |
-|  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic/Question2.md) | 201013 |
-|  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic/Question3.md) | 201014 |
-|  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic/Question4.md) | 201014 |
-
+|  | - | [가족 찾기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate/Question1.md) | 201013 |
+|  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate/Question2.md) | 201013 |
+|  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate/Question3.md) | 201014 |
+|  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate/Question4.md) | 201014 |
+|  | Intermediate | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate/Question5.md) | 201015 |
+|  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate/Question6.md) | 201015 |
+|  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate/Question7.md) | 201016 |
+|  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate/Question8.md) | 201016 |
+|  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate/Question9.md) | 201017 |
+|  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate/Question10.md) | 201017 |
+|  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate/Question11.md) | 201018 |
+|  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate/Question12.md) | 201018 |
+|  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate/Question13.md) | 201019 |
+|  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate/Question14.md) | 201019 |
