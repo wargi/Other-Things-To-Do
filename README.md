@@ -188,7 +188,7 @@
 |  | - | [가족 찾기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate/Question1.md) | 201013 |
 |  | - | [도플갱어](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate/Question2.md) | 201013 |
 |  | - | [빈도수 높은 알파벳 찾기 2](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate/Question3.md) | 201014 |
-|  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate/Question4.md) | 201014 |
+|  | - | [충치 체크](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate/Question4.md) | 201014 |
 |  | Intermediate | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate/Question5.md) | 201015 |
 |  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate/Question6.md) | 201015 |
 |  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate/Question7.md) | 201016 |
