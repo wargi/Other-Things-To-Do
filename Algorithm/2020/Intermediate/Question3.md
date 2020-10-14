@@ -1,46 +1,53 @@
-# 비밀번호 맞추기 #
+# 빈도수 높은 알파벳 찾기 2 #
 
 ## 1. 문제
-- 숫자로 된 1차원 배열(1x4)에 비밀번호 '1665'가 저장되어 있습니다.
-- 1차원 배열(1x4)를 입력받고 비밀번호가 일치하면 "pass", 아니라면 "fail"을 출력해주세요.
+- 한 문장을 입력받고 가장 빈도수가 많은 알파벳을 출력해주세요.
 
 ## 2. 입력
-- 첫째 줄: 1차원 배열(1x4)를 입력받는다.
+- 대문자 알파벳으로 구성된 문장을 입력받는다.
 
 ## 3. 출력
-- 비밀번호가 일치하면 "pass", 아니라면 "fail"을 출력해주세요.
+- 가장 빈도수가 많은 알파벳을 출력해주세요.
 
 ## 4. 예제 입력
 ```
-1 6 6 5
+AFKAFKEEE
 ```
 
 ## 5. 예제 출력
 ```
-pass
+E
 ```
 
 ## 6. 코드
 ```c++
 #include <iostream>
+#include <cstring>
 using namespace std;
-
-int pass[4] = { 1, 6, 6, 5 };
-
-int isSame(int n[4]) {
-    for (int i = 0; i < 4; i++) {
-        if (pass[i] != n[i]) return 0;
-    }
-
-    return 1;
-}
 
 int main()
 {
-    int input[4];
-    for (int i = 0; i < 4; i++) cin >> input[i];
+    char alpha[11];
+    cin >> alpha;
 
-    if (isSame(input) == 1) cout << "pass";
-    else cout << "fail";
+    int n = strlen(alpha);
+    int max = -1;
+
+    char ch;
+    int check[1000] = { 0 };
+
+    for (int i = 0; i < n; i++) {
+        check[alpha[i]]++;
+    }
+
+    for (int i = 0; i < 1000; i++) {
+        if (max < check[i]) {
+            max = check[i];
+            ch = char(i);
+        }
+    }
+
+    cout << ch;
+
 }
 ```
