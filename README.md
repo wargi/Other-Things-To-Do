@@ -191,7 +191,7 @@
 |  | - | [충치 체크](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate/Question4.md) | 201014 |
 |  | Basic 2 | [양쪽에서 문자 찾기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate/Question5.md) | 201015 |
 |  | - | [합격자 발표 2](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate/Question6.md) | 201015 |
-|  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate/Question7.md) | 201016 |
+|  | - | [WARGIPARK 찾기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate/Question7.md) | 201016 |
 |  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate/Question8.md) | 201016 |
 |  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate/Question9.md) | 201017 |
 |  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate/Question10.md) | 201017 |

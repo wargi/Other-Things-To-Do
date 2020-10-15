@@ -1,80 +1,70 @@
-# 마스킹 배열 숫자 찾기 #
+# WARGIPARK 찾기 #
 
 ## 1. 문제
 ```
-아래의 2차원 배열(3x3)을 하드 코딩해주세요.
-3 1 9
-7 2 1 
-1 0 8
+아래의 문장을 하드코딩 해주세요.
+WARGIPARK
 ```
 
-- 마스킹 배열(3x3)을 입력 받고, 3에서 5사이의 수가 존재 한다면 "발견", 존재 하지 않는다면 "미발견"을 출력해주세요.
+- 입력 받을 문자 개수 n과 문자를 입력받고, 하드코딩 문장에 포함되면 O 아니라면 X를 출력해주세요.
 
 ## 2. 입력
-- 마스킹 배열(3x3)을 입력 받는다.
+- 첫 째줄: 문자 n을 입력 받는다. (1 <= n <= 9)
+- 둘 째줄: 문자들을 입력받는다.
 
 ## 3. 출력
-- 3에서 5사이의 수가 존재 한다면 "발견", 존재 하지 않는다면 "미발견"을 출력해주세요.
+- 문장에 포함되면 O 아니라면 X를 출력해주세요.
 
 ## 4. 예제 입력
 ```
-1 1 1
-1 0 0
-1 0 0
+3
+S A N
 ```
 
 ## 5. 예제 출력
 ```
-발견
+XOX
 ```
 
 ## 6. 예제 입력
 
 ```
-0 0 1
-0 0 1
-1 1 1
+G W O
 ```
 
 ## 7. 예제 출력
 
 ```
-미발견
+OOX
 ```
 
 ## 8. 코드
 
 ```c++
 #include <iostream>
-#include <cstring>
 using namespace std;
-
-int arr[3][3] = {
-    3, 1, 9,
-    7, 2, 1,
-    1, 0, 8
-};
-
-int check(int n[3][3]) {
-    for (int i = 0; i < 3; i++) {
-        for (int j = 0; j < 3; j++) {
-            if (arr[i][j] >= 3 && arr[i][j] <= 5 && n[i][j] == 1) return 1;
-        }
-    }
-
-    return 0;
-}
 
 int main()
 {
-    int mask[3][3];
-    for (int i = 0; i < 3; i++) {
-        for (int j = 0; j < 3; j++) {
-            cin >> mask[i][j];
-        }
+    char vect[10] = "WARGIPARK";
+
+    int n;
+    cin >> n;
+
+    int check[1000] = { 0 };
+    char chArr[100];
+
+    for (int i = 0; i < 9; i++) {
+        check[vect[i]]++;
     }
 
-    if (check(mask) == 1) cout << "발견";
-    else cout << "미발견";
+    for (int i = 0; i < n; i++) {
+        cin >> chArr[i];
+    }
+
+    for (int i = 0; i < n; i++) {
+        if (check[chArr[i]] > 0) cout << "O";
+        else cout << "X";
+    }
 }
 ```
