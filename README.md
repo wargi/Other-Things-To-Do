@@ -139,7 +139,7 @@
 | | - | [특정 최단 거리](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/Graph/Question02.md) | 190924 |
 | | - | [파티](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/Graph/Question03.md) | 190927 |
 | 알고리즘 | ---------------- | 2020년 | ----------------- |
-|  | Basic 1 | [Find the tail](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/기본기/Question1.md) | 200920 |
+|  | Basic | [Find the tail](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/기본기/Question1.md) | 200920 |
 |  | - | [문자의 수](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/기본기/Question2.md) | 200921 |
 |  | - | [문장에 'A' 추가하기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/기본기/Question3.md) | 200921 |
 |  | - | [두 배열의 합](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/기본기/Question4.md) | 200922 |
@@ -159,7 +159,7 @@
 | | - | [마스킹 된 부분의 합 구하기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/기본기/Question18.md) | 200928 |
 | | - | [2차원 배열 위치 찾기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/기본기/Question19.md) | 200929 |
 | | - | [배열에서 숫자 찾기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/기본기/Question20.md) | 200929 |
-| | Basic 2 | [마스크 배열의 비어있는 곳 찾기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/기본기/Question21.md) | 200930 |
+| | - | [마스크 배열의 비어있는 곳 찾기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/기본기/Question21.md) | 200930 |
 | | - | [마스킹 처리 후 값 찾기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/기본기/Question22.md) | 200930 |
 | | - | [알파뱃의 총 개수 찾기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/기본기/Question23.md) | 201001 |
 | | - | [인기투표](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic/Question1.md) | 201001 |
@@ -189,7 +189,7 @@
 |  | - | [도플갱어](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate/Question2.md) | 201013 |
 |  | - | [빈도수 높은 알파벳 찾기 2](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate/Question3.md) | 201014 |
 |  | - | [충치 체크](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate/Question4.md) | 201014 |
-|  | Intermediate | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate/Question5.md) | 201015 |
+|  | Basic 2 | [양쪽에서 문자 찾기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate/Question5.md) | 201015 |
 |  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate/Question6.md) | 201015 |
 |  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate/Question7.md) | 201016 |
 |  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate/Question8.md) | 201016 |
