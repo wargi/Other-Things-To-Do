@@ -1,65 +1,63 @@
-# 범위 값 더하기
+# 고스트 찾기
 
 ## 1. 문제
-- 아래의 1차원 배열(1x11)을 하드코딩 해주세요.
-
-```
-3 4 1 1 2 6 8 7 8 9 10
-```
-
-- 기준점 index를 입력받고 기준점 index부터 5칸의 합을 출력해주세요
+- 한 문장을 입력 받고, GHOST가 있는지 찾아보고 있으면, "존재", 없다면 "존재하지 않음"을 출력해주세요.
 
 ## 2. 입력
-- 기준점 index를 입력받는다.
+- 한 문장을 입력 받는다.
 
 ## 3. 출력
-- index 포함 다섯 칸을 합하여 출력한다.
+- GHOST가 있는지 찾아보고 있으면, "존재", 없다면 "존재하지 않음"을 출력해주세요.
 
 ## 4. 예제 입력
 ```
-0
+AQGHOSTW
 ```
 
 ## 5. 예제 출력
 ```
-11
+존재
 ```
 
 ## 6. 예제 입력
 
 ```
-2
+QWERHOSTT
 ```
 
 ## 7. 예제 출력
 
 ```
-18
+존재하지 않음
 ```
 
 ## 8. 코드
 
 ```c++
 #include <iostream>
+#include <cstring>
 using namespace std;
 
-int vect[11] = { 3, 4, 1, 1, 2, 6, 8, 7, 8, 9, 10 };
+int main()
+{
+    char ghost[6] = { "GHOST" };
+    char input[100];
+    int check[100] = { 0 };
+    cin >> input;
 
-int getSum(int index) {
-	int sum = 0;
-	for (int i = index; i < index + 5; i++) {
-		sum += vect[i];
-	}
+    int n = strlen(input);
 
-	return sum;
-}
+    for (int i = 0; i < n; i++) check[input[i]]++;
 
-int main() {
-	int n;
-	cin >> n;
+    int flag = 1;
+    for (int i = 0; i < 5; i++) {
+        if (check[ghost[i]] != 1) {
+            flag = 0;
+            break;
+        }
+    }
 
-	cout << getSum(n);
-
-	return  0;
+    if (flag) cout << "존재";
+    else cout << "존재하지 않음";
 }
 ```
