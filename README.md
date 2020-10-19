@@ -195,7 +195,7 @@
 |  | - | [완벽하게 다른 문장 찾기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate/Question8.md) | 201016 |
 |  | - | [중복 제거](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate/Question9.md) | 201017 |
 |  | - | [글자 세기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate/Question10.md) | 201017 |
-|  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate/Question11.md) | 201018 |
-|  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate/Question12.md) | 201018 |
-|  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate/Question13.md) | 201019 |
+|  | - | [고스트 찾기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate/Question11.md) | 201018 |
+|  | - | [좌표를 이용한 배열의 합 구하기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate/Question12.md) | 201019 |
+|  | - | [구조체 익혀보기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate/Question13.md) | 201019 |
 |  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate/Question14.md) | 201019 |
