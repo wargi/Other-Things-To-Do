@@ -200,7 +200,7 @@
 |  | - | [구조체 익혀보기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic03/Question13.md) | 201019 |
 |  | - | [햄버거 주문하기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic03/Question14.md) | 201019 |
 |  | - | [포인터 익혀보기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic03/Question15.md) | 201020 |
-|  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic03/Question16.md) | 201020 |
+|  | - | [4x3 배열 만들기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic03/Question16.md) | 201020 |
 |  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic03/Question17.md) | 201021 |
 |  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic03/Question18.md) | 201021 |
 |  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic03/Question19.md) | 201022 |
