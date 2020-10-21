@@ -1,52 +1,54 @@
-# 빈도수 높은 알파벳 찾기
+# SWIFT 찾기
 
 ## 1. 문제
 
-- 대문자로만 이루어진 알파뱃 배열(1x8)을 입력받고, 그중에 가장 빈도수가 높은 알파벳을 출력해주세요.
+- "SWIFT" 문장을 vect배열에 저장하고 찾을 문자 개수 n과 n개의 알파벳을 입력받아주세요.
+- 그리고 입력 받은 알파벳이 포함되면 'O', 포함되지 않으면 'X'를 출력해주세요.
 
 ## 2. 입력
 
-- 대문자로만 이루어진 알파뱃 배열(1x8)을 입력받아주세요.
+- 찾을 문자 개수 n과 n개의 알파벳을 입력받아주세요.
 
 ## 3. 출력
-- 가장 빈도수가 높은 알파벳을 출력해주세요.
+- 입력 받은 알파벳이 포함되면 'O', 포함되지 않으면 'X'를 출력해주세요.
 
 ## 4. 예제 입력
 ```
-ABCCDEEE
+3
+I N T
 ```
 
 ## 5. 예제 출력
 ```
-E
+OXO
 ```
 
 ## 6. 코드
 ```c++
 #include <iostream>
-#include <cstring>
 using namespace std;
 
 int main()
 {
-    char v[9];
+    char vect[10] = "SWIFT";
+
+    int n;
+    cin >> n;
+
     int check[1000] = { 0 };
+    char chArr[100];
 
-    for (int i = 0; i < 8; i++) {
-        cin >> v[i];
-        check[v[i]]++;
+    for (int i = 0; i < 9; i++) {
+        check[vect[i]]++;
     }
 
-    int max = -1;
-    char ch;
-
-    for (int i = 0; i < 1000; i++) {
-        if (check[i] > max) {
-            max = check[i];
-            ch = char(i);
-        }
+    for (int i = 0; i < n; i++) {
+        cin >> chArr[i];
     }
 
-    cout << ch;
+    for (int i = 0; i < n; i++) {
+        if (check[chArr[i]] > 0) cout << "O";
+        else cout << "X";
+    }
 }
 ```
