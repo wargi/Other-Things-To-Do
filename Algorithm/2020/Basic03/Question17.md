@@ -1,28 +1,41 @@
-# 없는 숫자 찾기
+# 구조체 익혀보기 2
 
 ## 1. 문제
-- 9개 숫자를 입력받아, 2차원 배열(3x3)을 채워주세요.
+```c++
+//아래의 코드를 하드 코딩해주세요.
+struct Train {
+    int win;
+    char name[10];
+}
 
-- 배열을 탐색하여 1 ~ 9 까지의 숫자 중에 없는 숫자를 출력해주세요.
+Train trains[7] = {
+  {15, "summer"},
+  {33, "cloe"},
+  {24, "summer"},
+  {28, "niki"},
+  {32, "jenny"},
+  {20, "summer"},
+  {40, "coco"}
+};
+```
 
-
+- 이름(name)과 나이(win)를 입력받고, 몇 번째에 있는지 인덱스를 출력해주세요.
 
 ## 2. 입력
-- 9개 숫자를 입력받아, 2차원 배열(3x3)을 채워주세요.
+- 이름(name)과 나이(win)를 입력받아주세요.
 
 ## 3. 출력
-- 배열을 탐색하여 1 ~ 9 까지의 숫자 중에 없는 숫자를 출력해주세요.
+-  입력 받은 값이 몇 번째에 있는지 인덱스를 출력해주세요.
 
 ## 4. 예제 입력
 ```
-1 2 2
-3 4 4
-5 6 7
+cloe
+33
 ```
 
 ## 5. 예제 출력
 ```
-8 9
+1
 ```
 
 ## 6. 코드
@@ -31,20 +44,46 @@
 #include <cstring>
 using namespace std;
 
+struct Train {
+    int win;
+    char name[10];
+
+    int size() {
+        return strlen(name);
+    }
+};
+
 int main()
 {
-    int map[3][3];
-    int check[10] = { 0 };
+    int age;
+    char name[8];
 
-    for (int i = 0; i < 3; i++) {
-        for (int j = 0; j < 3; j++) {
-            cin >> map[i][j];
-            check[map[i][j]]++;
+    cin >> name >> age;
+
+    Train trains[7] = {
+        {15, "summer"},
+        {33, "cloe"},
+        {24, "summer"},
+        {28, "niki"},
+        {32, "jenny"},
+        {20, "summer"},
+        {40, "coco"}
+    };
+
+    for (int i = 0; i < 7; i++) {
+        if (trains[i].size() == strlen(name) && trains[i].win == age) {
+            int flag = 1;
+            for (int j = 0; j < trains[j].size(); j++) {
+                if (trains[i].name[j] != name[j]) {
+                    flag = 0;
+                    break;
+                }
+            }
+            if (flag) {
+                cout << i;
+                break;
+            }
         }
-    }
-
-    for (int i = 1; i < 10; i++) {
-        if (check[i] == 0) cout << i << " ";
     }
 }
 ```

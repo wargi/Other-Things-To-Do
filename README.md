@@ -201,11 +201,41 @@
 |  | - | [햄버거 주문하기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic03/Question14.md) | 201019 |
 |  | - | [포인터 익혀보기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic03/Question15.md) | 201020 |
 |  | - | [4x3 배열 만들기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic03/Question16.md) | 201020 |
-|  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic03/Question17.md) | 201021 |
+|  | - | [구조체 익혀보기 2](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic03/Question17.md) | 201021 |
 |  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic03/Question18.md) | 201021 |
 |  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic03/Question19.md) | 201022 |
 |  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic03/Question20.md) | 201022 |
 |  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic03/Question21.md) | 201023 |
 |  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic03/Question22.md) | 201023 |
 |  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic03/Question23.md) | 201024 |
-|  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic03/Question1.md) | 201024 |
+|  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic01/Question24.md) | 201024 |
+| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic01/Question25.md) | 201025 |
+| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic02/Question24.md) | 201025 |
+| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic02/Question25.md) | 201026 |
+| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic03/Question24.md) | 201026 |
+| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic03/Question25.md) | 201027 |
+| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic04/Question1.md) | 201027 |
+| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic04/Question2.md) | 201028 |
+| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic04/Question3.md) | 201028 |
+| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic04/Question4.md) | 201029 |
+| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic04/Question5.md) | 201029 |
+| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic04/Question6.md) | 201030 |
+| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic04/Question7.md) | 201030 |
+| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic04/Question8.md) | 201031 |
+| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic04/Question9.md) | 201031 |
+| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic04/Question10.md) | 201101 |
+| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic04/Question11.md) | 201101 |
+| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic04/Question12.md) | 201102 |
+| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic04/Question13.md) | 201102 |
+| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic04/Question14.md) | 201103 |
+| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic04/Question15.md) | 201103 |
+| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic04/Question16.md) | 201104 |
+| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic04/Question17.md) | 201104 |
+| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic04/Question18.md) | 201105 |
+| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic04/Question19.md) | 201105 |
+| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic04/Question20.md) | 201106 |
+| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic04/Question21.md) | 201106 |
+| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic04/Question22.md) | 201107 |
+| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic04/Question23.md) | 201107 |
+| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic04/Question24.md) | 201108 |
+| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic04/Question25.md) | 201108 |
