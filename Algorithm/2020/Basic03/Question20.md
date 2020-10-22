@@ -1,61 +1,70 @@
-# 알파벳 정렬하기
+# 특정 구역의 합
 
 ## 1. 문제
 
-```
-아래의 2차원 배열(5x3)을 하드코딩 해주세요.
-A B C
-A G H
-H I J
-K A B
-A B C
-```
+- 2차원 배열(4x4)을 입력 받고, 입력 받은 배열에서 2x3 사이즈의 합이 가장 큰 좌표를 출력해주세요.
 
-- 위의 하드코딩한 배열을 사전순으로 정렬하여 출력해주세요.
-
-## 2. 힌트
-- Direct Address Table을 이용하여 풀어주세요.
+## 2. 입력
+- 2차원 배열(4x4)을 입력 받아주세요.
 
 ## 3. 출력
 
-- 위의 하드코딩한 배열을 사전순으로 정렬하여 출력해주세요.
+- 입력 받은 배열에서 2x3 사이즈의 합이 가장 큰 좌표를 출력해주세요.
 
-## 4. 예제 출력
+## 4. 예제 입력
+
 ```
-AAAABBBCCGHHIJK
+1 5 9 13
+2 6 10 14
+3 7 11 15
+4 8 12 16
 ```
 
-## 5. 코드
+## 5. 예제 출력
+```
+(2, 1)
+```
+
+## 6. 코드
 
 ```c++
 #include <iostream>
-#include <cstring>
 using namespace std;
+
+int image[4][4];
+
+int calSum(int startY, int startX) {
+    int sum = 0;
+    for (int i = startY; i < startY + 2; i++) {
+        for (int j = startX; j < startX + 3; j++) {
+            sum += image[i][j];
+        }
+    }
+
+    return sum;
+}
 
 int main()
 {
-    char alpha[5][4] = {
-        "ABC",
-        "AGH",
-        "HIJ",
-        "KAB",
-        "ABC"
-    };
-
-    int check[1000] = { 0 };
-
-    for (int i = 0; i < 5; i++) {
-        for (int j = 0; j < 3; j++) {
-            check[alpha[i][j]]++;
+    for (int i = 0; i < 4; i++) {
+        for (int j = 0; j < 4; j++) {
+            cin >> image[i][j];
         }
     }
 
-    for (int i = 0; i < 1000; i++) {
-        if (check[i] > 0) {
-            for (int j = 0; j < check[i]; j++) {
-                cout << char(i);
+    int max = -1, maxY, maxX;
+    for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < 2; j++) {
+            int x = calSum(i, j);
+
+            if (x > max) {
+                max = x;
+                maxY = i;
+                maxX = j;
             }
         }
     }
+
+    cout << "(" << maxY << "," << maxX << ")";
 }
 ```
