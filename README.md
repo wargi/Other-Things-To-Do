@@ -206,7 +206,7 @@
 |  | - | [폭탄 터트리기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic03/Question19.md) | 201022 |
 |  | - | [특정 구역의 합](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic03/Question20.md) | 201022 |
 |  | - | [a, b](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic03/Question21.md) | 201023 |
-|  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic03/Question22.md) | 201023 |
+|  | - | [내 주위 판별](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic03/Question22.md) | 201023 |
 |  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic03/Question23.md) | 201024 |
 |  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic01/Question24.md) | 201024 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic01/Question25.md) | 201025 |
