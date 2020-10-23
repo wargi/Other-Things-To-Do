@@ -204,8 +204,8 @@
 |  | - | [구조체 익혀보기 2](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic03/Question17.md) | 201021 |
 |  | - | [가장 큰 좌표 찾기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic03/Question18.md) | 201021 |
 |  | - | [폭탄 터트리기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic03/Question19.md) | 201022 |
-|  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic03/Question20.md) | 201022 |
-|  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic03/Question21.md) | 201023 |
+|  | - | [특정 구역의 합](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic03/Question20.md) | 201022 |
+|  | - | [a, b](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic03/Question21.md) | 201023 |
 |  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic03/Question22.md) | 201023 |
 |  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic03/Question23.md) | 201024 |
 |  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic01/Question24.md) | 201024 |
