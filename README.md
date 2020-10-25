@@ -210,7 +210,7 @@
 |  | - | [배열 채우기 2](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic03/Question23.md) | 201024 |
 |  | - | [가로 세로 채우기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic01/Question24.md) | 201024 |
 | | - | [중복 제거 2](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic01/Question25.md) | 201025 |
-| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic02/Question24.md) | 201025 |
+| | - | [배열 탐색하기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic02/Question24.md) | 201025 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic02/Question25.md) | 201026 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic03/Question24.md) | 201026 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic03/Question25.md) | 201027 |
