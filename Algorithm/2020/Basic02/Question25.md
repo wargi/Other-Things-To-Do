@@ -1,42 +1,54 @@
-# 중복 제거 2
+# 마스킹의 합
 
 ## 1. 문제
 
-- 2차원 배열(3x3)을 입력 받아 주세요.
-- 입력 받은 배열에서 중복은 제거 한 알파벳을 사전순으로 출력해주세요.
+```
+1. 아래의 2차원 배열(3x3)을 하드코딩 해주세요.
+3 5 1
+3 8 1
+1 1 5
+
+2. 2차원 비트 배열(2x2)을 입력 받아 주세요.
+ex)
+1 1
+1 0
+
+3. 입력받은 비트베열을 하드코딩 배열을 좌표(0, 0)에 대입해서 1부분의 값을 더하면,
+3 + 5 + 3 = 11입니다.
+
+4. 비트배열을 하드코딩 배열에 대입했을 때, 가장 큰 값을 가져오는 좌표를 출력해주세요.
+```
 
 ## 2. 입력
-- 2차원 배열(3x3)을 입력 받아 주세요.
+- 2차원 비트배열(2x2)을 입력 받아 주세요.
 
 ## 3. 출력
 
-- 입력 받은 배열에서 중복은 제거 한 알파벳을 사전순으로 출력해주세요.
+- 비트배열을 하드코딩 배열에 대입했을 때, 가장 큰 값을 가져오는 좌표를 출력해주세요.
 
 
 ## 4. 예제 입력
 ```
-ATK
-AAA
-TTG
+1 1
+1 0
 ```
 
 ## 5. 예제 출력
 ```
-AGKT
+(0,1)
 ```
 
 ## 6. 예제 입력
 
 ```
-BBB
-BCD
-DZZ
+0 1
+1 1
 ```
 
 ## 7. 예제 출력
 
 ```
-BCDZ
+(0,0)
 ```
 
 ## 8. 코드
@@ -45,28 +57,42 @@ BCDZ
 #include <iostream>
 using namespace std;
 
-struct Sketchbook {
-    char image[3][4];
+int map[3][3] = {
+    3, 5, 1,
+    3, 8, 1,
+    1, 1, 5
 };
+
+int bitArray[2][2];
+
+int calSum(int y, int x) {
+    int sum = 0;
+    for (int i = 0; i < 2; i++) {
+        for (int j = 0; j < 2; j++) {
+            if (bitArray[i][j] == 1) sum += map[i + y][j + x];
+        }
+    }
+    return sum;
+}
 
 int main()
 {
-    int dat[100] = { 0 };
-    Sketchbook s1;
-
-    for (int i = 0; i < 3; i++) {
-        cin >> s1.image[i];
+    for (int i = 0; i < 2; i++) {
+        for (int j = 0; j < 2; j++) cin >> bitArray[i][j];
     }
 
-    for (int i = 0; i < 3; i++) {
-        for (int j = 0; j < 3; j++) {
-            dat[s1.image[i][j]]++;
+    int max = -1, maxX, maxY;
+    for (int i = 0; i < 2; i++) {
+        for (int j = 0; j < 2; j++) {
+            int res = calSum(i, j);
+            if (max < res) {
+                max = res;
+                maxX = j;
+                maxY = i;
+            }
         }
     }
 
-    for (int i = 0; i < 100; i++) {
-        if (dat[i] > 0) cout << char(i);
-    }
+    cout << "(" << maxY << "," << maxX << ")";
 }
-
 ```
