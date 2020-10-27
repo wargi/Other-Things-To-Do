@@ -1,54 +1,37 @@
-# 마스킹의 합
+# 부메랑
 
 ## 1. 문제
 
-```
-1. 아래의 2차원 배열(3x3)을 하드코딩 해주세요.
-3 5 1
-3 8 1
-1 1 5
-
-2. 2차원 비트 배열(2x2)을 입력 받아 주세요.
-ex)
-1 1
-1 0
-
-3. 입력받은 비트베열을 하드코딩 배열을 좌표(0, 0)에 대입해서 1부분의 값을 더하면,
-3 + 5 + 3 = 11입니다.
-
-4. 비트배열을 하드코딩 배열에 대입했을 때, 가장 큰 값을 가져오는 좌표를 출력해주세요.
-```
+- n을 입력 받고, n부터 0을 출력하고 0부터 다시 n까지 출력해주세요.
 
 ## 2. 입력
-- 2차원 비트배열(2x2)을 입력 받아 주세요.
+- 숫자 n을 입력 받아주세요.
 
 ## 3. 출력
 
-- 비트배열을 하드코딩 배열에 대입했을 때, 가장 큰 값을 가져오는 좌표를 출력해주세요.
+- n -> 0 -> n까지 출력해주세요.
 
 
 ## 4. 예제 입력
 ```
-1 1
-1 0
+2
 ```
 
 ## 5. 예제 출력
 ```
-(0,1)
+2 1 0 1 2
 ```
 
 ## 6. 예제 입력
 
 ```
-0 1
-1 1
+5
 ```
 
 ## 7. 예제 출력
 
 ```
-(0,0)
+5 4 3 2 1 0 1 2 3 4 5
 ```
 
 ## 8. 코드
@@ -57,42 +40,24 @@ ex)
 #include <iostream>
 using namespace std;
 
-int map[3][3] = {
-    3, 5, 1,
-    3, 8, 1,
-    1, 1, 5
-};
-
-int bitArray[2][2];
-
-int calSum(int y, int x) {
-    int sum = 0;
-    for (int i = 0; i < 2; i++) {
-        for (int j = 0; j < 2; j++) {
-            if (bitArray[i][j] == 1) sum += map[i + y][j + x];
-        }
+void countDown(int start, int end, bool flag) {
+    if (start > end) return;
+    if (start == 0) flag = false;
+    
+    cout << start << " ";
+    if (flag) {
+        countDown(--start, end, flag);
     }
-    return sum;
+    else {
+        countDown(++start, end, flag);
+    }
+    
 }
 
 int main()
 {
-    for (int i = 0; i < 2; i++) {
-        for (int j = 0; j < 2; j++) cin >> bitArray[i][j];
-    }
-
-    int max = -1, maxX, maxY;
-    for (int i = 0; i < 2; i++) {
-        for (int j = 0; j < 2; j++) {
-            int res = calSum(i, j);
-            if (max < res) {
-                max = res;
-                maxX = j;
-                maxY = i;
-            }
-        }
-    }
-
-    cout << "(" << maxY << "," << maxX << ")";
+    int n;
+    cin >> n;
+    countDown(n, n, true);
 }
 ```
