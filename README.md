@@ -216,7 +216,7 @@
 | | - | [부메랑](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic03/Question25.md) | 201027 |
 | | - | [문워크](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic04/Question1.md) | 201027 |
 | | - | [2단 점프](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic04/Question2.md) | 201028 |
-| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic04/Question3.md) | 201028 |
+| | - | [글자 출력하기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic04/Question3.md) | 201028 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic04/Question4.md) | 201029 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic04/Question5.md) | 201029 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic04/Question6.md) | 201030 |
