@@ -1,30 +1,28 @@
-# 합격자 발표 2
+# n부터 0까지
 
 ## 1. 문제
-- 아래의 2차원 배열(2x3)을 하드코딩하고, 1차원 배열(1x4)을 입력 받아 합격 여부를 출력해주세요.
+- 숫자 n을 입력받고, n이 0이 될때까지 2로 나누는 재귀를 만들고, 0이 되면 출력해주세요.
 
 ```
-3 5 1
-4 2 6
+ex)
+input: 16
+output: 1 2 4 8 16
 ```
 
 ## 2. 입력
-- 1차원 배열(1x4)을 입력 받아주세요.
+- 숫자 n을 입력받습니다.
 
 ## 3. 출력
-- 합격 여부를 출력해주세요.
+- n이 0이 될때까지 2로 나누는 재귀를 만들고, 0이 되면 위의 예제처럼 출력해주세요.
 
 ## 4. 예제 입력
 ```
-1 3 6 9
+23
 ```
 
 ## 5. 예제 출력
 ```
-1번 합격
-2번 합격
-6번 합격
-9번 불합격
+1 2 5 11
 ```
 
 ## 6. 코드
@@ -32,29 +30,17 @@
 #include <iostream>
 using namespace std;
 
-int main()
-{
-    int win[2][3] = {
-        3, 5, 1,
-        4, 2, 6
-    };
-
-    int people[4];
-    int check[100] = { 0 };
-    for (int i = 0; i < 2; i++) {
-        for (int j = 0; j < 3; j++) {
-            check[win[i][j]]++;
-        }
-    }
-
-    for (int i = 0; i < 4; i++) {
-        cin >> people[i];
-    }
-
-    for (int i = 0; i < 4; i++) {
-        if (check[people[i]] > 0) cout << people[i] << "번 합격\n";
-        else cout << people[i] << "번 불합격\n";
-    }
+int returnAve(int n) {
+    if (n == 0) return 0;
+    returnAve(n / 2);
+    cout << n << " ";
 }
 
+int main()
+{
+    int n;
+    cin >> n;
+
+    returnAve(n);
+}
 ```
