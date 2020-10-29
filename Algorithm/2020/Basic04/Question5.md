@@ -1,39 +1,40 @@
-# 양쪽에서 문자 찾기 #
+# 부메랑 2 #
 
 ## 1. 문제
 ```
-아래에 1차원 배열(1x9)을 하드코딩 해주세요.
-A T K P T C A B C
+아래에 1차원 배열(1x8)을 하드코딩 해주세요.
+3 7 4 1 9 4 6 2
 ```
 
-- 문자 두 개를 입력받고, 첫 번째 문자는 왼쪽에서 부터, 두 번째 문자는 오른쪽에서부터 찾아 두 문자 간의 간격을 출력해주세요.
+- 한 개의 index를 입력받아 주세요.
+- 입력 받은 index -> 0번 index -> 입력받은 index순으로 출력해주세요.
 
 ## 2. 입력
-- 문자 두 개를 입력 받아주세요.
+- 한 개의 index를 입력받아 주세요.
 
 ## 3. 출력
-- 첫 번째 문자는 왼쪽에서 부터, 두 번째 문자는 오른쪽에서부터 찾아 두 문자 간의 간격을 출력해주세요.
+- 입력 받은 index -> 0번 index -> 입력받은 index순으로 출력해주세요.
 
 ## 4. 예제 입력
 ```
-A C
+5
 ```
 
 ## 5. 예제 출력
 ```
-8
+4 9 1 4 7 3 7 4 1 9 4
 ```
 
 ## 6. 예제 입력
 
 ```
-K A
+2
 ```
 
 ## 7. 예제 출력
 
 ```
-4
+4 7 3 7 4
 ```
 
 ## 8. 코드
@@ -42,20 +43,20 @@ K A
 #include <iostream>
 using namespace std;
 
+int boomerang[8] = { 3, 7, 4, 1, 9, 4, 6, 2 };
+
+int returnMap(int n) {
+    cout << boomerang[n] << " ";
+    if (n == 0) return 0;
+    returnMap(n - 1);
+    cout << boomerang[n] << " ";
+}
+
 int main()
 {
-    char child[10] = "ATKPTCABC";
+    int n;
+    cin >> n;
 
-    int start = -1, end = -1;
-    char ch1, ch2;
-
-    cin >> ch1 >> ch2;
-
-    for (int i = 0; i < 9; i++) {
-        if (start == -1 && child[i] == ch1) start = i;
-        if (end == -1 && child[8 - i] == ch2) end = 8 - i;
-    }
-
-    cout << end - start;
+    returnMap(n);
 }
 ```
