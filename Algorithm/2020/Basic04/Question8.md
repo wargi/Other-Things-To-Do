@@ -1,44 +1,55 @@
-# 완벽하게 다른 문장 찾기 #
+# 계단 내려가기 #
 
 ## 1. 문제
 
 ```
-아래의 1차원 배열(1x4)을 하드코딩 해주세요.
-3 5 4 2
+한 문장을 입력받고 역 순으로 아래의 예시처럼 계단 형식으로 출력해주세요.
+
+input: HISWIFT
+
+output)
+T
+FT
+IFT
+WIFT
+SWIFT
+ISWIFT
+HISWIFT
 ```
 
-- 세 문장을 입력 받고, 세 문장 모두 같은 글자가 한글자라도 없으면 "Perfect", 아니면 "No"를 출력해 주세요.
-
 ## 2. 입력
-- 문장 세 개를 입력받는다.
+- 문장 한 개를 입력받는다.
 
 ## 3. 출력
-- 입력받은 세 문장 모두 같은 글자가 한글자라도 없으면 "Perfect", 아니면 "No"를 출력해 주세요.
+- 한 문장을 입력받고 역 순으로 아래의 예시처럼 계단 형식으로 출력해주세요.
 
 ## 4. 예제 입력
 ```
-PARK
-SANG
-WOOK
+WARGI
 ```
 
 ## 5. 예제 출력
 ```
-No
+I
+GI
+RGI
+ARGI
+WARGI
 ```
 
 ## 6. 예제 입력
 
 ```
-HELLO
-SWIFT
-2020
+PARK
 ```
 
 ## 7. 예제 출력
 
 ```
-Perfect
+K
+RK
+ARK
+PARK
 ```
 
 ## 8. 코드
@@ -50,36 +61,16 @@ using namespace std;
 
 int main()
 {
-    char ca[100], cb[100], cc[100];
-    cin >> ca >> cb >> cc;
+    char str[11];
+    cin >> str;
 
-    int n = strlen(ca);
-    int m = strlen(cb);
-    int o = strlen(cc);
-
-    int check[100] = { 0 };
+    int n = strlen(str);
 
     for (int i = 0; i < n; i++) {
-        check[ca[i]]++;
-    }
-
-    for (int i = 0; i < n; i++) {
-        check[cb[i]]++;
-    }
-
-    for (int i = 0; i < n; i++) {
-        check[cc[i]]++;
-    }
-
-    int flag = 1;
-    for (int i = 0; i < 100; i++) {
-        if (check[i] > 1) {
-            flag = 0;
-            break;
+        for (int j = n - i - 1; j < n; j++) {
+            cout << str[j];
         }
+        cout << "\n";
     }
-
-    if (flag) cout << "Perfect";
-    else cout << "No";
 }
 ```

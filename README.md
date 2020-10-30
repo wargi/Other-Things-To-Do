@@ -220,8 +220,8 @@
 | | - | [a to b](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic04/Question4.md) | 201029 |
 | | - | [부메랑 2](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic04/Question5.md) | 201030 |
 | | - | [n부터 0까지](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic04/Question6.md) | 201030 |
-| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic04/Question7.md) | 201030 |
-| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic04/Question8.md) | 201031 |
+| | - | [재귀 익혀보기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic04/Question7.md) | 201030 |
+| | - | [계단 내려가기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic04/Question8.md) | 201031 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic04/Question9.md) | 201031 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic04/Question10.md) | 201101 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic04/Question11.md) | 201101 |
