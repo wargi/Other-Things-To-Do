@@ -1,63 +1,63 @@
-# 고스트 찾기
+# 알파벳 출력하기
 
 ## 1. 문제
-- 한 문장을 입력 받고, GHOST가 있는지 찾아보고 있으면, "존재", 없다면 "존재하지 않음"을 출력해주세요.
+- 한 문자를 입력 받고, 입력 받은 문자가 중심이 되게 출력해주세요.
+- 예를 들어, D를 입력 받았다면, ABCDEFG를 출력해주세요.
+- 만약 A를 A이전은 다시 Z부터해서 XYZABCD 이런식으로 출력해주세요.
 
 ## 2. 입력
-- 한 문장을 입력 받는다.
+- 한 문자를 입력 받는다.
 
 ## 3. 출력
-- GHOST가 있는지 찾아보고 있으면, "존재", 없다면 "존재하지 않음"을 출력해주세요.
+- 입력 받은 문자가 중심이 되게 출력해주세요.
 
 ## 4. 예제 입력
 ```
-AQGHOSTW
+F
 ```
 
 ## 5. 예제 출력
 ```
-존재
+CDEFGHI
 ```
 
 ## 6. 예제 입력
 
 ```
-QWERHOSTT
+M
 ```
 
 ## 7. 예제 출력
 
 ```
-존재하지 않음
+JKLMNOP
 ```
 
 ## 8. 코드
 
 ```c++
 #include <iostream>
-#include <cstring>
 using namespace std;
 
 int main()
 {
-    char ghost[6] = { "GHOST" };
-    char input[100];
-    int check[100] = { 0 };
-    cin >> input;
+    char n;
+    cin >> n;
 
-    int n = strlen(input);
+    int a = int(n);
 
-    for (int i = 0; i < n; i++) check[input[i]]++;
+    for (int i = -3; i < 4; i++) {
+        int ch = a + i;
 
-    int flag = 1;
-    for (int i = 0; i < 5; i++) {
-        if (check[ghost[i]] != 1) {
-            flag = 0;
-            break;
+        if (ch < 65) {
+            ch = 91 - (65 - ch);
+            cout << char(ch);
         }
+        else if (ch > 90) {
+            ch = (ch - 90) + 64;
+            cout << char(ch);
+        }
+        else cout << char(ch);
     }
-
-    if (flag) cout << "존재";
-    else cout << "존재하지 않음";
 }
 ```
