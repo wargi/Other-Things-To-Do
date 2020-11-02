@@ -1,68 +1,71 @@
-# 구조체 익혀보기 #
+# 계단 내려가기 3 #
 
 ## 1. 문제
 ```
-구조체를 하나 선언하고 내부의 멤버변수 x, y, z를 만들어 주세요.
-그 후에, 두 개의 구조체 변수를 만들고 각 각 더한 값을 출력해주세요.
+문장을 입력 받고, 아래의 예시 처럼 계단식으로 출력해주세요.
 ex)
-a.x + b.x = ?
-a.y + b.y = ?
-a.z + b.z = ?
+input: WARGI
+
+output)
+W
+WA
+WAR
+WARG
+WARGI
 ```
 
 ## 2. 입력
-- 첫 줄: 세 개의 숫자를 입력받습니다.
-- 둘 째줄: 세 개의 숫자를 입력받습니다. 
+- 문장을 입력 받습니다.
 
 ## 3. 출력
-- 더 한 결과 값을 출력해주세요.
+- 위의 예시 처럼 계단식으로 출력해주세요.
 
 ## 4. 예제 입력
 ```
-1 5 9
-2 7 1
+HELLO
 ```
 
 ## 5. 예제 출력
 ```
-3 12 10
+H
+HE
+HEL
+HELL
+HELLO
 ```
 
 ## 6. 예제 입력
 
 ```
-3 6 9
-1 1 1
+HI
 ```
 
 ## 7. 예제 출력
 
 ```
-4 7 10
+H
+HI
 ```
 
 ## 8. 코드
 
 ```c++
 #include <iostream>
+#include <cstring>
 using namespace std;
-
-struct Data {
-    int x;
-    int y;
-    int z;
-};
 
 int main()
 {
-    Data a;
-    Data b;
+    char str[11];
+    cin >> str;
 
-    cin >> a.x >> a.y >> a.z;
-    cin >> b.x >> b.y >> b.z;
+    int n = strlen(str);
 
-    cout << a.x + b.x << "\n";
-    cout << a.y + b.y << "\n";
-    cout << a.z + b.z;
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j <= i; j++) {
+            cout << str[j];
+        }
+        cout << "\n";
+    }
 }
 ```
