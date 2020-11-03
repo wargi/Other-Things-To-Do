@@ -1,64 +1,105 @@
-# 햄버거 주문하기 #
+# 배열 합치기 #
 
 ## 1. 문제
-- 아래의 구조체를 만들어주세요.
+- 아래의 규칙대로 배열을 합쳐 주세요.
 
   ```
-  구조체명: MC
-  멤버 변수
-  burger1(char[9])
-  burger2(char[9])
+  정렬되어 있는 1차원 배열(1x4)을 두 개 받습니다.
   
-  MC bob, tom을 만들어주세요 :)
+  ex)
+  input1: 1 3 3 7
+  input2: 2 3 4 6
+  
+  1. 인덱스를 비교하여 더 작은 값을 result 배열에 넣습니다.
+  (1) 3 3 7
+  (2) 3 4 6
+  result = (1)
+  
+  1 (3) 3 7
+  (2) 3 4 6
+  result = 1 (2)
+  
+  2. 인덱스를 비교하여 같은 값 이면 둘 중 아무 배열의 값을 result 배열에 넣습니다.
+  1 (3) 3 7
+  2 (3) 4 6
+  result = 1 2 (3)
+  
+  1 3 (3) 7
+  2 (3) 4 6
+  result = 1 2 3 (3)
+  
+  1 3 3 (7)
+  2 (3) 4 6
+  result = 1 2 3 3 (3)
+  
+  1 3 3 (7)
+  2 3 (4) 6
+  result = 1 2 3 3 3 (4)
+  
+  1 3 3 (7)
+  2 3 4 (6)
+  result = 1 2 3 3 3 4 (6)
+  
+  3. 한 쪽 인덱스를 모두 넣었다면 반대쪽 배열의 남은 값들 모두를 result 배열에 넣습니다.
+  1 3 3 (7)
+  2 3 4 6
+  result = 1 2 3 3 3 4 6 (7)
+  
+  4. 이렇게 완성된 result 배열을 출력해주세요.
   ```
   
-- 네 개의 문장을 입력 받습니다.
-
-- bob부터 입력받고, 그 다음 tom을 입력받습니다.
 
 ## 2. 입력
-- 문장 네 개를 입력 받아 주세요.
+- 정렬되어 있는 1차원 배열(1x4)을 두 개 받습니다.
 
 ## 3. 출력
-- 입력 받은 문장의 글자의 length를 출력해주세요.
+- 완성된 result 배열을 출력해주세요.
 
 ## 4. 예제 입력
 ```
-sanghai
-bulgogi
-1955
-bigmac
+1 3 5 7
+2 4 6 8
 ```
 
 ## 5. 예제 출력
 ```
-bob.burger1=7
-bob.burger2=7
-tom.burger1=4
-tom.burger2=6
+1 2 3 4 5 6 7 8
 ```
 
 ## 6. 코드
 
 ```c++
 #include <iostream>
-#include <cstring>
 using namespace std;
-
-struct MC {
-    char burger1[9];
-    char burger2[9];
-};
 
 int main()
 {
-    MC bob, tom;
-    cin >> bob.burger1 >> bob.burger2;
-    cin >> tom.burger1 >> tom.burger2;
+    int vect1[4], vect2[4];
+    int result[8];
+    
+    for (int i = 0; i < 4; i++) {
+        cin >> vect1[i];
+    }
 
-    cout << "bob.burger1=" << strlen(bob.burger1) << "\n";
-    cout << "bob.burger2=" << strlen(bob.burger2) << "\n";
-    cout << "tom.burger1=" << strlen(tom.burger1) << "\n";
-    cout << "tom.burger2=" << strlen(tom.burger2);
+    for (int i = 0; i < 4; i++) {
+        cin >> vect2[i];
+    }
+
+    int indexL = 0, indexR = 0;
+    for (int i = 0; i < 8; i++) {
+        if (indexL == 4) {
+            result[i] = vect2[indexR++];
+        }
+        else if (indexR == 4) {
+            result[i] = vect1[indexL++];
+        }
+        else {
+            if (vect1[indexL] <= vect2[indexR]) {
+                result[i] = vect1[indexL++];
+            }
+            else result[i] = vect2[indexR++];
+        }
+        cout << result[i] << " ";
+    }
 }
 ```
