@@ -228,8 +228,8 @@
 | | - | [계단 내려가기 2](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic04/Question12.md) | 201102 |
 | | - | [계단 내려가기 3](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic04/Question13.md) | 201102 |
 | | - | [배열 합치기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic04/Question14.md) | 201103 |
-| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic04/Question15.md) | 201103 |
-| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic04/Question16.md) | 201104 |
+| | - | [패턴의 합](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic04/Question15.md) | 201103 |
+| | - | [트리 만들기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic04/Question16.md) | 201104 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic04/Question17.md) | 201104 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic04/Question18.md) | 201105 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic04/Question19.md) | 201105 |
