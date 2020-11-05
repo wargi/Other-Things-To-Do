@@ -139,6 +139,26 @@
 | | - | [특정 최단 거리](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/Graph/Question02.md) | 190924 |
 | | - | [파티](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/Graph/Question03.md) | 190927 |
 | 알고리즘 | ---------------- | 2020년 | ----------------- |
+|  |  |  |  |
+|  |  |  |  |
+|  |  |  |  |
+|  |  |  |  |
+|  |  |  |  |
+|  |  |  |  |
+|  |  |  |  |
+|  |  |  |  |
+|  |  |  |  |
+|  |  |  |  |
+|  |  |  |  |
+|  |  |  |  |
+|  |  |  |  |
+|  |  |  |  |
+|  |  |  |  |
+|  |  |  |  |
+|  |  |  |  |
+|  |  |  |  |
+|  |  |  |  |
+|  |  |  |  |
 |  | Basic | [Find the tail](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic01/Question1.md) | 200920 |
 |  | - | [문자의 수](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic01/Question2.md) | 200921 |
 |  | - | [문장에 'A' 추가하기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic01/Question3.md) | 200921 |
@@ -231,7 +251,7 @@
 | | - | [패턴의 합](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic04/Question15.md) | 201103 |
 | | - | [트리 만들기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic04/Question16.md) | 201104 |
 | | - | [로그인](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic04/Question17.md) | 201104 |
-| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic04/Question18.md) | 201105 |
+| | - | [트리 만들기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic04/Question18.md) | 201105 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic04/Question19.md) | 201105 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic04/Question20.md) | 201106 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic04/Question21.md) | 201106 |
