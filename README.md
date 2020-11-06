@@ -253,7 +253,7 @@
 | | - | [로그인](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic04/Question17.md) | 201104 |
 | | - | [트리 만들기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic04/Question18.md) | 201105 |
 | | - | [이진트리 만들기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic04/Question19.md) | 201105 |
-| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic04/Question20.md) | 201106 |
+| | - | [긴 문장 가져오기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic04/Question20.md) | 201106 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic04/Question21.md) | 201106 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic04/Question22.md) | 201107 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic04/Question23.md) | 201107 |

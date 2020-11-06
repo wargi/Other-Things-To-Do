@@ -1,70 +1,71 @@
-# 특정 구역의 합
+# 긴 문장 정렬
 
 ## 1. 문제
 
-- 2차원 배열(4x4)을 입력 받고, 입력 받은 배열에서 2x3 사이즈의 합이 가장 큰 좌표를 출력해주세요.
+- 세 문장을 입력 받아 배열에 저장하고, 가장 긴 문장과 맨 앞에 입력받은 문장을 swap하고 출력해주세요.
 
 ## 2. 입력
-- 2차원 배열(4x4)을 입력 받아주세요.
+- 세 문장을 입력 받아주세요.
 
 ## 3. 출력
 
-- 입력 받은 배열에서 2x3 사이즈의 합이 가장 큰 좌표를 출력해주세요.
+- 가장 긴 문장과 맨 앞에 입력받은 문장을 swap하고 출력해주세요.
 
 ## 4. 예제 입력
 
 ```
-1 5 9 13
-2 6 10 14
-3 7 11 15
-4 8 12 16
+WAR
+ABCDEFG
+GIP
 ```
 
 ## 5. 예제 출력
 ```
-(2, 1)
+ABCDEFG
+WAR
+GIP
 ```
 
 ## 6. 코드
 
 ```c++
+#define _CRT_SECURE_NO_WARNINGS
+
 #include <iostream>
+#include <cstring>
+
 using namespace std;
-
-int image[4][4];
-
-int calSum(int startY, int startX) {
-    int sum = 0;
-    for (int i = startY; i < startY + 2; i++) {
-        for (int j = startX; j < startX + 3; j++) {
-            sum += image[i][j];
-        }
-    }
-
-    return sum;
-}
 
 int main()
 {
-    for (int i = 0; i < 4; i++) {
-        for (int j = 0; j < 4; j++) {
-            cin >> image[i][j];
-        }
+    char str1[100];
+    char str2[100];
+    char str3[100];
+
+    cin >> str1 >> str2 >> str3;
+
+    int a = strlen(str1);
+    int b = strlen(str2);
+    int c = strlen(str3);
+
+    if (b >= a && b >= c)
+    {
+        char temp[100] = "";
+        strcpy(temp, str1);
+        strcpy(str1, str2);
+        strcpy(str2, temp);
+
+    }
+    else if (c >= a && c >= b)
+    {
+        char temp[100] = "";
+        strcpy(temp, str1);
+        strcpy(str1, str3);
+        strcpy(str3, temp);
     }
 
-    int max = -1, maxY, maxX;
-    for (int i = 0; i < 3; i++) {
-        for (int j = 0; j < 2; j++) {
-            int x = calSum(i, j);
-
-            if (x > max) {
-                max = x;
-                maxY = i;
-                maxX = j;
-            }
-        }
-    }
-
-    cout << "(" << maxY << "," << maxX << ")";
-}
+    cout << str1 << "\n";
+    cout << str2 << "\n";
+    cout << str3;
+} 
 ```
