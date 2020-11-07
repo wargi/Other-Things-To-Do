@@ -1,93 +1,109 @@
-# 배열 채우기 2
+# 저글링 이동
 
 ## 1. 문제
 
 ```
-1. 아래의 2차원 배열(4x4)를 하드코딩 해주세요.
-1 2 3 4
-5 6 7 8
-9 10 11 12
-13 14 15 16
+저글링을 조종하려고 합니다.
+현재 저글링의 좌표는 x,y(5,5)에 위치합니다.
+저글링에게 내릴 수 있는 명령어는 up/down/left/right/click 입니다.
+명령어 n개를 입력받아, 명령을 수행한 결과들을 출력해주세요.
 
-2. 0으로 채운 빈 배열(4x4)을 만들어 주세요.
-0 0 0 0
-0 0 0 0
-0 0 0 0
-0 0 0 0
-
-3. 숫자 네 개를 입력 받습니다.
-1 4 9 13
-
-4. 받은 숫자 순서(1~4)로 빈 배열에 채워주세요.
-1 0 0 2
-0 0 0 0
-3 0 0 0
-4 0 0 0
-
-5. 채운 배열을 출력해주세요.
+<명령어>
+up: y축으로 한칸 -1
+down: y축으로 한칸 +1
+left: x축으로 한칸 -1
+right: x축으로 한칸 +1
+click: 현재 좌표 출력
 ```
 
 ## 2. 입력
-- 숫자 네 개를 입력 받습니다.
+- 첫 줄: 명령어 수를 입력받습니다.
+- 명령어 들을 입력 받습니다.
 
 ## 3. 출력
 
-- 위의 문제 설명처럼 출력해주세요.
+- 명령어 수행 결과를 출력해주세요.
 
 
 ## 4. 예제 입력
 ```
-2 5 6 15
+3
+up
+up
+click
 ```
 
 ## 5. 예제 출력
 ```
-0 1 0 0
-2 3 0 0
-0 0 0 0
-0 0 4 0
+3,5
 ```
 
 ## 6. 예제 입력
 
 ```
-3 7 8 10
+4
+down
+click
+left
+click
 ```
 
 ## 7. 예제 출력
 
 ```
-0 0 1 0
-0 0 2 3
-0 4 0 0
-0 0 0 0
+6,5
+6,4
 ```
 
 ## 8. 코드
 
 ```c++
 #include <iostream>
+#include <cstring>
 using namespace std;
+
+struct Mouse {
+    int x, y;
+
+    void up() {
+        y--;
+    }
+
+    void down() {
+        y++;
+    }
+
+    void left() {
+        x--;
+    }
+
+    void right() {
+        x++;
+    }
+
+    void click() {
+        cout << y << "," << x << "\n";
+    }
+};
 
 int main()
 {
-    int input[4];
-    int map[4][4] = { 0 };
+    int n;
+    char str[100][100];
+    cin >> n;
 
-    int n = 1;
-    for (int i = 0; i < 4; i++) {
-        cin >> input[i];
-        int y = input[i] / 4;
-        int x = input[i] % 4 - 1;
-        if (x == -1) map[y - 1][3] = n++;
-        else map[y][x] = n++;
+    Mouse m = { 5, 5 };
+    
+    for (int i = 0; i < n; i++) {
+        cin >> str[i];
     }
 
-    for (int i = 0; i < 4; i++) {
-        for (int j = 0; j < 4; j++) {
-            cout << map[i][j] << " ";
-        }
-        cout << "\n";
+    for (int i = 0; i < n; i++) {
+        if (!strcmp(str[i], "up")) m.up();
+        else if (!strcmp(str[i], "down")) m.down();
+        else if (!strcmp(str[i], "left")) m.left();
+        else if (!strcmp(str[i], "right")) m.right();
+        else m.click();
     }
 }
 ```
