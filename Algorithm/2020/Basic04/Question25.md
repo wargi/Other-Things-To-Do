@@ -1,15 +1,22 @@
-# 부메랑
+# 세로줄의 합
 
 ## 1. 문제
 
-- n을 입력 받고, n부터 0을 출력하고 0부터 다시 n까지 출력해주세요.
+```
+아래의 2차원 배열(3x4)을 하드코딩 해주세요.
+3 4 1 5
+3 4 1 3
+5 2 3 6
+
+위의 하드코딩 배열의 세로줄을 합한 결과를 sum이라는 배열을 만들어주세요.
+```
 
 ## 2. 입력
-- 숫자 n을 입력 받아주세요.
+- sum의 인덱스를 입력받습니다.(0 ~ 3)
 
 ## 3. 출력
 
-- n -> 0 -> n까지 출력해주세요.
+- 입력받은 인덱스의 값을 출력해주세요.
 
 
 ## 4. 예제 입력
@@ -19,19 +26,19 @@
 
 ## 5. 예제 출력
 ```
-2 1 0 1 2
+5
 ```
 
 ## 6. 예제 입력
 
 ```
-5
+0
 ```
 
 ## 7. 예제 출력
 
 ```
-5 4 3 2 1 0 1 2 3 4 5
+11
 ```
 
 ## 8. 코드
@@ -40,24 +47,30 @@
 #include <iostream>
 using namespace std;
 
-void countDown(int start, int end, bool flag) {
-    if (start > end) return;
-    if (start == 0) flag = false;
-    
-    cout << start << " ";
-    if (flag) {
-        countDown(--start, end, flag);
+int calSum(int index) {
+    int map[3][4] = {
+    3, 4, 1, 5,
+    3, 4, 1, 3,
+    5, 2, 3, 6
+    };
+
+    int sum = 0;
+    for (int i = 0; i < 3; i++) {
+        sum += map[i][index];
     }
-    else {
-        countDown(++start, end, flag);
-    }
-    
+
+    return sum;
 }
 
 int main()
 {
-    int n;
+    int sum[4], n;
     cin >> n;
-    countDown(n, n, true);
+
+    for (int i = 0; i < 4; i++) {
+        sum[i] = calSum(i);
+    }
+
+    cout << sum[n];
 }
 ```
