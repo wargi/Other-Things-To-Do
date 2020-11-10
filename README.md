@@ -141,8 +141,8 @@
 | 알고리즘 | ---------------- | 2020년 | ----------------- |
 |  | Intermediate 1 | [문자에 '#' 넣기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate01/Question1.md) | 201109 |
 |  | - | [범위 사이의 숫자 바꾸기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate01/Question2.md) | 201109 |
-|  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate01/Question3.md) | 201110 |
-|  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate01/Question4.md) | 201110 |
+|  | - | [DAT 익혀보기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate01/Question3.md) | 201110 |
+|  | - | [바둑이](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate01/Question4.md) | 201110 |
 |  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate01/Question5.md) | 201111 |
 |  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate01/Question6.md) | 201111 |
 |  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate01/Question7.md) | 201112 |
