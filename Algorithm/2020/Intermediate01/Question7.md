@@ -1,63 +1,51 @@
-# 문장에 'W' 찾기 #
+# 트리 탐색하기 #
 
 ## 1. 문제
-- 세 문장을 입력받고 문장들 중에 W가 존재하는지 확인.
+<img src="./Tree01.png" alt="Tree" style="zoom:40%;" />
 
-## 2. 입력
-- 세 문장을 입력받는다.
+- Level 2에 도달했을 때, Path를 출력해주세요.
 
-## 3. 출력
-- 존재하면 O, 존재하지 않으면 X를 출력한다.
+## 2. 출력
+- Level 2에 도달했을 때, Path를 출력해주세요.
 
-## 4. 예제 입력
+## 3. 예제 출력
 ```
-SANGWOOK
-PARK
-WARGI
-```
-
-## 5. 예제 출력
-```
-O
-```
-
-## 6. 예제 입력
-
-```
-HELLO
-iOS
-2021
+AA
+AB
+AC
+BA
+BB
+BC
+CA
+CB
+CC
 ```
 
-## 7. 예제 출력
-
-```
-X
-```
-
-## 8. 코드
+## 4. 코드
 
 ```c++
 #include <iostream>
 using namespace std;
 
-int main()
-{
-    char someStr[3][11];
+char str[3];
 
-    bool flag = false;
-    for (int i = 0; i < 3; i++) cin >> someStr[i];
-
-    for (int i = 0; i < 3; i++) {
-        for (int j = 0; j < 10; j++) {
-            if ('W' == someStr[i][j]) {
-                flag = true;
-                break;
-            }
-        }
+void path(int x) {
+    if (x == 2)
+    {
+        cout << str << "\n";
+        return;
     }
 
-    if (flag) cout << "O";
-    else cout << "X";
+    for (int i = 0; i < 3; i++)
+    {
+        str[x] = 'A' + i;
+        path(x + 1);
+    }
+}
+
+int main()
+{
+    str[2] = '\0';
+    path(0);
 }
 ```
