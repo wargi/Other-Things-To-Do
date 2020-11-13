@@ -1,38 +1,51 @@
-# 배열의 좌표 찾기 #
+# 청소 스케줄 만들기 #
 
 ## 1. 문제
-- 6개의 숫자를 입력받고, 2 x 3 사이즈의 배열을 채워주세요.
-- 그리고, 배열의 값 중에 max값의 좌표와 min값의 좌표를 리턴해주세요.
+- n명의 친구를 입력받고, 4일치의 청소스케줄을 만들려고 합니다.
+- 한 명의 친구가 매일 청소를 할 수도 있고, 여러 친구가 할 수도 있습니다.
+- 모든 가능한 경우의 수를 출력해주세요.
 
 ## 2. 입력
-- 6개의 숫자를 입력받는다.
+- n을 입력받는다.(1 <= n)
 
 ## 3. 출력
-- 첫째 줄: max값의 좌표를 출력
-- 둘째 줄: min값의 좌표를 출력
+- 모든 가능한 경우의 수를 출력해주세요.
 
 ## 4. 예제 입력
 ```
-1 2 3 4 5 6
+2
 ```
 
 ## 5. 예제 출력
 ```
-(1,2)
-(0,0)
+1111
+1112
+1121
+1122
+1211
+1212
+1221
+1222
+2111
+2112
+2121
+2122
+2211
+2212
+2221
+2222
 ```
 
 ## 6. 예제 입력
 
 ```
-2 4 9 1 6 5
+1
 ```
 
 ## 7. 예제 출력
 
 ```
-(0,2)
-(1,0)
+1111
 ```
 
 ## 8. 코드
@@ -41,51 +54,23 @@
 #include <iostream>
 using namespace std;
 
-int arr[2][3];
-
-void getMax(int* dy, int* dx) {
-    int max = arr[*dy][*dx];
-
-    for (int i = 0; i < 2; i++) {
-        for (int j = 0; j < 3; j++) {
-            if (max < arr[i][j]) {
-                *dx = j;
-                *dy = i;
-                max = arr[i][j];
-            }
-        }
+char map[5];
+void cleaner(int start, int end, int branch) {
+    if (start == end) {
+        cout << map << "\n";
+        return;
     }
-}
 
-void getMin(int* dy, int* dx) {
-    int min = arr[*dy][*dx];
-
-    for (int i = 0; i < 2; i++) {
-        for (int j = 0; j < 3; j++) {
-            if (min > arr[i][j]) {
-                *dx = j;
-                *dy = i;
-                min = arr[i][j];
-            }
-        }
+    for (int i = 1; i <= branch; i++) {
+        map[start] = '0' + i;
+        cleaner(start + 1, end, branch);
     }
 }
 
 int main()
 {
-    for (int i = 0; i < 2; i++) {
-        for (int j = 0; j < 3; j++) {
-            cin >> arr[i][j];
-        }
-    }
-
-    int minX = 0, minY = 0;
-    int maxX = 0, maxY = 0;
-     
-    getMax(&maxY, &maxX);
-    getMin(&minY, &minX);
-
-    cout << "(" << maxY << "," << maxX << ")" << "\n";
-    cout << "(" << minY << "," << minX << ")";
+    int n;
+    cin >> n;
+    cleaner(0, 4, n);
 }
 ```
