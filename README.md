@@ -148,8 +148,8 @@
 |  | - | [트리 탐색하기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate01/Question7.md) | 201112 |
 |  | - | [같은 문장 판별](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate01/Question8.md) | 201112 |
 |  | - | [아파트](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate01/Question9.md) | 201113 |
-|  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate01/Question10.md) | 201113 |
-|  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate01/Question11.md) | 201114 |
+|  | - | [청소 스케줄 만들기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate01/Question10.md) | 201113 |
+|  | - | [길고 짧은 문장 찾기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate01/Question11.md) | 201114 |
 |  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate01/Question12.md) | 201114 |
 |  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate01/Question13.md) | 201115 |
 |  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate01/Question14.md) | 201115 |
