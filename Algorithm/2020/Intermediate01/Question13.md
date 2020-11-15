@@ -1,72 +1,71 @@
-# 문장에서 인덱스 찾기 #
+# 암호 찾기 #
 
 ## 1. 문제
-- 대문자로 구성된 문장을 입력받아주세요.
-- 그 중, 사전순으로 가장 뒤에 나오는 인덱스와 가장 앞에 나오는 인덱스를 찾아 출력해주세요.
+```
+아래의 암호가 저장되어 있는 1차원 배열(1x5)을 하드코딩해주세요.
+
+"Jason", "Dr.tom", "EXEXI", "GK12P", "POW"
+```
+
+- 문장을 하나 입력 받고, 위의 암호가 저장되어 있는 배열에 일치하는 게 있으면, "암호해제", 없으면 "암호틀림"을 출력해주세요.
 
 ## 2. 입력
-- 첫째 줄: 대문자로 구성된 문장을 입력받습니다.
+- 첫째 줄: 문장을 하나 입력 받습니다.
 
 ## 3. 출력
-- 첫째 줄: 사전순으로 제일 큰 알파벳의 인덱스를 출력한다.
-- 둘째 줄: 사전순으로 제일 작은 알파벳의 인덱스를 출력한다.
+- 위의 암호가 저장되어 있는 배열에 일치하는 게 있으면, "암호해제", 없으면 "암호틀림"을 출력해주세요.
 
 ## 4. 예제 입력
 ```
-PARKSW
+Dr.tim
 ```
 
 ## 5. 예제 출력
 ```
-5
-1
+암호틀림
 ```
 
 ## 6. 예제 입력
 
 ```
-SWIFT
+Dr.tom
 ```
 
 ## 7. 예제 출력
 
 ```
-1
-3
+암호해제
 ```
 
 ## 8. 코드
 
 ```c++
 #include <iostream>
+#include <cstring>
 using namespace std;
 
 int main()
 {
-    char someAlpha[11];
-    int cnt = 0;
-    int maxIndex = 0, minIndex = 0;
+    char arr[5][11] = {
+        "Jason",
+        "Dr.tom",
+        "EXEXI",
+        "GK12P",
+        "POW"
+    };
 
-    cin >> someAlpha;
+    char ch[11];
+    cin >> ch;
 
-    for (int i = 0; i < 11; i++) {
-        if (someAlpha[i] == '\0') break;
-        cnt++;
-    }
-    
-    char max = someAlpha[0], min = someAlpha[0];
-    for (int i = 1; i < cnt; i++) {
-        if (max < someAlpha[i]) {
-            max = someAlpha[i];
-            maxIndex = i;
-        }
-
-        if (min > someAlpha[i]) {
-            min = someAlpha[i];
-            minIndex = i;
+    int flag = 0;
+    for (int i = 0; i < 5; i++) {
+        if (!strcmp(arr[i], ch)) {
+            flag = 1;
+            break;
         }
     }
 
-    cout << maxIndex << "\n" << minIndex;
+    if (flag) cout << "암호해제";
+    else cout << "암호틀림";
 }
 ```
