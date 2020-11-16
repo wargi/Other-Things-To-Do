@@ -1,48 +1,79 @@
-# 3중 for
+# 3차원 배열 3
 
 ## 1. 문제
-- 숫자 두 개와 문자 한 개를 입력 받고 아래의 예시와 같이 출력해주세요.
+- 아래의 3차원 배열(3x3x3)을 하드코딩 해주세요.
 
   ```
-  1 2 C 를 만약 입력 받았다면,
+  AAA
+  AAA
+  AAA
   
-  CC
+  BBB
+  BBB
+  BBB
   
-  CC
+  CCC
+  CCC
+  CCC
   
-  를 출력.
+  그리고 문자를 하나 입력 받습니다.
+  만약 A를 입력했다면, 아래와 같이 출력해주세요.
+  input: A
+  output)
   
-  3 4 F 를 만약 입력 받았다면,
+  AAA
+  AAA
+  AAA
   
-  FFFF
-  FFFF
-  FFFF
+  BBB
+  BBB
+  BBB
   
-  FFFF
-  FFFF
-  FFFF
+  CCC
+  CCC
+  CCC
   
-  를 출력해주시오.
+  만약 B를 입력했다면, 아래와 같이 출력해주세요.
+  input: B
+  output)
+  
+  BBB
+  BBB
+  BBB
+  
+  CCC
+  CCC
+  CCC
+  
+  DDD
+  DDD
+  DDD
   ```
 
 ## 2. 입력
-- 첫째 줄: 숫자 두 개와 문자 한 개를 입력 받는다.
+- 첫째 줄: 문자 한 개를 입력 받는다.
 
 ## 3. 출력
 - 위의 예제의 규칙처럼 출력한다.
 
 ## 4. 예제 입력
 ```
-2 3 D
+C
 ```
 
 ## 5. 예제 출력
 ```
-DDD
-DDD
+CCC
+CCC
+CCC
 
 DDD
 DDD
+DDD
+
+EEE
+EEE
+EEE
 ```
 
 ## 6. 코드
@@ -52,18 +83,18 @@ using namespace std;
 
 int main()
 {
-    int n, m;
-    char k;
+    char ch;
+    char map[3][3][3];
 
-    cin >> n >> m >> k;
+    cin >> ch;
 
-    for (int i = 0; i < n * 2 + 1; i++) {
-        if (i * 2 == n * 2) {
+    for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < 3; j++) {
+            for (int k = 0; k < 3; k++) {
+                map[i][j][k] = ch + i;
+                cout << map[i][j][k];
+            }
             cout << "\n";
-            continue;
-        }
-        for (int j = 0; j < m; j++) {
-            cout << k;
         }
         cout << "\n";
     }
