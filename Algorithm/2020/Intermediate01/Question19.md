@@ -1,60 +1,72 @@
-# 2차원 배열 위치 찾기
+# 문장 정렬하기
 
 ## 1. 문제
-- ```
-아래의 2차원 배열(3x4)을 하드코딩 해주세요.
-  ADGJ
-  BEHK
-  CFIL
-  ```
-  
-- 문자 1개를 입력받고, y와 x의 좌표를 입력받습니다.
+- 길이가 다른 문장 네 개를 입력받습니다.
 
-- 만약, D 1 1을 입력받았다면, D의 위치(0, 1)에서 y + 1, x + 1의 위치의 알파벳(H)을 출력하시면 됩니다.
+- 문장들을 오름차순으로 정렬해서 출력해주세요.
+
 
 
 ## 2. 입력
-- 첫째 줄: 찾을 알파벳 한 개와 숫자 좌표(y, x)를 입력 받습니다.
+- 길이가 다른 문장 네 개를 입력받습니다.
 
 ## 3. 출력
-- 찾은 알파벳에서 좌표만큼 떨어진 알파벳을 출력합니다.
+- 문장들을 오름차순으로 정렬해서 출력해주세요.
 
 ## 4. 예제 입력
 ```
-H 1 1
+abc
+defg
+hi
+jklmn
 ```
 
 ## 5. 예제 출력
 ```
-L
+hi
+abc
+defg
+jklmn
 ```
 
 ## 6. 코드
 ```c++
+#define _CRT_SECURE_NO_WARNINGS
 #include <iostream>
+#include <cstring>
 using namespace std;
 
 int main()
 {
-    char vect[3][5] = {
-        "ADGJ",
-        "BEHK",
-        "CFIL"
-    };
+    char ch[4][11];
+    char result[4][11];
 
-    int y, x;
-    char ch;
-    cin >> ch >> y >> x;
+    for (int i = 0; i < 4; i++) cin >> ch[i];
 
     for (int i = 0; i < 3; i++) {
-        for (int j = 0; j < 4; j++) {
-            if (vect[i][j] == ch) {
-                y += i;
-                x += j;
+        for (int j = i + 1; j < 4; j++) {
+            if (strlen(ch[i]) > strlen(ch[j]))
+            {
+                char temp[11];
+                strcpy(temp, ch[i]);
+                strcpy(ch[i], ch[j]);
+                strcpy(ch[j], temp);
+            }
+            else if (strlen(ch[i]) == strlen(ch[j]))
+            {
+                if (strcmp(ch[i], ch[j]) == 1)
+                {
+                    char temp[11];
+                    strcpy(temp, ch[i]);
+                    strcpy(ch[i], ch[j]);
+                    strcpy(ch[j], temp);
+                }
             }
         }
     }
 
-    cout << vect[y][x];
+    for (int i = 0; i < 4; i++) {
+        cout << ch[i] << "\n";
+    }
 }
 ```
