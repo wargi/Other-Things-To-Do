@@ -159,8 +159,8 @@
 |  | - | [Mapping](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate01/Question18.md) | 201117 |
 |  | - | [문장 정렬하기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate01/Question19.md) | 201118 |
 |  | - | [3차원 배열 5](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate01/Question20.md) | 201118 |
-| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate01/Question21.md) | 201119 |
-| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate01/Question22.md) | 201119 |
+| | - | [등수 구하기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate01/Question21.md) | 201119 |
+| | - | [B & T](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate01/Question22.md) | 201119 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate01/Question23.md) | 201120 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate01/Question24.md) | 201120 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate01/Question25.md) | 201121 |

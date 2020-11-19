@@ -1,70 +1,64 @@
-# 마스킹 처리 후 값 찾기
+# B & T
 
 ## 1. 문제
 
-- 아래 두 배열을 하드 코딩 해주세요.
-
-  ```
-  1) 마스킹 배열(2x5)
-  0 0 1 0 0
-  0 0 1 1 1
-  
-  2) 값 배열(2x5)
-  3 5 4 1 1
-  3 5 2 5 6
-  ```
-
-- 숫자 한 개를 입력받고 해당하는 숫자가 마스킹 된 곳 중에 있는지를 출력하시오.
+- 네 글자를 입력받으세요.(무조건 B와 T가 포함됩니다.)
+- 네 글자를 조합하여 나타낼 수 있는 경우의 수를 출력하고합니다.
+- 하지만 B와 T가 붙어 있는 경우에는 출력할 수 없습니다.
+- 위의 조건에 맞춰 최종 결과를 출력해주세요.
 
 
 ## 2. 입력
 
-- 첫 번째 줄: 숫자 한 개가 주어진다.
+- 첫 번째 줄: 네 글자를 입력받으세요.(무조건 B와 T가 포함됩니다.)
 
 ## 3. 출력
 
-- 입력한 값이 있으면 존재를 출력하고, 없다면 없음을 출력하시오.
+- 위의 조건에 맞춰 최종 결과를 출력해주세요.
 
 
 ## 4. 예제 입력
 ```
-1
+BOTT
 ```
 
 ## 5. 예제 출력
 ```
-1 없음
+120
 ```
 
 ## 6. 코드
 
 ```c++
-#include <iostream>
+#include<iostream>
+#include<string.h>
 using namespace std;
 
-int main()
-{
-    int arr1[2][5] = {
-        0,0,1,0,0,
-        0,0,1,1,1
-    };
+char name[5];
+char path[5];
+int cnt = 0;
 
-    int arr2[2][5] = {
-        3,5,4,1,1,
-        3,5,2,5,6
-    };
+int run(int level) {
+	if (level == 4) {
+		cnt++;
+		return 0;
+	}
 
-    int n;
-    bool flag = false;
-    cin >> n;
+	for (int i = 0; i < 4; i++) {
+		if (name[i] == 'B' && path[level - 1] == 'T') continue;
+		if (name[i] == 'T' && path[level - 1] == 'B') continue;
 
-    for (int i = 0; i < 2; i++) {
-        for (int j = 0; j < 5; j++) {
-            if (arr1[i][j] == 1 && arr2[i][j] == n) flag = true;
-        }
-    }
+		path[level] = name[i];
+		run(level + 1);
+	}
+}
 
-    if (flag) cout << n << " 존재";
-    else cout << n << " 없음";
+int main() {
+	cin >> name;
+
+	run(0);
+	cout << cnt;
+
+	return 0;
 }
 ```
