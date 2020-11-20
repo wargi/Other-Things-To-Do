@@ -186,11 +186,11 @@
 >   1. Query 메시지
 >   2. Error 메시지
 >
-> | 데이터 |          내용           |            설명             | 데이터 |
+> | 데이터 |          데이터           |            데이터             | 데이터 |
 > | :----: | :---------------------: | :-------------------------: | :----: |
-> |   0    |         테스트2         |          Echo 응답          | Query  |
-> |   3    | Destination Unreachable |           테스트3           | Error  |
-> |   4    |      Source Quench      |           테스트3           | Error  |
+> |   0    |         Echo Reply         |          Echo 응답          | Query  |
+> |   3    | Destination Unreachable |           수신처 도달 불가           | Error  |
+> |   4    |      Source Quench      |           전송 제어 지시           | Error  |
 > |   5    |        Redirect         |        최적경로 통지        | Error  |
 > |   8    |      Echo Request       |            요청             | Query  |
 > |   11   |      Time Exceeded      | 시간 초과에 의한 패킷 제거  | Error  |
@@ -216,7 +216,24 @@
 > > - 무한으로 순환 되는 것을 방지하기 위해 대부분 Linux에서는 64개, Windows에서는 128개가 되면 소멸하게 만들어 놓는다.
 
 ## 8. Echo와 Time Exceeded
-- 
+- Echo
+
+> - 위에 표에서 에코와 관련된 타입인
+>
+>   - 0(Echo Reply): 요청을 받은 수신측 컴퓨터는 에코 응답을 돌려 보낸다.
+>
+>   - 8(Echo Request): 송신측 컴퓨터는 에코 요청을 보냄
+>
+>     > - 'Echo'라는 개념을 이용한 ping이라는 임의의 수신처에게 에코 요청을 보내는 소프트웨어가 있는데, 대부분 네트워크 관리자의 필수품이라고 할 수 있다. 에코의 요청과 응답을 통해 송신처와 수신처 간의 데이터를 송신할 수 있다는 의미. (그리고 요청과 응답에 걸리는 시간을 통해 네트워크 상태를 조사할 수 있다.)
+
+- Time Exceeded
+
+> - Time Exceeded는 '시간초과에 의한 패킷 파기'라는 메시지이다.
+>   - 여기서 시간초과는 TTL과 관계가 있는데, TTL은 끊어진 패킷을 파기하는데, 이때 파기한 것을 통지하는 메시지가 Time Exceeded다.
+> - Traceroute
+>
+> > - 위에 에코 요청/응답을 이용한 Ping처럼 Time Exceeded를 사용한 네트워크 체크용 스프트웨어가 있는데 Traceroute라고 한다.
+> > - Traceroute는 수신처까지의 경로를 가르쳐 주는 소프트웨어인데 수신처에 도달하기까지 경유하는 라우터를 가르쳐 준다.
 
 ## 9. Next Chapter Link
 - [Chapter 5: 커넥션과 포트 번호](https://github.com/wargi/Etc/blob/master/Network/Chapter5.md)

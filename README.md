@@ -7,7 +7,7 @@
 | | 1 | [네트워크 기초 지식](https://github.com/wargi/Etc/blob/master/Network/Chapter1.md) | 190515 |
 | | 2 | [신호의 전송과 충돌](https://github.com/wargi/Etc/blob/master/Network/Chapter2.md) | 190716 |
 | | 3 | [IP 어드레싱](https://github.com/wargi/Etc/blob/master/Network/Chapter3.md) | 190918 |
-| | 4 | [라우팅](https://github.com/wargi/Etc/blob/master/Network/Chapter4.md) | - |
+| | 4 | [라우팅](https://github.com/wargi/Etc/blob/master/Network/Chapter4.md) | 191121 |
 | | 5 | [커넥션과 포트 번호](https://github.com/wargi/Etc/blob/master/Network/Chapter5.md) | - |
 <<<<<<< HEAD
 | **알고리즘** | ---------------- | -------------------------- | ----------------- |
