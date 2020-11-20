@@ -8,27 +8,8 @@
 | | 2 | [신호의 전송과 충돌](https://github.com/wargi/Etc/blob/master/Network/Chapter2.md) | 190716 |
 | | 3 | [IP 어드레싱](https://github.com/wargi/Etc/blob/master/Network/Chapter3.md) | 190918 |
 | | 4 | [라우팅](https://github.com/wargi/Etc/blob/master/Network/Chapter4.md) | 191121 |
-<<<<<<< HEAD
-| | 5 | [커넥션과 포트 번호](https://github.com/wargi/Etc/blob/master/Network/Chapter5.md) | - |
-<<<<<<< HEAD
-| **알고리즘** | ---------------- | -------------------------- | ----------------- |
-=======
-=======
 | | 5 | [커넥션과 포트 번호](https://github.com/wargi/Etc/blob/master/Network/Chapter5.md) | 200125 |
->>>>>>> af83e60... Network
-| **운영체제** | ---------------- | -------------------------- | ----------------- |
-| | 1 | []() | - |
-| | 2 | []() | - |
-| | 3 | []()-] | - |
-| | 4 | []() | - |
-| | 5 | []() | - |
-| | 6 | []() | - |
-| | 7 | []() | - |
-| | 8 | []() | - |
-| | 9 | []() | - |
-| | 10 | []() | - |
 | **알고리즘 & 자료구조** | ---------------- | -------------------------- | ----------------- |
->>>>>>> c0c8efa... Network: Chapter 4 라우팅
 | | Multiple Loops | [Triangle Output 1](https://github.com/wargi/Etc/blob/master/Algorithm/MultipleLoops/Question1.md) | 190215 |
 | | - | [Triangle Output 2](https://github.com/wargi/Etc/blob/master/Algorithm/MultipleLoops/Question2.md) | 190216 |
 | | - | [Triangle Output 3](https://github.com/wargi/Etc/blob/master/Algorithm/MultipleLoops/Question3.md) | 190217 |
