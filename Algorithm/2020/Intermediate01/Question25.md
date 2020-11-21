@@ -1,72 +1,86 @@
-# 중복 제거 2
+# 그룹만들기 2
 
 ## 1. 문제
 
-- 2차원 배열(3x3)을 입력 받아 주세요.
-- 입력 받은 배열에서 중복은 제거 한 알파벳을 사전순으로 출력해주세요.
+- E / W / A / B / C 문자가 있습니다.
+- 이 중에 4명을 그룹으로 묶어야 해서 한명은 제외시켜야합니다.
+- 제외시키는 문자를 입력받고, 제외한 경우의 모든 순열을 출력해주세요.
 
 ## 2. 입력
-- 2차원 배열(3x3)을 입력 받아 주세요.
+- 제외시키는 문자를 입력받아 주세요.
 
 ## 3. 출력
 
-- 입력 받은 배열에서 중복은 제거 한 알파벳을 사전순으로 출력해주세요.
+- 제외한 경우의 모든 순열을 출력해주세요.
 
 
 ## 4. 예제 입력
 ```
-ATK
-AAA
-TTG
+E
 ```
 
 ## 5. 예제 출력
 ```
-AGKT
+WABC
+WACB
+WBAC
+WBCA
+WCAB
+WCBA
+AWBC
+AWCB
+ABWC
+ABCW
+ACWB
+ACBW
+BWAC
+BWCA
+BAWC
+BACW
+BCWA
+BCAW
+CWAB
+CWBA
+CAWB
+CABW
+CBWA
+CBAW
 ```
 
-## 6. 예제 입력
-
-```
-BBB
-BCD
-DZZ
-```
-
-## 7. 예제 출력
-
-```
-BCDZ
-```
-
-## 8. 코드
+## 6. 코드
 
 ```c++
-#include <iostream>
+#include<iostream>
+#include<string>
 using namespace std;
 
-struct Sketchbook {
-    char image[3][4];
-};
+string friends = "EWABC";
+int check[1000] = { 0 };
+char path[5];
+void run(int level, char e) {
+	if (level == 4) {
+		cout << path << "\n";
+		return;
+	}
 
-int main()
-{
-    int dat[100] = { 0 };
-    Sketchbook s1;
+	for (int i = 0; i < 5; i++) {
+		if (check[friends[i]] != 0) continue;
 
-    for (int i = 0; i < 3; i++) {
-        cin >> s1.image[i];
-    }
-
-    for (int i = 0; i < 3; i++) {
-        for (int j = 0; j < 3; j++) {
-            dat[s1.image[i][j]]++;
-        }
-    }
-
-    for (int i = 0; i < 100; i++) {
-        if (dat[i] > 0) cout << char(i);
-    }
+		check[friends[i]] = 1;
+		path[level] = friends[i];
+		run(level + 1, e);
+		path[level] = 0;
+		check[friends[i]] = 0;
+	}
 }
 
+int main() {
+	char except;
+	cin >> except;
+
+	check[except] = 1;
+	run(0, except);
+
+	return 0;
+}
 ```
