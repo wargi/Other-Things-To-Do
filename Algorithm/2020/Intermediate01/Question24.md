@@ -1,107 +1,80 @@
-# 가로 세로 채우기
+# 그룹 만들기
 
 ## 1. 문제
 
-```
-1. 아래의 2차원 배열(4x4)를 빈 배열을 하드코딩 해주세요.
-0 0 0 0
-0 0 0 0
-0 0 0 0
-0 0 0 0
-
-2. 만약 G 2를 입력 받으면, 아래와 같이 채워줍니다.
-0 0 0 0
-0 0 0 0
-1 1 1 1
-0 0 0 0
-
-3. 만약 S 0를 입력 받으면, 아래와 같이 채워줍니다.
-1 0 0 0
-1 0 0 0
-1 1 1 1
-1 0 0 0
-
-4. 만약 S 3를 입력 받으면, 아래와 같이 채워줍니다.
-1 0 0 1
-1 0 0 1
-1 1 1 1
-1 0 0 1
-
-5. 채운 배열을 출력해주세요.
-```
+- 문자 'B', 'T', 'S', 'K', 'R' 이 있습니다.
+- 이 중에 그룹으로 묶을 n명을 입력 받고, 경우의 수를 출력하려고 합니다.
+- 그룹에 첫번째가 리더, 이후 각각 위치가 있습니다.(ABC, CBA도 된다는 뜻)
+- 단, 그룹에는 꼭 'S'가 포함되어야합니다.
+- 위의 조건들을 생각하여 n을 입력받고 경우의 수를 출력해주세요.
 
 ## 2. 입력
-- 채울 내용을 세 줄 입력 받습니다.
+- 숫자 n을 입력받습니다.
 
 ## 3. 출력
 
-- 위의 문제 설명처럼 배열을 채우고 출력해주세요.
+- 경우의 수를 출력해주세요.
 
 
 ## 4. 예제 입력
 ```
-G 0
-S 1
-G 2
+3
 ```
 
 ## 5. 예제 출력
 ```
-1 1 1 1
-0 1 0 0
-1 1 1 1
-0 1 0 0
+36
 ```
 
 ## 6. 예제 입력
 
 ```
-S 3
-G 0
-S 1
+1
 ```
 
 ## 7. 예제 출력
 
 ```
-1 1 1 1
-0 1 0 1
-0 1 0 1
-0 1 0 1
+1
 ```
 
 ## 8. 코드
 
 ```c++
-#include <iostream>
+#include<iostream>
 using namespace std;
-int map[4][4] = { 0 };
 
-void drawG(int n) {
-    for (int i = 0; i < 4; i++) map[n][i] = 1;
+
+int cnt = 0;
+int check[1000] = { 0 };
+char path[6];
+char map[6] = "BTSKR";
+void run(int level, int limit) {
+	if (level == limit && check[int('S')] == 1) {
+		cnt++;
+		return;
+	}
+
+	for (int i = 0; i < 5; i++) {
+		if (check[map[i]] == 0) {
+			path[level] = map[i];
+			check[map[i]] = 1;
+			
+			run(level + 1, limit);
+
+			check[map[i]] = 0;
+			path[level] = 0;
+		}
+	}
 }
 
-void drawS(int n) {
-    for (int i = 0; i < 4; i++) map[i][n] = 1;
-}
+int main() {
+	int n;
+	cin >> n;
 
-int main()
-{
-    for (int i = 0; i < 3; i++) {
-        char ch;
-        int n;
+	run(0, n);
+	cout << cnt;
 
-        cin >> ch >> n;
-
-        if (ch == 'G') drawG(n);
-        else drawS(n);
-    }
-
-    for (int i = 0; i < 4; i++) {
-        for (int j = 0; j < 4; j++) {
-            cout << map[i][j] << " ";
-        }
-        cout << "\n";
-    }
+	return 0;
 }
 ```
