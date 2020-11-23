@@ -168,7 +168,7 @@
 | | - | [1차원 배열 이동시키기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate02/Question2.md) | 201122 |
 | | - | [안전한 배치 판변](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate02/Question3.md) | 201122 |
 | | - | [배열의 남은 곳 채우기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate02/Question4.md) | 201123 |
-| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate02/Question5.md) | 201123 |
+| | - | [배열 변경하기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate02/Question5.md) | 201123 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate02/Question6.md) | 201124 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate02/Question7.md) | 201124 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate02/Question8.md) | 201125 |
