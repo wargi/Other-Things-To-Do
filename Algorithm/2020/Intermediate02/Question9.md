@@ -1,63 +1,41 @@
-# 오프셋 찾기
+# heap 익혀보기 2
 
 ## 1. 문제
-- 아래의 2차원 배열(5x5)을 하드코딩 해주세요.
-
-```
-A B C D E
-F G H I J
-K L M N O
-P Q R S T
-U V W X Y
-```
-
-- 문자 한 개를 입력받아주세요. 그 후에 입력받은 문자가 'M'과 얼마나 떨어져 있는지 출력해주세요.
+- char 변수 3개를 heap을 이용하여 만들어주세요.
+- 문자 세 개를 위의 변수들에 입력받고, 입력 받은 문자가 모두 대문라면 "모두대문자"를 출력하고, 아니라면 "소문자있음"을 출력해주세요.
 
 ## 2. 입력
-- 문자 한 개를 입력받는다.
+- 문자 세 개를 변수들에 입력받는다.
 
 ## 3. 출력
-- 입력받은 문자가 'M'과 얼마나 떨어져 있는지 출력해주세요.
+- 입력 받은 문자가 모두 대문라면 "모두대문자"를 출력하고, 아니라면 "소문자있음"을 출력해주세요.
 
 ## 4. 예제 입력
 ```
-F
+S K t
 ```
 
 ## 5. 예제 출력
 ```
--1,-2
+소문자있음
 ```
 
 ## 6. 코드
 
 ```c++
 #include <iostream>
-#include <cstring>
 using namespace std;
 
 int main()
 {
-    char alpha[5][6] = {
-    "ABCDE",
-    "FGHIJ",
-    "KLMNO",
-    "PQRST",
-    "UVWXY"
-    };
+    char* a, * b, * c;
+    a = new char;
+    b = new char;
+    c = new char;
 
-    char ch;
-    cin >> ch;
-    int dy, dx;
-    for (int i = 0; i < 5; i++) {
-        for (int j = 0; j < 5; j++) {
-            if (ch == alpha[i][j]) {
-                dy = i - 2;
-                dx = j - 2;
-            }
-        }
-    }
+    cin >> *a >> *b >> *c;
 
-    cout << dy << "," << dx;
+    if (*a < 91 && *b < 91 && *c < 91) cout << "모두대문자";
+    else cout << "소문자있음";
 }
 ```
