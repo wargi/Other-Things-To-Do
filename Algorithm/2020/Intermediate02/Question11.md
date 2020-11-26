@@ -1,40 +1,34 @@
-# 범위 값 더하기
+# heap 익혀보기 4
 
 ## 1. 문제
-- 아래의 1차원 배열(1x11)을 하드코딩 해주세요.
-
-```
-3 4 1 1 2 6 8 7 8 9 10
-```
-
-- 기준점 index를 입력받고 기준점 index부터 5칸의 합을 출력해주세요
+- 문자 5개를 입력받고, 입력받은 순서대로 heap을 이용하여 링크드리스트에 저장하고 연결된 마지막 노드의 문자를 출력해주세요.
 
 ## 2. 입력
-- 기준점 index를 입력받는다.
+- 문자 5개를 입력받는다.
 
 ## 3. 출력
-- index 포함 다섯 칸을 합하여 출력한다.
+- 입력받은 순서대로 heap을 이용하여 링크드리스트에 저장하고 연결된 마지막 노드의 문자를 출력해주세요.
 
 ## 4. 예제 입력
 ```
-0
+A B C D E
 ```
 
 ## 5. 예제 출력
 ```
-11
+E
 ```
 
 ## 6. 예제 입력
 
 ```
-2
+S W I F T
 ```
 
 ## 7. 예제 출력
 
 ```
-18
+T
 ```
 
 ## 8. 코드
@@ -43,23 +37,31 @@
 #include <iostream>
 using namespace std;
 
-int vect[11] = { 3, 4, 1, 1, 2, 6, 8, 7, 8, 9, 10 };
+struct Node {
+    char data;
+    Node* next = NULL;
+};
 
-int getSum(int index) {
-	int sum = 0;
-	for (int i = index; i < index + 5; i++) {
-		sum += vect[i];
-	}
+int main()
+{
+    Node* head = new Node;
+    Node* n;
 
-	return sum;
-}
+    for (int i = 0; i < 5; i++) {
+        n = head;
+        cin >> n->data;
+        n = n->next;
+    }
+    
+    n = head;
+    while (true) {
+        if (n->next == NULL) {
+            cout << n->data;
+            break;
+        }
 
-int main() {
-	int n;
-	cin >> n;
+        n = n->next;
+    }
 
-	cout << getSum(n);
-
-	return  0;
 }
 ```
