@@ -1,63 +1,55 @@
-# Favorite Menu #
+# heap 익혀보기 3 #
 
 ## 1. 문제
 ```T
-아래의 1차원(1x4) 배열을 하드코딩 해주세요.
-M T K C
+1. 아래의 연결된 상태를 heap을 이용하여 만들어 주세요.
+head -> 3 -> 5 -> 4 -> 2
+
+2. 연결 상태를 만들었다면 while을 이용하여 처음부터 끝까지 출력해주세요.
 ```
 
-- 문자 하나를 입력 받고, 해당 문자가 하드코딩 배열에 있으면 "발견", 없으면 "미발견"
+## 2. 출력
+- 연결 상태를 만들었다면 while을 이용하여 처음부터 끝까지 출력해주세요.
 
-## 2. 입력
-- 문자 하나를 입력받는다.
-
-## 3. 출력
-- 입력받은 문자가 하드코딩 배열에 있으면 "발견", 없으면 "미발견"
-
-## 4. 예제 입력
+## 3. 예제 출력
 ```
-K
+3 5 4 2
 ```
 
-## 5. 예제 출력
-```
-발견
-```
-
-## 6. 예제 입력
-
-```
-F
-```
-
-## 7. 예제 출력
-
-```
-미발견
-```
-
-## 8. 코드
+## 4. 코드
 
 ```c++
 #include <iostream>
 using namespace std;
 
-char vect[5] = "MTKC";
+struct Node {
+    int data;
+    Node* next;
+};
 
-bool isExit(char ch) {
-	for (int i = 0; i < ch; i++) {
-		if (ch == vect[i]) return true;
-	}
-	return false;
-}
+int main()
+{
+    Node* head = new Node;
 
-int main() {
-	char ch;
-	cin >> ch;
+    head->data = 3;
+    head->next = new Node;
 
-	if (isExit(ch)) cout << "발견";
-	else cout << "미발견";
+    head->next->data = 5;
+    head->next->next = new Node;
 
-	return  0;
+    head->next->next->data = 4;
+    head->next->next->next = new Node;
+
+    head->next->next->next->data = 2;
+    head->next->next->next->next = NULL;
+
+    Node* x = head;
+    while (true)
+    {
+        cout << x->data << " ";
+        x = x->next;
+
+        if (x == NULL) break;
+    }
 }
 ```
