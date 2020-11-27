@@ -1,58 +1,79 @@
-# 동명이인 #
+# 떨어지는 빗방울 세기 #
 
 ## 1. 문제
-- 두 명의 이름을 입력받고, 이름이 같으면 "동명", 아니라면 "남남"으로 출력해주세요.
+- 2차원 배열(4x4)을 입력받고('#'은 빈칸을 의미), 각 세로줄마다 몇개의 문자가 있는지 출력해주세요.
+
+  ```
+  예를 들어)
+  아래와 같이 입력받는다면,
+  #ABC
+  D##E
+  ###F
+  #G##
+  
+  아래와 같이 출력한다.
+  1 2 1 3
+  ```
 
 ## 2. 입력
-- 두 명의 이름을 입력받습니다.
+- 2차원 배열(4x4)을 입력받습니다. ('#'은 빈칸을 의미)
 
 ## 3. 출력
-- 이름이 같으면 "동명", 아니라면 "남남"으로 출력해주세요.
+- 각 세로줄마다 몇개의 문자가 있는지 출력해주세요.
 
 ## 4. 예제 입력
 ```
-park
-sang
+#H#E
+L#L#
+O##S
+#WI#
 ```
 
 ## 5. 예제 출력
 ```
-남남
+2 2 2 2
 ```
 
 ## 6. 예제 입력
 
 ```
-wargi
-wargi
+##FT
+HI##
+WARG
+I###
 ```
 
 ## 7. 예제 출력
 
 ```
-동명
+3 2 2 2
 ```
 
 ## 8. 코드
 
 ```c++
 #include <iostream>
-#include <cstring>
+#include <string>
 using namespace std;
 
-bool isSame(char lv[100], char rv[100]) {
-	if (!strcmp(lv, rv)) return true;
-	else return false;
-}
+int main()
+{
+	int result[4] = { 0 };
 
-int main() {
-	char leftX[100];
-	char rightX[100];
-	cin >> leftX >> rightX;
+	char map[4][5];
 
-	if (isSame(leftX, rightX)) cout << "동명";
-	else cout << "남남";
+	for (int i = 0; i < 4; i++) {
+		cin >> map[i];
+	}
 
-	return  0;
+	for (int i = 0; i < 4; i++) {
+		for (int j = 0; j < 4; j++) {
+			if (map[i][j] != '#') result[j]++;
+		}
+	}
+
+	for (int i = 0; i < 4; i++) {
+		cout << result[i] << " ";
+	}
 }
 ```

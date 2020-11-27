@@ -175,8 +175,8 @@
 | | - | [heap 익혀보기 2](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate02/Question9.md) | 201125 |
 | | - | [heap 익혀보기 3](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate02/Question10.md) | 201126 |
 | | - | [heap 익혀보기 4](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate02/Question11.md) | 201126 |
-| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate02/Question12.md) | 201127 |
-| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate02/Question13.md) | 201127 |
+| | - | [나만의 숫자 만들기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate02/Question12.md) | 201127 |
+| | - | [떨어지는 빗방울 세기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate02/Question13.md) | 201127 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate02/Question14.md) | 201128 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate02/Question15.md) | 201128 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate02/Question16.md) | 201129 |
