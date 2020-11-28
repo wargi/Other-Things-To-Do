@@ -177,7 +177,7 @@
 | | - | [heap 익혀보기 4](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate02/Question11.md) | 201126 |
 | | - | [나만의 숫자 만들기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate02/Question12.md) | 201127 |
 | | - | [떨어지는 빗방울 세기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate02/Question13.md) | 201127 |
-| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate02/Question14.md) | 201128 |
+| | - | [짝 맞추기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate02/Question14.md) | 201128 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate02/Question15.md) | 201128 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate02/Question16.md) | 201129 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate02/Question17.md) | 201129 |
