@@ -1,52 +1,86 @@
-# 빈도수 높은 알파벳 찾기
+# n개의 주사위
 
 ## 1. 문제
 
-- 대문자로만 이루어진 알파뱃 배열(1x8)을 입력받고, 그중에 가장 빈도수가 높은 알파벳을 출력해주세요.
+- n개의 주사위를 던져서 나올 수 있는 모든 경우를 출력해주세요.
 
 ## 2. 입력
 
-- 대문자로만 이루어진 알파뱃 배열(1x8)을 입력받아주세요.
+- 주사위 개수 n을 입력 받습니다.
 
 ## 3. 출력
-- 가장 빈도수가 높은 알파벳을 출력해주세요.
+- n개의 주사위를 던져서 나올 수 있는 모든 경우를 출력해주세요.
 
 ## 4. 예제 입력
 ```
-ABCCDEEE
+2
 ```
 
 ## 5. 예제 출력
 ```
-E
+11
+12
+13
+14
+15
+16
+21
+22
+23
+24
+25
+26
+31
+32
+33
+34
+35
+36
+41
+42
+43
+44
+45
+46
+51
+52
+53
+54
+55
+56
+61
+62
+63
+64
+65
+66
 ```
 
 ## 6. 코드
 ```c++
 #include <iostream>
-#include <cstring>
 using namespace std;
+
+int n;
+char *path = new char[n + 1];
+void run(int level, int limit) {
+	if (level == limit) {
+		path[limit] = 0;
+		cout << path << "\n";
+		return;
+	}
+
+	for (int i = 0; i < 6; i++) {
+		path[level] = '1' + i;
+		run(level + 1, limit);
+		path[level] = 0;
+	}
+}
 
 int main()
 {
-    char v[9];
-    int check[1000] = { 0 };
+	cin >> n;
 
-    for (int i = 0; i < 8; i++) {
-        cin >> v[i];
-        check[v[i]]++;
-    }
-
-    int max = -1;
-    char ch;
-
-    for (int i = 0; i < 1000; i++) {
-        if (check[i] > max) {
-            max = check[i];
-            ch = char(i);
-        }
-    }
-
-    cout << ch;
+	run(0, n);
 }
 ```
