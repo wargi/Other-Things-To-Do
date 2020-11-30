@@ -1,61 +1,81 @@
-# 알파벳 정렬하기
+# Linked list 1
 
 ## 1. 문제
 
 ```
-아래의 2차원 배열(5x3)을 하드코딩 해주세요.
-A B C
-A G H
-H I J
-K A B
-A B C
+1. 11에서 36사이의 숫자 중 하나를 입력받아 주세요.
+
+2. 입력받은 번호에 해당하는 문자를 순서대로 4개를 연결시켜주세요.(번호별 문자는 아래를 참고해주세요.)
+
+3. 연결시킨 후에 head부터 모든 노드를 출력해주세요.
+
+11: A   12: B   13: C
+14: D   15: E   16: F
+17: G   18: H   19: I
+20: J   21: K   22: L
+23: M   24: N   25: O
+26: P   27: Q   28: R
+29: S   30: T   31: U
+32: V   33: W   34: X
+35: Y   36: Z
 ```
 
-- 위의 하드코딩한 배열을 사전순으로 정렬하여 출력해주세요.
-
-## 2. 힌트
-- Direct Address Table을 이용하여 풀어주세요.
+## 2. 입력
+- 숫자 n을 입력받아주세요. (11 <= n <= 36)
 
 ## 3. 출력
 
-- 위의 하드코딩한 배열을 사전순으로 정렬하여 출력해주세요.
+- 연결시킨 후에 head부터 모든 노드를 출력해주세요.
 
-## 4. 예제 출력
+## 4. 예제 입력
 ```
-AAAABBBCCGHHIJK
+14
 ```
 
-## 5. 코드
+## 5. 예제 출력
+
+```
+DEFG
+```
+
+## 6. 코드
 
 ```c++
 #include <iostream>
-#include <cstring>
 using namespace std;
+
+struct Node {
+    char data;
+    Node* next;
+};
+
+Node* head, * last;
+
+void addNode(char data) {
+    if (head == NULL) {
+        head = new Node();
+        head->data = data;
+        last = head;
+        return;
+    }
+
+    last->next = new Node();
+    last = last->next;
+    last->data = data;
+}
 
 int main()
 {
-    char alpha[5][4] = {
-        "ABC",
-        "AGH",
-        "HIJ",
-        "KAB",
-        "ABC"
-    };
+    int n;
+    cin >> n;
 
-    int check[1000] = { 0 };
-
-    for (int i = 0; i < 5; i++) {
-        for (int j = 0; j < 3; j++) {
-            check[alpha[i][j]]++;
-        }
+    for (int i = 0; i < 4; i++) {
+        char ch = char(n + 54 + i);
+        addNode(ch);
     }
-
-    for (int i = 0; i < 1000; i++) {
-        if (check[i] > 0) {
-            for (int j = 0; j < check[i]; j++) {
-                cout << char(i);
-            }
-        }
+    
+    for (Node* p = head; p != NULL; p = p->next) {
+        cout << p->data;
     }
 }
 ```
