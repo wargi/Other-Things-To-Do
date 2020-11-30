@@ -1,66 +1,69 @@
-# 블랙 리스트
+# heap 익혀보기 5
 
 ## 1. 문제
-- ```
-빌딩 배열(3x3)을 하드코딩 해주세요.
-  C D A
-  B M Z
-  Q P O
-  ```
-  
-- 블랙 리스트 네 명을 입력받고, 빌딩 배열에 몇 명의 블랙 리스트가 있는지 출력해주세요.
+- 숫자 n을 입력받고, n의 배수 4개의 링크드리스트를 연결하여 만들고 출력해주세요.
 
+```
+input: 4
 
+4 -> 8 -> 12 -> 16
+
+output)
+4 8 12 16
+```
 
 ## 2. 입력
-- 블랙 리스트 네 명을 입력 받습니다.
+- 숫자 n을 입력받습니다.
 
 ## 3. 출력
-- 빌딩 배열에 몇 명의 블랙 리스트가 있는지 출력해주세요.
+- 연결된 링크드리스트를 head부터 순서대로 출력해주세요.
 
 ## 4. 예제 입력
 ```
-A R M C
+2
 ```
 
 ## 5. 예제 출력
 ```
-3명
+2 4 6 8
 ```
 
 ## 6. 코드
 ```c++
 #include <iostream>
-#include <cstring>
 using namespace std;
+
+struct Node {
+    int data;
+    Node* next;
+};
+
+Node* head, * last;
+
+void addNode(int data) {
+    if (head == NULL) {
+        head = new Node();
+        head->data = data;
+        last = head;
+        return;
+    }
+
+    last->next = new Node();
+    last = last->next;
+    last->data = data;
+}
 
 int main()
 {
-    char town[3][4] = {
-        "CDA",
-        "BMZ",
-        "QPO"
-    };
+    int n;
+    cin >> n;
 
-    int check[1000] = { 0 };
-    char black[5];
-
-    for (int i = 0; i < 4; i++) {
-        cin >> black[i];
-        check[black[i]]++;
+    for (int i = 1; i <= 4; i++) {
+        addNode(n * i);
     }
 
-    for (int i = 0; i < 3; i++) {
-        for (int j = 0; j < 3; j++) {
-            check[town[i][j]]++;
-        }
+    for (Node* p = head; p != NULL; p = p->next) {
+        cout << p->data << " ";
     }
-
-    int cnt = 0;
-    for (int i = 0; i < 1000; i++) {
-        if (check[i] == 2) cnt++;
-    }
-
-    cout << cnt << "명";
 }
 ```

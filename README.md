@@ -171,7 +171,7 @@
 | | - | [배열 변경하기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate02/Question5.md) | 201123 |
 | | - | [알파벳 찾기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate02/Question6.md) | 201124 |
 | | - | [자기 위치 찾기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate02/Question7.md) | 201124 |
-| | - | [heap 익혀보기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate02/Question8.md) | 201125 |
+| | - | [heap 익혀보기 1](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate02/Question8.md) | 201125 |
 | | - | [heap 익혀보기 2](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate02/Question9.md) | 201125 |
 | | - | [heap 익혀보기 3](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate02/Question10.md) | 201126 |
 | | - | [heap 익혀보기 4](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate02/Question11.md) | 201126 |
@@ -182,7 +182,7 @@
 | | - | [2진수 나누어 저장하기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate02/Question16.md) | 201129 |
 | | - | [min & max 찾기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate02/Question17.md) | 201129 |
 | | - | [n개의 주사위](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate02/Question18.md) | 201130 |
-| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate02/Question19.md) | 201130 |
+| | - | [heap 익혀보기 5](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate02/Question19.md) | 201201 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate02/Question20.md) | 201201 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate02/Question21.md) | 201201 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate02/Question22.md) | 201202 |
