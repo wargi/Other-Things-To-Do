@@ -185,7 +185,7 @@
 | | - | [Heap 5](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate02/Question19.md) | 201201 |
 | | - | [Linked list 1](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate02/Question20.md) | 201201 |
 | | - | [Path 출력하기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate02/Question21.md) | 201201 |
-| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate02/Question22.md) | 201202 |
+| | - | [몇 번째 Path인지 찾기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate02/Question22.md) | 201202 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate02/Question23.md) | 201202 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate02/Question24.md) | 201203 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate02/Question25.md) | 201203 |
