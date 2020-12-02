@@ -1,77 +1,41 @@
-# 카운팅 수 찾기
+# Linked List를 Tree로 바꾸기
 
 ## 1. 문제
 
-```
-아래의 2차원 배열(3x5)를 입력해주세요.
-1 3 3 5 1
-3 6 2 4 2
-1 9 2 6 5
-```
+- heap을 이용하여 아래의 그림처럼 연결 해주세요.
+- 입/출력 값은 없습니다 :)
 
-- 숫자 한 개를 입력 받습니다.
-- 위 하드코딩 배열에는 같은 숫자가 여러개 존재합니다.
-- 예를 들어, 숫자 1은 3개, 3은 3개 존재합니다.
-- 이런 식으로, 입력받은 숫자 만약 2라면 2개의 카운팅 값을 가진 존재 5(2개 존재)와 6(2개 존재)을 출력해제요.
+<img src="./Tree03.png" alt="Tree" style="zoom:80%;" />
 
-## 2. 입력
-- 한 개의 숫자를 입력받습니다.
-
-## 3. 출력
-
-- 입력 받은 카운팅과 같은 빈도수를 가진 숫자를 출력해주세요.
-
-
-## 4. 예제 입력
-```
-3
-```
-
-## 5. 예제 출력
-```
-1 2 3
-```
-
-## 6. 예제 입력
-
-```
-2
-```
-
-## 7. 예제 출력
-
-```
-5 6
-```
-
-## 8. 코드
-
+## 2. 코드
 ```c++
 #include <iostream>
 using namespace std;
 
+struct Node {
+    int data;
+    Node* pre;
+    Node* post;
+};
+
 int main()
 {
-    int map[3][5] = {
-        1, 3, 3, 5, 1,
-        3, 6, 2, 4, 2,
-        1, 9, 2, 6, 5
-    };
-    int check[199] = { 0 };
-    int n;
+    Node* head = new Node;
 
-    cin >> n;
+    head->data = 3;
+    head->pre = new Node;
+    head->post = new Node;
 
-    for (int i = 0; i < 3; i++) {
-        for (int j = 0; j < 5; j++) {
-            check[map[i][j]]++;
-        }
-    }
+    head->pre->data = 7;
+    head->pre->pre = head->pre->post = NULL;
 
-    for (int i = 0; i < 200; i++) {
-        if (check[i] == n) {
-            cout << i << " ";
-        }
-    }
+    head->post->data = 6;
+    head->post->pre = new Node;
+    head->post->post = NULL;
+
+    head->post->pre->data = 2;
+    head->post->pre->pre = head->post->pre->post = NULL;
+
+    return 0;
 }
 ```
