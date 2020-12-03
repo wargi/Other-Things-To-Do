@@ -1,78 +1,94 @@
-# 배열 탐색하기
+# Linked List로 구성된 이진 트리 탐색
 
 ## 1. 문제
 
+- 아래의 이미지와 같이 노드를 만들어주세요.
+- 한 문장을 입력받습니다.
+
 ```
-1. 2차원 배열(3x4)을 하드코딩 해주세요.
-A B G K
-T T A B
-A C C D
+* 입력 받은 문장이 "H" 라면 head가 가르키는 값을 출력하고,
+* 입력 받은 문장이 "HR" 이라면 head->Right가 가르키는 값을 출력하고,
+* 입력 받은 문장이 "HL"이라면 head->Left가 가르키는 값을 출력하고,
+* 입력 받은 문장이 "HRR" 이라면 head->Right->Right가 가르키는 값을 출력하고,
+* 입력 받은 문장이 "HLL" 이라면 head->Left->Left가 가르키는 값을 출력합니다.
+* 입력 받은 문장이 "HLR" 이라면 head->Left->Right가 가르키는 값을 출력합니다.
 ```
 
-- 2차원 배열(2x2)을 입력 받고, 해당 배열이 위의 하드 코딩 배열에 존재하는지 출력해주세요.
-- 존재한다면, 몇개가 있는지 확인하고 "발견(1개)" 이런식으로 출력해주시고, 없다면 "미발견"이라고 출력해주세요.
+<img src="./Tree04.png" alt="Tree" style="zoom:80%;" />
 
 ## 2. 입력
 
-- 2차원 배열(2x2)을 입력 받습니다.
+- 한 문장을 입력받습니다.
 
 ## 3. 출력
 
-- 입력 받은 배열이 존재한다면, 몇개가 있는지 확인하고 "발견(1개)" 이런식으로 출력해주시고, 없다면 "미발견"이라고 출력해주세요.
+- 위에 적어놓은 조건을 적용하여 결과를 출력해주세요.
 
 
 ## 4. 예제 입력
 ```
-AB
-CD
+HLL
 ```
 
 ## 5. 예제 출력
 ```
-발견(1개)
+D
 ```
 
 ## 6. 예제 입력
 
 ```
-AS
-DF
+HR
 ```
 
 ## 7. 예제 출력
 
 ```
-미발견
+C
 ```
 
 ## 8. 코드
 
 ```c++
 #include <iostream>
+#include <cstring>
+#include <string>
 using namespace std;
 
-struct Sketchbook {
-    char image[3][4];
+struct Node {
+    char data;
+    Node* left;
+    Node* right;
 };
 
 int main()
 {
-    int dat[100] = { 0 };
-    Sketchbook s1;
+    Node* head = new Node;
+    head->data = 'A';
+    head->left = new Node;
+    head->right = new Node;
 
-    for (int i = 0; i < 3; i++) {
-        cin >> s1.image[i];
-    }
+    head->left->data = 'B';
+    head->left->left = new Node;
+    head->left->right = new Node;
 
-    for (int i = 0; i < 3; i++) {
-        for (int j = 0; j < 3; j++) {
-            dat[s1.image[i][j]]++;
-        }
-    }
+    head->right->data = 'C';
+    head->right->left = head->right->right = NULL;
 
-    for (int i = 0; i < 100; i++) {
-        if (dat[i] > 0) cout << char(i);
-    }
+    head->left->left->data = 'D';
+    head->left->left->left = head->left->left->right = NULL;
+
+    head->left->right->data = 'E';
+    head->left->right->left = head->left->right->right = NULL;
+
+    string s;
+    cin >> s;
+
+    if (s == "H") cout << head->data;
+    else if (s == "HL") cout << head->left->data;
+    else if (s == "HR") cout << head->right->data;
+    else if (s == "HLL") cout << head->left->left->data;
+    else cout << head->left->right->data;
+
 }
-
 ```

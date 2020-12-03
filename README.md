@@ -186,8 +186,8 @@
 | | - | [Linked list 1](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate02/Question20.md) | 201201 |
 | | - | [Path 출력하기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate02/Question21.md) | 201201 |
 | | - | [몇 번째 Path인지 찾기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate02/Question22.md) | 201202 |
-| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate02/Question23.md) | 201202 |
-| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate02/Question24.md) | 201203 |
+| | - | [Linked List를 Tree로 바꾸기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate02/Question23.md) | 201202 |
+| | - | [Linked List로 구성된 이진 트리 탐색](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate02/Question24.md) | 201203 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate02/Question25.md) | 201203 |
 |  | Basic | [Find the tail](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic01/Question1.md) | 200920 |
 |  | - | [문자의 수](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic01/Question2.md) | 200921 |
