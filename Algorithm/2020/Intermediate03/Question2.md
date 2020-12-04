@@ -1,49 +1,48 @@
-# 도플갱어
+# 문장 사이의 숫자 찾기
 
 ## 1. 문제
-- 6개의 숫자를 입력 받고, 같은 숫자가 존재하면 "도플갱어 발견", 존재하지 않는다면 "미발견"을 출력해주세요.
+- 문장을 입력 받습니다.
+- 문장에는 숫자가 끼어있는데, 문장에 숨어 있는 숫자를 찾아서 5를 더한 결과값을 출력해주세요.
 
 ## 2. 입력
-- 1차원 배열(1x6)을 입력 받는다.
+- 문장을 입력 받는다.
 
 ## 3. 출력
-- 같은 숫자가 존재하면 "도플갱어 발견", 존재하지 않는다면 "미발견"을 출력해주세요.
+- 문장에 숨어 있는 숫자를 찾아서 5를 더한 결과값을 출력해주세요.
 
 ## 4. 예제 입력
 ```
-1 3 3 5 1 4
+ATP1326TTA
 ```
 
 ## 5. 예제 출력
 ```
-도플갱어 발견
+1331
 ```
 
 ## 6. 코드
 ```c++
 #include <iostream>
+#include <string>
 using namespace std;
 
 int main()
 {
-    int input[6];
-    int check[100] = { 0 };
+    int n[100], cnt = 0;
 
-    for (int i = 0; i < 6; i++) {
-        cin >> input[i];
-        check[input[i]]++;
+    string s;
+    cin >> s;
+
+    for (int i = 0; i < s.size(); i++) {
+        int x = s[i] - '0';
+        if (x < 10) n[cnt++] = x;
     }
 
-    int flag = 1;
-
-    for (int i = 0; i < 100; i++) {
-        if (check[i] > 1) {
-            flag = 0;
-            break;
-        }
+    int x = 0;
+    for (int i = 0; i < cnt; i++) {
+        x = x * 10 + n[i];
     }
 
-    if (flag) cout << "미발견";
-    else cout << "도플갱어 발견";
+    cout << x + 5;
 }
 ```
