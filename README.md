@@ -192,7 +192,7 @@
 | | Intermediate 2 | [중복 없이 카드 뽑기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate03/Question1.md) | 201204 |
 | | - | [문장 사이의 숫자 찾기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate03/Question2.md) | 201204 |
 | | - | [원하는 행렬 출력하기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate03/Question3.md) | 201205 |
-| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate03/Question4.md) | 201205 |
+| | - | [에이스 뽑기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate03/Question4.md) | 201205 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate03/Question5.md) | 201206 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate03/Question6.md) | 201206 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate03/Question7.md) | 201207 |
