@@ -1,30 +1,31 @@
-# 합격자 발표 2
+# Queue 구조체
 
 ## 1. 문제
-- 아래의 2차원 배열(2x3)을 하드코딩하고, 1차원 배열(1x4)을 입력 받아 합격 여부를 출력해주세요.
-
-```
-3 5 1
-4 2 6
-```
+- int x와 char y로 Queue로 구성된 구조체 배열을 만들어주세요.
+- 첫 줄에 Enqueue 갯수를 입력받습니다.
+- 다음 줄부터 입력 값들이 주어집니다.
+- 모두 Dequeue하고 Dequeue하며 나오는 값을 출력해주세요.
 
 ## 2. 입력
-- 1차원 배열(1x4)을 입력 받아주세요.
+- 첫 줄에 Enqueue 갯수를 입력받습니다.
+- 다음 줄부터 입력 값들이 주어집니다.
 
 ## 3. 출력
-- 합격 여부를 출력해주세요.
+- 모두 Dequeue하고 Dequeue하며 나오는 값을 출력해주세요.
 
 ## 4. 예제 입력
 ```
-1 3 6 9
+3
+1 A
+2 B
+3 C
 ```
 
 ## 5. 예제 출력
 ```
-1번 합격
-2번 합격
-6번 합격
-9번 불합격
+1 A
+2 B
+3 C
 ```
 
 ## 6. 코드
@@ -32,29 +33,45 @@
 #include <iostream>
 using namespace std;
 
-int main()
-{
-    int win[2][3] = {
-        3, 5, 1,
-        4, 2, 6
-    };
+struct Node {
+	int x;
+	char y;
+	Node* next;
+};
 
-    int people[4];
-    int check[100] = { 0 };
-    for (int i = 0; i < 2; i++) {
-        for (int j = 0; j < 3; j++) {
-            check[win[i][j]]++;
-        }
-    }
+Node* head, * last;
 
-    for (int i = 0; i < 4; i++) {
-        cin >> people[i];
-    }
+void push(int x, char y) {
+	if (head == NULL) {
+		head = new Node({ x, y });
+		last = head;
+		return;
+	}
 
-    for (int i = 0; i < 4; i++) {
-        if (check[people[i]] > 0) cout << people[i] << "번 합격\n";
-        else cout << people[i] << "번 불합격\n";
-    }
+	last->next = new Node({ x, y });
+	last = last->next;
 }
 
+void pop() {
+	cout << head->x << " " << head->y << "\n";
+	head = head->next;
+}
+
+int main()
+{
+	int n;
+	cin >> n;
+
+	for (int i = 0; i < n; i++) {
+		int x;
+		char y;
+		cin >> x >> y;
+
+		push(x, y);
+	}
+
+	for (int i = 0; i < n; i++) {
+		pop();
+	}
+}
 ```
