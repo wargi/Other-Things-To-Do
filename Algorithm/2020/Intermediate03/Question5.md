@@ -1,39 +1,43 @@
-# 양쪽에서 문자 찾기 #
+# Enqueue & Dequeue #
 
 ## 1. 문제
-```
-아래에 1차원 배열(1x9)을 하드코딩 해주세요.
-A T K P T C A B C
-```
-
-- 문자 두 개를 입력받고, 첫 번째 문자는 왼쪽에서 부터, 두 번째 문자는 오른쪽에서부터 찾아 두 문자 간의 간격을 출력해주세요.
+- 첫 줄에 두 개를 숫자를 입력 받습니다.
+- 첫 줄의 첫 번째 숫자는 Queue에 Enqueue할 갯수입니다.
+- 첫 줄의 두 번째 숫자는 Queue에 Dequeue할 갯수입니다.
+- 다음 줄에는 Queue에 넣을 문자들을 입력받습니다.
+- 최종 Enqueue & Dequeue한 Queue의 결과를 출력해주세요.
 
 ## 2. 입력
-- 문자 두 개를 입력 받아주세요.
+- 첫 줄에 두 개를 숫자를 입력 받습니다.
+- 첫 줄의 첫 번째 숫자는 Queue에 Enqueue할 갯수입니다.
+- 첫 줄의 두 번째 숫자는 Queue에 Dequeue할 갯수입니다.
+- 다음 줄에는 Queue에 넣을 문자들을 입력받습니다.
 
 ## 3. 출력
-- 첫 번째 문자는 왼쪽에서 부터, 두 번째 문자는 오른쪽에서부터 찾아 두 문자 간의 간격을 출력해주세요.
+- 최종 Enqueue & Dequeue한 Queue의 결과를 출력해주세요.
 
 ## 4. 예제 입력
 ```
-A C
+5 2
+A B C G K
 ```
 
 ## 5. 예제 출력
 ```
-8
+C G K
 ```
 
 ## 6. 예제 입력
 
 ```
-K A
+3 1
+A B C
 ```
 
 ## 7. 예제 출력
 
 ```
-4
+B C
 ```
 
 ## 8. 코드
@@ -42,20 +46,49 @@ K A
 #include <iostream>
 using namespace std;
 
-int main()
-{
-    char child[10] = "ATKPTCABC";
+struct Node {
+    char data;
+    Node* next;
+};
 
-    int start = -1, end = -1;
-    char ch1, ch2;
+Node* head, * last;
 
-    cin >> ch1 >> ch2;
-
-    for (int i = 0; i < 9; i++) {
-        if (start == -1 && child[i] == ch1) start = i;
-        if (end == -1 && child[8 - i] == ch2) end = 8 - i;
+void enQueue(char data) {
+    if (head == NULL) {
+        head = new Node();
+        head->data = data;
+        last = head;
+        return;
     }
 
-    cout << end - start;
+    last->next = new Node();
+    last = last->next;
+    last->data = data;
+}
+
+void deQueue(Node* p) {
+    if (head->next == NULL) return;
+    head = head->next;
+}
+
+int main()
+{
+    int e, d;
+    cin >> e >> d;
+
+    for (int i = 0; i < e; i++) {
+        char ch;
+        cin >> ch;
+
+        enQueue(ch);
+    }
+
+    for (int i = 0; i < d; i++) {
+        deQueue(head);
+    }
+
+    for (Node* p = head; p != NULL; p = p->next) {
+        cout << p->data << " ";
+    }
 }
 ```
