@@ -1,85 +1,125 @@
-# 완벽하게 다른 문장 찾기 #
+# 메모장 만들기 #
 
 ## 1. 문제
 
+- 첫 번째 줄: 한 문장을 입력 받으세요.
+- 두 번째 줄: 커서의 위치를 입력 받으세요.
+- 세 번째 줄: 명령어 4개를 입력 받으세요.
+
 ```
-아래의 1차원 배열(1x4)을 하드코딩 해주세요.
-3 5 4 2
+명령어표
+L: 커서를 왼쪽으로 한 칸 이동
+R: 커서를 오른쪽으로 한 칸 이동
+D: 커서에 위치한 칸 삭제
 ```
 
-- 세 문장을 입력 받고, 세 문장 모두 같은 글자가 한글자라도 없으면 "Perfect", 아니면 "No"를 출력해 주세요.
+- 명령어들을 수행하고 커서가 있는 위치를 출력해주세요.
 
 ## 2. 입력
-- 문장 세 개를 입력받는다.
+- 첫 번째 줄: 한 문장을 입력 받으세요.
+- 두 번째 줄: 커서의 위치를 입력 받으세요.
+- 세 번째 줄: 명령어 4개를 입력 받으세요.
 
 ## 3. 출력
-- 입력받은 세 문장 모두 같은 글자가 한글자라도 없으면 "Perfect", 아니면 "No"를 출력해 주세요.
+- 명령어들을 수행하고 커서가 있는 위치를 출력해주세요.
 
 ## 4. 예제 입력
 ```
-PARK
-SANG
-WOOK
+ABCDEF
+2
+RRLD
 ```
 
 ## 5. 예제 출력
 ```
-No
+3
 ```
 
 ## 6. 예제 입력
 
 ```
-HELLO
-SWIFT
-2020
+GHIJKL
+4
+LLLD
 ```
 
 ## 7. 예제 출력
 
 ```
-Perfect
+1
 ```
 
 ## 8. 코드
 
 ```c++
 #include <iostream>
-#include <cstring>
+#include <string>
 using namespace std;
+
+struct Node {
+	char data;
+	Node* next;
+};
+
+Node* head, * last, * current;
+
+void addNode(char data) {
+	if (head == NULL) {
+		head = new Node({ data });
+		last = head;
+		current = head;
+		return;
+	}
+
+	last->next = new Node({ data });
+	last = last->next;
+}
+
+void moveNode(int level, int limit) {
+	if (level == limit) return;
+	if (current->next == NULL) return;
+	else current = current->next;
+	moveNode(level + 1, limit);
+}
+
+void backNode(Node* p) {
+	if (head == current) return;
+	if (p->next == current) {
+		current = p;
+	}
+	else {
+		backNode(p->next);
+	}
+}
 
 int main()
 {
-    char ca[100], cb[100], cc[100];
-    cin >> ca >> cb >> cc;
+	string n, m;
+	int idx;
 
-    int n = strlen(ca);
-    int m = strlen(cb);
-    int o = strlen(cc);
+	cin >> n >> idx >> m;
 
-    int check[100] = { 0 };
+	for (int i = 0; i < n.size(); i++) {
+		addNode(n[i]);
+	}
 
-    for (int i = 0; i < n; i++) {
-        check[ca[i]]++;
-    }
+	moveNode(0, idx);
 
-    for (int i = 0; i < n; i++) {
-        check[cb[i]]++;
-    }
+	for (int i = 0; i < m.size(); i++) {
+		if (m[i] == 'R') moveNode(0, 1);
+		if (m[i] == 'L') backNode(head);
+		if (m[i] == 'D') {
+			if (current->next == NULL) continue;
+			if (current->next->next == NULL) current->next = NULL;
+			else current->next = current->next->next;
+		}
+	}
 
-    for (int i = 0; i < n; i++) {
-        check[cc[i]]++;
-    }
+	int cnt = 0;
+	for (Node* p = head; current != p; p = p->next) {
+		cnt++;
+	}
 
-    int flag = 1;
-    for (int i = 0; i < 100; i++) {
-        if (check[i] > 1) {
-            flag = 0;
-            break;
-        }
-    }
-
-    if (flag) cout << "Perfect";
-    else cout << "No";
+	cout << cnt;
 }
 ```
