@@ -1,71 +1,75 @@
-# 글자 세기 #
+# 5번째 Queue #
 
 ## 1. 문제
-- 한 문장을 읽고, 중복을 제거한 알파벳이 각 각 처음 입력받은 문장에 몇개 있는지 출력하세요.
-
-## 2. 입력
-- 문자 하나를 입력받는다.
-
-## 3. 출력
-- 중복을 제거한 알파벳이 각 각 처음 입력받은 문장에 몇개 있는지 출력하세요.
-
-## 4. 예제 입력
-```
-HELLOSWIFT
-```
-
-## 5. 예제 출력
-```
-H:1
-E:1
-L:2
-O:1
-S:1
-W:1
-I:1
-F:1
-T:1
-```
-
-## 6. 예제 입력
+- 소방관 B I A H 4명이 잇습니다.
+- 위의 소방관들 중에 출동할 순서를 뽑아야 하는데 소방관 B를 시작으로 5번째 소방관을 선택합니다.
 
 ```
-BYE2020
+ex)
+B -> I -> A -> H -> B (5번째 B 출동)
 ```
 
-## 7. 예제 출력
+- B 소방관이 출동했으니, 이제 남은 3명의 소방관을 위의 예제처럼 출동시키면 됩니다.
+- 출동하는 소방관의 순서대로 출력해주세요.
 
 ```
-B:1
-Y:1
-E:1
-2:2
-0:2
+1. B -> I -> A -> H -> B (B 출동)
+2. I -> A -> H -> I -> A (A 출동)
+3. H -> I -> H -> I -> H (H 출동)
+4. 남은 I 출동
 ```
 
-## 8. 코드
+## 2. 출력
+- 위의 예제와 같이 출동하는 순서대로 소방관을 출력해주세요.
 
+## 3. 예제 출력
+```
+B A H I
+```
+
+## 4. 코드
 ```c++
 #include <iostream>
-#include <cstring>
 using namespace std;
 
-int main()
-{
-    char ch[11];
-    cin >> ch;
+struct Node {
+	char data;
+	Node* next;
+};
 
-    int n = strlen(ch);
-    int check[100] = { 0 };
+Node* head, * last;
 
-    for (int i = 0; i < n; i++)
-        check[ch[i]]++;
+void enQueue(char x) {
+	if (head == NULL) {
+		head = new Node({ x });
+		last = head;
+		return;
+	}
 
-    for (int i = 0; i < 100; i++) {
-        if (check[i] > 0) {
-            cout << char(i) << ":" << check[i] << "\n";
-        }
-    }
+	last->next = new Node({ x });
+	last = last->next;
+}
 
+char deQueue() {
+	char ch = head->data;
+	head = head->next;
+	return ch;
+}
+
+int main() {
+	enQueue('B');
+	enQueue('I');
+	enQueue('A');
+	enQueue('H');
+
+	int i = 1;
+	while (head != NULL) {
+		char ch = deQueue();
+		if (i % 5 == 0) cout << ch << " ";
+		else enQueue(ch);
+		i++;
+	}
+
+	return 0;
 }
 ```
