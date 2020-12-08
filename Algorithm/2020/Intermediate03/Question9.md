@@ -1,44 +1,67 @@
-# 중복 제거
+# Enqueue & Dequeue 2
 
 ## 1. 문제
-- 한 문장을 입력받고, 중복 입력된 알파벳을 제거하고 출력해주세요
+- 10의 크기를 가진 Queue를 생성해주세요.
+- 반복할 횟수 n을 입력받아주세요.
+- 1번 반복에 1, 2, 3을 enqueue하고 dequeue를 3번합니다.
+- Dequeue를 할 때마다 Dequeue하는 값을 출력해주세요.
 
 ## 2. 입력
-- 한 개의 문장을 입력받는다.
+- 반복할 횟수 n을 입력받아주세요.
 
 ## 3. 출력
-- 중복을 제거한 문장을 출력해주세요.
+- Dequeue를 할 때마다 Dequeue하는 값을 출력해주세요.
 
 ## 4. 예제 입력
 ```
-AABACDDED
+5
 ```
 
 ## 5. 예제 출력
 ```
-ABCDE
+123123123123123
 ```
 
 ## 6. 코드
 
 ```c++
 #include <iostream>
-#include <cstring>
-
 using namespace std;
+
+struct Node {
+    int data;
+    Node* next;
+};
+
+Node* head, * last;
+
+void enQueue(int x) {
+    if (head == NULL) {
+        head = new Node({ x });
+        last = head;
+        return;
+    }
+
+    last->next = new Node({ x });
+    last = last->next;
+}
+
+void deQueue() {
+    cout << head->data;
+    head = head->next;
+}
 
 int main()
 {
-    char ch[11];
-    cin >> ch;
-
-    int n = strlen(ch);
-    int check[100] = { 0 };
-
-    for (int i = 0; i < n; i++) check[ch[i]]++;
-
-    for (int i = 0; i < 100; i++) {
-        if (check[i] > 0) cout << char(i);
+    int n;
+    cin >> n;
+    for (int i = 0; i < n; i++) {
+        enQueue(1);
+        enQueue(2);
+        enQueue(3);
+        deQueue();
+        deQueue();
+        deQueue();
     }
 }
 ```
