@@ -202,7 +202,7 @@
 | | - | [Enqueue & Dequeue 3](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate03/Question11.md) | 201209 |
 | | - | [구조체 Pointer](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate03/Question12.md) | 201209 |
 | | - | [잔돈 교환](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate03/Question13.md) | 201210 |
-| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate03/Question14.md) | 201210 |
+| | - | [다른 종류의 알파벳 찾기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate03/Question14.md) | 201211 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate03/Question15.md) | 201211 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate03/Question16.md) | 201211 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate03/Question17.md) | 201212 |
