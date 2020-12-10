@@ -1,57 +1,67 @@
-# 4x3 배열 만들기
+# 소문자로 변경
 
 ## 1. 문제
-- 2차원 배열(4x3)을 만들고 내부의 값을 0으로 초기화 해주세요.
+- 대문자로 구성된 문장을 총 4개 입력 받습니다.
 
-- 좌표 네 개를 입력받고, 입력받은 좌표에 값을 5로 바꾸고, 결과를 출력해주세요.
+- 입력된 문장들 중에 가장 긴 문장과 짧은 문장을 소문자로 바꾸고 입력받은 순서대로 출력해주세요.
 
 ## 2. 입력
-- 좌표(y, x)를 네 개를 입력받습니다.
+- 대문자로 구성된 문장을 총 4개 입력 받습니다.
 
 ## 3. 출력
-- 값을 변경한 후 2차원 배열(4x3)을 출력해주세요.
+- 입력된 문장들 중에 가장 긴 문장과 짧은 문장을 소문자로 바꾸고 입력받은 순서대로 출력해주세요.
 
 ## 4. 예제 입력
 
 ```
-0 1
-1 1
-2 0
-3 0
+BHC
+GOOBNE
+CHICKEN
+NENE
 ```
 
 ## 4. 예제 출력
 ```
-0 5 0
-0 5 0
-5 0 0
-5 0 0
+bhc
+GOOBNE
+chicken
+NENE
 ```
 
 ## 6. 코드
 ```c++
 #include <iostream>
+#include <string>
 using namespace std;
 
-int main()
-{
-    int input[4][2];
-    int vect[4][3] = { 0 };
+int main() {
+	string s[4];
+	int min = 1000, max = -1, minIdx, maxIdx;
+	
+	for (int i = 0; i < 4; i++) {
+		cin >> s[i];
+		int size = s[i].size();
+		if (min > size) {
+			min = s[i].size();
+			minIdx = i;
+		}
 
-    for (int t = 0; t < 4; t++) {
-        for (int u = 0; u < 2; u++) {
-            cin >> input[t][u];
-        }
-        int ny = input[t][0];
-        int nx = input[t][1];
-        vect[ny][nx] = 5;
-    }
+		if (max < size) {
+			max = s[i].size();
+			maxIdx = i;
+		}
+	}
 
-    for (int i = 0; i < 4; i++) {
-        for (int j = 0; j < 3; j++) {
-            cout << vect[i][j] << " ";
-        }
-        cout << "\n";
-    }
+	for (int i = 0; i < 4; i++) {
+		if (i == minIdx || i == maxIdx) {
+			for (int j = 0; j < s[i].size(); j++) cout << char(s[i][j] + 32);
+		}
+		else {
+			cout << s[i];
+		}
+		cout << "\n";
+	}
+
+	return 0;
 }
 ```
