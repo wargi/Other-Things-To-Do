@@ -1,89 +1,80 @@
-# 구조체 익혀보기 2
+# Magic Number 만들기
 
 ## 1. 문제
-```c++
-//아래의 코드를 하드 코딩해주세요.
-struct Train {
-    int win;
-    char name[10];
-}
+```
+1. 아래의 2차원 배열(3x4)을 하드코딩 해주세요.
+0 0 0 0
+1 0 0 0
+1 0 0 0
 
-Train trains[7] = {
-  {15, "summer"},
-  {33, "cloe"},
-  {24, "summer"},
-  {28, "niki"},
-  {32, "jenny"},
-  {20, "summer"},
-  {40, "coco"}
-};
+2. 하드코딩한 배열의 맨 윗줄에 들어갈 숫자 4개를 입력 받아주세요.
+
+3. 그 후에, 남은 곳을 채웁니다.
+
+4. 채울 때 규칙이 있는데, 채워야 할 곳에 좌표에서 위쪽과 왼쪽 값을 더한 결과를 채워주세요.
+
+예제)
+input: 1 2 1 4
+
+1. 윗 줄을 채운다.
+1 2 1 4
+1 0 0 0
+1 0 0 0
+
+2. 1행까지 실행한 결과
+1 2 1 4
+1 3 4 8
+1 0 0 0
+
+3. 2행까지 완료한 최종상태
+1 2 1 4
+1 3 4 8
+1 4 8 16
 ```
 
-- 이름(name)과 나이(win)를 입력받고, 몇 번째에 있는지 인덱스를 출력해주세요.
-
 ## 2. 입력
-- 이름(name)과 나이(win)를 입력받아주세요.
+- 하드코딩한 배열의 맨 윗줄에 들어갈 숫자 4개를 입력 받아주세요.
 
 ## 3. 출력
--  입력 받은 값이 몇 번째에 있는지 인덱스를 출력해주세요.
+-  위의 예제처럼 실행한 후 배열의 최종상태를 출력해주세요.
 
 ## 4. 예제 입력
 ```
-cloe
-33
+1 1 1 1
 ```
 
 ## 5. 예제 출력
 ```
-1
+1 1 1 1
+1 2 3 4
+1 3 6 10
 ```
 
 ## 6. 코드
 ```c++
 #include <iostream>
-#include <cstring>
 using namespace std;
 
-struct Train {
-    int win;
-    char name[10];
+int magicMap[3][4] = { 0 };
 
-    int size() {
-        return strlen(name);
-    }
-};
+int main() {
+	for (int i = 0; i < 4; i++) {
+		cin >> magicMap[0][i];
+	}
 
-int main()
-{
-    int age;
-    char name[8];
+	for (int i = 1; i < 3; i++) {
+		for (int j = 0; j < 4; j++) {
+			if (j == 0) magicMap[i][j] = magicMap[i - 1][j];
+			else magicMap[i][j] = magicMap[i - 1][j] + magicMap[i][j - 1];
+		}
+	}
 
-    cin >> name >> age;
-
-    Train trains[7] = {
-        {15, "summer"},
-        {33, "cloe"},
-        {24, "summer"},
-        {28, "niki"},
-        {32, "jenny"},
-        {20, "summer"},
-        {40, "coco"}
-    };
-
-    for (int i = 0; i < 7; i++) {
-        if (trains[i].size() == strlen(name) && trains[i].win == age) {
-            int flag = 1;
-            for (int j = 0; j < trains[j].size(); j++) {
-                if (trains[i].name[j] != name[j]) {
-                    flag = 0;
-                    break;
-                }
-            }
-            if (flag) {
-                cout << i;
-                break;
-            }
-        }
-    }
+	for (int i = 0; i < 3; i++) {
+		for (int j = 0; j < 4; j++) {
+			cout << magicMap[i][j] << " ";
+		}
+		cout << "\n";
+	}
+	return 0;
 }
 ```
