@@ -1,28 +1,30 @@
-# 특정 구역의 합
+# Linked list Line
 
 ## 1. 문제
 
-- 2차원 배열(4x4)을 입력 받고, 입력 받은 배열에서 2x3 사이즈의 합이 가장 큰 좌표를 출력해주세요.
+- Linked list로 Line을 구현할려고 합니다.
+- 입력받은 문자들을 모두 Linked list에 등록하고, 등록 후 다시 처음부터 출력해주세요.
+
+<img src="./LinkedList01.png" alt="LinkedList" style="zoom:80%;" />
 
 ## 2. 입력
-- 2차원 배열(4x4)을 입력 받아주세요.
+- 첫 줄: 입력받을 문자의 갯수 n을 입력 받습니다.
+- 마지막 줄: n개의 문자들을 입력 받습니다.
 
 ## 3. 출력
 
-- 입력 받은 배열에서 2x3 사이즈의 합이 가장 큰 좌표를 출력해주세요.
+- 입력받은 문자들을 모두 Linked list에 등록하고, 등록 후 다시 처음부터 출력해주세요.
 
 ## 4. 예제 입력
 
 ```
-1 5 9 13
-2 6 10 14
-3 7 11 15
-4 8 12 16
+4
+A B C D
 ```
 
 ## 5. 예제 출력
 ```
-(2, 1)
+A B C D
 ```
 
 ## 6. 코드
@@ -31,40 +33,39 @@
 #include <iostream>
 using namespace std;
 
-int image[4][4];
+struct Node {
+	char data;
+	Node* next;
+};
 
-int calSum(int startY, int startX) {
-    int sum = 0;
-    for (int i = startY; i < startY + 2; i++) {
-        for (int j = startX; j < startX + 3; j++) {
-            sum += image[i][j];
-        }
-    }
+Node* head, * last;
 
-    return sum;
+void addNode(char x) {
+	if (head == NULL) {
+		head = new Node({ x });
+		last = head;
+		return;
+	}
+
+	last->next = new Node({ x });
+	last = last->next;
 }
 
-int main()
-{
-    for (int i = 0; i < 4; i++) {
-        for (int j = 0; j < 4; j++) {
-            cin >> image[i][j];
-        }
-    }
+int main() {
+	int n;
+	cin >> n;
 
-    int max = -1, maxY, maxX;
-    for (int i = 0; i < 3; i++) {
-        for (int j = 0; j < 2; j++) {
-            int x = calSum(i, j);
+	for (int i = 0; i < n; i++) {
+		char ch;
+		cin >> ch;
 
-            if (x > max) {
-                max = x;
-                maxY = i;
-                maxX = j;
-            }
-        }
-    }
+		addNode(ch);
+	}
 
-    cout << "(" << maxY << "," << maxX << ")";
+	for (Node* p = head; p != NULL; p = p->next) {
+		cout << p->data << " ";
+	}
+
+	return 0;
 }
 ```

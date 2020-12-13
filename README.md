@@ -208,7 +208,7 @@
 | | - | [Magic Number 만들기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate03/Question17.md) | 201212 |
 | | - | [두 개의 max값 찾기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate03/Question18.md) | 201212 |
 | | - | [내 주위에 벽 쌓기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate03/Question19.md) | 201213 |
-| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate03/Question20.md) | 201213 |
+| | - | [Linked list Line](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate03/Question20.md) | 201213 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate03/Question21.md) | 201214 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate03/Question22.md) | 201214 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate03/Question23.md) | 201215 |
