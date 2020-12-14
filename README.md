@@ -209,7 +209,7 @@
 | | - | [두 개의 max값 찾기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate03/Question18.md) | 201212 |
 | | - | [내 주위에 벽 쌓기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate03/Question19.md) | 201213 |
 | | - | [Linked list Line](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate03/Question20.md) | 201213 |
-| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate03/Question21.md) | 201214 |
+| | - | [삼각관계 2](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate03/Question21.md) | 201214 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate03/Question22.md) | 201214 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate03/Question23.md) | 201215 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate03/Question24.md) | 201215 |
