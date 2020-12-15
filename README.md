@@ -211,8 +211,8 @@
 | | - | [Linked list Line](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate03/Question20.md) | 201213 |
 | | - | [삼각관계 2](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate03/Question21.md) | 201214 |
 | | - | [인기 많은 알파벳 찾기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate03/Question22.md) | 201214 |
-| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate03/Question23.md) | 201215 |
-| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate03/Question24.md) | 201215 |
+| | - | [인접 행렬 그래프](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate03/Question23.md) | 201215 |
+| | - | [테트리스](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate03/Question24.md) | 201215 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate03/Question25.md) | 201216 |
 |  | Basic | [Find the tail](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic01/Question1.md) | 200920 |
 |  | - | [문자의 수](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic01/Question2.md) | 200921 |
