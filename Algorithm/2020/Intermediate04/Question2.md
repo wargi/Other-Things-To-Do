@@ -1,23 +1,38 @@
-# 2단 점프
+# DFS
 
 ## 1. 문제
-- 한 개의 숫자를 입력받고, 입력받은 숫자를 2씩 증가하는 재귀함수를 만들어 주세요.
-- 3번째 재귀함수에 들어오면 다시 리턴하며 값을 출력해주세요.
+- DFS는 그래프, 트리 탐색의 방법 중 하나입니다. 배열이나 링크드리스트는 반복문으로 쉽게 탐색이 가능하지만, 그래프와 같은 자료구조는 반복문으로 탐색이 어렵습니다.
+- 그래서 DFS로 탐색하곤 합니다.
+- 그래프를 N x N의 인접행렬로 입력받고,
+- DFS 탐색 순서로 출력해주세요.
+- 예시)
+
+<img src="./Tree02.png" alt="Tree" style="zoom:80%;" />
+
+- 위의 트리로 DFS를 돌리면 출력결과는 0 2 5 6 3 1 4 가 출력된다.
 
 ## 2. 입력
-- 한 개의 숫자를 입력받는다.
+- 첫 줄: 인접행렬의 사이즈를 정할 N을 입력받는다.
+- 다음 줄부터: N x N의 2차원 배열을 입력받는다.
 
 ## 3. 출력
-- 3번째 재귀함수에 들어오면 다시 리턴하며 값을 출력해주세요.
+- DFS 탐색 순서로 출력해주세요.
 
 ## 4. 예제 입력
 ```
-2
+7
+0 0 1 1 1 0 0 
+0 0 0 0 0 0 0
+0 0 0 0 0 1 1
+0 1 0 0 0 0 0
+0 0 0 0 0 0 0
+0 0 0 0 0 0 0
+0 0 0 0 0 0 0
 ```
 
 ## 5. 예제 출력
 ```
-8 6 4 2
+0 2 5 6 3 1 4
 ```
 
 ## 6. 코드
@@ -25,16 +40,55 @@
 #include <iostream>
 using namespace std;
 
-void abc(int start, int end) {
-    if (end == 4) return;
-    abc(start + 2, end + 1);
-    cout << start << " ";
+int n, parent;
+int map[100][100];
+
+void run(int row) {
+    cout << row << " ";
+
+    for (int i = 0; i < n; i++) {
+        if (map[row][i] == 1) {
+            run(i);
+        }
+    }
 }
 
 int main()
 {
-    int n;
     cin >> n;
-    abc(n, 0);
+
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++) {
+            cin >> map[i][j];
+        }
+    }
+
+    for (int i = 0; i < n; i++) {
+        int flag = 0;
+        for (int j = 0; j < n; j++) {
+            if (map[i][j] == 1) {
+                flag = 1;
+                break;
+            }
+        }
+
+        if (flag) {
+            flag = 0;
+            for (int j = 0; j < n; j++) {
+                if (map[j][i] == 1) {
+                    flag = 1;
+                    break;
+                }
+            }
+            if (!flag) {
+                parent = i;
+                break;
+            }
+        }
+    }
+
+    run(parent);
+
+    return 0;
 }
 ```
