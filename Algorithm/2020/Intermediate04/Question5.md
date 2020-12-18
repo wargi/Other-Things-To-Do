@@ -1,62 +1,80 @@
-# 부메랑 2 #
+# Linked list & DFS #
 
 ## 1. 문제
-```
-아래에 1차원 배열(1x8)을 하드코딩 해주세요.
-3 7 4 1 9 4 6 2
+
+- 여섯 글자를 입력 받고, Linked list로 아래과 같이 연결해주세요.
+
+```c++
+// ex
+head = new Node();
+head->left = new Node();
+head->right = new Node();
+...
 ```
 
-- 한 개의 index를 입력받아 주세요.
-- 입력 받은 index -> 0번 index -> 입력받은 index순으로 출력해주세요.
+- Linked list Node에 각각 입력받은 문자를 넣어주세요.
+- 만약, ABCDEF를 입력 받았다면 아래의 그림과 같습니다.
+
+<img src="./Tree05.png" alt="Tree" style="zoom:80%;" />
+
+- 모두 연결시킨 후, DFS로 탐색한 결과를 출력해주세요.
 
 ## 2. 입력
-- 한 개의 index를 입력받아 주세요.
+- 여섯 글자를 입력 받아 주세요.
 
 ## 3. 출력
-- 입력 받은 index -> 0번 index -> 입력받은 index순으로 출력해주세요.
+- DFS로 탐색한 결과를 출력해주세요.
 
 ## 4. 예제 입력
 ```
-5
+ABCDEF
 ```
 
 ## 5. 예제 출력
 ```
-4 9 1 4 7 3 7 4 1 9 4
+ABDECF
 ```
 
-## 6. 예제 입력
-
-```
-2
-```
-
-## 7. 예제 출력
-
-```
-4 7 3 7 4
-```
-
-## 8. 코드
+## 6. 코드
 
 ```c++
 #include <iostream>
+#include <cstring>
 using namespace std;
 
-int boomerang[8] = { 3, 7, 4, 1, 9, 4, 6, 2 };
+struct Node {
+    char data;
+    Node* left;
+    Node* right;
+};
 
-int returnMap(int n) {
-    cout << boomerang[n] << " ";
-    if (n == 0) return 0;
-    returnMap(n - 1);
-    cout << boomerang[n] << " ";
+Node* head;
+
+void run(Node* p) {
+    if (p == NULL) return;
+    cout << p->data;
+
+    run(p->left);
+    run(p->right);
 }
 
+char map[10] = "_ABC__DE";
+char ch[1000];
+char chMap[1000];
 int main()
 {
-    int n;
-    cin >> n;
+    cin >> ch;
+    int n = strlen(ch);
+    
+    head = new Node({ ch[0] });
+    head->left = new Node({ ch[1] });
+    head->right = new Node({ ch[2] });
+    head->left->left = new Node({ ch[3] });
+    head->left->right = new Node({ ch[4] });
+    head->right->left = new Node({ ch[5] });
 
-    returnMap(n);
+    run(head);
+
+    return 0;
 }
 ```
