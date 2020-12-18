@@ -1,67 +1,72 @@
-# a to b #
+# DFS 2 #
 
 ## 1. 문제
-- 변수 a, b를 만들고, 각 각에 숫자를 입력받아 주세요.
-- 그 후, 재귀 호출을 이용하여 a -> b -> a까지 출력해주세요.
+- 8개의 노드로 구성 된 문자열을 입력받고, 8x8의 인접행렬을 입력받아 주세요.
+- 아래의 그림은 예제 입력의 예시에 해당하는 트리입니다.
+- DFS로 0번 노드부터 모든 노드를 탐색하고 출력해주세요.
+
+<img src="./Tree04.png" alt="Tree" style="zoom:80%;" />
 
 ## 2. 입력
-- 변수 a, b를 만들고, 각 각에 숫자를 입력받아 주세요.
+- 8개의 노드로 구성 된 문자열을 입력받고, 8x8의 인접행렬을 입력받아 주세요.
 
 ## 3. 출력
-- 재귀 호출을 이용하여 a -> b -> a까지 출력해주세요.
+- DFS로 0번 노드부터 모든 노드를 탐색하고 출력해주세요.
 
 ## 4. 예제 입력
 ```
-1 5
+RKFCBICM
+0 1 1 1 0 0 0 0
+0 0 0 0 1 1 0 0 
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 1 1
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
 ```
 
 ## 5. 예제 출력
 ```
-1 2 3 4 5 4 3 2 1
+RKBIFCCM
 ```
 
-## 6. 예제 입력
-
-```
-5 9
-```
-
-## 7. 예제 출력
-
-```
-5 6 7 8 9 8 7 6 5
-```
-
-## 8. 예제 입력
-
-```
-2 7
-```
-
-## 9. 예제 출력
-
-```
-2 3 4 5 6 7 6 5 4 3 2
-```
-
-## 10. 코드
+## 6. 코드
 
 ```c++
 #include <iostream>
+#include <string>
 using namespace std;
 
-int aToB(int a, int b) {
-    cout << a << " ";
-    if (a == b) return 0;
-    aToB(a + 1, b);
-    cout << a << " ";
+int n;
+int map[100][100];
+string names;
+
+void input() {
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++) {
+            cin >> map[i][j];
+        }
+    }
+}
+
+void run(int row) {
+    cout << names[row];
+
+    for (int i = 0; i < n; i++) {
+        if (map[row][i] == 1) run(i);
+    }
 }
 
 int main()
 {
-    int a, b;
-    cin >> a >> b;
+    cin >> names;
+    n = names.size();
 
-    aToB(a, b);
+    input();
+
+    run(0);
+
+    return 0;
 }
 ```
