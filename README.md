@@ -219,6 +219,26 @@
 | | - | [Tree 3](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate04/Question3.md) | 201217 |
 | | - | [DFS 2](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate04/Question4.md) | 201218 |
 | | - | [Linked list & DFS](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate04/Question5.md) | 201218 |
+| | - | [string 익혀보기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate04/Question6.md) | 201219 |
+| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate04/Question7.md) | 201219 |
+| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate04/Question8.md) | 201220 |
+| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate04/Question9.md) | 201220 |
+| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate04/Question10.md) | 201221 |
+| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate04/Question11.md) | 201221 |
+| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate04/Question12.md) | 201222 |
+| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate04/Question13.md) | 201222 |
+| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate04/Question14.md) | 201223 |
+| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate04/Question15.md) | 201223 |
+| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate04/Question16.md) | 201224 |
+| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate04/Question17.md) | 201224 |
+| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate04/Question18.md) | 201225 |
+| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate04/Question19.md) | 201225 |
+| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate04/Question20.md) | 201226 |
+| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate04/Question21.md) | 201226 |
+| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate04/Question22.md) | 201227 |
+| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate04/Question23.md) | 201227 |
+| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate04/Question24.md) | 201228 |
+| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate04/Question25.md) | 201228 |
 |  | Basic | [Find the tail](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic01/Question1.md) | 200920 |
 |  | - | [문자의 수](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic01/Question2.md) | 200921 |
 |  | - | [문장에 'A' 추가하기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic01/Question3.md) | 200921 |
