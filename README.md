@@ -220,10 +220,10 @@
 | | - | [DFS 2](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate04/Question4.md) | 201218 |
 | | - | [Linked list & DFS](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate04/Question5.md) | 201218 |
 | | - | [string 익혀보기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate04/Question6.md) | 201219 |
-| | - | [문장 사이의 문장찾기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate04/Question7.md) | 201219 |
+| | - | [문장속에 문장 찾기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate04/Question7.md) | 201219 |
 | | - | [A ~ K 알파벳 찾기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate04/Question8.md) | 201220 |
 | | - | [통과율](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate04/Question9.md) | 201220 |
-| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate04/Question10.md) | 201221 |
+| | - | [문장속에 문장 찾기 2](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate04/Question10.md) | 201221 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate04/Question11.md) | 201221 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate04/Question12.md) | 201222 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate04/Question13.md) | 201222 |
