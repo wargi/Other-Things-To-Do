@@ -1,63 +1,58 @@
-# 알파벳 출력하기
+# 문장의 일부분 꺼내오기
 
 ## 1. 문제
-- 한 문자를 입력 받고, 입력 받은 문자가 중심이 되게 출력해주세요.
-- 예를 들어, D를 입력 받았다면, ABCDEFG를 출력해주세요.
-- 만약 A를 A이전은 다시 Z부터해서 XYZABCD 이런식으로 출력해주세요.
+- 한 문장을 입력 받습니다.
+- 그리고, 시작 인덱스와 종료 인덱스, 반복횟수를 입력받고 출력해주세요.
 
 ## 2. 입력
-- 한 문자를 입력 받는다.
+- 한 문장을 입력 받는다.
+- 시작 인덱스와 종료 인덱스, 반복횟수를 입력 받습니다.
 
 ## 3. 출력
-- 입력 받은 문자가 중심이 되게 출력해주세요.
+- 시작 인덱스와 종료 인덱스, 반복횟수를 입력받고 출력해주세요.
 
 ## 4. 예제 입력
 ```
-F
+ABCDEFGHIJKL
+3 5 3
 ```
 
 ## 5. 예제 출력
 ```
-CDEFGHI
+DEFDEFDEF
 ```
 
 ## 6. 예제 입력
 
 ```
-M
+ABSDEFSS
+1 3 1
 ```
 
 ## 7. 예제 출력
 
 ```
-JKLMNOP
+BSD
 ```
 
 ## 8. 코드
 
 ```c++
 #include <iostream>
+#include <string>
 using namespace std;
 
 int main()
 {
-    char n;
-    cin >> n;
+	int s, e, r;
+	string t;
+	cin >> t;
+	cin >> s >> e >> r;
 
-    int a = int(n);
-
-    for (int i = -3; i < 4; i++) {
-        int ch = a + i;
-
-        if (ch < 65) {
-            ch = 91 - (65 - ch);
-            cout << char(ch);
-        }
-        else if (ch > 90) {
-            ch = (ch - 90) + 64;
-            cout << char(ch);
-        }
-        else cout << char(ch);
-    }
+	for (int j = 0; j < r; j++) {
+		for (int i = s; i <= e; i++) {
+			cout << t[i];
+		}
+	}
 }
 ```
