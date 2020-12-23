@@ -227,7 +227,7 @@
 | | - | [문장의 일부분 꺼내오기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate04/Question11.md) | 201221 |
 | | - | [문장 내용 수정하기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate04/Question12.md) | 201222 |
 | | - | [문장의 일부분 꺼내오기 2](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate04/Question13.md) | 201222 |
-| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate04/Question14.md) | 201223 |
+| | - | [단어 꺼내오기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate04/Question14.md) | 201223 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate04/Question15.md) | 201223 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate04/Question16.md) | 201224 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate04/Question17.md) | 201224 |
