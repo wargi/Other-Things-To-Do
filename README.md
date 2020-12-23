@@ -230,7 +230,7 @@
 | | - | [단어 꺼내오기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate04/Question14.md) | 201223 |
 | | - | [E-mail 구분하기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate04/Question15.md) | 201224 |
 | | - | [바이러스](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate04/Question16.md) | 201224 |
-| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate04/Question17.md) | 201224 |
+| | - | [유효성 검사](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate04/Question17.md) | 201224 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate04/Question18.md) | 201225 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate04/Question19.md) | 201225 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate04/Question20.md) | 201226 |
