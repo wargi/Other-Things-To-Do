@@ -142,7 +142,7 @@
 |  | Advanced 1 | [구조체 정렬하기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced01/Question1.md) | 201225 |
 |  | - | [Tree 01](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced01/Question2.md) | 201226 |
 |  | - | [배열 덧셈](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced01/Question3.md) | 201226 |
-|  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced01/Question4.md) | 201227 |
+|  | - | [증가 배열 판별](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced01/Question4.md) | 201227 |
 |  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced01/Question5.md) | 201227 |
 |  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced01/Question6.md) | 201228 |
 |  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced01/Question7.md) | 201228 |
