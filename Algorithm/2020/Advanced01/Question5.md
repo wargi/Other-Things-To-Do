@@ -1,130 +1,47 @@
-# 저글링 컨트롤 #
+# 내 마음대로 숫자 바꾸기 #
 
 ## 1. 문제
-```
-아래의 Map 2차원 배열(5x3)을 하드코딩 해주세요.
-_ _ _
-_ _ _
-A B C
-_ _ _
-_ _ _
-
-A, B, C의 저글링이 있습니다.
-UP/DOWN/LEFT/RIGHT의 명령어가 있습니다.
-
-UP: y죄표 -1
-DOWN: y좌표 +1
-LEFT: x좌표 -1
-RIGHT: x좌표 +1
-
-7개의 명령어를 입력받고, 명령어는 A UP 이런식으로 받습니다.
-명령어를 모두 실행하고 맵을 출력해주세요.
-```
+- 5자리의 숫자를 입력받고, 각 각의 자리마다 1을 더합니다. (만약 1을 더하였을 때 해당 자리의 숫자가 10이되면 자리올림을 하여야합니다.)
+- 최종 완성된 숫자를 거꾸로 출력해주세요.
+- <img src="./Array01.png" alt="Array" style="zoom:61%;" />
 
 ## 2. 입력
-- 7개의 명령어를 입력 받습니다.
+- 5자리의 숫자를 입력받습니다.
 
 ## 3. 출력
-- 명령어를 모두 실행하고 맵을 출력해주세요.
+- 최종 완성된 숫자를 거꾸로 출력해주세요.
 
 ## 4. 예제 입력
 ```
-A UP
-B DOWN
-C UP
-A RIGHT
-C UP
-C LEFT
-A LEFT
+12345
 ```
 
 ## 5. 예제 출력
 ```
-_C_
-A__
-___
-_B_
-___
+65432
 ```
 
 ## 6. 코드
 ```c++
 #include <iostream>
-#include <cstring>
 using namespace std;
-
-struct Model {
-    int x, y;
-    
-    void up() {
-        y--;
-    }
-
-    void down() {
-        y++;
-    }
-
-    void left() {
-        x--;
-    }
-
-    void right() {
-        x++;
-    }
-};
 
 int main()
 {
-    Model a = { 0, 2 };
-    Model b = { 1, 2 };
-    Model c = { 2, 2 };
+    int n;
+    int arr[5];
+    cin >> n;
 
-    char map[5][4] = {
-        "___",
-        "___",
-        "___",
-        "___",
-        "___"
-    };
-
-    for (int i = 0; i < 7; i++) {
-        char lValue, rValue[10];
-        cin >> lValue >> rValue;
-
-        if(lValue == 'A')
-        {
-            if (!strcmp(rValue, "UP")) a.up();
-            if (!strcmp(rValue, "DOWN")) a.down();
-            if (!strcmp(rValue, "LEFT")) a.left();
-            if (!strcmp(rValue, "RIGHT")) a.right();
-        }
-
-        if (lValue == 'B')
-        {
-            if (!strcmp(rValue, "UP")) b.up();
-            if (!strcmp(rValue, "DOWN")) b.down();
-            if (!strcmp(rValue, "LEFT")) b.left();
-            if (!strcmp(rValue, "RIGHT")) b.right();
-        }
-
-        if (lValue == 'C')
-        {
-            if (!strcmp(rValue, "UP")) c.up();
-            if (!strcmp(rValue, "DOWN")) c.down();
-            if (!strcmp(rValue, "LEFT")) c.left();
-            if (!strcmp(rValue, "RIGHT")) c.right();
-        }
+    for (int i = 4; i >= 0; i--) {
+        n += 1;
+        arr[i] = n % 10;
+        n = n / 10;
+    }
+    
+    for (int i = 4; i >= 0; i--) {
+        cout << arr[i];
     }
 
-    map[a.y][a.x] = 'A';
-    map[b.y][b.x] = 'B';
-    map[c.y][c.x] = 'C';
-
-    for (int i = 0; i < 5; i++) {
-        for (int j = 0; j < 3; j++) {
-            cout << map[i][j];
-        }
-        cout << "\n";
-    }
+    return 0;
 }
 ```
