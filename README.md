@@ -146,7 +146,7 @@
 |  | - | [내 마음대로 숫자 바꾸기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced01/Question5.md) | 201227 |
 |  | - | [같은 알파벳 집어내기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced01/Question6.md) | 201228 |
 |  | - | [빈도수 출력하기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced01/Question7.md) | 201228 |
-|  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced01/Question8.md) | 201229 |
+|  | - | [Tree 02](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced01/Question8.md) | 201229 |
 |  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced01/Question9.md) | 201229 |
 |  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced01/Question10.md) | 201230 |
 |  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced01/Question11.md) | 201230 |
