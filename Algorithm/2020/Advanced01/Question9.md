@@ -1,56 +1,58 @@
-# 아파트
+# DFS
 
 ## 1. 문제
-- 주인공은 현재 아파트의 1층에 서있습니다.
-- "up"이라는 명령이 들어오면 2층으로 가고(한 층 올라갑니다.)
-- "down"이라는 명령이 들어오면 지하 1층인 B1으로 가고(한 층 내려갑니다.)
-- 5번의 명령을 받고 나서 주인공의 층수를 출력해주세요.
+- 아래의 1차원 배열을 하드코딩 해주세요.
+
+```
+0 3 4 2 4 1 0 3
+```
+
+- 위의 하드코딩한 1차원 배열은 아래 그림의 이진트리를 나타냅니다.
+- <img src="./Tree03.png" alt="Tree" style="zoom:77%;" />
+- 이제 변경할 인덱스와 값을 입력받습니다.
+- 만약, 4와 7을 입력받았다면, 하드코딩한 배열의 4번 인덱스와 값을 7로 바꾼 후에 DFS를 돌리고 결과를 출력해주세요.
 
 ## 2. 입력
-- up / down 중 하나의 명령어를 총 5개 입력 받습니다.
+- 변경할 인덱스와 값을 입력받습니다.
 
 ## 3. 출력
-- 5번의 명령을 받고 나서 주인공의 층수를 출력해주세요.
+- 인덱스와 값을 바꾼 후에 DFS를 돌리고 결과를 출력해주세요.
 
 ## 4. 예제 입력
 ```
-up
-up
-down
-down
-down
+4 7
 ```
 
 ## 5. 예제 출력
 ```
-B1
+3 4 7 1 2 3
 ```
 
 ## 6. 코드
 
 ```c++
 #include <iostream>
-#include <cstring>
 using namespace std;
 
-int main()
-{
-    int x = 1;
-    for (int i = 0; i < 5; i++) {
-        char input[5];
-        cin >> input;
+int map[8] = { 0, 3, 4, 2, 4, 1, 0, 3 };
 
-        if (!strcmp(input, "up")) x++;
-        else x--;
-    }
+void run(int now) {
+	if (now >= 8) return;
+	if (map[now] == 0) return;
+	cout << map[now] << " ";
+	
+	run(now * 2);
+	run(now * 2 + 1);
+}
 
-    if (x < 1) {
-        x -= 1;
-        x = x * -1;
-        cout << "B" << x;
-    }
-    else {
-        cout << x;
-    }
+int main() {
+	int x, n;
+	cin >> x >> n;
+
+	map[x] = n;
+
+	run(1);
+
+	return 0;
 }
 ```
