@@ -148,7 +148,7 @@
 |  | - | [빈도수 출력하기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced01/Question7.md) | 201228 |
 |  | - | [Tree 02](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced01/Question8.md) | 201229 |
 |  | - | [DFS](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced01/Question9.md) | 201229 |
-|  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced01/Question10.md) | 201230 |
+|  | - | [짝수 노드까지 DFS 탐색하기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced01/Question10.md) | 201230 |
 |  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced01/Question11.md) | 201230 |
 |  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced01/Question12.md) | 201231 |
 |  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced01/Question13.md) | 201231 |
