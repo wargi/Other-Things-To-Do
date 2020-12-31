@@ -1,40 +1,25 @@
-# 3차원 배열
+# 마지막 노드들의 합
 
 ## 1. 문제
-```
-아래의 3차원 배열(3x2x2)을 하드코딩 해주세요.
-[0]
-2 4
-1 5
-
-[1]
-2 3
-3 6
-
-[2]
-7 3
-1 5
-```
-
-- 그리고 숫자를 하나 입력 받고, max와 min값을 출력 해주세요.
+- 2진 트리를 1차원 배열의 형태로 입력받습니다.
+- 만약 3, 5, 7, 4, 2, 6, 9를 입력 받았다면, 아래의 그림과 같습니다.
+- <img src="./Tree06.png" alt="Tree" style="zoom:77%;" />
+- 이제 마지막 경로의 있는 노드들끼리의 합을 DFS를 이용하여 구해주세요.
 
 ## 2. 입력
-- 첫 번째 줄: 숫자를 하나 입력 받는다.
-
-
+- 7개의 숫자로 구성된 1차원 배열을 입력 받습니다.
 
 ## 3. 출력
-- 해당하는 2차원 index 배열의 max와 min값을 출력 해주세요.
+- 마지막 경로의 있는 노드들끼리의 합을 DFS를 이용하여 구해주세요.
 
 ## 4. 예제 입력
 ```
-0
+3 5 7 4 2 6 9
 ```
 
 ## 5. 예제 출력
 ```
-MAX=5
-MIN=1
+21
 ```
 
 ## 6. 코드
@@ -42,34 +27,23 @@ MIN=1
 #include <iostream>
 using namespace std;
 
-int map[3][2][2] = {
-    {
-        2, 4,
-        1, 5
-    },
-    {
-        2, 3,
-        3, 6
-    },
-    {
-        7, 3,
-        1, 5
-    }
-};
+int vect[8] = { 0 };
+int sum = 0;
 
-int main()
-{
-    int i;
-    cin >> i;
-    int max = -1, min = 100000;
-    for (int j = 0; j < 2; j++) {
-        for (int k = 0; k < 2; k++) {
-            if (max < map[i][j][k]) max = map[i][j][k];
-            if (min > map[i][j][k]) min = map[i][j][k];
-        }
-    }
+void run(int level, int now) {
+	if (now >= 8) return;
+	if (level == 2) sum += vect[now];
 
-    cout << "MAX=" << max << "\n";
-    cout << "MIN=" << min;
+	run(level + 1, now * 2);
+	run(level + 1, now * 2 + 1);
+}
+
+int main() {
+	for (int i = 1; i < 8; i++) cin >> vect[i];
+
+	run(0, 1);
+	cout << sum;
+
+	return 0;
 }
 ```

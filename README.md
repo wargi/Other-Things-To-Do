@@ -150,7 +150,7 @@
 |  | - | [DFS](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced01/Question9.md) | 201229 |
 |  | - | [짝수 노드까지 DFS 탐색하기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced01/Question10.md) | 201230 |
 |  | - | [DFS 탐색하며 대문자 출력](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced01/Question11.md) | 201230 |
-|  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced01/Question12.md) | 201231 |
+|  | - | [마지막 노드들의 합](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced01/Question12.md) | 201231 |
 |  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced01/Question13.md) | 201231 |
 |  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced01/Question14.md) | 210101 |
 |  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced01/Question15.md) | 210101 |
