@@ -1,33 +1,26 @@
-# 3차원 배열 2 #
+# DFS 2 #
 
 ## 1. 문제
-- 아래와 같이, 3차원 배열(2x2x3)을 하드코딩하여 채워주세요.
-
-  ```
-  A T B
-  C C B
-  
-  A A A
-  B B C
-  ```
-  
-- 이제 문자 하나를 입력받고, 문자가 위의 배열에 있는 확인하고 있다면 "발견", 없다면 "미발견"이라고 출력해주세요.
+- Node 안에 들어갈 문자 5개를 입력 받습니다.
+- 만약, ABCDE를 입력 받으면, 아래와 같이 저장됩니다.(트리 모양은 고정)
+- <img src="./Tree08.png" alt="Tree" style="zoom:77%;" />
+- 위의 트리를 인접행렬로 저장하고, DFS를 돌려 탐색 순서대로 출력해주세요.
 
 
 ## 2. 입력
-- 문자 하나를 입력받아 주세요.
+- Node 안에 들어갈 문자 5개를 입력 받습니다.
 
 ## 3. 출력
-- 문자가 위의 배열에 있는 확인하고 있다면 "발견", 없다면 "미발견"이라고 출력해주세요.
+- DFS를 돌려 탐색 순서대로 출력해주세요.
 
 ## 4. 예제 입력
 ```
-K
+ABCDE
 ```
 
 ## 5. 예제 출력
 ```
-미발견
+ABDEC
 ```
 
 ## 6. 코드
@@ -36,29 +29,25 @@ K
 #include <iostream>
 using namespace std;
 
-bool run(char ch) {
-    char map[2][2][4] = {
-        { "ATB", "CCB" },
-        { "AAA", "BBC" }
-    };
+char vect[7];
 
-    for (int i = 0; i < 2; i++) {
-        for (int j = 0; j < 2; j++) {
-            for (int k = 0; k < 3; k++) {
-                if (ch == map[i][j][k]) return true;
-            }
-        }
-    }
+void run(int now) {
+	if (now >= 6) return;
 
-    return false;
+	cout << vect[now];
+	run(now * 2);
+	run(now * 2 + 1);
 }
 
-int main()
-{
-    char ch;
-    cin >> ch;
-    
-    if (run(ch)) cout << "발견";
-    else cout << "미발견";
+int main() {
+
+	vect[0] == '_';
+	for (int i = 1; i < 6; i++) {
+		cin >> vect[i];
+	}
+
+	run(1);
+
+	return 0;
 }
 ```
