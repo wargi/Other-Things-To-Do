@@ -153,8 +153,8 @@
 |  | - | [마지막 노드들의 합](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced01/Question12.md) | 201231 |
 |  | - | [BFS](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced01/Question13.md) | 201231 |
 |  | - | [DFS 2](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced01/Question14.md) | 210101 |
-|  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced01/Question15.md) | 210101 |
-|  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced01/Question16.md) | 210102 |
+|  | - | [BFS 2](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced01/Question15.md) | 210101 |
+|  | - | [BFS 3](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced01/Question16.md) | 210102 |
 |  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced01/Question17.md) | 210102 |
 |  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced01/Question18.md) | 210103 |
 |  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced01/Question19.md) | 210103 |
