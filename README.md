@@ -155,7 +155,7 @@
 |  | - | [DFS 2](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced01/Question14.md) | 210101 |
 |  | - | [BFS 2](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced01/Question15.md) | 210101 |
 |  | - | [BFS 3](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced01/Question16.md) | 210102 |
-|  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced01/Question17.md) | 210102 |
+|  | - | [바이러스 퍼트리기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced01/Question17.md) | 210102 |
 |  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced01/Question18.md) | 210103 |
 |  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced01/Question19.md) | 210103 |
 |  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced01/Question20.md) | 210104 |

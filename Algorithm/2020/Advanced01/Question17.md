@@ -1,46 +1,26 @@
-# 3차원 배열 4
+# 바이러스 퍼트리기
 
 ## 1. 문제
-```
-숫자 2개를 변수에 입력 받습니다.
-
-만약 1, 3을 입력 받았다면
-input: 1 3
-output)
-1 1 1
-3 3 3
-
-1 1 1
-3 3 3
-
-1 1 1
-3 3 3
-
-위 처럼 3차원 배열에 저장하고 출력해주세요. 
-```
+- 바이러스 하나가 있습니다.
+- 이 바이러스에 걸린 한명은 1초에 3명씩 감염시킵니다.
+- 바이러스가 2초가 되면(0초: 1명 -> 1초: 4명 -> 2초: 13명) 이런식으로 계속 늘어납니다.
+- n초를 입력받고 몇 명이 감염되었는지 출력하는 프로그램을 작성하시오.
 
 
 ## 2. 입력
-- 첫 줄: 숫자 2개를 변수에 입력 받습니다.
+- 첫 줄: 몇 초간 바이러스간 퍼진지 n을 입력받으세요.
 
 ## 3. 출력
-- 위 예제 처럼 출력해주세요. 
+- 몇 명이 감염되었는지 출력해주세요. 
 
 ## 4. 예제 입력
 ```
-2 4
+3
 ```
 
 ## 5. 예제 출력
 ```
-2 2 2
-4 4 4
-
-2 2 2
-4 4 4
-
-2 2 2
-4 4 4
+40
 ```
 
 ## 6. 코드
@@ -48,30 +28,41 @@ output)
 #include <iostream>
 using namespace std;
 
+struct Node {
+    int data;
+    Node* next;
+};
+
+Node* head, * last;
+void enQueue(int x) {
+    if (head == NULL) {
+        head = new Node({ x });
+        last = head;
+        return;
+    }
+
+    last->next = new Node({ x });
+    last = last->next;
+}
+
 int main()
 {
-    int a, b;
-    cin >> a >> b;
+    int n;
+    cin >> n;
 
-    int map[3][2][3];
-
-    for (int i = 0; i < 3; i++) {
-        for (int j = 0; j < 2; j++) {
-            for (int k = 0; k < 3; k++) {
-                if (j == 0) map[i][j][k] = a;
-                else map[i][j][k] = b;
-            }
-        }
+    enQueue(1);
+    for (int i = 0; i < n; i++) {
+        int data = last->data * 3;
+        enQueue(data);
     }
 
-    for (int i = 0; i < 3; i++) {
-        for (int j = 0; j < 2; j++) {
-            for (int k = 0; k < 3; k++) {
-                cout << map[i][j][k] << " ";
-            }
-            cout << "\n";
-        }
-        cout << "\n";
+    int cnt = 0;
+    for (Node* p = head; p != NULL; p = p->next) {
+        cnt += p->data;
     }
+
+    cout << cnt;
+
+    return 0;
 }
 ```
