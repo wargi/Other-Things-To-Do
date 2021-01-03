@@ -1,72 +1,62 @@
-# 문장 정렬하기
+# 흔적 탐색하기
 
 ## 1. 문제
-- 길이가 다른 문장 네 개를 입력받습니다.
 
-- 문장들을 오름차순으로 정렬해서 출력해주세요.
+```
+아래의 1차원 배열 두 개(1x7)를 하드코딩 해주세요.
+evid: -1 0 0 1 2 4 4
+timeLog: 8 3 5 6 8 9 10
+```
 
-
+- 탐색을 시작할 인덱스를 입력받으세요.
+- 만약, 5번 인덱스를 입력받았다면, evid의 5번 인덱스를 살펴보면, 범인은 4번 인덱스에서 출발하였고, 시간은 9시인걸 알 수 있습니다.
+- 이제 4번 인덱스를 살펴보면, 범인은 2번 인덱스에서 출발하였고, 시간은 8시인걸 알 수 있습니다.
+- 이제 2번 인덱스를 살펴보면, 범인은 0번 인덱스에서 출발하였고, 시간은 5시인걸 알 수 있습니다.
+- 마지막으로, 이제 0번 인덱스를 살펴보면, 범인(-1)을 찾았습니다.
+- 이 과정을 처음->범인탐색 과정을 반대로, 범인->처음으로 아래의 예제처럼 출력해주세요.
 
 ## 2. 입력
-- 길이가 다른 문장 네 개를 입력받습니다.
+- 탐색할 인덱스 n을 입력받습니다. (0 <= n <= 6)
 
 ## 3. 출력
-- 문장들을 오름차순으로 정렬해서 출력해주세요.
+- 범인->처음 탐색식으로 출력해주세요.
 
 ## 4. 예제 입력
 ```
-abc
-defg
-hi
-jklmn
+4
 ```
 
 ## 5. 예제 출력
 ```
-hi
-abc
-defg
-jklmn
+0번index(출발)
+2번index(5시)
+4번index(8시)
 ```
 
 ## 6. 코드
 ```c++
-#define _CRT_SECURE_NO_WARNINGS
 #include <iostream>
-#include <cstring>
 using namespace std;
 
-int main()
-{
-    char ch[4][11];
-    char result[4][11];
+int evid[7] = { -1, 0, 0, 1, 2, 4, 4 };
+int timeStemp[7] = { 8, 3, 5, 6, 8, 9, 10 };
 
-    for (int i = 0; i < 4; i++) cin >> ch[i];
+void run(int idx) {
+	if (evid[idx] == -1) {
+		cout << idx << "번index(출발)\n";
+		return;
+	}
 
-    for (int i = 0; i < 3; i++) {
-        for (int j = i + 1; j < 4; j++) {
-            if (strlen(ch[i]) > strlen(ch[j]))
-            {
-                char temp[11];
-                strcpy(temp, ch[i]);
-                strcpy(ch[i], ch[j]);
-                strcpy(ch[j], temp);
-            }
-            else if (strlen(ch[i]) == strlen(ch[j]))
-            {
-                if (strcmp(ch[i], ch[j]) == 1)
-                {
-                    char temp[11];
-                    strcpy(temp, ch[i]);
-                    strcpy(ch[i], ch[j]);
-                    strcpy(ch[j], temp);
-                }
-            }
-        }
-    }
+	run(evid[idx]);
+	cout << idx << "번index(" << timeStemp[idx] << "시)\n";
+}
 
-    for (int i = 0; i < 4; i++) {
-        cout << ch[i] << "\n";
-    }
+int main() {
+	int n;
+	cin >> n;
+
+	run(n);
+
+	return 0;
 }
 ```

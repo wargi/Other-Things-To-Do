@@ -157,7 +157,7 @@
 |  | - | [BFS 3](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced01/Question16.md) | 210102 |
 |  | - | [바이러스 퍼트리기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced01/Question17.md) | 210102 |
 |  | - | [다리 건너갔다 돌아오기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced01/Question18.md) | 210103 |
-|  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced01/Question19.md) | 210103 |
+|  | - | [흔적 찾기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced01/Question19.md) | 210103 |
 |  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced01/Question20.md) | 210104 |
 |  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced01/Question21.md) | 210104 |
 |  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced01/Question22.md) | 210105 |
