@@ -1,81 +1,69 @@
-# 등수 구하기
+# Merge Sort
 
 ## 1. 문제
 
-- 네 명의 이름을 입력 받고, 네 명 중에 1~3등을 뽑아서 상품을 주려 합니다.
-- 상품을 줄 수 있는 모든 경우의 수를 출력해주세요.
+- 2개의 정렬된 1차원 배열(1x4)를 받고 Merge sort방식으로 동작하게 프로그램을 작성하시오.
+- 최종 정렬된 배열(1x8)을 출력하시오.
 
 ## 2. 입력
 
-- 네 명의 이름을 입력 받습니다.
+- 2개의 정렬된 1차원 배열(1x4)를 입력 받습니다.
 
 ## 3. 출력
 
-- 상품을 줄 수 있는 모든 경우의 수를 출력해주세요.
+- 최종 정렬된 배열(1x8)을 출력하시오.
 
 ## 4. 입력예제
 
 ```
-ATKP
+1 5 7 9
+3 4 5 6
 ```
 
 ## 5. 출력예제
 
 ```
-ATK
-ATP
-AKT
-AKP
-APT
-APK
-TAK
-TAP
-TKA
-TKP
-TPA
-TPK
-KAT
-KAP
-KTA
-KTP
-KPA
-KPT
-PAT
-PAK
-PTA
-PTK
-PKA
-PKT
+1 3 4 5 5 6 7 9
 ```
 
 ## 6. 코드
 
 ```c++
-#include<iostream>
+#include <iostream>
 using namespace std;
 
-char vect[5];
-char path[4];
-int check[1000] = { 0 };
-void run(int level) {
-	if (level == 3) {
-		cout << path << "\n";
-		return;
-	}
+int main() {
+	int vect1[4], vect2[4], result[8];
 
-	for (int i = 0; i < 4; i++) {
-		if (check[vect[i]] == 0) {
-			check[vect[i]] = 1;
-			path[level] = vect[i];
-			run(level + 1);
-			check[vect[i]] = 0;
+	int lx = 0, rx = 0;
+
+	for (int i = 0; i < 2; i++) {
+		for (int j = 0; j < 4; j++) {
+			if (i == 0) cin >> vect1[j];
+			else cin >> vect2[j];
 		}
 	}
-}
 
-int main() {
-	cin >> vect;
-	run(0);
+
+	for (int i = 0; i < 8; i++) {
+		if (lx == 4) {
+			result[i] = vect2[rx++];
+		}
+		else if (rx == 4) {
+			result[i] = vect1[lx++];
+		}
+		else {
+			if (vect1[lx] <= vect2[rx]) {
+				result[i] = vect1[lx++];
+			}
+			else {
+				result[i] = vect2[rx++];
+			}
+		}
+	}
+
+	for (int i = 0; i < 8; i++) cout << result[i] << " ";
+
 	return 0;
 }
 ```

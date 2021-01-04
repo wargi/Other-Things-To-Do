@@ -159,7 +159,7 @@
 |  | - | [다리 건너갔다 돌아오기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced01/Question18.md) | 210103 |
 |  | - | [흔적 찾기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced01/Question19.md) | 210103 |
 |  | - | [2차원 배열 검사하기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced01/Question20.md) | 210104 |
-|  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced01/Question21.md) | 210104 |
+|  | - | [Merge Sort](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced01/Question21.md) | 210104 |
 |  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced01/Question22.md) | 210105 |
 |  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced01/Question23.md) | 210105 |
 |  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced01/Question24.md) | 210106 |
