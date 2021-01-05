@@ -1,58 +1,95 @@
-# ABC
+# 2차원 배열의 열을 회전시키기
 
 ## 1. 문제
 
-- A, B, C의 문자가 있습니다.
-- 세 개의 문자 중에 n개의 문자를 선택했을 때, 경우의 수를 출력할려고 합니다.
-- 문자가 중복되어도 되지만, 세 개 연속으로 같은 문자가 선택되는 경우는 제외하고 출력해주세요.
+```
+1. 3개의 숫자로 된 2차원 배열(3x1)이 있습니다.
+ex)
+1
+2
+3
+
+2. 이 배열을 한번 돌리면 아래와 같이 됩니다.
+1    3
+2 -> 1
+3    2
+
+3. 두번 더 돌리게 되면 아래와 같이 됩니다.
+3    2    1
+1 -> 3 -> 2
+2    1    3
+
+4. 이런식으로 열마다 각각 동작하는 2차원 배열(3x4)이 있습니다. (아래의 배열을 하드코딩 해주세요.)
+3 2 5 3
+7 6 1 6
+4 9 2 7
+
+5. 각 열마다 회전 시킬 횟수를 입력받고 최종 회전한 결과 배열을 출력해주세요.
+ex)
+input)
+1 2 1 2
+
+output)
+4626
+3957
+7213
+```
 
 ## 2. 입력
-- 숫자 n을 입력받습니다.
+- 각 열마다 회전 시킬 횟수를 입력받습니다.
 
 ## 3. 출력
 
-- n개의 문자를 선택했을 때, 세 개 연속으로 같은 문자가 선택되는 경우는 제외하고 경우의 수를 출력해주세요.
+- 최종 회전한 결과 배열을 출력해주세요.
 
 
 ## 4. 예제 입력
 ```
-3
+1 2 1 2
 ```
 
 ## 5. 예제 출력
 ```
-24
+4626
+3957
+7213
 ```
 
 ## 6. 코드
 
 ```c++
-#include<iostream>
+#include <iostream>
 using namespace std;
 
-int cnt = 0;
-char path[3] = { 0 };
-void run(int level, int limit, int conti) {
-	if (conti >= 2) return;
-	if (level == limit) {
-		cnt++;
-		return;
-	}
+int map[3][4] = {
+	3, 2, 5, 3,
+	7, 6, 1, 6,
+	4, 9, 2, 7
+};
 
-	for (int i = 'A'; i < 'D'; i++) {
-		path[level] = i;
-		if (path[level] == path[level - 1]) run(level + 1, limit, conti + 1);
-		else run(level + 1, limit, 0);
-	}
-}
+int vect[4];
 
 int main() {
-	int n;
-	cin >> n;
+	for (int i = 0; i < 4; i++) {
+		cin >> vect[i];
+	}
 
-	run(0, n, 0);
-	cout << cnt;
-	
+	for (int i = 0; i < 4; i++) {
+		for (int j = 0; j < vect[i]; j++) {
+			int temp = map[2][i];
+			map[2][i] = map[1][i];
+			map[1][i] = map[0][i];
+			map[0][i] = temp;
+		}
+	}
+
+	for (int i = 0; i < 3; i++) {
+		for (int j = 0; j < 4; j++) {
+			cout << map[i][j];
+		}
+		cout << "\n";
+	}
+
 	return 0;
 }
 ```
