@@ -163,11 +163,19 @@
 |  | - | [사각도형의 좌표구하기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced01/Question22.md) | 210105 |
 |  | - | [2차원 배열의 열을 회전시키기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced01/Question23.md) | 210105 |
 |  | - | [개미의 인생](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced01/Question24.md) | 210106 |
-|  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced01/Question25.md) | 210106 |
+|  | - | [움직이는 저글링](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced01/Question25.md) | 210106 |
 |  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced02/Question1.md) | 210107 |
 |  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced02/Question2.md) | 210107 |
 |  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced02/Question3.md) | 210108 |
 |  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced02/Question4.md) | 210108 |
+| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced02/Question5.md) | 210109 |
+| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced02/Question6.md) | 210109 |
+| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced02/Question7.md) | 210110 |
+| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced02/Question8.md) | 210110 |
+| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced02/Question9.md) | 210111 |
+| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced02/Question10.md) | 210111 |
+| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced02/Question11.md) | 210112 |
+| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced02/Question12.md) | 210112 |
 |  | Intermediate 1 | [문자에 '#' 넣기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate01/Question1.md) | 201109 |
 |  | - | [범위 사이의 숫자 바꾸기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate01/Question2.md) | 201109 |
 |  | - | [DAT 익혀보기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate01/Question3.md) | 201110 |
