@@ -35,7 +35,10 @@ output)
 7213
 ```
 
+- <img src="./Exam02.png" alt="Exam" style="zoom:77%;" />
+
 ## 2. 입력
+
 - 각 열마다 회전 시킬 횟수를 입력받습니다.
 
 ## 3. 출력
