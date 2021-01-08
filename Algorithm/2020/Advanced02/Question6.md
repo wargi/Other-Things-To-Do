@@ -1,78 +1,85 @@
-# 알파벳 찾기
+# 경우의 수
 
 ## 1. 문제
+
+- 축구 경기에서 승부차기의 순간까지 왔습니다.
+- 만약, ooxx라면 1번 2번 선수가 골을 넣은 것 입니다.
+- 승부차기할 선수의 수를 입력 받고, 가능한 경우의 수를 출력하는 프로그램을 작성하시오.
+
 ```
-1. 아래의 2차원 배열(4x4)을 하드코딩 해주세요.
-A B C D
-B B A B
-C B A C
-B A A A
+ex)
+input: 3
 
-2. 2차원 배열(4x4)을 입력받아 주세요.
-ex input)
-A B B A
-B A C B
-C B A A
-D D A B
-
-3. 입력받은 배열과 하드코딩 배열을 비교합니다. 만약 같은 좌표에 같은 알파벳을 가지고 있다면,
-   체크하고 마지막까지 탐색하여, 최종에 체크된 알파벳들 중에 가장 많이 체크된 알파벳을 출력해주세요.
-   
-위의 예제 입력의 경우 출력은 'B'가 됩니다.
+output)
+ooo
+oox
+oxo
+oxx
+xoo
+xox
+xxo
+xxx
 ```
 
 ## 2. 입력
-- 2차원 배열(4x4)을 입력받아 주세요.
+- 승부차기할 선수의 수를 입력 받아 주세요.
 
 ## 3. 출력
-- 최종에 체크된 알파벳들 중에 가장 많이 체크된 알파벳을 출력해주세요.
+- 가능한 경우의 수를 출력해주세요.
 
 ## 4. 예제 입력
 ```
-AAAA
-BBBB
-CCCC
-DDDD
+4
 ```
 
 ## 5. 예제 출력
 ```
-B
+oooo
+ooox
+ooxo
+ooxx
+oxoo
+oxox
+oxxo
+oxxx
+xooo
+xoox
+xoxo
+xoxx
+xxoo
+xxox
+xxxo
+xxxx
 ```
 
 ## 6. 코드
 ```c++
-#include<iostream>
+#include <iostream>
 using namespace std;
 
-char map[4][5] = {
-	"ABCD",
-	"BBAB",
-	"CBAC",
-	"BAAA"
-};
+char path[100];
 
-int check[26] = { 0 };
-char inputMap[4][5];
+void dfs(int level, int end) {
+    if (level == end) {
+        cout << path << "\n";
+        return;
+    }
 
-int main() {
-	int cnt = -1, x;
-	for (int i = 0; i < 4; i++) {
-		for (int j = 0; j < 4; j++) {
-			cin >> inputMap[i][j];
-			if(inputMap[i][j] == map[i][j]) check[inputMap[i][j] - 'A']++;
-		}
-	}
+    for (int i = 0; i < 2; i++) {
+        if (i) path[level] = 'x';
+        else path[level] = 'o';
+        dfs(level + 1, end);
+        path[level] = 0;
+    }
+}
 
-	for (int i = 0; i < 26; i++) {
-		if (cnt < check[i]) {
-			x = i;
-			cnt = check[i];
-		}
-	}
+int main()
+{
+    int n;
+    cin >> n;
 
-	cout << char('A' + x);
+    dfs(0, n);
 
-	return 0;
+    return 0;
 }
 ```

@@ -45,5 +45,37 @@ int graph[6][6] = {
 ## 6. 코드
 
 ```c++
+#include <iostream>
+using namespace std;
 
+int map[6][6] = {
+    0, 0, 0, 0, 1, 0,
+    1, 0, 1, 0, 0, 1,
+    1, 0, 0, 1, 0, 0,
+    1, 1, 0, 0, 0, 0,
+    0, 1, 0, 1, 0, 1,
+    0, 0, 1, 1, 0, 0
+};
+
+int main()
+{
+    int n;
+    cin >> n;
+
+    int head = 0, tail = 1, vect[10] = { n, };
+    int check[10] = { 0 };
+    check[n] = 1;
+    while (head != tail) {
+        int now = vect[head++];
+        cout << now << "\n";
+        for (int i = 0; i < 6; i++) {
+            if (map[now][i] && !check[i]) {
+                check[i] = 1;
+                vect[tail++] = i;
+            }
+        }
+    }
+
+    return 0;
+}
 ```
