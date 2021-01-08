@@ -166,7 +166,7 @@
 |  | - | [움직이는 저글링](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced01/Question25.md) | 210106 |
 |  | - | [가장 긴 단어찾기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced02/Question1.md) | 210107 |
 |  | - | [DFS - 인접행렬 Graph](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced02/Question2.md) | 210107 |
-|  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced02/Question3.md) | 210108 |
+|  | - | [DFS - 인접행렬 가중치 Graph](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced02/Question3.md) | 210108 |
 |  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced02/Question4.md) | 210108 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced02/Question5.md) | 210109 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced02/Question6.md) | 210109 |
