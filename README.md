@@ -171,7 +171,7 @@
 | | - | [BFS - 인접행렬 Graph](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced02/Question5.md) | 210109 |
 | | - | [경우의 수](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced02/Question6.md) | 210109 |
 | | - | [n번째 큰 숫자 찾기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced02/Question7.md) | 210110 |
-| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced02/Question8.md) | 210110 |
+| | - | [가장 큰 2진수 찾기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced02/Question8.md) | 210110 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced02/Question9.md) | 210111 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced02/Question10.md) | 210111 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced02/Question11.md) | 210112 |

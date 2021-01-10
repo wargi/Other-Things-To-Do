@@ -1,53 +1,84 @@
-# heap 익혀보기 #
+# 가장 큰 2진수 찾기 #
 
 ## 1. 문제
 
-- int a, b를 가진 구조체를 heap을 이용하여 만들어주세요.
-- 그리고 숫자 2개를 a, b에 입력 받고 5를 더한 결과 값을 출력해주세요.
+- 0과 1로 된 2진수 3개를 입력받습니다.
+- 3개의 2진수 중에 가장 큰 2진수를 출력하는 프로그램을 작성하시오.
+- 단, 10진수로 변환하지 않고 비교하여 판별해주세요.
 
 ## 2. 입력
-- 숫자 2개를 a, b에 입력 받는다.
+- 2진수 3개를 입력 받는다.
 
 ## 3. 출력
-- 5를 더한 결과 값을 출력해주세요.
+- 3개의 2진수 중에 가장 큰 2진수를 출력해주세요.
 
 ## 4. 예제 입력
 ```
-1 5
+1100
+1011
+10001
 ```
 
 ## 5. 예제 출력
 ```
-2 10
+10001
 ```
 
 ## 6. 예제 입력
 
 ```
-4 8
+11011
+1110110
+1010011
 ```
 
 ## 7. 예제 출력
 
 ```
-9 13
+1110110
 ```
 
 ## 8. 코드
 
 ```c++
 #include <iostream>
+#include <string>
 using namespace std;
 
-struct BBQ {
-    int a, b;
-};
+string getCompare(string x, string y) {
+    int xl = x.size();
+    int yl = y.size();
+    string result;
+
+    if (xl > yl) {
+        result = x;
+    }
+    else if (xl < yl) {
+        result = y;
+    }
+    else {
+        for (int i = 0; i < xl; i++) {
+            if (x[i] == y[i]) continue;
+            if (x[i] > y[i]) result = x;
+            else result = y;
+            break;
+        }
+    }
+
+    return result;
+}
 
 int main()
 {
-    BBQ* x = new BBQ;
+    string a, b, c, r;
+
+    cin >> a >> b >> c;
+
+    r = getCompare(a, b);
+    r = getCompare(r, c);
     
-    cin >> x->a >> x->b;
-    cout << x->a + 5 << " " << x->b + 5;
+    cout << r;
+
+    return 0;
 }
 ```
