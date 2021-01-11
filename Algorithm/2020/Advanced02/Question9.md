@@ -1,41 +1,72 @@
-# heap 익혀보기 2
+# 카드 뽑기
 
 ## 1. 문제
-- char 변수 3개를 heap을 이용하여 만들어주세요.
-- 문자 세 개를 위의 변수들에 입력받고, 입력 받은 문자가 모두 대문라면 "모두대문자"를 출력하고, 아니라면 "소문자있음"을 출력해주세요.
+- 카드 리스트를 입력받아 주세요.(A ~ Z)
+- 리스트의 카드 중에 몇 장을 뽑을지 입력 받습니다.
+- 중복을 허용하여 같은 카드도 뽑을 수 있다면 카드를 뽑을 수 있는 경우의 수를 출력하는 프로그램을 작성하시오.
 
 ## 2. 입력
-- 문자 세 개를 변수들에 입력받는다.
+- 첫 줄: 카드 리스트를 입력받는다.
+- 마지막 줄: 카드를 몇 장을 뽑을지 입력 받습니다.
 
 ## 3. 출력
-- 입력 받은 문자가 모두 대문라면 "모두대문자"를 출력하고, 아니라면 "소문자있음"을 출력해주세요.
+- 카드를 뽑을수 있는 경우의 수를 출력해주세요.
 
 ## 4. 예제 입력
 ```
-S K t
+AGFT
+2
 ```
 
 ## 5. 예제 출력
 ```
-소문자있음
+AA
+AG
+AF
+AT
+GA
+GG
+GF
+GT
+FA
+FG
+FF
+FT
+TA
+TG
+TF
+TT
 ```
 
 ## 6. 코드
 
 ```c++
 #include <iostream>
+#include <string>
 using namespace std;
+
+string s;
+char path[100];
+
+void dfs(int level, int end) {
+    if (level == end) {
+        cout << path << "\n";
+        return;
+    }
+
+    for (int i = 0; i < s.size(); i++) {
+        path[level] = s[i];
+        dfs(level + 1, end);
+        path[level] = 0;
+    }
+}
 
 int main()
 {
-    char* a, * b, * c;
-    a = new char;
-    b = new char;
-    c = new char;
+    int n;
+    cin >> s >> n;
+    dfs(0, n);
 
-    cin >> *a >> *b >> *c;
-
-    if (*a < 91 && *b < 91 && *c < 91) cout << "모두대문자";
-    else cout << "소문자있음";
+    return 0;
 }
 ```
