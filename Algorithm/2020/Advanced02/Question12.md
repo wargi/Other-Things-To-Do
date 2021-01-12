@@ -1,43 +1,83 @@
-# 나만의 숫자 만들기
+# 2차원 배열 시계 방향으로 회전시키기
 
 ## 1. 문제
-- 6자리의 숫자를 입력받으세요.
-- 입력 받은 숫자 중에 2번째 index와 4번째 index의 숫자를 추출하고, 5를 더한 값을 출력해주세요.
-
-```
-ex)
-374126 -> 42(2번째, 4번째) -> 42 + 5 -> 47(최종결과)
-```
+- 2차원 배열(3x3)이 있습니다.
+- 이 배열을 90도의 배수로 입력을 받아 시계방향으로 회전시키고 결과를 출력해주세요.
+- <img src="./Exam01.png" alt="Exam" style="zoom:77%;" />
 
 ## 2. 입력
-- 6자리의 숫자를 입력 받는다.
+- 배열을 회전시킬 90도의 배수로 입력을 받는다.
 
 ## 3. 출력
 - 최종 결과를 출력한다.
 
 ## 4. 예제 입력
 ```
-123456
+180
 ```
 
 ## 5. 예제 출력
 ```
-40
+6 3 9 12
 ```
 
 ## 6. 코드
 ```c++
 #include <iostream>
-#include <string>
 using namespace std;
+
+int map[3][3] = {
+    0, 12, 0,
+    9, 0, 3,
+    0, 6, 0
+};
+
+int direct[4][2] = {
+    1, 1,
+    -1, 1,
+    1, -1,
+    -1, -1
+};
+
+void spin() {
+    int temp[4][4] = { 0 };
+    int cnt = 0;
+  
+    for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < 3; j++) {
+            if (map[i][j] > 0) {
+                int dy = i + direct[cnt][0];
+                int dx = j + direct[cnt++][1];
+
+                temp[dy][dx] = map[i][j];
+            }
+        }
+    }
+
+    for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < 3; j++) {
+            map[i][j] = temp[i][j];
+        }
+    }
+}
 
 int main()
 {
-    string s;
-    cin >> s;
+    int n;
+    cin >> n;
 
-    int a = s[2] - '0';
-    int b = s[4] - '0';
-    cout << a * 10 + b + 5;
+    int x = n / 90;
+
+    for (int i = 0; i < x; i++) {
+        spin();
+    }
+
+    for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < 3; j++) {
+            if (map[i][j] > 0) cout << map[i][j] << " ";
+        }
+    }
+
+    return 0;
 }
 ```
