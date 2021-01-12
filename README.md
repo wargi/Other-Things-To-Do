@@ -174,7 +174,7 @@
 | | - | [가장 큰 2진수 찾기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced02/Question8.md) | 210110 |
 | | - | [카드 뽑기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced02/Question9.md) | 210111 |
 | | - | [비밀번호 찾기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced02/Question10.md) | 210111 |
-| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced02/Question11.md) | 210112 |
+| | - | [10 ~ 20은 몇개?](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced02/Question11.md) | 210112 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced02/Question12.md) | 210112 |
 |  | Intermediate 1 | [문자에 '#' 넣기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate01/Question1.md) | 201109 |
 |  | - | [범위 사이의 숫자 바꾸기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate01/Question2.md) | 201109 |
