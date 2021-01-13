@@ -1,60 +1,52 @@
-# 짝 맞추기 #
+# 금, 은, 동 뽑기 #
 
 ## 1. 문제
-- B와 F로만 구성된 문장을 입력 받고, 짝인지 판별하는 프로그램을 작성하시오.
-
-- 규칙1. B는 시작을 뜻하고, F는 끝을 뜻합니다.
-
-- 규칙2. B와 F의 개수는 같아야합니다.
-
-- 짝이 맞다면, "짝이맞음", 안 맞다면 "짝이안맞음"을 출력해주세요.
-
-  ```
-  ex)
-  BFBFBF -> 짝이 맞음
-  FBBF -> 짝이 안 맞음(B보다 F가 먼저 시작함)
-  BBBFBFFFF -> 짝이 맞음
-  BBFBF -> 짝이 안 맞음(F가 하나 부족)
-  ```
+- n명이 수영을 합니다.
+- 이 중에 1~3등을 뽑아 메달을 주는데 나올 수 있는 경우의 수는 몇 개인지 출력하는 프로그램을 작성해주세요.
 
 ## 2. 입력
-- B와 F로만 구성된 문장을 입력 받아 주세요. (최대 10글자)
+- n명을 입력받습니다.
 
 ## 3. 출력
-- 짝인지 판별하고 출력해주세요.
+- 경우의 수는 몇 개인지 출력해주세요.
 
 ## 4. 예제 입력
 ```
-BFBF
+4
 ```
 
 ## 5. 예제 출력
 ```
-짝이맞음
+24
 ```
 
 ## 6. 코드
 
 ```c++
 #include <iostream>
-#include <cstring>
 using namespace std;
+
+int cnt = 0;
+void run(int start, int branch) {
+    if (start == 3) {
+        cnt++;
+        return;
+    }
+
+    for (int i = start; i < branch; i++) {
+        run(start + 1, branch);
+    }
+}
 
 int main()
 {
-	char ch[1000];
-	cin >> ch;
-	
-	int n = strlen(ch);
-	int flag = 0;
+    int n;
+    cin >> n;
 
-	for (int i = 0; i < n; i++) {
-		if (flag < 0) break;
-		if ('B' == ch[i]) flag++;
-		else flag--;
-	}
+    run(0, n);
 
-	if (!flag) cout << "짝이맞음";
-	else cout << "짝이안맞음";
+    cout << cnt;
+
+    return 0;
 }
 ```
