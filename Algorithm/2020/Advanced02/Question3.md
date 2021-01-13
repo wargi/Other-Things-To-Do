@@ -20,7 +20,8 @@ int graph[6][6] = {
 - 단, 한번 방문한 노드는 방문할 수 없으며 출발지점에서 가중치의 시작 값은 0입니다.
 - 한 노드에서 여러노드를 방문 가능할때 작은 숫자부터 탐색합니다.
 - 아래의 그림은 위의 인접행렬 Graph입니다.
-- <img src="./Graph02.png" alt="Graph" style="zoom:77%;" />
+
+<img src="./Graph02.png" alt="Graph" style="zoom:77%;" />
 
 ## 2. 입력
 
