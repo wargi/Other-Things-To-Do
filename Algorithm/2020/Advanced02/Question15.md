@@ -1,100 +1,115 @@
-# 바람개비 #
+# 2차원 배열 돌리기 #
 
 ## 1. 문제
 ```
-1. 아래의 문자로 구성된 2차원 배열(3x3)을 하드코딩 하세요.
-_ 5 4
-3 _ _
-_ _ 1
+1. 2차원 배열(3x3)을 두개(a, b)를 입력 받습니다.
+A: 1 1 1   1 2 3
+   2 2 2   1 2 3
+   3 3 3   1 2 3
 
-2. 하드 코딩한 배열을 회전시킬 횟수 n을 입력받아주세요.
-
-3. 입력받은 n만큼 오른쪽으로 회전하고 난 후 결과를 출력해주세요.
+2. a배열을 왼쪽으로 몇 번 회전시켜야 b배열과 같은지 출력하는 프로그램을 작성하시오.
 
 ex)
-3을 입력 받았다고 생각하고,
 
 1회 회전 상태)
-_ 3 _
-_ _ 5
-1 _ 4
+1 2 3
+1 2 3
+1 2 3
 
-2회 회전 상태)
-1 _ _
-_ _ 3
-4 5 _
-
-3회 회전 최종상태)
-4 _ 1
-5 _ _
-_ 3 _
+1회 회전후 b배열과 같으므로 1을 출력한다.
 ```
 
-## 2. 힌트
-- 오른쪽으로 회전 시킬때 마다 좌표가 어떻게 바뀌는지 생각해보세요 :)
+## 2. 입/출력
+- 입력: 2차원 배열(3x3)을 두개(a, b)를 입력 받습니다.
+- 출력: a배열을 왼쪽으로 몇 번 회전시켜야 b배열과 같은지 출력해주세요.
 
-## 3. 입/출력
-- 입력: 배열을 회전시킬 횟수 n을 입력받습니다.
-- 출력: 회전하고 난 후 결과를 출력해주세요.
+## 3. 예제 입력
+```
+1 1 1
+2 2 2
+3 3 3
 
-## 4. 예제 입력
-```
-2
-```
-
-## 5. 예제 출력
-```
-1__
-__3
-45_
+1 2 3
+1 2 3
+1 2 3
 ```
 
-## 6. 코드
+## 4. 예제 출력
+```
+1
+```
+
+## 5. 코드
 ```c++
 #include <iostream>
-#include <cstring>
 using namespace std;
+
+struct Node {
+    int x, y;
+};
+
+int a[3][3], b[3][3];
+int direct[9][2] = {
+    2, 0,
+    1, -1,
+    0, -2,
+    1, 1,
+    0, 0,
+    -1, -1,
+    0, 2,
+    -1, 1,
+    -2, 0
+};
+
+void getLeft() {
+    int cnt = 0;
+    int temp[3][3];
+
+    for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < 3; j++) {
+            int dy = i + direct[cnt][0];
+            int dx = j + direct[cnt++][1];
+
+            temp[dy][dx] = a[i][j];
+        }
+    }
+
+    for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < 3; j++) {
+            a[i][j] = temp[i][j];
+        }
+    }
+}
+
+bool getSame() {
+    for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < 3; j++) {
+            if (a[i][j] != b[i][j]) return false;
+        }
+    }
+    return true;
+}
 
 int main()
 {
-	int input[3][3] = {
-		0, 5, 4,
-		3, 0, 0,
-		0, 0, 1
-	};
+    for (int x = 0; x < 2; x++) {
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                if (!x) cin >> a[i][j];
+                else cin >> b[i][j];
+            }
+        }
+    }
 
-	int n;
-	cin >> n;
+    int r = 0;
+    while (true) {
+        r++;
+        getLeft();
+        if (getSame()) break;
+    }
 
-	int result[3][3] = { 0 };
+    cout << r;
 
-	
-
-	for (int i = 0; i < n; i++) {
-		int result[3][3] = { 0 };
-
-		for (int y = 0; y < 3; y++) {
-			for (int x = 0; x < 3; x++) {
-				int dy = 0 - y + x;
-				int dx = 2 - y - x;
-
-				result[y + dy][x + dx] = input[y][x];
-			}
-		}
-
-		for (int y = 0; y < 3; y++) {
-			for (int x = 0; x < 3; x++) {
-				input[y][x] = result[y][x];
-			}
-		}
-	}
-
-	for (int y = 0; y < 3; y++) {
-		for (int x = 0; x < 3; x++) {
-			if (input[y][x] == 0) cout << "_";
-			else cout << input[y][x];
-		}
-		cout << "\n";
-	}
+    return 0;
 }
 ```

@@ -177,8 +177,8 @@
 | | - | [10 ~ 20은 몇개?](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced02/Question11.md) | 210112 |
 | | - | [2차원 배열 시계 방향으로 회전시키기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced02/Question12.md) | 210112 |
 | | - | [Advanced 2 준비](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced02/Question13.md) | 210113 |
-| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced02/Question14.md) | 210113 |
-| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced02/Question15.md) | 210114 |
+| | - | [금, 은, 동 뽑기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced02/Question14.md) | 210113 |
+| | - | [2차원 배열 돌리기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced02/Question15.md) | 210114 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced02/Question16.md) | 210114 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced02/Question17.md) | 210115 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced02/Question18.md) | 210115 |
