@@ -179,7 +179,7 @@
 | | - | [Advanced 2 준비](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced02/Question13.md) | 210113 |
 | | - | [금, 은, 동 뽑기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced02/Question14.md) | 210113 |
 | | - | [2차원 배열 돌리기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced02/Question15.md) | 210114 |
-| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced02/Question16.md) | 210114 |
+| | - | [DFS - 인접행렬 Tree](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced02/Question16.md) | 210114 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced02/Question17.md) | 210115 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced02/Question18.md) | 210115 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced02/Question19.md) | 210116 |
