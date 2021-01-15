@@ -1,59 +1,31 @@
-# n개의 주사위
+# 큰 수 3개 구하기
 
 ## 1. 문제
 
-- n개의 주사위를 던져서 나올 수 있는 모든 경우를 출력해주세요.
+- 첫 줄에 2차원 배열의 사이즈 row, col을 입력받습니다.
+- 그 후에, 배열 값을 입력받고, 배열에서 가장 큰 값 3개를 찾아서 좌표와 함께 출력하는 프로그램을 작성해주세요.
 
 ## 2. 입력
 
-- 주사위 개수 n을 입력 받습니다.
+- 첫 줄에 2차원 배열의 사이즈 row, col을 입력받고,
+- 그 후에, 배열 값을 입력받습니다.
 
 ## 3. 출력
-- n개의 주사위를 던져서 나올 수 있는 모든 경우를 출력해주세요.
+- 배열에서 가장 큰 값 3개를 찾아서 좌표와 함께 출력해주세요.
 
 ## 4. 예제 입력
 ```
-2
+3 4
+1 5 2 7
+1 5 1 6
+3 3 2 4
 ```
 
 ## 5. 예제 출력
 ```
-11
-12
-13
-14
-15
-16
-21
-22
-23
-24
-25
-26
-31
-32
-33
-34
-35
-36
-41
-42
-43
-44
-45
-46
-51
-52
-53
-54
-55
-56
-61
-62
-63
-64
-65
-66
+7(0,3)
+6(1,3)
+5(0,1)
 ```
 
 ## 6. 코드
@@ -61,26 +33,43 @@
 #include <iostream>
 using namespace std;
 
-int n;
-char *path = new char[n + 1];
-void run(int level, int limit) {
-	if (level == limit) {
-		path[limit] = 0;
-		cout << path << "\n";
-		return;
-	}
-
-	for (int i = 0; i < 6; i++) {
-		path[level] = '1' + i;
-		run(level + 1, limit);
-		path[level] = 0;
-	}
-}
+struct Node {
+    int y, x;
+    int data;
+};
 
 int main()
 {
-	cin >> n;
+    int map[100][100] = { 0 };
+    int n, m;
 
-	run(0, n);
+    cin >> n >> m;
+
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < m; j++) {
+            cin >> map[i][j];
+        }
+    }
+
+    Node nodes[3] = { { 0, 0, -1 }, { 0, 0, -1 }, { 0, 0, -1 } };
+
+    for (int x = 0; x < 3; x++) {
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < m; j++) {
+                if (nodes[x].data < map[i][j]) {
+                    nodes[x].y = i;
+                    nodes[x].x = j;
+                    nodes[x].data = map[i][j];
+                }
+            }
+        }
+        map[nodes[x].y][nodes[x].x] = -1;
+    }
+
+    for (int i = 0; i < 3; i++) {
+        cout << nodes[i].data << "(" << nodes[i].y << "," << nodes[i].x << ")\n";
+    }
+    
+    return 0;
 }
 ```
