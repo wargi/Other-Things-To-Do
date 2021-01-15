@@ -1,32 +1,20 @@
-# min & max 찾기
+# 가장 작은 수 출력
 
 ## 1. 문제
-- 첫 줄에 숫자로 구성된 1차원 배열(1x6) 입력받고,
-- 다음 줄에 'm'과 'x'로 구성된 1차원 배열(1x6)를 입력받습니다.
-- m은 min값, x는 max값을 의미합니다.
-- 문자배열을 처음부터 탐색하며, 만약 처음 탐색한 m이라면 제일 작은 값을 출력하고(2번째 만난 m이라면 2번째로 작은 값을 출력),
-- 만약 처음 탐색한 x이라면 제일 큰 값을 출력해서 최종결과를 출력해주세요.(2번째 만난 x라면 2번째로 큰 값을 출력)
-
-```
-ex)
-input)
-1 3 5 7 9 2
-xxmmxm
-
-output: 971355
-```
+- 처음 입력 받을 숫자들의 개수 n을 입력받습니다.
+- 그 후에, n개의 숫자들을 이용하여 가장 작은 세자리 수를 만들어주는 프로그램을 작성하시오.
 
 ## 2. 입력
-- 첫 줄에 숫자로 구성된 1차원 배열(1x6) 입력받고,
-- 다음 줄에 'm'과 'x'로 구성된 1차원 배열(1x6)를 입력받습니다.
+- 첫 줄에 입력 받을 숫자들의 개수 n을 입력받고,
+- 다음 줄에 n개의 숫자들을 입력받습니다.
 
 ## 3. 출력
-- 문자 배열을 탐색하여 최종결과를 출력해주세요.
+- n개의 숫자들을 이용하여 가장 작은 세자리 수를 만들어 출력해주세요.
 
 ## 4. 예제 입력
 ```
-3 7 4 0 9 6
-mxmmxx
+5
+0 0 0 0 5
 ```
 
 ## 5. 예제 출력
@@ -34,53 +22,56 @@ mxmmxx
 093476
 ```
 
-## 6. 코드
+## 6. 예제 입력
+
+```
+4
+9 1 3 0
+```
+
+## 7. 예제 출력
+
+```
+103
+```
+
+## 8. 코드
+
 ```c++
 #include <iostream>
 using namespace std;
 
-int number[6], check[100] = { 0 };
+int n, m = 9999;
+int check[1000] = { 0 };
+int* vect;
 
-int findMin() {
-	int min = 10000;
-	
-	for (int i = 0; i < 6; i++) {
-		if (check[number[i]] == 0 && min > number[i]) {
-			min = number[i];
-		}
-	}
+void dfs(int level, int sum) {
+    if (level == 3) {
+        if (sum >= 100 && sum <= 999 && sum < m) m = sum;
+        
+        return;
+    }
 
-	check[min]++;
-	return min;
-}
-
-int findMax() {
-	int max = -1;
-
-	for (int i = 0; i < 6; i++) {
-		if (check[number[i]] == 0 && max < number[i]) {
-			max = number[i];
-		}
-	}
-
-	check[max]++;
-	return max;
+    for (int i = 0; i < n; i++) {
+        if (!check[i]) {
+            check[i] = 1;
+            dfs(level + 1, sum * 10 + vect[i]);
+            check[i] = 0;
+        }
+    }
 }
 
 int main()
 {
-	
-	char command[7];
+    cin >> n;
+    vect = new int[n];
 
-	for (int i = 0; i < 6; i++) {
-		cin >> number[i];
-	}
+    for (int i = 0; i < n; i++) cin >> vect[i];
 
-	cin >> command;
+    dfs(0, 0);
 
-	for (int i = 0; i < 6; i++) {
-		if (command[i] == 'm') cout << findMin();
-		else cout << findMax();
-	}
+    cout << m;
+
+    return 0;
 }
 ```
