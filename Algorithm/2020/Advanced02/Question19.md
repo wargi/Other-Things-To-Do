@@ -1,69 +1,79 @@
-# heap 익혀보기 5
+# 데이트 스케줄
 
 ## 1. 문제
-- 숫자 n을 입력받고, n의 배수 4개의 링크드리스트를 연결하여 만들고 출력해주세요.
-
-```
-input: 4
-
-4 -> 8 -> 12 -> 16
-
-output)
-4 8 12 16
-```
+- 3명의 이름을 입력받고, 순서대로 데이트를 할 상대를 선택해야 합니다.
+- 금 ~ 일요일 까지 총 3일간 3번의 데이트를 하는데, 가능한 경우의 수를 모두 출력해주세요.(같은 사람이 중복되어도 됩니다.)
 
 ## 2. 입력
-- 숫자 n을 입력받습니다.
+- 3명의 이름을 입력받습니다.
 
 ## 3. 출력
-- 연결된 링크드리스트를 head부터 순서대로 출력해주세요.
+- 금 ~ 일요일 까지 총 3일간 3번의 데이트를 하는데, 가능한 경우의 수를 모두 출력해주세요.
 
 ## 4. 예제 입력
 ```
-2
+bob jason tom
 ```
 
 ## 5. 예제 출력
 ```
-2 4 6 8
+bob bob bob
+bob bob jason
+bob bob tom
+bob jason bob
+bob jason jason
+bob jason tom
+bob tom bob
+bob tom jason
+bob tom tom
+jason bob bob
+jason bob jason
+jason bob tom
+jason jason bob
+jason jason jason
+jason jason tom
+jason tom bob
+jason tom jason
+jason tom tom
+tom bob bob
+tom bob jason
+tom bob tom
+tom jason bob
+tom jason jason
+tom jason tom
+tom tom bob
+tom tom jason
+tom tom tom
 ```
 
 ## 6. 코드
 ```c++
 #include <iostream>
+#include <string>
 using namespace std;
 
-struct Node {
-    int data;
-    Node* next;
-};
-
-Node* head, * last;
-
-void addNode(int data) {
-    if (head == NULL) {
-        head = new Node();
-        head->data = data;
-        last = head;
+string vect[3];
+string path[3];
+void dfs(int level) {
+    if (level == 3) {
+        for (int i = 0; i < 3; i++) cout << path[i] << " ";
+        cout << "\n";
         return;
     }
 
-    last->next = new Node();
-    last = last->next;
-    last->data = data;
+    for (int i = 0; i < 3; i++) {
+        path[level] = vect[i];
+        dfs(level + 1);
+        path[level] = "";
+    }
 }
 
 int main()
 {
-    int n;
-    cin >> n;
+    for (int i = 0; i < 3; i++) cin >> vect[i];
 
-    for (int i = 1; i <= 4; i++) {
-        addNode(n * i);
-    }
+    dfs(0);
 
-    for (Node* p = head; p != NULL; p = p->next) {
-        cout << p->data << " ";
-    }
+    return 0;
 }
 ```

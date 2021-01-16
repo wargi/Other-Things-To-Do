@@ -182,7 +182,7 @@
 | | - | [DFS - 인접행렬 Tree](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced02/Question16.md) | 210114 |
 | | - | [가장 작은 수 출력](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced02/Question17.md) | 210115 |
 | | - | [큰 수 3개 구하기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced02/Question18.md) | 210115 |
-| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced02/Question19.md) | 210116 |
+| | - | [데이트 스케줄](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced02/Question19.md) | 210116 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced02/Question20.md) | 210116 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced02/Question21.md) | 210117 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced02/Question22.md) | 210117 |
