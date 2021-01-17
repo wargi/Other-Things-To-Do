@@ -184,7 +184,7 @@
 | | - | [큰 수 3개 구하기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced02/Question18.md) | 210115 |
 | | - | [데이트 스케줄](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced02/Question19.md) | 210116 |
 | | - | [시간복잡도 구하기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced02/Question20.md) | 210116 |
-| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced02/Question21.md) | 210117 |
+| | - | [가장 작은 부분 찾기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced02/Question21.md) | 210117 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced02/Question22.md) | 210117 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced02/Question23.md) | 210118 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced02/Question24.md) | 210118 |

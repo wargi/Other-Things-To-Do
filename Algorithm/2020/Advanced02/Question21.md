@@ -1,44 +1,29 @@
-# path 출력하기
+# 가장 작은 부분 찾기
 
 ## 1. 문제
 
-- 아래와 같은 트리를 만들고 level을 입력받고, level에 도달하였을 때, path를 출력해주세요.
-
-<img src="./Tree01.png" alt="Tree" style="zoom:80%;" />
+- 숫자 n을 입력받고 n개의 숫자들을 배열에 넣어주세요.
+- 그 후에 배열의 연속된 네 칸의 합을 구했을때 가장 작은 합을 출력하는 프로그램을 작성해주세요. 
 
 ## 2. 입력
 
-- n을 입력받아주세요. (2 <= level <= 4)
+- 숫자 n을 입력받고 n개의 숫자들을 1차원 배열(1xn)에 넣어주세요. (4 <= n <= 100,000)
 
 ## 3. 출력
 
-- path를 출력해주세요.
+- 연속된 네 칸의 합을 구했을때 가장 작은 합을 출력해주세요.
 
 ## 4. 입력 예시
 
 ```
-2
+9
+7 2 4 3 2 1 1 9 2
 ```
 
 ## 5. 출력 예시
 
 ```
-BB
-BG
-BT
-BK
-GB
-GG
-GT
-GK
-TB
-TG
-TT
-TK
-KB
-KG
-KT
-KK
+7
 ```
 
 ## 6. 코드
@@ -47,24 +32,33 @@ KK
 #include <iostream>
 using namespace std;
 
-char ch[5] = "BGTK";
-char map[1000];
-
-void path(int x, int end) {
-    if (x == end) {
-        cout << map << "\n";
-        return;
-    }
-    for (int i = 0;i < 4; i++) {
-        map[x] = ch[i];
-        path(x + 1, end);
-    }
-}
+int v[100001], check[100000];
+int sum = 0;
 
 int main()
 {
     int n;
     cin >> n;
-    path(0, n);
+
+    int min = 21e8;
+
+    for (int i = 0; i < n; i++)
+        cin >> v[i];
+
+    for (int i = 0; i < n; i++) {
+        if (i < 4) {
+            sum += v[i];
+        }
+        else {
+            sum -= v[i - 4];
+            sum += v[i];
+        }
+        
+        if (min > sum) min = sum;
+    }
+
+    cout << min;
+
+    return 0;
 }
 ```
