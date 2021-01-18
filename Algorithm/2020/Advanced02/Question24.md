@@ -1,94 +1,67 @@
-# Linked List로 구성된 이진 트리 탐색
+# "HITSWARGI"
 
 ## 1. 문제
 
-- 아래의 이미지와 같이 노드를 만들어주세요.
-- 한 문장을 입력받습니다.
+- n을 입력받고 n개의 문자열을 1차원 배열에 입력받습니다. 
+- 이제, n개의 문자열 중 2개만 조합하여 새로운 문자열을 만들려고 합니다.
+- 처음 선택한 문자열은 반드시 두 번째 선택한 문자열보다 더 왼쪽에 있어야 합니다.
+- 2개의 문자열을 선택하여 "HITSWARGI" 이라는 문장을 만들 수 있는 경우가 총 몇 가지인지 출력하는 프로그램을 작성해주세요.
 
 ```
-* 입력 받은 문장이 "H" 라면 head가 가르키는 값을 출력하고,
-* 입력 받은 문장이 "HR" 이라면 head->Right가 가르키는 값을 출력하고,
-* 입력 받은 문장이 "HL"이라면 head->Left가 가르키는 값을 출력하고,
-* 입력 받은 문장이 "HRR" 이라면 head->Right->Right가 가르키는 값을 출력하고,
-* 입력 받은 문장이 "HLL" 이라면 head->Left->Left가 가르키는 값을 출력합니다.
-* 입력 받은 문장이 "HLR" 이라면 head->Left->Right가 가르키는 값을 출력합니다.
-```
+1. 만약, 7개의 문장을 입력받았다면
+HITS HI HITSW WARGI SWA RGI ARGI
 
-<img src="./Tree04.png" alt="Tree" style="zoom:80%;" />
+2. 만들 수 있는 경우의 수는
+0번 index + 3번 index = HITSWARGI
+2번 index + 6번 index = HITSWARGI
+답은 '2'입니다.
+```
 
 ## 2. 입력
 
-- 한 문장을 입력받습니다.
+- n을 입력받고 n개의 문자열을 1차원 배열에 입력받습니다. 
 
 ## 3. 출력
 
-- 위에 적어놓은 조건을 적용하여 결과를 출력해주세요.
+- 2개의 문자열을 선택하여 "HITSWARGI" 이라는 문장을 만들 수 있는 경우가 총 몇 가지인지 출력해주세요.
 
 
 ## 4. 예제 입력
 ```
-HLL
+HITS HI HITSW WARGI SWA RGI ARGI
 ```
 
 ## 5. 예제 출력
 ```
-D
+2
 ```
 
-## 6. 예제 입력
-
-```
-HR
-```
-
-## 7. 예제 출력
-
-```
-C
-```
-
-## 8. 코드
+## 6. 코드
 
 ```c++
 #include <iostream>
-#include <cstring>
 #include <string>
 using namespace std;
 
-struct Node {
-    char data;
-    Node* left;
-    Node* right;
-};
-
 int main()
 {
-    Node* head = new Node;
-    head->data = 'A';
-    head->left = new Node;
-    head->right = new Node;
+     string s[1000];
+     int n;
+     cin >> n;
 
-    head->left->data = 'B';
-    head->left->left = new Node;
-    head->left->right = new Node;
+     for (int i = 0; i < n; i++) {
+         cin >> s[i];
+     }
 
-    head->right->data = 'C';
-    head->right->left = head->right->right = NULL;
+     int cnt = 0;
+     for (int i = 0; i < n - 1; i++) {
+         for (int j = i + 1; j < n; j++) {
+             if (s[i] < s[j] && s[i] + s[j] == "HITSMUSIC") cnt++;
+         }
+     }
 
-    head->left->left->data = 'D';
-    head->left->left->left = head->left->left->right = NULL;
+     cout << cnt;
 
-    head->left->right->data = 'E';
-    head->left->right->left = head->left->right->right = NULL;
-
-    string s;
-    cin >> s;
-
-    if (s == "H") cout << head->data;
-    else if (s == "HL") cout << head->left->data;
-    else if (s == "HR") cout << head->right->data;
-    else if (s == "HLL") cout << head->left->left->data;
-    else cout << head->left->right->data;
-
+    return 0;
 }
 ```
