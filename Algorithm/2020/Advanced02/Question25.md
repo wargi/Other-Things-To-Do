@@ -1,61 +1,64 @@
-# 삼각관계
+# 가장 저렴한 곳에 주차하기
 
 ## 1. 문제
 
-- 아래의 이미지와 같이 링크드리스트를 구현해주세요.
-- 링크드리스트를 만들었다면, head를 이용하여, son의 love1과 love가 누구인지 출력해주세요.
+- 공영주차장에 차를 주차허려 합니다.
+- 차가 차지하는 칸을 n을 입력받습니다. (1 <=  n <= 9)
 
-<img src="./Tree05.png" alt="Tree" style="zoom:80%;" />
+```
+- 아래의 칸 별 요금이 적힌 1차원 배열(1x9)을 하드코딩 해주세요.
+1 2 3 3 5 1 0 1 3
+```
+
+- 이 주차장은 칸 별로 요금이 다른데 차가 주차할 수 있는 영역(1~9칸)중에 가장 저렴한 구간에 주차하 요금을 출력해주세요.
+
+## 2. 입력
+
+- 차가 차지하는 칸을 n을 입력받습니다. (1 <=  n <= 9)
 
 ## 3. 출력
 
-- head를 이용하여, son의 love1과 love가 누구인지 출력해주세요.
+- 이 주차장은 칸 별로 요금이 다른데 차가 주차할 수 있는 영역(1~9칸)중에 가장 저렴한 구간에 주차하 요금을 출력해주세요.
 
 
-## 4. 예제 출력
+## 4. 예제 입력
 ```
-girlfriend
-boyfriend
+3
 ```
 
-## 5. 코드
+## 5. 예제 출력
+
+```
+2
+```
+
+## 6. 코드
 
 ```c++
 #include <iostream>
-#include <string>
 using namespace std;
-
-struct Node {
-    string name;
-    Node* love1;
-    Node* love2;
-};
 
 int main()
 {
-    Node* head = new Node;
+    int n;
+    int vect[9] = { 1, 2, 3, 3, 5, 1, 0, 1, 3 };
+    int sum = 0, max;
 
-    head->name = "boss";
-    head->love1 = new Node;
-    head->love2 = new Node;
+    cin >> n;
 
-    head->love1->name = "wife";
-    head->love1->love1 = head;
-    head->love1->love2 = head->love2;
+    for (int i = 0; i < n; i++) sum += vect[i];
 
-    head->love2->name = "son";
-    head->love2->love1 = new Node;
-    head->love2->love2 = new Node;
+    max = sum;
 
-    head->love2->love1->name = "girlfriend";
-    head->love2->love1->love1 = head->love2;
-    head->love2->love1->love2 = head->love2->love2;
+    for (int i = 1; i < 9 - n + 1; i++) {
+        sum += vect[i + n - 1];
+        sum -= vect[i - 1];
+        
+        if (max > sum) max = sum;
+    }
 
-    head->love2->love2->name = "boyfriend";
-    head->love2->love2->love1 = head->love2->love1;
-    head->love2->love2->love2 = NULL;
+    cout << max;
 
-    cout << head->love2->love1->name << "\n";
-    cout << head->love2->love2->name;
+    return 0;
 }
 ```

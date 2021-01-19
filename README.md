@@ -188,7 +188,7 @@
 | | - | [메모리 사용량 구하기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced02/Question22.md) | 210117 |
 | | - | [라인 바꾸기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced02/Question23.md) | 210118 |
 | | - | ["HITSWARGI"](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced02/Question24.md) | 210118 |
-| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced02/Question25.md) | 210119 |
+| | - | [가장 저렴한 곳에 주차하기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced02/Question25.md) | 210119 |
 | | Advanced 2 | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced03/Question1.md) | 210119 |
 |  | Intermediate 1 | [문자에 '#' 넣기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate01/Question1.md) | 201109 |
 |  | - | [범위 사이의 숫자 바꾸기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate01/Question2.md) | 201109 |
