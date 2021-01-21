@@ -191,8 +191,8 @@
 | | - | [가장 저렴한 곳에 주차하기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced02/Question25.md) | 210119 |
 | | Advanced 2 | [사전 정리하기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced03/Question1.md) | 210119 |
 | |  | [숫자 뒤집개](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced03/Question2.md) | 210120 |
-| |  | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced03/Question3.md) | 210120 |
-| |  | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced03/Question4.md) | 210121 |
+| |  | [최대 수익내기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced03/Question3.md) | 210120 |
+| |  | [삽입정렬](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced03/Question4.md) | 210121 |
 | |  | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced03/Question5.md) | 210121 |
 | |  | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced03/Question6.md) | 210122 |
 | |  | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced03/Question7.md) | 210122 |
