@@ -197,7 +197,7 @@
 | |  | [같은 숫자 제거](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced03/Question6.md) | 210122 |
 | |  | [라인 정렬](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced03/Question7.md) | 210122 |
 | |  | [이름 정렬](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced03/Question8.md) | 210123 |
-| |  | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced03/Question9.md) | 210123 |
+| |  | [공개 투표](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced03/Question9.md) | 210123 |
 | |  | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced03/Question10.md) | 210124 |
 | |  | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced03/Question11.md) | 210124 |
 | |  | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced03/Question12.md) | 210125 |

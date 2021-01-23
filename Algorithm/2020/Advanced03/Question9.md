@@ -1,67 +1,72 @@
-# Enqueue & Dequeue 2
+# 공개 투표
 
 ## 1. 문제
-- 10의 크기를 가진 Queue를 생성해주세요.
-- 반복할 횟수 n을 입력받아주세요.
-- 1번 반복에 1, 2, 3을 enqueue하고 dequeue를 3번합니다.
-- Dequeue를 할 때마다 Dequeue하는 값을 출력해주세요.
+- 공개 투표를 진행하여 국회의원을 뽑습니다.
+- N명이 투표를 진행합니다.
+- 가장 투표를 많이 받은 국회의원을 찾고, 당선된 국회의원에게 표를 선사한 사람들을 출력하는 프로그램을 작성하시오.
+- 국회의원은 숫자로 되어있습니다.
+- 만약 투표수가 같다면, 숫자가 빠른 국회의원이 당선됩니다.
 
 ## 2. 입력
-- 반복할 횟수 n을 입력받아주세요.
+- 첫 줄: 국회의원의 수와 시민의 수를 입력받습니다.
+- 다음 줄 부터: 투표한 국회의원 번호와 투표한 시민의 이름을 입력받습니다.
 
 ## 3. 출력
-- Dequeue를 할 때마다 Dequeue하는 값을 출력해주세요.
+- 당선된 국회의원에게 표를 선사한 사람들을 출력해주세요.
 
 ## 4. 예제 입력
 ```
-5
+5 12
+0 sam
+1 sammy
+3 sole
+2 coo
+0 luke
+1 haily
+2 elly
+3 hoo
+2 kim
+2 joon
+4 john
+4 loo
 ```
 
 ## 5. 예제 출력
 ```
-123123123123123
+coo elly kim joon
 ```
 
 ## 6. 코드
 
 ```c++
 #include <iostream>
+#include <string>
+#include <vector>
 using namespace std;
 
-struct Node {
-    int data;
-    Node* next;
-};
+vector<string> arr[100];
 
-Node* head, * last;
+int main() {
+    int n, m, max = -1, maxIndex;
+    cin >> n >> m;
 
-void enQueue(int x) {
-    if (head == NULL) {
-        head = new Node({ x });
-        last = head;
-        return;
+    for(int i = 0; i < m; i++) {
+        int idx;
+        string s;
+
+        cin >> idx >> s;
+
+        arr[idx].push_back(s);
+        int size = arr[idx].size();
+        
+        if (size > max) {
+            max = arr[idx].size();
+            maxIndex = idx;
+        }
     }
 
-    last->next = new Node({ x });
-    last = last->next;
-}
+    for(int i = 0; i < arr[maxIndex].size(); i++) cout << arr[maxIndex][i] << " ";
 
-void deQueue() {
-    cout << head->data;
-    head = head->next;
-}
-
-int main()
-{
-    int n;
-    cin >> n;
-    for (int i = 0; i < n; i++) {
-        enQueue(1);
-        enQueue(2);
-        enQueue(3);
-        deQueue();
-        deQueue();
-        deQueue();
-    }
+    return 0;
 }
 ```
