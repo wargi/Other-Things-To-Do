@@ -1,153 +1,101 @@
-# Enqueue & Dequeue 3
+# 회원 관리
 
 ## 1. 문제
-- Size가 4인 Queue를 링크드리스트로 만들어주세요.
-- 그리고 아래의 예제들처럼 입력 받았을때, 최종 Queue의 결과를 출력해주세요.
+- 회원 관리를 위해 기존 시스템의 회원들의 아이디를 변경할려고 합니다. 아래의 규칙에 어긋난 회원 아이디가 있다면 변경해주세요.
+- [규칙]
+
+1. 모두 대문자
+2. 첫 글자 대문자 나머지 소문자
+
+- 변경이 끝난 뒤에 정렬하여 출력하는 프로그램을 작성해주세요.
 
 ```
-E는 Enqueue를 뜻하고, 옆의 숫자를 Queue에 넣습니다.
-D는 Dequeue를 뜻하고, Dequeue를 수행합니다.(D옆의 숫자 0은 의미가 없습니다.)
-
-ex 1)
-input)
-3
-E 5
-E 6
-E 9
-
-output: 5 6 9
-
-ex 2)
-input)
-4
-E 2
-D 0
-E 9
-E 11
-
-output: 9 11
-
-ex 3)
-3
-E 5
-D 0
-D 0
-
-output: Error
-
-ex 4)
-5
-E 6
-E 7
-E 1
-E 2
-E 3
-
-output: Error
+[변경 규칙]
+첫 글자 대문자이고, 나머지 소문자 // 변경하지 않습니다.
+소문자로만 이루어진 회원들 // 첫 글자 대문자, 나머지 소문자로 아이디로 변경합니다.
+그 밖에 대소문자가 섞여있는 회원들 // 모두 대문자로 아이디를 변경합니다.
 ```
 
 ## 2. 입력
-- 첫 줄: 받을 명령어 갯수 n이 주어진다.
-- 다음줄부터 n개의 명령어들이 입력된다.
+- 첫 줄: 회원 명 수 n이 주어진다.
+- 다음줄부터 n개의 아이디들이 입력된다.
 
 ## 3. 출력
-- Queue의 최종상태를 출력하세요.
+- 변경이 끝난 뒤에 정렬하여 출력하세요.
 
 ## 4. 예제 입력
 ```
-2
-E 1
-E 2
+5
+redeye
+apple
+Steve
+Berry
+eUnBo
 ```
 
 ## 5. 예제 출력
 ```
-1 2
+Apple
+Berry
+EUNBO
+Redeye
+Steve
 ```
 
-## 6. 예제 입력
-
-```
-1
-D 0
-```
-
-## 7. 예제 출력
-
-```
-Error
-```
-
-## 8. 코드
+## 6. 코드
 
 ```c++
 #include <iostream>
+#include <vector>
+#include <algorithm>
+#include <string>
 using namespace std;
 
-struct Node {
-	int data;
-	Node* next;
-};
+vector<string> s;
 
-Node* head, * last;
-int cnt = 0;
+string check(string a) {
+    int first = 0, size = a.length();
+    int low = 0, up = 0;
 
-int enQueue(int x) {
-	if (cnt == 4) return 0;
-	if (head == NULL) {
-		head = new Node({ x });
-		last = head;
-		return 1;
-	}
+    for(int i = 0; i < size; i++) {
+        if(i == 0 && a[i] >= 'A' && a[i] <= 'Z') first = 1;
+        else 
+        {
+            if(a[i] >= 'A' && a[i] <= 'Z') up++;
+            else low++;
+        }
+    }
 
-	last->next = new Node({ x });
-	last = last->next;
+    if(first && low && !up) return a;
+    if(!first && low && !up) {
+        a[0] -= 32;
+        return a;
+    }
 
-	return 1;
+    for(int i = 0; i < size; i++) {
+        if(a[i] > 96) a[i] -= 32;
+    }
+
+    return a;
 }
-
-int deQueue() {
-	if (cnt == 0) return 0;
-
-	head = head->next;
-
-	return 1;
-}
-
-void print() {
-	for (Node* p = head; p != NULL; p = p->next) cout << p->data << " ";
-}
-
 
 int main() {
-	int n, m, flag = 1;
-	cin >> n;
+    int n;
+    cin >> n;
+    
+    for(int i = 0; i < n; i++) {
+        string t;
+        cin >> t;
 
-	for (int i = 0; i < n; i++) {
-		char ch;
-		cin >> ch;
+        t = check(t);
+        
+        s.push_back(t);
+    }
 
-		if (ch == 'E') {
-			cin >> m;
+    sort(s.begin(), s.end());
 
-			if (!enQueue(m)) {
-				flag = 0;
-				break;
-			}
-		}
-		else {
-			cin >> m;
+    for(int i = 0; i < n; i++) cout << s[i] << "\n";
 
-			if (!deQueue()) {
-				flag = 0;
-				break;
-			}
-		}
-	}
-
-	if (flag) print();
-	else cout << "Error";
-	
-	return 0;
+    return 0;
 }
 ```
