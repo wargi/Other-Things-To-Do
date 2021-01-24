@@ -198,7 +198,7 @@
 | |  | [라인 정렬](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced03/Question7.md) | 210122 |
 | |  | [이름 정렬](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced03/Question8.md) | 210123 |
 | |  | [공개 투표](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced03/Question9.md) | 210123 |
-| |  | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced03/Question10.md) | 210124 |
+| |  | [농작물 피해](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced03/Question10.md) | 210124 |
 | |  | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced03/Question11.md) | 210124 |
 | |  | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced03/Question12.md) | 210125 |
 | |  | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced03/Question13.md) | 210125 |
@@ -213,13 +213,13 @@
 | |  | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced03/Question22.md) | 210130 |
 | |  | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced03/Question23.md) | 210130 |
 | |  | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced03/Question24.md) | 210131 |
-| |  | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced03/Question25.md) | 210201 |
+| |  | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced03/Question25.md) | 210131 |
 | |  | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced04/Question1.md) | 210201 |
-| |  | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced04/Question2.md) | 210202 |
+| |  | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced04/Question2.md) | 210201 |
 | |  | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced04/Question3.md) | 210202 |
-| |  | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced04/Question4.md) | 210203 |
+| |  | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced04/Question4.md) | 210202 |
 | |  | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced04/Question5.md) | 210203 |
-| |  | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced04/Question6.md) | 210204 |
+| |  | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced04/Question6.md) | 210203 |
 | |  | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced04/Question7.md) | 210204 |
 |  | Intermediate 1 | [문자에 '#' 넣기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate01/Question1.md) | 201109 |
 |  | - | [범위 사이의 숫자 바꾸기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate01/Question2.md) | 201109 |
