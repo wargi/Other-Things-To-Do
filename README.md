@@ -202,7 +202,7 @@
 | |  | [회원 관리](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced03/Question11.md) | 210124 |
 | |  | [빈도 수 높은 카드 선정](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced03/Question12.md) | 210125 |
 | |  | [로또 번호 생성하기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced03/Question13.md) | 210125 |
-| |  | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced03/Question14.md) | 210126 |
+| |  | [검색 엔진](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced03/Question14.md) | 210126 |
 | |  | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced03/Question15.md) | 210126 |
 | |  | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced03/Question16.md) | 210127 |
 | |  | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced03/Question17.md) | 210127 |
