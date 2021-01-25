@@ -1,80 +1,60 @@
-# 상하좌우 판별 #
+# 알파벳 감소시키기 #
 
 ## 1. 문제
 
-```
-1. 1, 0으로 구성된 2차원 배열(4x4)을 입력 받습니다.
-
-2. 만약, 1을 입력받은 좌표의 상하좌우에 1이 있다면 "위험한 상태"라고 출력해주시고,
-   없다면 "안전한 상태"라고 출력하는 프로그램을 작성해주세요.
-```
+- 한 문자열을 입력받고, 알파벳을 1씩 감소시키며 출력합니다.
+- 'A'보다 작아진다면, '_'를 출력합니다.
+- 모든 문자들이 '_'가 될 때까지 출력하는 프로그램을 작성해주세요.
 
 ## 2. 입력
-- 1, 0으로 구성된 2차원 배열(4x4)을 입력 받습니다.
+- 한 문자열을 입력받습니다. (최대 10글자)
 
 ## 3. 출력
-- 만약, 1을 입력받은 좌표의 상하좌우에 1이 있다면 "위험한 상태"라고 출력해주시고, 없다면 "안전한 상태"라고 출력하는 프로그램을 작성해주세요.
+- 모든 문자들이 '_'가 될 때까지 출력해주세요.
 
 ## 4. 예제 입력
 ```
-1 0 0 0
-0 1 1 0
-0 0 0 1
-0 0 0 0
+CGDE
 ```
 
 ## 5. 예제 출력
 ```
-위험한 상태
+CGDE
+BFCD
+AEBC
+_DAB
+_C_A
+_B__
+_A__
+____
 ```
 
 ## 6. 코드
 ```c++
 #include <iostream>
+#include <string>
 using namespace std;
 
-int map[4][4];
+int main()
+{
+    string s;
+    cin >> s;
 
-int getState(int y, int x) {
-	int direct[4][2] = {
-		-1, 0,
-		1, 0,
-		0, -1,
-		0, 1
-	};
+    char maxCh = 'A';
 
-	for (int i = 0; i < 4; i++) {
-		int dy = y + direct[i][0];
-		int dx = x + direct[i][1];
+    for (int i = 0; i < s.length(); i++) if (maxCh <= s[i]) maxCh = s[i];
 
-		if (dy >= 0 && dy < 4 && dx >= 0 && dx < 4 && map[dy][dx] == 1) return 0;
-	}
+    cout << s << "\n";
 
-	return 1;
-}
+    for (char i = maxCh; i >= 'A'; i--) {
+        for (int j = 0; j < s.length(); j++) {
+            if (s[j] - 1 < 'A') s[j] = '_';
+            if (s[j] != '_') s[j] -= 1;
+            cout << s[j];
+        }
+        cout << "\n";
+    }
 
-
-int main() {
-
-	for (int i = 0; i < 4; i++) {
-		for (int j = 0; j < 4; j++) {
-			cin >> map[i][j];
-		}
-	}
-
-	int flag = 1;
-	for (int i = 0; i < 4; i++) {
-		for (int j = 0; j < 4; j++) {
-			if (map[i][j] == 1 && !getState(i, j)) {
-				flag = 0;
-				break;
-			}
-		}
-	}
-
-	if (flag) cout << "안전한 상태";
-	else cout << "위험한 상태";
-
-	return 0;
+    return 0;
 }
 ```
