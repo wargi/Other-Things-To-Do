@@ -1,80 +1,94 @@
-# Magic Number 만들기
+# Score 맞추기
 
 ## 1. 문제
 ```
-1. 아래의 2차원 배열(3x4)을 하드코딩 해주세요.
-0 0 0 0
-1 0 0 0
-1 0 0 0
+* 1 ~ 50 사이의 숫자 중 하나의 Score 맞추는 게임을 할려고 합니다.
 
-2. 하드코딩한 배열의 맨 윗줄에 들어갈 숫자 4개를 입력 받아주세요.
+Exam)
+1. Score: 47이라고 가정하겠습니다.
 
-3. 그 후에, 남은 곳을 채웁니다.
+2. 게임을 하는 인원을 입력받습니다. (인원당 Score를 한 번만 외칠수 있습니다.)
 
-4. 채울 때 규칙이 있는데, 채워야 할 곳에 좌표에서 위쪽과 왼쪽 값을 더한 결과를 채워주세요.
+2. 처음 사람이 30을 외쳤다면, "UP"이라고 대답합니다.(30 < 47)
 
-예제)
-input: 1 2 1 4
+3. 두번째 사람이 48을 외쳤다면, "DOWN"이라고 대답합니다.(48 > 47)
 
-1. 윗 줄을 채운다.
-1 2 1 4
-1 0 0 0
-1 0 0 0
+5. 마지막 41을 외쳤다면, "UP"이라고 대답합니다.(41 < 47)
 
-2. 1행까지 실행한 결과
-1 2 1 4
-1 3 4 8
-1 0 0 0
+6. 이렇게 결국 정답을 못맞췄다면 Score가 있을 범위를 출력합니다.
 
-3. 2행까지 완료한 최종상태
-1 2 1 4
-1 3 4 8
-1 4 8 16
+7. 42 ~ 47
+
+* 위 처럼 진행하는 게임입니다.
+
+[출력 규칙]
+- 만약 논리적인 오류가 있는 이력이 발견되면 "ERROR" 라고 출력하세요.
+- 만약 정답이 1 개로 좁혀졌다면 정답의 숫자만 출력 해 주세요.
+
+exam input 2)
+3
+10 UP
+35 DOWN
+7 DOWN
+
+exam output 2: ERROR
+
+exam input 3)
+4
+20 UP
+23 DOWN
+21 UP
+
+exam output 3: 22
 ```
 
 ## 2. 입력
-- 하드코딩한 배열의 맨 윗줄에 들어갈 숫자 4개를 입력 받아주세요.
+- 첫 줄: 인원 수를 입력받습니다.
+- 다음 줄부터: 예상 Score와 Up & Down이 입력됩니다.
+- 예상 스코어에 정답을 외치는 경우는 없습니다.
 
 ## 3. 출력
--  위의 예제처럼 실행한 후 배열의 최종상태를 출력해주세요.
+-  위의 예제처럼 실행한 후 최종 결과를 출력해주세요.
 
 ## 4. 예제 입력
 ```
-1 1 1 1
+4
+20 UP
+23 DOWN
+21 UP
 ```
 
 ## 5. 예제 출력
 ```
-1 1 1 1
-1 2 3 4
-1 3 6 10
+22
 ```
 
 ## 6. 코드
 ```c++
 #include <iostream>
+#include <string>
 using namespace std;
 
-int magicMap[3][4] = { 0 };
+int main()
+{
+    int n, start = 1, end = 1;
+    cin >> n;
 
-int main() {
-	for (int i = 0; i < 4; i++) {
-		cin >> magicMap[0][i];
-	}
+    int flag = 0;
+    for (int i = 0; i < n; i++) {
+        int num;
+        string s;
+        cin >> num >> s;
 
-	for (int i = 1; i < 3; i++) {
-		for (int j = 0; j < 4; j++) {
-			if (j == 0) magicMap[i][j] = magicMap[i - 1][j];
-			else magicMap[i][j] = magicMap[i - 1][j] + magicMap[i][j - 1];
-		}
-	}
+        if (s == "UP") start = num + 1;
+        else end = num - 1;
+        if (start == end) break;
+    }
 
-	for (int i = 0; i < 3; i++) {
-		for (int j = 0; j < 4; j++) {
-			cout << magicMap[i][j] << " ";
-		}
-		cout << "\n";
-	}
-	return 0;
+    if (start > end) cout << "ERROR";
+    else if (start == end) cout << start;
+    else cout << start << " ~ " << end;
+
+    return 0;
 }
 ```
