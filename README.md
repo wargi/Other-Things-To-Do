@@ -206,7 +206,7 @@
 | | - | [알파벳 감소시키기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced03/Question15.md) | 210126 |
 | | - | [알파벳 뒤집기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced03/Question16.md) | 210127 |
 | | - | [Score 맞추기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced03/Question17.md) | 210127 |
-| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced03/Question18.md) | 210128 |
+| | - | [범인 추적하기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced03/Question18.md) | 210128 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced03/Question19.md) | 210128 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced03/Question20.md) | 210129 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced03/Question21.md) | 210129 |
