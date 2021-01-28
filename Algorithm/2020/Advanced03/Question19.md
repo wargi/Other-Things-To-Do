@@ -1,87 +1,107 @@
-# 내 주위에 벽 쌓기
+# 사각형 땅따먹기
 
 ## 1. 문제
-- ```
-1. 아래의 2차원 배열(4x4) 하드코딩 해주세요.
-  ____
-  ____
-  ____
-  ____
-  
-  2. 좌표(y, x)를 3개 입력받고, 받은 좌표에 '#'을 채우고 주위의 8군대 좌표들에 '@'로 채운 결과값을 출력합니다.
-  
-  ex) 좌표(1, 1) -> 좌표(1, 3) -> 좌표(3, 3)을 받으면, 아래의 예제처럼 됩니다.
-  @@@_      @@@@      @@@@
-  @#@_  ->  @#@#  ->  @#@#
-  @@@_      @@@@      @@@@
-  ____      ____      __@#
-  ```
-  
+- 4x8 사이즈의 땅을 입력받습니다.
+- 입력 받은 땅에서 0을 제외한 숫자를 사각형 모양으로 선택하면 자신의 땅이 됩니다.
+- [땅 선택 예제 이미지]
+
+![예제 이미지]()
+
+- 사각형 모양의 땅을 선택한 부분의 가치를 합하여 출력하는 프로그램을 작성해주세요.
 
 ## 2. 입력
-- 좌표(y, x)를 3개 입력 받습니다.
+
+- 4x8 사이즈의 땅을 입력받습니다.
 
 ## 3. 출력
-- 받은 좌표에 '#'을 채우고 주위의 8군대 좌표들에 '@'로 채운 결과값을 출력합니다.
+
+- 사각형 모양의 땅을 선택한 부분의 가치를 합하여 출력해주세요.
 
 ## 4. 예제 입력
+
 ```
-0 0
-2 2
-0 3
+0 0 3 3 0 0 0 0
+5 1 4 2 6 9 8 1
+6 5 1 3 2 6 3 2
+0 0 0 0 9 9 4 0
 ```
 
 ## 5. 예제 출력
+
 ```
-#@@#
-@@@@
-_@#@
-_@@@
+64
 ```
 
 ## 6. 코드
+
 ```c++
 #include <iostream>
 using namespace std;
 
-char map[4][5];
-int direct[8][2] = {
-	-1, -1,
-	-1, 0,
-	-1, 1,
-	0, -1,
-	0, 1,
-	1, -1,
-	1, 0,
-	1, 1
-};
+int map[4][8];
 
-void setWall(int y, int x) {
-	for (int i = 0; i < 8; i++) {
-		int dy = y + direct[i][0];
-		int dx = x + direct[i][1];
+int getValueR(int y, int x) {
+    int val = 0, maxX = 7;
 
-		if (dy >= 0 && dy < 4 && dx >= 0 && dx < 4) map[dy][dx] = '@';
-	}
+    for (int i = y; i < 4; i++) {
+        int tVal = 0, tX = -1;
+        for (int j = x; j <= maxX; j++) {
+            if (map[i][j] == 0) break;
+            tX = j;
+            tVal += map[i][j];
+        }
+
+        if (i == y) maxX = tX;
+
+        if (maxX == tX) val += tVal;
+        else return val;
+    }
+    return val;
 }
 
-int main() {
-	for (int i = 0; i < 3; i++) {
-		int y, x;
-		cin >> y >> x;
+int getValueD(int y, int x) {
+    int val = 0, maxY = 3;
 
-		map[y][x] = '#';
-		setWall(y, x);
-	}
+    for (int i = x; i < 8; i++) {
+        int tVal = 0, tY = -1;
+        for (int j = y; j <= maxY; j++) {
+            if (map[j][i] == 0) break;
+            tY = j;
+            tVal += map[j][i];
+        }
 
-	for (int i = 0; i < 4; i++) {
-		for (int j = 0; j < 4; j++) {
-			if (map[i][j] != '#' && map[i][j] != '@') map[i][j] = '_';
-			cout << map[i][j];
-		}
-		cout << "\n";
-	}
+        if (i == x) maxY = tY;
 
-	return 0;
+        if (maxY == tY) val += tVal;
+        else return val;
+    }
+    return val;
+}
+
+int main()
+{
+    for (int i = 0; i < 4; i++) {
+        for (int j = 0; j < 8; j++) {
+            cin >> map[i][j];
+        }
+    }
+
+    int max = -1;
+    for (int y = 0; y < 4; y++) {
+        for (int x = 0; x < 8; x++) {
+            int v = 0;
+            if (map[y][x] != 0) {
+                v = getValueR(y, x);
+                if (v > max) max = v;
+                v = getValueD(y, x);
+                if (v > max) max = v;
+            }
+        }
+    }
+
+    cout << max;
+
+    return 0;
 }
 ```
+

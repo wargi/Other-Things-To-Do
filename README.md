@@ -207,7 +207,7 @@
 | | - | [알파벳 뒤집기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced03/Question16.md) | 210127 |
 | | - | [Score 맞추기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced03/Question17.md) | 210127 |
 | | - | [범인 추적하기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced03/Question18.md) | 210128 |
-| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced03/Question19.md) | 210128 |
+| | - | [사각형 땅따먹기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced03/Question19.md) | 210128 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced03/Question20.md) | 210129 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced03/Question21.md) | 210129 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced03/Question22.md) | 210130 |
@@ -221,6 +221,7 @@
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced04/Question5.md) | 210203 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced04/Question6.md) | 210203 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced04/Question7.md) | 210204 |
+| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced04/Question8.md) | 210204 |
 |  | Intermediate 1 | [문자에 '#' 넣기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate01/Question1.md) | 201109 |
 |  | - | [범위 사이의 숫자 바꾸기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate01/Question2.md) | 201109 |
 |  | - | [DAT 익혀보기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate01/Question3.md) | 201110 |
