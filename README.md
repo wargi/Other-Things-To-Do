@@ -208,7 +208,7 @@
 | | - | [Score 맞추기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced03/Question17.md) | 210127 |
 | | - | [범인 추적하기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced03/Question18.md) | 210128 |
 | | - | [사각형 땅따먹기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced03/Question19.md) | 210128 |
-| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced03/Question20.md) | 210129 |
+| | - | [이미지 회전](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced03/Question20.md) | 210129 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced03/Question21.md) | 210129 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced03/Question22.md) | 210130 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced03/Question23.md) | 210130 |
