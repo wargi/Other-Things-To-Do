@@ -1,70 +1,85 @@
-# 삼각관계 2
+# Cycle 찾기
 
 ## 1. 문제
 
-- 아래의 이미지는 삼각 관계를 나타낸 그래프 입니다.
-- 그래프를 인접행렬로 작성하여, 행렬을 이용하여 5명 중에 가장 인기가 많은 사람을 출력해주세요.
+- 노드 4개의 연결상태를 입력 받고, Cycle이 있는 그래프인지 판별해주세요.
+- Cycle이 있다면 "발견", 없다면 "미발견"을 출력하는 프로그램을 작성하시오.
+- [예제 이미지]
 
 <img src="./Graph01.png" alt="Graph" style="zoom:80%;" />
 
-## 2. 출력
+- 위의 이미지는 Cycle이 있으므로 "발견"을 출력합니다.
 
-- 인접 행렬을 이용하여 5명 중에 가장 인기가 많은 사람을 출력해주세요.
+## 2. 입력
 
-## 3. 출력 예시
+- 첫 줄: 간선의 개 수를 입력 받습니다.
+- 다음 줄부터: 연결 정보를 입력받습니다.
+
+## 3. 출력
+
+- Cycle이 있다면 "발견", 없다면 "미발견"을 출력해주세요.
+
+## 4. 입력 예시
 
 ```
-Bob
+4
+A C
+A B
+B D
+C B
 ```
 
-## 4. 코드
+## 5. 출력 예시
+
+```
+발견
+```
+
+## 6. 코드
 
 ```c++
 #include <iostream>
-#include <string>
 using namespace std;
 
-struct Node {
-	string name;
-	Node* next;
-};
+int vect[1000] = { 0, };
 
-Node* head[5], * last[5];
+char getBoss(char ch) {
+	if (vect[ch] == 0) return ch;
 
-void addNode(int idx, string name) {
-	if (head[idx] == NULL) {
-		head[idx] = new Node({ name });
-		last[idx] = head[idx];
-		return;
-	}
+	int ref = getBoss(vect[ch]);
+	vect[ch] = ref;
+	return ref;
+}
 
-	last[idx]->next = new Node({ name });
-	last[idx] = last[idx]->next;
+void setGroup(char lv, char rv) {
+	char lb = getBoss(lv);
+	char rb = getBoss(rv);
+
+	if (lb == rb) return;
+
+	vect[rv] = lb;
 }
 
 int main() {
-	string person[5] = { "Amy", "Bob", "Chloe", "Edger", "Diane" };
 
-	addNode(0, "Bob");
+	int n;
+	cin >> n;
 
-	addNode(1, "Chloe");
-	addNode(1, "Diane");
+	int isCycle = 0;
+	for (int i = 0; i < n; i++) {
+		char c, h;
+		cin >> c >> h;
 
-	addNode(3, "Amy");
-
-	int max = -1, idx;
-	for (int i = 0; i < 5; i++) {
-		int cnt = 0;
-		for (Node* p = head[i]; p != NULL; p = p->next) {
-			cnt++;
-		}
-		if (max < cnt) {
-			max = cnt;
-			idx = i;
+		if (getBoss(c) != getBoss(h)) setGroup(c, h);
+		else {
+			isCycle = 1;
+			break;
 		}
 	}
 
-	cout << person[idx];
+	if (isCycle) cout << "발견";
+	else cout << "미발견";
+
 
 	return 0;
 }
