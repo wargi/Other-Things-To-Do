@@ -210,7 +210,7 @@
 | | - | [사각형 땅따먹기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced03/Question19.md) | 210128 |
 | | - | [이미지 회전](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced03/Question20.md) | 210129 |
 | | - | [Cycle 찾기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced03/Question21.md) | 210129 |
-| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced03/Question22.md) | 210130 |
+| | - | [남은 그룹](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced03/Question22.md) | 210130 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced03/Question23.md) | 210130 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced03/Question24.md) | 210131 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced03/Question25.md) | 210131 |

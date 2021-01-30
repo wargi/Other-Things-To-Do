@@ -1,37 +1,49 @@
-# 인기 많은 알파벳 찾기
+# 남은 그룹
 
 ## 1. 문제
 
-<img src="./Graph02.png" alt="Graph" style="zoom:52%;" />
+- 아래의 이미지와 같이 그룹을 형성하고 있습니다.
+- 아래의 이미지는 그룹의 초기 상태를 나타냅니다.
+- 아래의 이미지와 같이 그룹이 지어진 상태에서 시작합니다.
 
-- 위의 이미지의 그래프에 A ~ D의 관계도가 나타나 있습니다.
-- 이것을 인접행렬로 표현하면 아래처럼 표현할 수 있습니다.
+<img src="./Group01.png" alt="Group" style="zoom:80%;" />
 
-<img src="./Array01.png" alt="Array" style="zoom:43%;" />
+- 위의 이미지와 같은 초기 상태에서 시작합니다. 따라서, 입력을 받기 전 남아있는 그룹의 수는 총 4개 입니다.
+- 이제 그룹으로 합쳐질 n개의 문자 쌍을 입력 받아주세요. n개의 문자 쌍을 모두 Groupping을 했을 때, 최종적으로 몇 개의 그룹이 남아있는지 출력하는 프로그램을 작성하시오.
 
-- 위의 인접행렬을 보고, 연결 상태를 파악해서 가장 많이 연결된 알파벳을 출력해주세요.
+```
+[Exam]
+input)
+3
+G I // G와 I가 속한 그룹을 합침 (현재 그룹수 : 4 --> 3개)
+D E // D와 E가 속한 그룹을 합침, 하지만 이미 같은 그룹이라 그룹의 수는 변동 없음 (현재 그룹 수 : 3개)
+H J // D와 E가 속한 그룹을 합침, 하지만 이미 같은 그룹이라 그룹의 수는 변동 없음 (현재 그룹 수 : 3개)
+
+output: 3개
+```
 
 
 ## 2. 입력
 
-- 인접행렬 2차원 배열(4x4)을 입력 받습니다.
+- 첫 줄: 합칠 그룹의 수를 입력받습니다.
+- 다음 줄부터: 합칠 그룹원 두 명을 입력받습니다.
 
 ## 3. 출력
 
-- 가장 많이 연결된 알파벳을 출력해주세요.
+- 최종적으로 몇 개의 그룹이 남아있는지 출력해주세요.
 
 
 ## 4. 예제 입력
 ```
-0 1 1 1
-1 0 1 0
-1 1 0 0
-1 0 0 0
+3
+G I
+D E
+H J
 ```
 
 ## 5. 예제 출력
 ```
-A
+3개
 ```
 
 ## 6. 코드
@@ -40,28 +52,45 @@ A
 #include <iostream>
 using namespace std;
 
-int map[4][4];
+int vect[100] = { 0 };
+char getBoss(char ch) {
+	if (vect[ch] == 0) return ch;
+
+	int ret = getBoss(vect[ch]);
+	vect[ch] = ret;
+	return ret;
+}
+
+void setGroup(char lv, char rv) {
+	char lb = getBoss(lv);
+	char rb = getBoss(rv);
+
+	if (lb == rb) return;
+	vect[rv] = lb;
+}
 
 int main() {
-	int alpha[4] = { 0 };
+	setGroup('A', 'B');
+	setGroup('B', 'C');
+	setGroup('D', 'E');
+	setGroup('E', 'F');
+	setGroup('G', 'H');
+	setGroup('I', 'J');
 
-	for (int i = 0; i < 4; i++) {
-		for (int j = 0; j < 4; j++) {
-			cin >> map[i][j];
-			if (map[i][j] == 1) alpha[j]++;
+	int n, g = 4;
+	cin >> n;
+
+	for (int i = 0; i < n; i++) {
+		char c, h;
+		cin >> c >> h;
+
+		if (getBoss(c) != getBoss(h)) {
+			setGroup(c, h);
+			g--;
 		}
 	}
 
-	int max = -1, maxIdx;
-
-	for (int i = 0; i < 4; i++) {
-		if (max < alpha[i]) {
-			maxIdx = i;
-			max = alpha[i];
-		}
-	}
-
-	cout << char(65 + maxIdx);
+	cout << g << "개";
 
 	return 0;
 }
