@@ -1,49 +1,91 @@
-# 인접 행렬 그래프
+# Binary Search Tree 탐색하기
 
 ## 1. 문제
 
-- 아래의 그림 같이 5개의 노드를 가진 그래프를 인접행렬로 하드코딩 하고, 어떤 간선들이 존재하는지 아래의 예제 출력과 같이 출력해주세요.
+- 숫자 다섯 개를 다섯 칸짜리 1차원 배열에 입력 받아주세요.
+- 그리고 아래의 Binary Search Tree 이미지를 1차원 배열에 하드코딩 해주세요.
 
-<img src="./Graph03.png" alt="Graph" style="zoom:80%;" />
+<img src="./Graph02.png" alt="Graph" style="zoom:80%;" />
 
-- 입력 값은 없습니다.
+- 재귀 호출을 이용하여 target 숫자들이 각각 존재하는지 찾아서 출력하는 프로그램을 작성해주세요.
 
-## 2. 출력
-- 위의 문제 설명처럼 출력해주세요.
+## 2. 입력
+- 숫자 다섯 개를 다섯 칸짜리 1차원 배열에 입력 받아주세요.
 
-## 3. 예제 출력
+## 3. 출력
+
+- 재귀 호출을 이용하여 target 숫자들이 각각 존재하는지 찾아서 출력해주세요.
+
+## 4. 예제 입력
 
 ```
-A B 1
-A C 7
-A D 2
-B C 8
-B E 5
-C D 3
-C E 6
+8 16 9 25 30
 ```
 
-## 4. 코드
+## 5. 예제 출력
+
+```
+8:3회만에찾음
+16:4회만에찾음
+9:없음
+25:3회만에찾음
+30:없음
+```
+
+## 6. 코드
 
 ```c++
 #include <iostream>
 using namespace std;
 
-int map[5][5] = {
-	0, 1, 7, 2, 0,
-	1, 0, 8, 0, 5,
-	7, 8, 0, 3, 6,
-	2, 3, 0, 0, 0,
-	0, 5, 6, 0, 0
-};
+int vect[1000] = { 0 };
+
+void insert(int val) {
+	int now = 1;
+
+	while (1) {
+		if (vect[now] == 0) {
+			vect[now] = val;
+			return;
+		}
+
+		if (vect[now] < val) now = now * 2 + 1;
+		else now = now * 2;
+	}
+}
+
+int find(int v) {
+	int now = 1, cnt = 0;
+
+	while (1) {
+		cnt++;
+		if (now > 1000) return 0;
+		if (vect[now] == 0) return 0;
+		if (vect[now] == v) return cnt;
+
+		if (vect[now] < v) now = now * 2 + 1;
+		else now = now * 2;
+	}
+}
 
 int main() {
+	insert(15);
+	insert(7);
+	insert(19);
+	insert(8);
+	insert(17);
+	insert(25);
+	insert(16);
+	insert(18);
+
 	for (int i = 0; i < 5; i++) {
-		for (int j = 0; j < 5; j++) {
-			if (map[i][j] > 0 && j >= i) {
-				cout << char(i + 65) << " " << char(j + 65) << " " << map[i][j] << "\n";
-			}
-		}
+		int n;
+		cin >> n;
+
+		int cnt = find(n);
+
+		if (cnt) cout << n << ":" << cnt << "회만에찾음\n";
+		else cout << n << ":" << "없음\n";
 	}
 
 	return 0;
