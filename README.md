@@ -212,7 +212,7 @@
 | | - | [Cycle 찾기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced03/Question21.md) | 210129 |
 | | - | [남은 그룹](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced03/Question22.md) | 210130 |
 | | - | [Binary Search Tree 탐색하기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced03/Question23.md) | 210130 |
-| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced03/Question24.md) | 210131 |
+| | - | [Binary Search Tree 만들고 탐색하기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced03/Question24.md) | 210131 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced03/Question25.md) | 210131 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced04/Question1.md) | 210201 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced04/Question2.md) | 210201 |

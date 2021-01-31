@@ -1,41 +1,38 @@
-# 테트리스
+# Binary Search Tree 만들고 탐색하기
 
 ## 1. 문제
 
-- 테트리스는 한 줄이 꽉 차면 그 줄은 사라지게 됩니다.
-- 블럭 상태를 입력 받고, 꽉찬 줄이 터지고 난 후의 결과를 출력해주세요.
-- 예시)
+- Binary Search Tree 자료구조에 값을 넣을 n개의 숫자를 입력받으세요.
+- 이제 1~6까지 각 숫자들이 Binary Search Tree에 존재하는지 출력하는 프로그램을 작성해주세요.
+- insert함수와 find함수는 모두 재귀호출로 구현해주세요.
 
-<img src="./Array02.png" alt="Array" style="zoom:60%;" />
-
-- 터진 줄만 제거하고, 위에 블럭은 완전히 바닥에 떨어지는 것이 아닙니다.
+<img src="./Graph03.png" alt="Graph" style="zoom:60%;" />
 
 ## 2. 입력
 
-- 2차원 배열(5x4)를 입력 받습니다.
+- 첫 줄: Binary Search Tree에 넣을 n개의 숫자
+- 마지막 줄: n개의 숫자 값
 
 ## 3. 출력
 
-- 꽉찬 줄이 있다면 터진 후의 최종 상태를 출력해주세요.
+- 이제 1~6까지 각 숫자들이 Binary Search Tree에 존재하는지 출력해주세요.
 
 ## 4. 입력 예시
 
 ```
-0 0 0 0
-0 0 1 0
-1 1 1 1
-1 1 1 1
-0 1 0 0
+4
+1 3 4 7
 ```
 
 ## 5. 출력 예시
 
 ```
-0 0 0 0
-0 0 0 0
-0 0 0 0
-0 0 1 0
-0 1 0 0
+1:O
+2:X
+3:O
+4:O
+5:X
+6:X
 ```
 
 ## 6. 코드
@@ -44,54 +41,39 @@
 #include <iostream>
 using namespace std;
 
+int vect[1000] = { 0 };
+void insert(int now, int v) {
+	if (vect[now] == 0) {
+		vect[now] = v;
+		return;
+	}
+
+	if (vect[now] < v) insert(now * 2 + 1, v);
+	else insert(now * 2, v);
+}
+
+char find(int now, int v) {
+	if (now > 1000) return 'X';
+	if (vect[now] == 0) return 'X';
+	if (vect[now] == v) return 'O';
+
+	if (vect[now] < v) find(now * 2 + 1, v);
+	else find(now * 2, v);
+}
+
 int main() {
-	int map[5][4] = { 0 };
-	int check[5] = { 0 };
-	for (int i = 0; i < 5; i++) {
-		int cnt = 0;
-		for (int j = 0; j < 4; j++) {
-			cin >> map[i][j];
-			if (map[i][j] == 1) cnt++;
-		}
+	int n;
+	cin >> n;
 
-		if (cnt == 4) {
-			for (int j = 0; j < 4; j++) {
-				map[i][j] = 0;
-			}
-		}
+	for (int i = 0; i < n; i++) {
+		int t;
+		cin >> t;
+
+		insert(1, t);
 	}
 
-	for (int i = 0; i < 5; i++) {
-		int flag = 0;
-		for (int j = 0; j < 4; j++) {
-			if (map[i][j] == 1) {
-				flag = 1;
-				break;
-			}
-		}
-
-		check[i] = flag;
-	}
-
-	for (int i = 4; i >= 1; i--) {
-		if (check[i] == 0) {
-			for (int j = i - 1; j >= 0; j--) {
-				if (check[j] == 1) {
-					for (int k = 0; k < 4; k++) {
-						map[i][k] = map[j][k];
-						map[j][k] = 0;
-					}
-					break;
-				}
-			}
-		}
-	}
-
-	for (int i = 0; i < 5; i++) {
-		for (int j = 0; j < 4; j++) {
-			cout << map[i][j] << " ";
-		}
-		cout << "\n";
+	for (int i = 1; i <= 6; i++) {
+		cout << i << ":" << find(1, i) << "\n";
 	}
 
 	return 0;
