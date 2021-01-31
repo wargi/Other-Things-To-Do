@@ -6,7 +6,7 @@
 - 이제 1~6까지 각 숫자들이 Binary Search Tree에 존재하는지 출력하는 프로그램을 작성해주세요.
 - insert함수와 find함수는 모두 재귀호출로 구현해주세요.
 
-<img src="./Graph03.png" alt="Graph" style="zoom:60%;" />
+<img src="./Graph03.png" alt="Graph" style="zoom:80%;" />
 
 ## 2. 입력
 
