@@ -1,50 +1,27 @@
-# Tree 3 #
+# Binary Search Tree로 정렬하기 #
 
 ## 1. 문제
-- 인접행렬(NxN) 트리를 입력받고, Level 2에 도착할 때 경로를 출력해주세요.
+- 다섯 개의 숫자를 Binary Search Tree 자료구조에 저장하고, 작거나 같은 수는 왼쪽, 큰 수는 오른쪽에 저장하는 Binary Search Tree에서 DFS를 이용하여 쉽게 숫자를 정렬하고 출력할 수 있습니다.
 
-<img src="./Tree03.png" alt="Tree" style="zoom:80%;" />
+<img src="./Graph01.png" alt="Graph" style="zoom:80%;" />
 
-- 만약, 위의 그림에 있는 트리를 인접행렬로 입력 받았다면, 다음과 같이 출력해주세요.
-
-```
-0 1 3
-0 1 4
-0 1 5
-0 2 6
-0 2 7
-0 2 8
-```
+- Binary Search Tree 자료구조를 만들고, 다섯 개의 숫자를 입력받아, Binary Search Tree에 순서대로 insert 해주세요.
+- 만들어진 Binary Search Tree를 탐색하여, 정렬 결과를 출력하는 프로그램을 작성하시오.
 
 ## 2. 입력
-- 첫 줄: N을 입력받는다.
-- 다음 줄부터: 인접행렬(NxN)을 입력받는다.
+- 첫 줄: 다섯 개의 숫자를 입력받는다.
 
 ## 3. 출력
-- Level 2에 도착할 때 경로를 출력해주세요.
+- 만들어진 Binary Search Tree를 탐색하여, 정렬 결과를 출력하시오.
 
 ## 4. 예제 입력
 ```
-9
-0 1 1 0 0 0 0 0 0
-0 0 0 1 1 1 0 0 0
-0 0 0 0 0 0 1 1 1
-0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0
+5 7 2 3 1
 ```
 
 ## 5. 예제 출력
 ```
-0 1 3
-0 1 4
-0 1 5
-0 2 6
-0 2 7
-0 2 8
+1 2 3 5 7
 ```
 
 ## 6. 코드
@@ -52,40 +29,35 @@
 #include <iostream>
 using namespace std;
 
-int n;
-int map[100][100];
-char path[100];
+int vect[1000];
+void insert(int now, int v) {
+	if (vect[now] == 0) {
+		vect[now] = v;
+		return;
+	}
 
-void run(int level, int row) {
-    if (level == 2) {
-        for (int i = 0; i < 3; i++) {
-            cout << path[i] << " ";
-        }
-        cout << "\n";
-    }
-
-    for (int i = 0; i < n; i++) {
-        if (map[row][i] == 1) {
-            path[level + 1] = '0' + i;
-            run(level + 1, i);
-            path[level + 1] = 0;
-        }
-    }
+	if (vect[now] < v) insert(now * 2 + 1, v);
+	else insert(now * 2, v);
 }
 
-int main()
-{
-    cin >> n;
+void run(int now) {
+	if (vect[now] == 0) return;
 
-    for (int i = 0; i < n; i++) {
-        for (int j = 0; j < n; j++) {
-            cin >> map[i][j];
-        }
-    }
+	run(now * 2);
+	cout << vect[now] << " ";
+	run(now * 2 + 1);
+}
 
-    path[0] = '0';
-    run(0, 0);
+int main() {
+	for (int i = 0; i < 5; i++) {
+		int t;
+		cin >> t;
 
-    return 0;
+		insert(1, t);
+	}
+
+	run(1);
+
+	return 0;
 }
 ```
