@@ -1,79 +1,61 @@
-# Linked list & DFS #
+# 기름 잔량 확인하기 #
 
 ## 1. 문제
 
-- 여섯 글자를 입력 받고, Linked list로 아래과 같이 연결해주세요.
-
-```c++
-// ex
-head = new Node();
-head->left = new Node();
-head->right = new Node();
-...
-```
-
-- Linked list Node에 각각 입력받은 문자를 넣어주세요.
-- 만약, ABCDEF를 입력 받았다면 아래의 그림과 같습니다.
-
-<img src="./Tree05.png" alt="Tree" style="zoom:80%;" />
-
-- 모두 연결시킨 후, DFS로 탐색한 결과를 출력해주세요.
+- 기름의 잔량을 알려주는 프로그램을 만들려고 합니다.
+- Binary Search를 이용하여 잔량을 출력하는 프로그램을 작성하시오.
+- '#'은 남은 기름, '_'은 비어있는 기름
 
 ## 2. 입력
-- 여섯 글자를 입력 받아 주세요.
+- 기름의 상태 문자열을 입력받습니다. (10글자)
 
 ## 3. 출력
-- DFS로 탐색한 결과를 출력해주세요.
+- 잔량을 출력해주세요.
 
 ## 4. 예제 입력
 ```
-ABCDEF
+###_______
 ```
 
 ## 5. 예제 출력
 ```
-ABDECF
+30%
 ```
 
 ## 6. 코드
 
 ```c++
 #include <iostream>
-#include <cstring>
 using namespace std;
 
-struct Node {
-    char data;
-    Node* left;
-    Node* right;
-};
+char vect[11];
 
-Node* head;
+void find() {
+    int start = 1, end = 8;
 
-void run(Node* p) {
-    if (p == NULL) return;
-    cout << p->data;
+    while (1) {
+        int mid = (start + end) / 2;
 
-    run(p->left);
-    run(p->right);
+        if (vect[mid] == '#' && vect[mid + 1] == '_') {
+            cout << mid + 1 << "0%";
+            return;
+        }
+
+        if (vect[mid] == '#') start = mid + 1;
+        else end = mid - 1;
+    }
 }
 
-char map[10] = "_ABC__DE";
-char ch[1000];
-char chMap[1000];
+void bs() {
+    if (vect[0] == '_') cout << "0%";
+    else if (vect[9] == '#') cout << "100%";
+    else find();
+}
+
 int main()
 {
-    cin >> ch;
-    int n = strlen(ch);
-    
-    head = new Node({ ch[0] });
-    head->left = new Node({ ch[1] });
-    head->right = new Node({ ch[2] });
-    head->left->left = new Node({ ch[3] });
-    head->left->right = new Node({ ch[4] });
-    head->right->left = new Node({ ch[5] });
-
-    run(head);
+    cin >> vect;
+    bs();
 
     return 0;
 }
