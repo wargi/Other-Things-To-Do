@@ -217,7 +217,7 @@
 | | - | [Steak House](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced04/Question1.md) | 210201 |
 | | - | [국가 전쟁](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced04/Question2.md) | 210201 |
 | | - | [Binary Search Tree로 정렬하기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced04/Question3.md) | 210202 |
-| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced04/Question4.md) | 210202 |
+| | - | [재귀를 이용한 Binary Search](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced04/Question4.md) | 210202 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced04/Question5.md) | 210203 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced04/Question6.md) | 210203 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced04/Question7.md) | 210204 |

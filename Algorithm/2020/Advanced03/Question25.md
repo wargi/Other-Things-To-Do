@@ -11,7 +11,7 @@
 - 출력결과: cycle 발견
 - [Exam 02]
 
-<img src="./Group03.png" alt="Group" style="zoom:80%;" />
+<img src="./Group03.png" alt="Group" style="zoom:95%;" />
 
 - 위 이미지의 그래프는 Cycle이 존재하지 않습니다.
 - 출력결과: 미발견
