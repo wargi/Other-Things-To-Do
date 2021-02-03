@@ -1,74 +1,75 @@
-# A ~ K 알파벳 찾기 #
+# Root 계산기 #
 
 ## 1. 문제
 
-- 문장을 하나 입력받고, 문장에서 A ~ K 중에 가장 빈도수가 높은 알파벳과 가장 빈도수가 적은 알파벳을 찾는 프로그램을 작성하시오.
+- 게임 프로그래머 'P'씨는 3D좌표를 구할 때, 루트 값을 구해야하는 경우가 많아서, 루트를 계산하는 프로그램을 만들려고 합니다.
+- 입력 받은 값을 Binary Search를 이용해 루트 값의 정수부를 구해주세요.
+
+```
+[Exam]
+만약, 16을 입력시에 결과는 4 입니다.
+만약, 17을 입력시에 결과는 4.xxx 이므로, 결과는 4 입니다.
+만약, 25을 입력시에 결과는 5 입니다.
+만약, 35을 입력시에 결과는 5.xxx 이므로, 5입니다.
+```
 
 ## 2. 입력
-- 문장 한 개를 입력받는다.
+- 숫자 하나를 입력 받습니다.
 
 ## 3. 출력
-- 첫 줄: 가장 빈도수가 높은 알파벳 출력
-- 마지막 줄: 가장 빈도수가 낮은 알파벳 출력
-- 만약, 빈도수가 같다면 아스키코드값이 작은 알파벳으로 출력
+- 입력 받은 루트 값을 정수만 출력해주세요.
 
 ## 4. 예제 입력
 ```
-AAABBEEEAK
+36
 ```
 
 ## 5. 예제 출력
 ```
-A
-C
+6
 ```
 
 ## 6. 예제 입력
 
 ```
-AAAABCDEFIQS
+130
 ```
 
 ## 7. 예제 출력
 
 ```
-A
-G
+11
 ```
 
 ## 8. 코드
 
 ```c++
 #include <iostream>
-#include <string>
 using namespace std;
 
-int main()
-{
-    int minAlpha = 200, maxAlpha = 200;
-    int mini = 21e8, maxi = -21e8;
-    int check[100] = { 0 };
-    string s;
-    cin >> s;
+int main() {
+	int n;
+	cin >> n;
 
-    for (int i = 0; i < s.length(); i++) check[s[i]]++;
+	float min = 21e8, idx = 0;
+	int start = 1, end = n;
 
-    for (int i = 'A'; i <= 'K'; i++) {
-        if (mini > check[i]) {
-            mini = check[i];
-            minAlpha = i;
-        }
+	while (start <= end) {
+		int mid = (start + end) / 2;
 
-        if (maxi < check[i]) {
-            maxi = check[i];
-            maxAlpha = i;
-        }
-    }
+		float t = float(n) / (mid * mid);
 
-    cout << char(maxAlpha) << "\n";
-    cout << char(minAlpha);
+		if (t >= 1.0 && t < 2.0 && min > t) {
+			min = t;
+			idx = mid;
+		}
 
+		if ((mid * mid) > n) end = mid - 1;
+		else start = mid + 1;
+	}
 
-    return 0;
+	cout << idx;
+
+	return  0;
 }
 ```
