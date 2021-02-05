@@ -1,60 +1,72 @@
-# 문장속에 문장 찾기 2 #
+# Heap 인접행렬 #
 
 ## 1. 문제
 
-- 문장 5개를 입력받고, 문장에 "MIT"라는 단어가 총 몇개 있는지 출력해주세요.
+- N과 인정행렬(NxN)을 입력 받고, 가장 가치가 높은 간선 3개를 출력하는 프로그램을 작성하시오.
 
 ## 2. 입력
-- 문장 5개를 입력받는다.
+- N과 인정행렬(NxN)을 입력 받는다.
 
 ## 3. 출력
--  문장에 "MIT"라는 단어가 총 몇개 있는지 출력해주세요.
+-  가장 가치가 높은 간선 3개를 출력해주세요.
 
 ## 4. 예제 입력
 ```
-ATVMITMIT
-CCCMIIT
-MITTD
-MITTTI
-MMMMM
+4
+0 0 30 20
+10 0 5 40
+10 0 0 5
+0 50 0 0
 ```
 
 ## 5. 예제 출력
 ```
-4
+D-B 50
+B-D 40
+A-C 30
 ```
 
 ## 6. 코드
 
 ```c++
 #include <iostream>
-#include <string>
+#include <queue>
 using namespace std;
 
-int main()
-{
-    int cnt = 0;
-    string t[5];
+struct Node {
+	char from;
+	char to;
+	int val;
+};
 
-    for (int i = 0; i < 5; i++) {
-        cin >> t[i];
-    }
+bool operator<(Node t1, Node t2) {
+	return t2.val > t1.val;
+}
 
-    for (int i = 0; i < 5; i++) {
-        for (int j = 0; j < t[i].length(); j++) {
-            int n = t[i].find("MIT", j);
-            if (n >= 0) {
-                cnt++;
-                j = n;
-            }
-            else {
-                break;
-            }
-        }
-    }
+priority_queue<Node> q;
 
-    cout << cnt;
+int main() {
+	int n;
+	cin >> n;
 
-    return 0;
+	for (int i = 0; i < n; i++) {
+		for (int j = 0; j < n; j++) {
+			int t;
+			cin >> t;
+
+			if (t > 0) {
+				Node w = { 'A' + i, 'A' + j, t };
+				q.push(w);
+			}
+		}
+	}
+
+	for (int i = 0; i < 3; i++) {
+		cout << q.top().from << "-" << q.top().to << " " << q.top().val << "\n";
+		q.pop();
+	}
+
+
+	return  0;
 }
 ```
