@@ -223,8 +223,8 @@
 | | - | [데이터 백업하기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced04/Question7.md) | 210204 |
 | | - | [Root 계산기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced04/Question8.md) | 210204 |
 | | - | [Heap Sort 구현](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced04/Question9.md) | 210205 |
-| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced04/Question10.md) | 210205 |
-| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced04/Question11.md) | 210206 |
+| | - | [Heap 인접행렬](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced04/Question10.md) | 210205 |
+| | - | [금 나와라 뚝딱 !](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced04/Question11.md) | 210206 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced04/Question12.md) | 210206 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced04/Question13.md) | 210207 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced04/Question14.md) | 210207 |
