@@ -1,74 +1,44 @@
-# 문장 내용 수정하기
+# DFS: 후위 출력
 
 ## 1. 문제
-```
-[문자표]
-KFC -> #BBQ#
-MC -> #BBQ#
-BICMAC -> #MACBOOK#
-SHACK -> #SHOCK#
-SONY -> #NONY#
-```
-
-- 한 문장을 입력 받고, 해당 문장에서 위의 문자표의 왼쪽에 있는 단어가 있다면 오른쪽 단어로 바꾸어 출력해주세요.
+- 아래의 이미지에 있는 이진트리를 1차원 배열에 하드코딩 해 주세요.
+- DFS를 돌리면서 탐색 순서대로 노드의 값을 출력하고자 합니다.
+- 출력하는 타이밍은 아래와 같습니다.
+- 왼쪽으로 진입했다가 돌아온 뒤 (왼쪽으로 재귀), 오른쪽으로 진입했다가 돌아왔을 때 (오른쪽으로 재귀) 출력합니다.
 
 ## 2. 입력
-- 한 문장을 입력 받는다.
+- 입력 값은 없습니다.
 
 ## 3. 출력
-- 입력받은 문장에서 위의 문자표의 왼쪽에 있는 단어가 있다면 오른쪽 단어로 바꾸어 출력해주세요.
+- 문제의 조건 대로 탐색하고 출력해주세요.
 
-## 4. 예제 입력
+## 4. 예제 출력
 ```
-ILOVESONY
-```
-
-## 5. 예제 출력
-```
-ILOVE#NONY#
+1 6 2 4 8 7 5 3
 ```
 
-## 6. 예제 입력
-
-```
-KFCANDMC
-```
-
-## 7. 예제 출력
-
-```
-#BBQ#AND#BBQ#
-```
-
-## 8. 코드
+## 5. 코드
 
 ```c++
 #include <iostream>
-#include <string>
 using namespace std;
+
+int vect[16] = { -1, 3, 2, 5, 1, 6, -1, 7, -1, -1, -1, -1, -1, -1, 4, 8 };
+
+void dfs(int now) {
+    if (now > 16) return;
+    if (vect[now] == -1) return;
+
+    dfs(now * 2);
+    dfs(now * 2 + 1);
+
+    cout << vect[now] << " ";
+}
 
 int main()
 {
-	string b[5] = { "KFC", "MC", "BICMAC", "SHACK", "SONY" };
-	string a[5] = { "#BBQ#", "#BBQ#", "#MACBOOK#", "#SHOCK#", "#NONY#" };
+    dfs(1);
 
-	string t;
-	cin >> t;
-
-	for (int i = 0; i < 5; i++) {
-		for (int j = 0; j < t.length(); j++) {
-			int n = t.find(b[i], j);
-
-			if (n >= 0) {
-				t.replace(n, b[i].size(), a[i]);
-				j = n;
-			}
-			else {
-				break;
-			}
-		}
-	}
-
-	cout << t;
+    return 0;
 }
 ```
