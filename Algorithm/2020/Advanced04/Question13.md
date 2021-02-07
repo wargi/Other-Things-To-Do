@@ -1,68 +1,93 @@
-# 문장의 일부분 꺼내오기 2 #
+# 저렴한 비행 구간 #
 
 ## 1. 문제
-- 문장들을 입력받고 그 사이에 "[xxxxx]" 이런식으로 구성된 7자리 문장을 추출할려고 합니다.
-- 입력 받은 모든 문장에서 "[xxxxx]"를 모두 추출해서 출력해주세요.
+- 5개국 여행 계획을 세워주는 여행사에서 경로추천을 해주려합니다.
+- DFS를 활용하여 시작점부터 도착지점까지의 최소 비용과 경로를 출력해주세요.
+- 아래 그래프를 인접행렬로 하드코딩해주세요.
 
 ## 2. 입력
-- 문장을 입력 받습니다.
+- 시작점과 도착지점을 입력 받아주세요.
 
 ## 3. 출력
-- 입력 받은 모든 문장에서 "[xxxxx]"를 모두 추출해서 출력해주세요.
+- 최소 비용과 경로를 출력해주세요. 
+- 갈 수 있는 길이 없다면 "impossible" 을 출력 하세요.
 
 ## 4. 예제 입력
 ```
-3
-ABC[89101]
-DEF[123][4567]GH
-IJ[11213]KL[14151][61718]
+G B
 ```
 
 ## 5. 예제 출력
 ```
-[89101]
-[11213]
-[14151]
-[61718]
+6:GTHB
 ```
 
 ## 6. 코드
 
 ```c++
+#define _CRT_SECURE_NO_WARNINGS
 #include <iostream>
-#include <vector>
-#include <string>
+#include <cstring>
+
 using namespace std;
+
+int map[5][5] = {
+    0, 3, 6, 2, 0,
+    0, 0, 2, 0, 4,
+    0, 0, 0, 0, 1,
+    0, 0, 0, 0, 8,
+    0, 10, 0, 0, 0
+};
+
+int flag = 0;
+int check[5] = { 0 };
+char names[6] = "GTHKB";
+char path[6];
+char minPath[6];
+int cost = 21e8;
+
+void run(int level, int start, int end, int sum) {
+    if (start == end) {
+        if (cost > sum) {
+            cost = sum;
+            strcpy(minPath, path);
+        }
+        flag = 1;
+        return;
+    }
+
+    if (level > 4) return;
+
+    for (int i = 0; i < 5; i++) {
+        if (!check[i] && map[start][i]) {
+            check[i] = 1;
+            path[level + 1] = names[i];
+            run(level + 1, i, end, sum + map[start][i]);
+            path[level + 1] = 0;
+            check[i] = 0;
+        }
+    }
+}
 
 int main()
 {
-	int n;
-	cin >> n;
+    int sIdx, eIdx;
+    char s, e;
+    cin >> s >> e;
 
-	vector<string> s;
-	vector<string> k;
-	for (int i = 0; i < n; i++) {
-		string t;
-		cin >> t;
+    for (int i = 0; i < 5; i++) {
+        if (s == names[i]) sIdx = i;
+        if (e == names[i]) eIdx = i;
+    }
+    
+    check[sIdx] = 1;
+    path[0] = s;
+    
+    run(0, sIdx, eIdx, 0);
 
-		s.push_back(t);
-	}
+    if (!flag) cout << "impossible";
+    else cout << cost << ":" << minPath;
 
-	for (int i = 0; i < n; i++) {
-		for (int j = 0; j < s[i].length(); j++) {
-			if (s[i][j] == '[') {
-				string sub = s[i].substr(j, 7);
-				k.push_back(sub);
-			}
-
-		}
-	}
-
-	for (int i = 0; i < k.size(); i++) {
-		if (k[i].size() != 7) continue;
-		if (k[i][6] != ']') continue;
-
-		cout << k[i] << "\n";
-	}
+    return 0;
 }
 ```
