@@ -1,58 +1,53 @@
-# 단어 꺼내오기 #
+# 숫자 10 만들기 #
 
 ## 1. 문제
-- 한 문장을 입력받고, 문장에 '_'를 제외한 단어들을 모두 저장하고 출력하는 프로그램을 작성하시오.
+- 입력받은 숫자 갯수로 10을 만들 수 있는 조합의 수를 출력하세요.
+- 사용 되는 숫자의 범위는 1 ~ 9 입니다.
+- 만일 입력 받은 N이 3 이라면, 3개의 숫자를 더하여 10이 되는 숫자 조합의 개 수를 출력하면 됩니다.
 
 
 ## 2. 입력
-- 한 문장을 입력받습니다.
+- 1 ~ 9까지의 숫자 중에 사용될 숫자의 개수 N을 입력 하세요.
 
 ## 3. 출력
-- '_' 제외하여 각각의 단어를 아래의 예시처럼 출력해주세요.
+- 숫자의 개수 N을 조합하여 10이 되는 경우의 수의 총합을 출력하세요.
 
 ## 4. 예제 입력
 ```
-Apple_Swift_____iOS__iPhone___iMAC____iCloud
+3
 ```
 
 ## 5. 예제 출력
 ```
-1#Apple
-2#Swift
-3#iOS
-4#iPhone
-5#iMAC
-6#iCloud
+36
 ```
 
 ## 6. 코드
 
 ```c++
 #include <iostream>
-#include <vector>
-#include <string>
 using namespace std;
+
+int cnt = 0;
+void dfs(int level, int end, int sum) {
+    if (level == end) {
+        if (sum == 10) cnt++;
+        return;
+    }
+
+    for (int i = 1; i < 10; i++) {
+        dfs(level + 1, end, sum + i);
+    }
+}
 
 int main()
 {
-	int cnt = 1;
-	string t;
-	string s;
-	cin >> s;
+    int n;
+    cin >> n;
 
-	for (int i = 0; i < s.length(); i++) {
-		if (s[i] == '_' && t.size() != 0) {
-			cout << cnt++ << "#" << t << "\n";
-			t = "";
-		}
-		else if (s[i] != '_') {
-			t += s[i];
-		}
-		else {
-			continue;
-		}
-	}
+    dfs(0, n, 0);
+    cout << cnt;
 
-	if (t.size() != 0) cout << cnt++ << "#" << t;
+    return 0;
 }
 ```
