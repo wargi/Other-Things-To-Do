@@ -1,87 +1,84 @@
-# 바이러스
+# 문자 필터 서비스
 
 ## 1. 문제
 
-- 0으로만 이뤄진 2차원 배열(4x4)이 있습니다.
-- 이 배열의 한 좌표를 입력받고, 입력받은 좌표에 값을 1을 넣어줍니다.
-- 그러면 상하좌우 1씩 더해지며 값이 배열애서 점점 바이러스처럼 퍼져나갑니다.
-- 바이러스가 모두 퍼진 배열의 최종 상태를 출력해주세요.
-- 이해를 돕기 위해 아래의 예시를 확인하고 프로그램을 작성해주세요.
+- 문자 메세지에 보기 싫은 단어가 있으면, 모두 3개의 #으로 (###) 모자이크 처리하려고 합니다.
+- 문자메세지 필터기능을 완성시켜주세요.
+- 모자이크 처리 할 **5개의 위험 단어**들은 다음과 같습니다.
 
 ```
-(2, 2)의 좌표를 입력받습니다.
-
-1. 배열의 상태
-0 0 0 0
-0 0 0 0
-0 0 1 0
-0 0 0 0
-
-2. 바이러스가 조금씩 퍼집니다.
-0 0 0 0   ->   0 0 3 0        0 4 3 4        5 4 3 4
-0 0 2 0        0 3 2 3   ->   4 3 2 3        4 3 2 3
-0 2 1 2        3 2 1 2        3 2 1 2   ->   3 2 1 2
-0 0 2 0        0 3 2 3        4 3 2 3        4 3 2 3
-
-3. 바이러스가 모두 퍼진 최종상태리를 출력합니다.
-5 4 3 4
-4 3 2 3
-3 2 1 2
-4 3 2 3
+chicken
+pizza
+jockbal
+bread
+samhap
 ```
+
+- **대소문자 구분 없이 위험 단어가 있으면 모자이크 처리 해 주세요.**
 
 ## 2. 입력
 
-- 좌표 하나를 입력받습니다. (y, x)
+- 문장의 길이가 최대 50 글자인 한 문장을 입력 받습니다.
 
 ## 3. 출력
 
-- 바이러스가 모두 퍼진 최종상태리를 출력합니다.
+- 모자이크해야할 단어를 길이에 상관없이 "###" 로 바꿔 문장을 출력해주세요.
 
 ## 4. 입력 예제
 
 ```
-2 2
+HeyBread!DoYouWannaBuildAChicken
 ```
 
 ## 5. 출력 예제
 
 ```
-5 4 3 4
-4 3 2 3
-3 2 1 2
-4 3 2 3
+Hey###!DoYouWannaBuildA###
 ```
 
 ## 6. 코드
 
 ```c++
 #include <iostream>
+#include <string>
 using namespace std;
 
-int map[4][4] = { 0 };
+string arr[5] = {
+    "chicken",
+    "pizza",
+    "jockbal",
+    "bread",
+    "samhap"
+};
 
-int main() {
-	int y, x;
-	cin >> y >> x;
+int main()
+{
+    string s, ts;
+    cin >> s;
 
-	for (int i = 0; i < 4; i++) {
-		for (int j = 0; j < 4; j++) {
-			int k = (y - i);
-			int l = (x - j);
-			if (k < 0) k = k * -1;
-			if (l < 0) l = l * -1;
-			map[i][j] = k + l + 1;
-		}
-	}
+    ts = s;
 
-	for (int i = 0; i < 4; i++) {
-		for (int j = 0; j < 4; j++) {
-			cout << map[i][j] << " ";
-		}
-		cout << "\n";
-	}
+    for (int i = 0; i < s.length(); i++) {
+        if (s[i] >= 'A' && s[i] <= 'Z') ts[i] = s[i] + 32;
+    }
 
-	return 0;
+    for (int i = 0; i < s.length(); i++) {
+        int flag = 0, idx = 0;
+        for (int j = 0; j < 5; j++) {
+            int size = s.length() - (i + arr[j].length());
+            if (size < 0) continue;
+            
+            string t = ts.substr(i, arr[j].size());
+
+            if (arr[j] == t) {
+                s.replace(i, arr[j].size(), "###");
+                ts.replace(i, arr[j].size(), "###");
+            }
+        }
+    }
+
+    cout << s;
+
+    return 0;
 }
 ```
