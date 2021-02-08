@@ -227,8 +227,8 @@
 | | - | [금 나와라 뚝딱 !](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced04/Question11.md) | 210206 |
 | | - | [DFS: 후위 출력](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced04/Question12.md) | 210206 |
 | | - | [저렴한 비행 구간](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced04/Question13.md) | 210207 |
-| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced04/Question14.md) | 210207 |
-| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced04/Question15.md) | 210208 |
+| | - | [숫자 10 만들기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced04/Question14.md) | 210207 |
+| | - | [수족관 속의 상어](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced04/Question15.md) | 210208 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced04/Question16.md) | 210208 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced04/Question17.md) | 210209 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced04/Question18.md) | 210209 |
