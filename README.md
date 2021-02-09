@@ -231,7 +231,7 @@
 | | - | [수족관 속의 상어](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced04/Question15.md) | 210208 |
 | | - | [문자 필터 서비스](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced04/Question16.md) | 210208 |
 | | - | [3000](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced04/Question17.md) | 210209 |
-| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced04/Question18.md) | 210209 |
+| | - | [2차원 배열 뽑기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced04/Question18.md) | 210209 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced04/Question19.md) | 210210 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced04/Question20.md) | 210210 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced04/Question21.md) | 210211 |
