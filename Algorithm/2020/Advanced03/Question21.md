@@ -1,86 +1,88 @@
-# Cycle 찾기
+# 배관 수리
 
 ## 1. 문제
 
-- 노드 4개의 연결상태를 입력 받고, Cycle이 있는 그래프인지 판별해주세요.
-- Cycle이 있다면 "발견", 없다면 "미발견"을 출력하는 프로그램을 작성하시오.
-- [예제 이미지]
+- 수압이 좋지 않은 집을 수리하기 위해, 배관을 선택해주세요.
 
-<img src="./Graph01.png" alt="Graph" style="zoom:80%;" />
+<img src="./Array03.png" alt="Array" style="zoom:80%;" />.
 
-- 위의 이미지는 Cycle이 있으므로 "발견"을 출력합니다.
+- 전체 배관의 맵은 2차원 배열로 주어지고 각 행에서 0이 아닌 칸을 한 개씩 열어야 합니다.
+- 총 수압은 각 행의 칸을 선택했을때, 선택한 칸들의 곱입니다.
+
+<img src="./Array04.png" alt="Array" style="zoom:80%;" />.
+
+- 위 그림처럼, **첫 번째 줄의 6, 두 번째 줄의 4, 세 번째 줄의 4, 네 번째 줄의 9 를** 선택한다면, 총 수압의 값은 864 로 수압의 값이 가장 큰 상태가 됩니다.
+- 또한, 최대 값이 중복될 수 있습니다. 
+
+- 모든 경우의 수에서 가장 큰 값을 출력해주세요.
 
 ## 2. 입력
 
-- 첫 줄: 간선의 개 수를 입력 받습니다.
-- 다음 줄부터: 연결 정보를 입력받습니다.
+- 첫 줄: 배관 사이즈의 세로, 가로 N 이 입력됩니다. (3 <= N <= 10)
+- 다음 줄부터: 배관 사이즈의 정보가 음수와 양수로 입력 됩니다.
 
 ## 3. 출력
 
-- Cycle이 있다면 "발견", 없다면 "미발견"을 출력해주세요.
+- 배관을 열어, 선택한 배관들의 곱이 가장 큰 숫자를 출력하세요.
 
 ## 4. 입력 예시
 
 ```
 4
-A C
-A B
-B D
-C B
+3 4 -2 6
+0 -4 4 1
+-4 4 0 -2
+5 1 6 9
 ```
 
 ## 5. 출력 예시
 
 ```
-발견
+864
 ```
 
 ## 6. 코드
 
 ```c++
 #include <iostream>
+#include <vector>
 using namespace std;
 
-int vect[1000] = { 0, };
+int n, maxV = -21e8;
+int check[10] = { 0 };
+vector<vector<int>> arr;
 
-char getBoss(char ch) {
-	if (vect[ch] == 0) return ch;
+void dfs(int level, int sum) {
+    if (level == n) {
+        if (sum > maxV) maxV = sum;
+        return;
+    }
 
-	int ref = getBoss(vect[ch]);
-	vect[ch] = ref;
-	return ref;
+    for (int i = 0; i < n; i++) {
+        if (arr[level][i] != 0) {
+            dfs(level + 1, sum * arr[level][i]);
+        }
+    }
 }
 
-void setGroup(char lv, char rv) {
-	char lb = getBoss(lv);
-	char rb = getBoss(rv);
+int main()
+{
+    cin >> n;
 
-	if (lb == rb) return;
+    for (int i = 0; i < n; i++) {
+        vector<int> t;
+        for (int j = 0; j < n; j++) {
+            int m;
+            cin >> m;
 
-	vect[rv] = lb;
-}
+            t.push_back(m);
+        }
+        arr.push_back(t);
+    }
+    
+    dfs(0, 1);
+    cout << maxV;
 
-int main() {
-
-	int n;
-	cin >> n;
-
-	int isCycle = 0;
-	for (int i = 0; i < n; i++) {
-		char c, h;
-		cin >> c >> h;
-
-		if (getBoss(c) != getBoss(h)) setGroup(c, h);
-		else {
-			isCycle = 1;
-			break;
-		}
-	}
-
-	if (isCycle) cout << "발견";
-	else cout << "미발견";
-
-
-	return 0;
+    return 0;
 }
 ```
