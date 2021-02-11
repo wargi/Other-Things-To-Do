@@ -234,7 +234,7 @@
 | | - | [2차원 배열 뽑기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced04/Question18.md) | 210209 |
 | | - | [바베큐 장작](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced04/Question19.md) | 210210 |
 | | - | [배관 수리](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced04/Question20.md) | 210210 |
-| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced04/Question21.md) | 210211 |
+| | - | [다빈치 코드](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced04/Question21.md) | 210211 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced04/Question22.md) | 210211 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced04/Question23.md) | 210212 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced04/Question24.md) | 210212 |
