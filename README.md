@@ -138,7 +138,7 @@
 | | Graph | [최단 거리](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/Graph/Question01.md) | 190919 |
 | | - | [특정 최단 거리](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/Graph/Question02.md) | 190924 |
 | | - | [파티](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/Graph/Question03.md) | 190927 |
-| 알고리즘 | ---------------- | 2020년 | ----------------- |
+| 알고리즘 | ---------------- | 2020 & 2021 | ----------------- |
 |  | Advanced 1 | [구조체 정렬하기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced01/Question1.md) | 201225 |
 |  | - | [Tree 01](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced01/Question2.md) | 201226 |
 |  | - | [배열 덧셈](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced01/Question3.md) | 201226 |
@@ -236,7 +236,7 @@
 | | - | [배관 수리](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced04/Question20.md) | 210210 |
 | | - | [다빈치 코드](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced04/Question21.md) | 210211 |
 | | - | [문자 Card 순열](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced04/Question22.md) | 210211 |
-| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced04/Question23.md) | 210212 |
+| | - | [줄 세우기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced04/Question23.md) | 210212 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced04/Question24.md) | 210212 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced04/Question25.md) | 210213 |
 |  | Intermediate 1 | [문자에 '#' 넣기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate01/Question1.md) | 201109 |

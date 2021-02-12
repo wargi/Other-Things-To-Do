@@ -1,109 +1,61 @@
-# 저글링 이동
+# 줄 세우기
 
 ## 1. 문제
 
-```
-저글링을 조종하려고 합니다.
-현재 저글링의 좌표는 x,y(5,5)에 위치합니다.
-저글링에게 내릴 수 있는 명령어는 up/down/left/right/click 입니다.
-명령어 n개를 입력받아, 명령을 수행한 결과들을 출력해주세요.
-
-<명령어>
-up: y축으로 한칸 -1
-down: y축으로 한칸 +1
-left: x축으로 한칸 -1
-right: x축으로 한칸 +1
-click: 현재 좌표 출력
-```
+- 동물병원 원장님은 동물들에게 밥을 주려고 합니다.
+- 여섯 마리의 동물이 밥을 먹기 위해 줄을 섭니다.
+- 강아지 태평이는 a등, 또는 b등이 되는 것을 싫어 합니다. 
+- 태평이가 a등 또는 b등을 할 경우를 제외하고, 동물들이 줄을 설 수 있는 경우가 총 몇개인지
+- Backtracking 으로 Counting 해주세요.
 
 ## 2. 입력
-- 첫 줄: 명령어 수를 입력받습니다.
-- 명령어 들을 입력 받습니다.
+- 태평이가 피하고자 하는 등수 a, b가 입력 됩니다.
 
 ## 3. 출력
 
-- 명령어 수행 결과를 출력해주세요.
+- 태평이가 a, b 등수가 되는 경우를 제외한 나머지의 경우의 수를 출력해주세요.
 
 
 ## 4. 예제 입력
 ```
-3
-up
-up
-click
+1 6
 ```
 
 ## 5. 예제 출력
 ```
-3,5
+480
 ```
 
-## 6. 예제 입력
-
-```
-4
-down
-click
-left
-click
-```
-
-## 7. 예제 출력
-
-```
-6,5
-6,4
-```
-
-## 8. 코드
+## 6. 코드
 
 ```c++
 #include <iostream>
-#include <cstring>
 using namespace std;
 
-struct Mouse {
-    int x, y;
+int check[6] = { 0 };
+int n, m, cnt = 0;
 
-    void up() {
-        y--;
-    }
+void run(int level) {
+	if (level == 6) {
+		cnt++;
+		return;
+	}
 
-    void down() {
-        y++;
-    }
+	for (int i = 0; i < 6; i++) {
+		if (i == 4 && ((level + 1) == n || (level + 1) == m)) continue;
+		if (check[i]) continue;
+		check[i] = 1;
+		run(level + 1);
+		check[i] = 0;
+	}
+}
 
-    void left() {
-        x--;
-    }
+int main() {
+	cin >> n >> m;
 
-    void right() {
-        x++;
-    }
+	run(0);
+	cout << cnt;
 
-    void click() {
-        cout << y << "," << x << "\n";
-    }
-};
-
-int main()
-{
-    int n;
-    char str[100][100];
-    cin >> n;
-
-    Mouse m = { 5, 5 };
-    
-    for (int i = 0; i < n; i++) {
-        cin >> str[i];
-    }
-
-    for (int i = 0; i < n; i++) {
-        if (!strcmp(str[i], "up")) m.up();
-        else if (!strcmp(str[i], "down")) m.down();
-        else if (!strcmp(str[i], "left")) m.left();
-        else if (!strcmp(str[i], "right")) m.right();
-        else m.click();
-    }
+	return  0;
 }
 ```
