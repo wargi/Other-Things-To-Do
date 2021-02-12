@@ -1,33 +1,42 @@
-# A to B
+# 홀/짝 숫자카드
 
 ## 1. 문제
 
+- 숫자 카드 6개를 입력 받으세요. (숫자 범위 : 1 ~ 9)
+- 이 중에 네 장을 뽑아 만들 수 있는 숫자를 만드려합니다.
+- 만들 수 있는 네 자리 수의 총 개수를 출력하세요.
+- 그리고 만들 수 있는 네 자리 수 중 짝수 개수와 홀수 개수를 재귀호출을 이용하여 각각 구하세요.
+
 ```
-2차원 배열(4x3)을 입력 받고, A, B가 적혀있습니다.
-A와 B를 찾아서 위,아래,왼쪽,오른쪽 몇칸 떨어져 있는지 출력합니다.
+[숫자 조건]
+1. 0은 들어갈 수 없습니다. 
+  - 0410 : 숫자 0은 허용하지 않습니다.
+2. 같은 카드 사용 중복을 허용하지 않습니다. 
+  - 만약 123456을 입력받았고, 1134 인 경우, 1 번째 카드를 중복 사용했기 때문에 불가능합니다.
+  - 만약 123456을 입력받았고, 4444 인 경우, 4 번째 카드를 중복 사용했기 때문에 불가능합니다.
+  - 만약 112345을 입력받았고, 1134 가 가능한 경우는 1 번째 카드와 2 번째 카드를 사용하여 만든 경우입니다. 
+3. 똑같은 수를 세면 안됩니다.
+  - 만들어진 네자리 수는, 한번 씩만 세어야 합니다. 여러번 세면 안됩니다.
 ```
 
 ## 2. 입력
 
-- 2차원 배열(4x3)을 입력 받습니다.
+- 숫자 6 개를 입력하세요.
 
 ## 3. 출력
 
-- A와 B를 찾아서 위,아래,왼쪽,오른쪽 몇칸 떨어져 있는지 출력합니다.
+- 만들 수 있는 숫자의 총 개수, 만들어지는 숫자들 중에서 짝수 개수와 홀수 개수를 출력하세요.
 
 ## 4. 예제 입력
 
 ```
-AWR
-ZOT
-YPB
-XQU
+235761
 ```
 
 ## 5. 예제 출력
 
 ```
-4
+360 120 240
 ```
 
 ## 6. 코드
@@ -36,32 +45,39 @@ XQU
 #include <iostream>
 using namespace std;
 
-int main()
-{
-    char str[4][4];
+char vect[7];
+char path[7];
+int tCheck[9999] = { 0 };
+int tCnt = 0, hCnt = 0, jCnt = 0, check[6] = { 0 };
 
-    for (int i = 0; i < 4; i++) cin >> str[i];
-    
-    int lx, ly, rx, ry;
+void run(int level, int sum) {
+	if (level == 4) {
+		if (tCheck[sum]) return;
+		tCheck[sum] = 1;
+		tCnt++;
+		if ((path[3] - '0') % 2 == 0) jCnt++;
+		else hCnt++;
 
-    for (int i = 0; i < 4; i++) {
-        for (int j = 0; j < 3; j++) {
-            if (str[i][j] == 'A')
-            {
-                ly = i;
-                lx = j;
-            }
+		return;
+	}
 
-            if (str[i][j] == 'B')
-            {
-                ry = i;
-                rx = j;
-            }
-        }
-    }
+	for (int i = 0; i < 6; i++) {
+		if (check[i]) continue;
+		check[i] = 1;
+		path[level] = vect[i];
+		run(level + 1, sum * 10 + (vect[i] - '0'));
+		path[level] = 0;
+		check[i] = 0;
+	}
+}
 
-    if (lx + ly >= rx + ry) cout << lx + ly - rx - ry;
-    else cout << rx + ry - lx - ly;
+int main() {
+	cin >> vect;
 
+
+	run(0, 0);
+	cout << tCnt << " " << jCnt << " " << hCnt;
+
+	return  0;
 }
 ```
