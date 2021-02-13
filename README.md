@@ -238,7 +238,7 @@
 | | - | [문자 Card 순열](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced04/Question22.md) | 210211 |
 | | - | [줄 세우기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced04/Question23.md) | 210212 |
 | | - | [홀/짝 숫자카드](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced04/Question24.md) | 210212 |
-| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced04/Question25.md) | 210213 |
+| | - | [문장 만들기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced04/Question25.md) | 210213 |
 |  | Intermediate 1 | [문자에 '#' 넣기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate01/Question1.md) | 201109 |
 |  | - | [범위 사이의 숫자 바꾸기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate01/Question2.md) | 201109 |
 |  | - | [DAT 익혀보기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate01/Question3.md) | 201110 |

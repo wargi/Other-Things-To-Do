@@ -1,76 +1,65 @@
-# 세로줄의 합
+# 문장 만들기
 
 ## 1. 문제
 
-```
-아래의 2차원 배열(3x4)을 하드코딩 해주세요.
-3 4 1 5
-3 4 1 3
-5 2 3 6
+- 아래 단어들을 적절히 사용해서, 문장을 구성해 주세요.
+- 사용할 수 있는 단어들은 다음과 같습니다.
 
-위의 하드코딩 배열의 세로줄을 합한 결과를 sum이라는 배열을 만들어주세요.
 ```
+"BTS", "SBS", "BS", "CBS", "SES"
+```
+
+- 위 단어들을 최소로 사용하여 입력받은 문장을 만드려고 합니다.
+- 단어를 중복 사용할 수 있습니다.
 
 ## 2. 입력
-- sum의 인덱스를 입력받습니다.(0 ~ 3)
+
+- 문장을 입력 해주세요. (<= 30글자)
 
 ## 3. 출력
 
-- 입력받은 인덱스의 값을 출력해주세요.
+- 문장을 만들 수 있는 단어의 사용 최소 개수를 출력하세요.
 
 
 ## 4. 예제 입력
 ```
-2
+CBSSES
 ```
 
 ## 5. 예제 출력
 ```
-5
+2
 ```
 
-## 6. 예제 입력
-
-```
-0
-```
-
-## 7. 예제 출력
-
-```
-11
-```
-
-## 8. 코드
+## 6. 코드
 
 ```c++
 #include <iostream>
+#include <string>
 using namespace std;
 
-int calSum(int index) {
-    int map[3][4] = {
-    3, 4, 1, 5,
-    3, 4, 1, 3,
-    5, 2, 3, 6
-    };
+int cnt = 0, mini = 21e8, check[5] = { 0 };
+string s, p[5] = { "BTS", "SBS", "BS", "CBS", "SES" };
 
-    int sum = 0;
-    for (int i = 0; i < 3; i++) {
-        sum += map[i][index];
-    }
+void run(int level, string w) {
+	if (s == w) {
+		if (mini > level) mini = level;
+		return;
+	}
 
-    return sum;
+	if (level == 5) return;
+
+	for (int i = 0; i < 5; i++) {
+		run(level + 1, w + p[i]);
+	}
 }
 
-int main()
-{
-    int sum[4], n;
-    cin >> n;
+int main() {
+	cin >> s;
+	run(0, "");
+	cout << mini;
 
-    for (int i = 0; i < 4; i++) {
-        sum[i] = calSum(i);
-    }
 
-    cout << sum[n];
+	return  0;
 }
 ```
