@@ -13,7 +13,7 @@
 | | - | [2019 & 2020 Algorithm 풀어본 문제리스트](https://github.com/wargi/Etc/blob/master/1920_README.md) | - |
 |  | ---------------- | 2020 & 2021 | ----------------- |
 |  | Expert 1 | [최적의 숫자 구하기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Expert01/Question1.md) | 210214 |
-|  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Expert01/Question2.md) | 210214 |
+|  | - | [거스름돈](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Expert01/Question2.md) | 210214 |
 |  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Expert01/Question3.md) | 210215 |
 |  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Expert01/Question4.md) | 210215 |
 |  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Expert01/Question5.md) | 210216 |
