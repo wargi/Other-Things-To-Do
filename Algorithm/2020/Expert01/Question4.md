@@ -1,71 +1,74 @@
-# 증가 배열 판별 #
+# 취객의 걸음걸이 #
 
 ## 1. 문제
-- 1차원 배열(1x5)을 입력 받고, 배열의 인덱스 0 ~ 4로 증가 될때, index안에 값도 같이 증가하는지 판별하시오.
+- 취객은 목적지까지 걸어가는데 비틀비틀 움직입니다.
+
+<img src="./Array01.png" alt="Array" style="zoom:77%;" />
+
+- 세 방향으로 움직일 수 있습니다.
+- 취객이 만약 B에서 출발한다면, 첫걸음에 갈 수 있는 곳은 (0,1), (1,1), (2,1) 입니다.
+- 만약 (0,1)에 도착한다면 (2,0) 또는 (2,1)로 움직일 수 있습니다.
+
+<img src="./Array02.png" alt="Array" style="zoom:77%;" />
+
+- 이렇게 취객이 비틀비틀 움직일때, 목적지에 도착할 수 있는 경우의 수가 총 몇 가지 존재하는지 출력하세요.
 
 ## 2. 입력
-- 1차원 배열(1x5)을 입력 받습니다.
+- 취객이 출발할 방향(A, B, C)을 입력 받습니다.
 
 ## 3. 출력
-- 증가 배열을 판별하고 증가된다면 "증가됨", 증가되지 않으면 "증가안됨"을 출력해주세요.
+- 목적지에 도착할 수 있는 경우의 수가 총 몇 가지 존재하는지 출력하세요.
 
 ## 4. 예제 입력
 ```
-1 3 5 6 9
+A
 ```
 
 ## 5. 예제 출력
 ```
-증가됨
+408
 ```
 
-## 6. 예제 입력
-
-```
-1 5 3 7 9
-```
-
-## 7. 예제 출력
-
-```
-증가안됨
-```
-
-## 8. 예제 입력
-
-```
-3 5 7 9 10
-```
-
-## 9. 예제 출력
-
-```
-증가됨
-```
-
-## 10. 코드
+## 6. 코드
 
 ```c++
 #include <iostream>
 using namespace std;
 
-int main()
-{
-    int vect[5];
+int cnt = 0;
+char path[10];
+int direct[3] = { -1, 0, 1 };
+void run(int level, int now) {
+	if (level == 7) {
+		cnt++;
+		return;
+	}
 
-    for (int i = 0; i < 5; i++) cin >> vect[i];
-
-    int flag = 1;
-    for (int i = 1; i < 5; i++) {
-        if (vect[i - 1] > vect[i]) {
-            flag = 0;
-            break;
-        }
-    }
-
-    if (flag) cout << "증가됨";
-    else cout << "증가안됨";
-
-    return 0;
+	for (int i = 0; i < 3; i++) {
+		if (now + direct[i] < 0 || now + direct[i] > 2) continue;
+		path[level] = '0' + now;
+		run(level + 1, now + direct[i]);
+		path[level] = 0;
+	}
 }
+
+int main() {
+	char ch;
+	cin >> ch;
+
+	if (ch == 'A') {
+		run(0, 0);
+	}
+	else if (ch == 'B') {
+		run(0, 1);
+	}
+	else {
+		run(0, 2);
+	}
+
+	cout << cnt;
+
+	return  0;
+}
+
 ```

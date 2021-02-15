@@ -15,7 +15,7 @@
 |  | Expert 1 | [최적의 숫자 구하기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Expert01/Question1.md) | 210214 |
 |  | - | [거스름돈](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Expert01/Question2.md) | 210214 |
 |  | - | [구매 목록](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Expert01/Question3.md) | 210215 |
-|  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Expert01/Question4.md) | 210215 |
+|  | - | [취객의 걸음걸이](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Expert01/Question4.md) | 210215 |
 |  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Expert01/Question5.md) | 210216 |
 |  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Expert01/Question6.md) | 210216 |
 |  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Expert01/Question7.md) | 210217 |
