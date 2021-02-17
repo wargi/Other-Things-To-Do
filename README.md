@@ -18,7 +18,7 @@
 |  | - | [취객의 걸음걸이](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Expert01/Question4.md) | 210215 |
 |  | - | [고객센터 스케줄](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Expert01/Question5.md) | 210216 |
 |  | - | [정상 등반](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Expert01/Question6.md) | 210216 |
-|  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Expert01/Question7.md) | 210217 |
+|  | - | [가로 큐브 회전시키기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Expert01/Question7.md) | 210217 |
 |  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Expert01/Question8.md) | 210217 |
 |  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Expert01/Question9.md) | 210218 |
 |  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Expert01/Question10.md) | 210218 |
