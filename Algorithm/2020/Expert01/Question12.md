@@ -1,49 +1,100 @@
-# 마지막 노드들의 합
+# 약재 조합
 
 ## 1. 문제
-- 2진 트리를 1차원 배열의 형태로 입력받습니다.
-- 만약 3, 5, 7, 4, 2, 6, 9를 입력 받았다면, 아래의 그림과 같습니다.
-- <img src="./Tree06.png" alt="Tree" style="zoom:77%;" />
-- 이제 마지막 경로의 있는 노드들끼리의 합을 DFS를 이용하여 구해주세요.
+- 뒷산에서 수 많은 한약 재료들을 배열에 담아왔습니다.
+- 한약 재료 세가지를 조합하여 한약을 만드려고 합니다.
+- 이곳에 쓰인 알파벳(재료)들을 선정해서 **세 자리로 구성된** 새로운 조합(한약)을 만들어보려고 합니다.
+- 사전 순으로, 중복없이 만들어지는 모든 조합을 출력 해 주세요.
 
 ## 2. 입력
-- 7개의 숫자로 구성된 1차원 배열을 입력 받습니다.
+- 최대 20자리의 대문자로 구성된 문자열을 입력받아주세요.
 
 ## 3. 출력
-- 마지막 경로의 있는 노드들끼리의 합을 DFS를 이용하여 구해주세요.
+- 세 자리로 구성된 한약을 사전 순으로 출력 해주세요.
+- 중복없이 한약을 만들어야 합니다. 
 
 ## 4. 예제 입력
 ```
-3 5 7 4 2 6 9
+ZFAABABBAB
 ```
 
 ## 5. 예제 출력
 ```
-21
+AAA
+AAB
+AAF
+AAZ
+ABB
+ABF
+ABZ
+AFF
+AFZ
+AZZ
+BBB
+BBF
+BBZ
+BFF
+BFZ
+BZZ
+FFF
+FFZ
+FZZ
+ZZZ
 ```
 
 ## 6. 코드
 ```c++
 #include <iostream>
+#include <algorithm>
+#include <cstring>
 using namespace std;
 
-int vect[8] = { 0 };
-int sum = 0;
+char path[4];
+char vect[21];
+int visit[21];
+int sizeT;
 
-void run(int level, int now) {
-	if (now >= 8) return;
-	if (level == 2) sum += vect[now];
+void run(int now, int level)
+{
+    if (level == 3) {
+        cout << path << "\n";
+        return;
+    }
 
-	run(level + 1, now * 2);
-	run(level + 1, now * 2 + 1);
+    for (int i = now; i < sizeT; i++) {
+        visit[i] = 1;
+        path[level] = vect[i];
+        run(i, level + 1);
+        path[level] = 0;
+    }
+
 }
 
-int main() {
-	for (int i = 1; i < 8; i++) cin >> vect[i];
+void init() {
+    int used[1000] = { 0 };
+    char map[21];
 
-	run(0, 1);
-	cout << sum;
+    cin >> map;
+    sizeT = strlen(map);
 
-	return 0;
+    sort(map, map + sizeT);
+
+    int idx = 0;
+    for (int i = 0; i < sizeT; i++) {
+        if (used[map[i]]) continue;
+        used[map[i]]++;
+        vect[idx++] = map[i];
+    }
+
+    sizeT = idx;
+}
+
+int main()
+{
+    init();
+
+    run(0, 0);
+
+    return 0;
 }
 ```

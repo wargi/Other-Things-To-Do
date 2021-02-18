@@ -23,7 +23,7 @@
 |  | - | [세 형제의 식사](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Expert01/Question9.md) | 210218 |
 |  | - | [불 화살 맞추기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Expert01/Question10.md) | 210218 |
 |  | - | [폭탄 투하](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Expert01/Question11.md) | 210219 |
-|  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Expert01/Question12.md) | 210219 |
+|  | - | [약재 조합](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Expert01/Question12.md) | 210219 |
 |  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Expert01/Question13.md) | 210220 |
 |  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Expert01/Question14.md) | 210220 |
 |  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Expert01/Question15.md) | 210221 |
