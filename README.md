@@ -20,7 +20,7 @@
 |  | - | [정상 등반](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Expert01/Question6.md) | 210216 |
 |  | - | [가로 큐브 회전시키기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Expert01/Question7.md) | 210217 |
 |  | - | [커스텀 연산자](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Expert01/Question8.md) | 210217 |
-|  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Expert01/Question9.md) | 210218 |
+|  | - | [세 형제의 식사](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Expert01/Question9.md) | 210218 |
 |  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Expert01/Question10.md) | 210218 |
 |  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Expert01/Question11.md) | 210219 |
 |  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Expert01/Question12.md) | 210219 |
