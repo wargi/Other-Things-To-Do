@@ -1,31 +1,38 @@
-# BFS #
+# Point 적립 #
 
 ## 1. 문제
-- 6개의 Node로 구성된 인접행렬을 입력받습니다.
-- 0번 Node부터 BFS로 탐색하여, 홀수 Node를 찾을 때 마다 출력해주세요.
-- 만약, 아래의 그림과 같이 트리를 입력받았다면,
-- <img src="./Tree07.png" alt="Tree" style="zoom:77%;" />
-- 출력결과: 1 3 5
+- 회사 근처 카페에는 다섯 종류의 음료를 판매합니다.
+- 음료 하나를 구매할 때 마다 Point (pt)를 얻을수도 있습니다.
+- 회사카드 한도가 결정되어있고, 그 한도만큼 결제를 할 수 있습니다.
+- 결제 후 생기는 Point는 내 개인으로 적립하려고 합니다.
+- 따라서 구매 조건에 맞게 음료를 구매하면서, 최대 Point를 얻을 수 있도록 음료를 선택하려고 합니다.
+- **구매조건**
+  1. 회사카드 한도 내로 구매를 해야합니다.
+  2. 음료 종류는 T 개를 선택해야합니다.
+  3. 종류별 같은 수량으로 구매를 해야합니다.
+- 회사카드 한도를 먼저 입력받습니다.
+- 구매 담당자가 조건에 맞게 구매하면서, 얻을 수 MAX Point는 얼마일까요?
+- **예시**
+- 예를 들어, 회사카드 한도가 10,000원 이고, T = 2, 두 종류를 선택 한다고 가정하겠습니다.
+- 아메리카노 (500원, 30p), 멜론 주스 (300원, 40p) 를 선택하면, 800원 x 12 = 9,600원으로 10,000원 안쪽으로 구매할 수 있습니다.
+- 그리고, 얻을수 있는 총 Point 70p x 12 = 840pt 입니다.
 
 ## 2. 입력
-- 6개의 Node로 구성된 인접행렬을 입력받습니다.
+- 회사카드 한도를 입력받으세요. (1,000 <= 한도 <= 50,000)
+- 메뉴에서 골라야하는 음료의 종류 T 를 입력 해주세요.
 
 ## 3. 출력
-- 0번 Node부터 BFS로 탐색하여, 홀수 Node를 찾을 때 마다 출력해주세요.
+- 한도 내, 얻을 수 있는 최대의 Point 값을 출력 해주세요.
 
 ## 4. 예제 입력
 ```
-0 1 0 1 1 0
-0 0 1 0 0 1
-0 0 0 0 0 0
-0 0 0 0 0 0
-0 0 0 0 0 0
-0 0 0 0 0 0
+10000
+2
 ```
 
 ## 5. 예제 출력
 ```
-1 3 5
+840
 ```
 
 ## 6. 코드
@@ -34,31 +41,35 @@
 #include <iostream>
 using namespace std;
 
-int map[6][6];
-int vect[6];
+int n;
+int drinks[5] = { 500, 700, 600, 300, 400 };
+int points[5] = { 30, 10, 30, 40, 20 };
+int used[5] = { 0 };
+int maxi = -21e8;
 
-int main()
-{
-    for (int i = 0; i < 6; i++) {
-        for (int j = 0; j < 6; j++) {
-            cin >> map[i][j];
-        }
-    }
+void run(int level, int sum, int point) {
+	if (level == n) {
+		int t = 10000 / sum;
+		t = t * point;
 
-    int head = 0;
-    int tail = 1;
+		if (maxi < t) maxi = t;
+		return;
+	}
 
-    while(head != tail) {
-        for (int i = 0; i < 6; i++) {
-            if (map[head][i] == 1) vect[tail++] = i;
-        }
-        head++;
-    }
+	for (int i = 0; i < 5; i++) {
+		if (used[i]) continue;
+		used[i] = 1;
+		run(level + 1, sum + drinks[i], point + points[i]);
+		used[i] = 0;
+	}
+}
 
-    for (int i = 0; i < head; i++) {
-        if (vect[i] % 2 == 1) cout << vect[i] << " ";
-    }
+int main() {
+	cin >> n;
 
-    return 0;
+	run(0, 0, 0);
+	cout << maxi;
+
+	return 0;
 }
 ```
