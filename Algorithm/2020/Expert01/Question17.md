@@ -1,68 +1,90 @@
-# 바이러스 퍼트리기
+# 친구보러 가는 길
 
 ## 1. 문제
-- 바이러스 하나가 있습니다.
-- 이 바이러스에 걸린 한명은 1초에 3명씩 감염시킵니다.
-- 바이러스가 2초가 되면(0초: 1명 -> 1초: 4명 -> 2초: 13명) 이런식으로 계속 늘어납니다.
-- n초를 입력받고 몇 명이 감염되었는지 출력하는 프로그램을 작성하시오.
+<img src="./Array18.png" alt="Array.png" style="zoom:77%;" />
+
+- (0, 0)에 서있는 쥐는 **치즈를 먼저 먹고,** 친구를 만나러 가려고 합니다.
+- 쥐는 **↑↓ ← →** 로 이동 할 수 있습니다.
+- **예시**
+
+> - 위 예제에서는 **9회** 이동으로 치즈를 먹고 친구를 만날 수 있습니다.
 
 
 ## 2. 입력
-- 첫 줄: 몇 초간 바이러스간 퍼진지 n을 입력받으세요.
+- 치즈 위치 (Y, X) 와 친구 좌표 (N, M) 을 입력 받으세요.
 
 ## 3. 출력
-- 몇 명이 감염되었는지 출력해주세요. 
+- 친구를 만나기까지의 최단 거리를 출력 해주세요.
+- 한 칸을 이동했을때가 1입니다.
 
 ## 4. 예제 입력
 ```
-3
+2 0
+0 3
 ```
 
 ## 5. 예제 출력
 ```
-40
+9
 ```
 
 ## 6. 코드
 ```c++
-#include <iostream>
+#include<iostream>
 using namespace std;
 
 struct Node {
-    int data;
-    Node* next;
+	int y, x;
+	int level;
 };
 
-Node* head, * last;
-void enQueue(int x) {
-    if (head == NULL) {
-        head = new Node({ x });
-        last = head;
-        return;
-    }
+int map[3][5] = { 
+	0, 0, 0, 0, 1,
+	1, 0, 1, 0, 0,
+	0, 0, 0, 0, 1
+};
+int direct[4][2] = { -1, 0, 1, 0, 0, -1, 0, 1 };
 
-    last->next = new Node({ x });
-    last = last->next;
+int road(Node s, Node e) {
+	Node vect[20];
+	vect[0] = s;
+
+	int head = 0, tail = 1;
+	int visited[3][5] = { 0 };
+	visited[s.y][s.x] = 1;
+
+	while (head != tail) {
+		Node now = vect[head++];
+
+		for (int i = 0; i < 4; i++) {
+			int dy = now.y + direct[i][0];
+			int dx = now.x + direct[i][1];
+
+			if (dy >= 0 && dx >= 0 && dy < 3 && dx < 5 && !map[dy][dx] && !visited[dy][dx]) {
+				visited[dy][dx] = 1;
+
+				if (dy == e.y && dx == e.x) return now.level + 1;
+				vect[tail++] = { dy, dx, now.level + 1 };
+			}
+		}
+	}
+
+	return -1;
 }
 
-int main()
-{
-    int n;
-    cin >> n;
+int main() {
+	Node c, f;
 
-    enQueue(1);
-    for (int i = 0; i < n; i++) {
-        int data = last->data * 3;
-        enQueue(data);
-    }
+	cin >> c.y >> c.x;
+	cin >> f.y >> f.x;
+	c.level = 0;
+	f.level = 0;
 
-    int cnt = 0;
-    for (Node* p = head; p != NULL; p = p->next) {
-        cnt += p->data;
-    }
+	int a = road({ 0, 0, 0 }, c);
+	int b = road(c, f);
 
-    cout << cnt;
+	cout << a + b;
 
-    return 0;
+	return 0;
 }
 ```

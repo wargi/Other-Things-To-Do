@@ -13,13 +13,13 @@
 >- 아래처럼 바이러스는 상하좌우 네 방향으로 퍼지며, 강도는 1씩 증가합니다.
 >- (0, 0) 과 (2, 2) 에서 바이러스가 모두 퍼지면 위와 같은 결과가 출력되어야 합니다.
 >
-><img src="./Tree09.png" alt="Tree" style="zoom:77%;" />
+><img src="./Array14.png" alt="Array" style="zoom:77%;" />
 
 - **예시 2**
 
 > - 3 x 3 맵에서 (2, 1) (2, 2)에 바이러스를 투여했을 경우, 최종 결과는 다음과 같습니다.
 >
-> <img src="./Tree09.png" alt="Tree" style="zoom:77%;" />
+> <img src="./Array15.png" alt="Array" style="zoom:77%;" />
 
 ## 2. 입력
 - 첫 번째 줄에는 맵의 크기인 N 이 입력됩니다. ( 3 <= N <= 100)

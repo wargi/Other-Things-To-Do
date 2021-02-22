@@ -6,12 +6,12 @@
 - 아래 1의 위치로는 이동할 수 없습니다. 
 - 2차원 배열의 맵은 하드코딩하여 풀어 주세요.
 
-<img src="./Array.png" alt="Array.png" style="zoom:77%;" />
+<img src="./Array16.png" alt="Array.png" style="zoom:77%;" />
 
 - **예시 1**
 - 시작 좌표 (0, 0) 과 도착 좌표 (3, 3) 이 입력 될때, 결과는 6회입니다.
 
-<img src="./Array.png" alt="Array.png" style="zoom:77%;" />
+<img src="./Array17.png" alt="Array.png" style="zoom:77%;" />
 
 ## 2. 입력
 - 시작 좌표 Y X 와, 그 다음 줄에 종료 좌표 Y X 를 입력하세요.
