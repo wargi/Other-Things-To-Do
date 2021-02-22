@@ -1,63 +1,71 @@
-# 다리 건너갔다 돌아오기
+# 치킨이 좋아
 
 ## 1. 문제
-```
-1. 아래의 1차원 배열(1x11)을 하드코딩 해주세요.
--1 3 1 2 1 3 2 1 2 1 -1
-
-2. 처음 점프 할 n값(index)을 입력받습니다. (1 <= n <= 9)
-만약, index n을 1로 입력받으면 1칸을 점프합니다.
-만약, n을 3으로 입력받았다면 2칸을 점프합니다.
-
-3. 점프를 해서 다음 인덱스로 가서 그 안에 값만큼 점프를 계속해서 마지막에 도착지점에 도달하면,
-다시 시작지점으로 돌아갑니다.
-
-4. 위의 시작부터 도착하여 다시 시작까지의 과정을 출력해주세요.
-만약, n을 2를 입력받았다면,
-시작 1 2 3 2 도착 2 3 2 1 시작 <- 출력
-```
+- 4 x 6 사이즈의 맵에 있는 모든 치킨을 먹으려고 합니다.
+- 지혁이는 [0, 0]에서 출발하고, **↑↓ ← →** 방향으로 이동할 수 있습니다.
+- 1은 **벽이라** 이동할 수없습니다. 
+- 2는 **고기** 입니다. 
+- 0으로 표시된 지역만 이동할 수 있습니다. 
 
 ## 2. 입력
-- 시작할 위치 n을 입력받으세요. (1 <= n <= 9)
+- 2차원 배열 정보(4 X 6)를 입력 받으세요.
 
 ## 3. 출력
-- 위의 예제처럼 출력해주세요.
+- 치킨을 총 몇 마리 먹을 수 있는지 출력하세요.
 
 ## 4. 예제 입력
 ```
-4
+0 0 1 2 1 2
+1 0 0 1 0 1
+0 0 1 2 0 0
+2 0 0 0 0 0
 ```
 
 ## 5. 예제 출력
 ```
-시작 1 3 2 도착 2 3 1 시작
+2
 ```
 
 ## 6. 코드
 ```c++
-#include <iostream>
+#include<iostream>
 using namespace std;
 
-int vect[11] = { 0, 3, 1, 2, 1, 3, 2, 1, 2, 1, 0 };
+struct Node {
+	int y, x;
+};
 
-void run(int idx) {
-	if (idx >= 10) {
-		cout << "도착 ";
-		return;
-	}
-
-	cout << vect[idx] << " ";
-	run(idx + vect[idx]);
-	cout << vect[idx] << " ";
-}
+Node vect[100];
+int cnt = 0;
+int map[4][6];
+int visited[4][6] = { 1, };
+int direct[4][2] = { -1, 0, 1, 0, 0, -1, 0, 1 };
 
 int main() {
-	int n;
-	cin >> n;
+	int head = 0, tail = 1;
+	vect[head] = { 0, 0 };
+	
+	for (int i = 0; i < 4; i++) {
+		for (int j = 0; j < 6; j++) cin >> map[i][j];
+	}
+	
+	while (head != tail) {
+		Node now = vect[head++];
 
-	cout << "시작 ";
-	run(n);
-	cout << "시작";
+		for (int t = 0; t < 4; t++) {
+			int dy = now.y + direct[t][0];
+			int dx = now.x + direct[t][1];
+
+			if (dy >= 0 && dx >= 0 && dy < 4 && dx < 6 && !visited[dy][dx] && map[dy][dx] != 1) {
+				if (map[dy][dx] == 2) cnt++;
+				visited[dy][dx] = 1;
+				
+				vect[tail++] = { dy, dx };
+			}
+		}
+	}
+
+	cout << cnt;
 
 	return 0;
 }
