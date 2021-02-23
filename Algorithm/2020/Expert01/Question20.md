@@ -1,51 +1,89 @@
-# 2차원 배열 검사하기
+# 무인도 사이즈
 
 ## 1. 문제
 
-- 2차원 배열(3x3)을 입력받고, 한 개의 행에 숫자들이 같은지 판별하는 프로그램을 작성하시오.
-- 만약, 같다면 같은 숫자를 출력하고, 아니라면 'x'를 출력해주세요.
+- 지효는 땅이 얼마나 큰지 알아내는 드론을 띄웠습니다.
+- ↑ ↓ ← → 으로 땅이 붙어있는 경우는 하나의 땅입니다
 
 ## 2. 입력
-- 2차원 배열(3x3)을 입력받아주세요.
+- 4x4 땅 상태를 입력 받아 주세요.
 
 ## 3. 출력
 
-- 같다면 같은 숫자를 출력하고, 아니라면 'x'를 출력해주세요.
+- (0, 0) 부터 상, 하, 좌, 우 네 방향으로 붙어있는 육지의 크기를 출력해주세요.
+- 아래 예제입력의 사이즈는 5 입니다.
 
 
 ## 4. 예제 입력
 ```
-2 2 2
-4 5 6
-8 8 8
+1 1 0 1
+0 1 0 1
+0 1 1 0
+1 0 0 0
 ```
 
 ## 5. 예제 출력
 ```
-2
-x
-8
+5
 ```
 
 ## 6. 코드
 
 ```c++
-#include <iostream>
+#include<iostream>
 using namespace std;
 
-int main() {
-	int map[3][3];
+struct Node {
+	int y, x;
+};
 
-	for (int i = 0; i < 3; i++) {
-		for (int j = 0; j < 3; j++) {
+int maxi = -21e8;
+int map[4][4] = { 0 };
+int visited[4][4] = { 0 };
+int direct[4][2] = { -1, 0, 1, 0, 0, -1, 0, 1 };
+
+int run(int sy, int sx) {
+	Node vect[20];
+	int cnt = 1;
+	int head = 0, tail = 1;
+	vect[head] = { sy, sx };
+	
+	while (head != tail) {
+		Node now = vect[head++];
+
+		for (int i = 0; i < 4; i++) {
+			int dy = now.y + direct[i][0];
+			int dx = now.x + direct[i][1];
+
+			if (dy >= 0 && dx >= 0 && dy < 4 && dx < 4 && map[dy][dx] && !visited[dy][dx]) {
+				cnt++;
+				visited[dy][dx] = 1;
+				vect[tail++] = { dy, dx };
+			}
+		}
+	}
+
+	return cnt;
+}
+
+int main() {
+	for (int i = 0; i < 4; i++) {
+		for (int j = 0; j < 4; j++) {
 			cin >> map[i][j];
 		}
 	}
 
-	for (int i = 0; i < 3; i++) {
-		if (map[i][0] == map[i][1] && map[i][1] == map[i][2]) cout << map[i][0] << "\n";
-		else cout << "x\n";
+	for (int i = 0; i < 4; i++) {
+		for (int j = 0; j < 4; j++) {
+			if (map[i][j] && !visited[i][j]) {
+				visited[i][j] = 1;
+				int t = run(i, j);
+				if (t > maxi) maxi = t;
+			}
+		}
 	}
+
+	cout << maxi;
 
 	return 0;
 }
