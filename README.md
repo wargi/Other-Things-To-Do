@@ -30,7 +30,7 @@
 |  | - | [미로찾기 with BFS](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Expert01/Question16.md) | 210221 |
 |  | - | [친구보러 가는 길](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Expert01/Question17.md) | 210222 |
 |  | - | [치킨이 좋아](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Expert01/Question18.md) | 210222 |
-|  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Expert01/Question19.md) | 210223 |
+|  | - | [폭죽](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Expert01/Question19.md) | 210223 |
 |  | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Expert01/Question20.md) | 210223 |
 |  | Advanced 1 | [구조체 정렬하기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced01/Question1.md) | 201225 |
 |  | - | [Tree 01](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced01/Question2.md) | 201226 |
