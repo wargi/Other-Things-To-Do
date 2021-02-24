@@ -11,7 +11,7 @@
   2. 출력할 적의 이니셜은 사전식 순서대로 출력해 주세요.
 - **예시**
 
-<img src="./Array11.png" alt="Array" style="zoom:77%;" />
+<img src="./Array11.png" alt="Array" />
 
 - 폭탄 3개를 투여할 경우, 정답은 A E H (알파벳 순서대로 출력)
 

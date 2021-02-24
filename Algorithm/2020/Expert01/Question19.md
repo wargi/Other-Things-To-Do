@@ -12,19 +12,13 @@
 - 0은 빈 하늘을, 1은 폭죽을 의미합니다.
 - **예시**
 
-> <img src="./Array20.png" alt="Array.png" style="zoom:77%;" />
+> <img src="./Array20.png" alt="Array.png" style="zoom:85%;" />
 >
-> - **1초 경과**
+> <img src="./Array21.png" alt="Array.png" style="zoom:85%;" />
 >
-> <img src="./Array21.png" alt="Array.png" style="zoom:77%;" />
+> <img src="./Array22.png" alt="Array.png" style="zoom:85%;" />
 >
-> - **2초 경과**
->
-> <img src="./Array22.png" alt="Array.png" style="zoom:77%;" />
->
-> - **3초 경과**
->
-> <img src="./Array23.png" alt="Array.png" style="zoom:77%;" />
+> <img src="./Array23.png" alt="Array.png" style="zoom:85%;" />
 >
 > - 예시에서 하늘을 불꽃으로 모두 채우는데 걸리는 시간은 3초 입니다.
 
