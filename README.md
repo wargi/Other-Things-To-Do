@@ -33,7 +33,7 @@
 |  | - | [폭죽](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Expert01/Question19.md) | 210223 |
 |  | - | [무인도 사이즈](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Expert01/Question20.md) | 210223 |
 | | - | [집배원 with BFS](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Expert01/Question21.md) | 210224 |
-| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Expert01/Question22.md) | 210224 |
+| | - | [벌집](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Expert01/Question22.md) | 210224 |
 |  | Advanced 1 | [구조체 정렬하기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced01/Question1.md) | 201225 |
 |  | - | [Tree 01](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced01/Question2.md) | 201226 |
 |  | - | [배열 덧셈](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced01/Question3.md) | 201226 |
