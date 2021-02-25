@@ -1,61 +1,42 @@
-# 2차원 배열의 열을 회전시키기
+# 세 가지 선택
 
 ## 1. 문제
 
-```
-1. 3개의 숫자로 된 2차원 배열(3x1)이 있습니다.
-ex)
-1
-2
-3
+- **\* Backtracking 으로 풀어주세요.**
+- 3 x 3 숫자판에서 3개의 숫자를 선택해주세요.
+- 선택한 세 개의 숫자를 곱하고 가장 큰 값을 가지는 경우의 총 수를 구해주세요.
 
-2. 이 배열을 한번 돌리면 아래와 같이 됩니다.
-1    3
-2 -> 1
-3    2
+<img src="./Array24.png" alt="Array" style="zoom:105%;" />
 
-3. 두번 더 돌리게 되면 아래와 같이 됩니다.
-3    2    1
-1 -> 3 -> 2
-2    1    3
+- 아래 이미지의 예제에서는 MAX 값인 48 이 나오는 조합이 총 4개 있습니다.
 
-4. 이런식으로 열마다 각각 동작하는 2차원 배열(3x4)이 있습니다. (아래의 배열을 하드코딩 해주세요.)
-3 2 5 3
-7 6 1 6
-4 9 2 7
+<img src="./Array25.png" alt="Array" style="zoom:110%;" />
 
-5. 각 열마다 회전 시킬 횟수를 입력받고 최종 회전한 결과 배열을 출력해주세요.
-ex)
-input)
-1 2 1 2
+- **예제**
 
-output)
-4626
-3957
-7213
-```
-
-- <img src="./Exam02.png" alt="Exam" style="zoom:77%;" />
+> - 아래 예제에서는 총 7가지 조합이 있습니다. MAX 값은 75 입니다.
+>
+> <img src="./Array26.png" alt="Array" style="zoom:115%;" />
 
 ## 2. 입력
 
-- 각 열마다 회전 시킬 횟수를 입력받습니다.
+- 3 x 3 숫자 맵을 입력 받아주세요.
 
 ## 3. 출력
 
-- 최종 회전한 결과 배열을 출력해주세요.
+- 가장 큰 숫자를 가지는 조합의 총 개수를 출력 해주세요.
 
 
 ## 4. 예제 입력
 ```
-1 2 1 2
+-4 1 3
+3 -1 4
+-3 4 0
 ```
 
 ## 5. 예제 출력
 ```
-4626
-3957
-7213
+4
 ```
 
 ## 6. 코드
@@ -64,35 +45,53 @@ output)
 #include <iostream>
 using namespace std;
 
-int map[3][4] = {
-	3, 2, 5, 3,
-	7, 6, 1, 6,
-	4, 9, 2, 7
-};
+int map[3][3];
+int used[3][3];
+int path[4];
+int maxi = -21e8;
+int cnt = 0;
+void run(int level, int sum, int ny, int nx) {
+    if (level == 3) {
+        if (maxi < sum) {
+            
+            maxi = sum;
+            cnt = 1;
+        }
+        else if (maxi == sum) {
+            cnt++;
+        }
+        
+        return;
+    }
 
-int vect[4];
+    for (int i = ny; i < 3; i++) {
+        int flag = 0;
+        for (int j = 0; j < 3; j++) {
+            if (ny == i && !flag) {
+                j = nx;
+                flag = 1;
+            }
+            if (used[i][j]) continue;
+            used[i][j] = 1;
+            path[level] = map[i][j];
+            run(level + 1, sum * map[i][j], i, j);
+            used[i][j] = 0;
+        }
+    }
+}
 
-int main() {
-	for (int i = 0; i < 4; i++) {
-		cin >> vect[i];
-	}
 
-	for (int i = 0; i < 4; i++) {
-		for (int j = 0; j < vect[i]; j++) {
-			int temp = map[2][i];
-			map[2][i] = map[1][i];
-			map[1][i] = map[0][i];
-			map[0][i] = temp;
-		}
-	}
+int main()
+{
+     for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < 3; j++) {
+            cin >> map[i][j];
+        }
+    }
 
-	for (int i = 0; i < 3; i++) {
-		for (int j = 0; j < 4; j++) {
-			cout << map[i][j];
-		}
-		cout << "\n";
-	}
+    run(0, 1, 0, 0);
+    cout << cnt;
 
-	return 0;
+    return 0;
 }
 ```
