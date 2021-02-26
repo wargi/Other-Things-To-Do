@@ -1,46 +1,34 @@
-# 움직이는 저글링
+# 섬 사이즈 구하기
 
 ## 1. 문제
 
-- 2차원 배열(4x3)로 이루어진 맵을 입력받습니다.
-- 맵의 입력값 중에 '#'은 벽을 뜻하고, '_' 이동가능 공간, 알파벳은 저글링의 이름을 뜻합니다.
-- 저글링이 움직이는 AI는 단순하여 오른쪽 -> 아래 -> 왼쪽 -> 위 순서로만 움직입니다.
+- 주어지는 지도에 몇개의 섬이 존재하는지 찾아내야 합니다.
+- 지도는 5 x 8 크기로 주어지며, 하나의 섬은 **상, 하, 좌, 우**로 이어져있습니다.
+- 예를들어, 아래 지도와 같은 경우 이어져 있는 섬의 개수는 총 3개 입니다.
 
-```
-- 1초 후: 오른쪽 이동,
-- 2초 후: 아래쪽 이동,
-- 3초 후: 왼쪽 이동,
-- 4초 후: 위쪽 이동
-- 5초 후: 다시 오른쪽 이동
-```
-
-- 단, 저글링은 벽을 통과하지 못하며, 같은 저글링끼리 겹치지도 못합니다.
-- 저글링들의 이동순서는 알파벳 순으로 이동합니다. (A -> Z)
-- 맵(4x3)을 입력 받은 후, 5초 후의 상황을 출력해주세요.
-- <img src="./Exam03.png" alt="Exam" style="zoom:77%;" />
+<img src="./Array27.png" alt="Array" style="zoom:105%;" />
 
 ## 2. 입력
-- 2차원 배열(4x3)로 이루어진 맵을 입력받아 주세요.
+- 5 x 8 크기의 지도 정보가 입력 됩니다.
+- 섬은 1, 바다는 0 으로 입력 됩니다. 
 
 ## 3. 출력
 
-- 맵(4x3)을 입력 받은 후, 5초 후의 상황을 출력해주세요.
+- 이어져 있는 각 섬의 총 개수를 출력 하세요.
 
 
 ## 4. 예제 입력
 ```
-_A_
-#_G
-E_#
-#__
+0 0 0 0 0 0 0 0
+0 1 0 1 0 1 1 1
+0 1 1 1 0 0 1 1
+0 0 0 0 0 1 0 0
+0 1 1 1 1 1 0 0
 ```
 
 ## 5. 예제 출력
 ```
-__A
-#_G
-_E#
-#__
+3
 ```
 
 ## 6. 코드
@@ -49,72 +37,59 @@ _E#
 #include <iostream>
 using namespace std;
 
-char map[4][4];
+struct Node {
+    int y, x;
+};
 
-void left(int y, int x) {
-	int dx = x - 1;
+int map[5][8], visited[5][8] = { 0, };
+int direct[4][2] = { -1, 0, 1, 0, 0, -1, 0, 1 };
 
-	if (dx >= 0 && map[y][dx] == '_') {
-		map[y][dx] = map[y][x];
-		map[y][x] = '_';
-	}
+void bfs(int y, int x) {
+    int head = 0, tail = 1;
+
+    visited[y][x] = 1;
+    Node arr[1000] = { { y, x }, };
+
+    while (head != tail) {
+        Node now = arr[head++];
+
+        for (int t = 0; t < 4; t++) {
+            int dy = now.y + direct[t][0];
+            int dx = now.x + direct[t][1];
+            
+            if (dy < 0 || dx < 0 || dy >= 5 || dx >= 8) continue;
+            if (!map[dy][dx]) continue;
+            if (visited[dy][dx]) continue;
+            visited[dy][dx] = 1;
+
+            arr[tail++] = { dy, dx };
+        }
+    }
 }
 
-void right(int y, int x) {
-	int dx = x + 1;
+int main()
+{
+    int cnt = 0;
 
-	if (dx < 3 && map[y][dx] == '_') {
-		map[y][dx] = map[y][x];
-		map[y][x] = '_';
-	}
+    for (int i = 0; i < 5; i++) {
+        for (int j = 0; j < 8; j++) {
+            cin >> map[i][j];
+        }
+    }
+    
+    for (int i = 0; i < 5; i++) {
+        for (int j = 0; j < 8; j++) {
+            if (!map[i][j]) continue;
+            if (visited[i][j]) continue;
+            
+            bfs(i, j);
+            cnt++;
+        }
+    }
+
+    cout << cnt;
+
+    return 0;
 }
 
-void up(int y, int x) {
-	int dy = y - 1;
-
-	if (dy >= 0 && map[dy][x] == '_') {
-		map[dy][x] = map[y][x];
-		map[y][x] = '_';
-	}
-}
-
-void down(int y, int x) {
-	int dy = y + 1;
-
-	if (dy < 4 && map[dy][x] == '_') {
-		map[dy][x] = map[y][x];
-		map[y][x] = '_';
-	}
-}
-
-int main() {
-	char alpha[4] = "ACD";
-
-	for (int i = 0; i < 4; i++) {
-		for (int j = 0; j < 3; j++) {
-			cin >> map[i][j];
-		}
-	}
-
-	for (int i = 0; i < 5; i++) {
-		for (int j = 0; j < 3; j++) {
-			for (int k = 0; k < 4; k++) {
-				for (int l = 0; l < 3; l++) {
-					if (alpha[j] == map[k][l]) {
-						if (i == 0 || i == 4) right(k, l);
-						else if (i == 1) down(k, l);
-						else if (i == 2) left(k, l);
-						else up(k, l);
-					}
-				}
-			}
-		}
-	}
-
-	for (int i = 0; i < 4; i++) {
-		cout << map[i] << "\n";
-	}
-
-	return 0;
-}
 ```

@@ -35,7 +35,7 @@
 | | - | [집배원 with BFS](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Expert01/Question21.md) | 210224 |
 | | - | [벌집](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Expert01/Question22.md) | 210224 |
 | | - | [세 가지 선택](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Expert01/Question23.md) | 210225 |
-| | - | [채널 선택](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Expert01/Question24.md) | 210226 |
+| | - | [섬 사이즈 구하기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Expert01/Question24.md) | 210226 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Expert01/Question25.md) | 210226 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Expert02/Question1.md) | 210227 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Expert02/Question2.md) | 210227 |
