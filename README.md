@@ -40,7 +40,7 @@
 | | - | [가장 가까운 섬 찾기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Expert02/Question1.md) | 210227 |
 | | - | [정렬된 배열 합치기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Expert02/Question2.md) | 210227 |
 | | - | [화장실 대기시간 구하기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Expert02/Question3.md) | 210228 |
-| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Expert02/Question4.md) | 210228 |
+| | - | [잔돈 교환](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Expert02/Question4.md) | 210228 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Expert02/Question5.md) | 210301 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Expert02/Question6.md) | 210301 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Expert02/Question7.md) | 210302 |
