@@ -1,85 +1,62 @@
-# 경우의 수
+# 블럭 채우기
 
 ## 1. 문제
 
-- 축구 경기에서 승부차기의 순간까지 왔습니다.
-- 만약, ooxx라면 1번 2번 선수가 골을 넣은 것 입니다.
-- 승부차기할 선수의 수를 입력 받고, 가능한 경우의 수를 출력하는 프로그램을 작성하시오.
+- 막대 블럭들을 넣을 수 있는 100 cm 크기의 길다란 홈이 있습니다.
+- n개의 막대 블럭이 있을때 일부 막대블럭을 선택하여, **최대 몇개를 넣을 수 있을지** 출력하세요.
 
 ```
-ex)
-input: 3
-
-output)
-ooo
-oox
-oxo
-oxx
-xoo
-xox
-xxo
-xxx
+[예시]
+20cm, 57cm, 13cm, 40cm, 33cm, 8cm 막대 블럭이 있을때 최대 4개를 넣을 수 있습니다. 
 ```
 
 ## 2. 입력
-- 승부차기할 선수의 수를 입력 받아 주세요.
+- 첫 줄에 막대 블럭의 개 수 n을 입력받습니다. (1 <= n <= 10)
+- 다음 줄에 블럭들을 입력 받습니다.
 
 ## 3. 출력
-- 가능한 경우의 수를 출력해주세요.
+- **최대 몇개를 넣을 수 있을지** 출력하세요.
 
 ## 4. 예제 입력
 ```
-4
+6
+20 57 13 40 33 8
 ```
 
 ## 5. 예제 출력
 ```
-oooo
-ooox
-ooxo
-ooxx
-oxoo
-oxox
-oxxo
-oxxx
-xooo
-xoox
-xoxo
-xoxx
-xxoo
-xxox
-xxxo
-xxxx
+4
 ```
 
 ## 6. 코드
 ```c++
 #include <iostream>
+#include <vector>
+#include <algorithm>
+#include <string>
 using namespace std;
-
-char path[100];
-
-void dfs(int level, int end) {
-    if (level == end) {
-        cout << path << "\n";
-        return;
-    }
-
-    for (int i = 0; i < 2; i++) {
-        if (i) path[level] = 'x';
-        else path[level] = 'o';
-        dfs(level + 1, end);
-        path[level] = 0;
-    }
-}
 
 int main()
 {
-    int n;
-    cin >> n;
+	int n;
+	int vect[100] = { 0 };
 
-    dfs(0, n);
+	cin >> n;
 
-    return 0;
+	for (int i = 0; i < n; i++) {
+		cin >> vect[i];
+	}
+
+	sort(vect, vect + n);
+
+	int sum = 0, cnt = 0;
+	for (int i = 0; i < n; i++) {
+		sum += vect[i];
+		if (sum <= 100) cnt++;
+		else break;
+	}
+
+	cout << cnt;
 }
+
 ```

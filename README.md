@@ -42,7 +42,7 @@
 | | - | [화장실 대기시간 구하기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Expert02/Question3.md) | 210228 |
 | | - | [잔돈 교환](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Expert02/Question4.md) | 210228 |
 | | - | [스케줄 배정](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Expert02/Question5.md) | 210301 |
-| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Expert02/Question6.md) | 210301 |
+| | - | [블럭 채우기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Expert02/Question6.md) | 210301 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Expert02/Question7.md) | 210302 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Expert02/Question8.md) | 210302 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Expert02/Question9.md) | 210303 |
