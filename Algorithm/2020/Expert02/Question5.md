@@ -1,82 +1,93 @@
-# BFS - 인접행렬 Graph #
+# 스케줄 배정 #
 
 ## 1. 문제
 
-- 아래의 인접행렬(6x6) Graph를 하드코딩 해주세요.
+- **회의실이 하나인 회사**가 있습니다.
+- 예약스케쥴을 입력받고, 최대 몇번의 회의가 가능한지 출력하세요
 
-```c++
-int graph[6][6] = {
-	0, 0, 0, 0, 1, 0,
-   1, 0, 1, 0, 0, 1,
-   1, 0, 0, 1, 0, 0,
-   1, 1, 0, 0, 0, 0,
-   0, 1, 0, 1, 0, 1,
-   0, 0, 1, 1, 0, 0
-};
-```
+- 만약 6번의 회의가 있고, 아래의 그림과 같이 스케쥴을 입력받았다면, 최대 3번의 회의가 가능합니다.
 
-- 출발 노드를 입력받고, BFS로 탐색하여 각 노드를 방문할 때마다 방문한 노드를 출력하는 프로그램을 작성해주세요.
-- 단, 한번 방문한 노드는 다시 방문할 수 없습니다.
-- 아래의 그림은 위의 인접행렬을 Graph로 나타낸 모습입니다.
+<img src="./Array03.png" alt="Array" style="zoom:77%;" />
 
-<img src="./Graph03.png" alt="Graph" style="zoom:77%;" />
+> - **[힌트]**
+> - 가장 일찍 끝나는 회의 먼저 선택하기
 
 ## 2. 입력
 
-- 출발 노드를 입력받아주세요.
+- 첫번째 입력숫자는 회의의 횟수입니다.
+- 그 다음 입력 숫자들은 스케쥴 시작시간과 종료시간 입니다.
 
 ## 3. 출력
-- 각 노드를 방문할 때마다 방문한 노드를 출력해주세요.
+- 가능한 최대 회의 횟수를 출력하세요
 
 ## 4. 예제 입력
 ```
-0
+6
+1 6
+3 8
+8 9
+2 4
+4 6
+7 9
 ```
 
 ## 5. 예제 출력
 ```
-0
-4
-1
 3
-5
-2
 ```
 
 ## 6. 코드
 
 ```c++
 #include <iostream>
+#include <vector>
+#include <algorithm>
+#include <string>
 using namespace std;
 
-int map[6][6] = {
-    0, 0, 0, 0, 1, 0,
-    1, 0, 1, 0, 0, 1,
-    1, 0, 0, 1, 0, 0,
-    1, 1, 0, 0, 0, 0,
-    0, 1, 0, 1, 0, 1,
-    0, 0, 1, 1, 0, 0
+struct Node {
+	int input;
+	int data;
 };
 
 int main()
 {
-    int n;
-    cin >> n;
+	vector<Node> vect;
+	int n, cnt = 1, start = 0, end = 100000000;
+	cin >> n;
 
-    int head = 0, tail = 1, vect[10] = { n, };
-    int check[10] = { 0 };
-    check[n] = 1;
-    while (head != tail) {
-        int now = vect[head++];
-        cout << now << "\n";
-        for (int i = 0; i < 6; i++) {
-            if (map[now][i] && !check[i]) {
-                check[i] = 1;
-                vect[tail++] = i;
-            }
-        }
-    }
+	for (int i = 0; i < n; i++) {
+		int s, e;
+		cin >> s >> e;
 
-    return 0;
+		if (e < end) {
+			end = e;
+			start = s;
+		}
+
+		vect.push_back({ s, e });
+	}
+
+	while (1) {
+		int min = 32e7, index = -1;
+		for (int i = 0; i < n; i++) {
+			if (end <= vect[i].input && min > vect[i].data) {
+				min = vect[i].data;
+				index = i;
+			}
+		}
+
+		if (index == -1) break;
+
+		start = vect[index].input;
+		end = vect[index].data;
+		cnt++;
+	}
+
+	cout << cnt;
+
+	return 0;
+
 }
+
 ```
