@@ -1,80 +1,32 @@
-# 비밀번호 찾기 #
+# 레드마블 #
 
 ## 1. 문제
-```T
-1. 비밀번호 개 수를 입력받고, 다음 줄 부터 4글자로 이루어진 비밀번호를 입력받습니다.
-ex)
-input)
-3
-ABCD
-ACDE
-ADEF
+<img src="./Array04.png" alt="Array" style="zoom:105%;" />
 
-2. A ~ Z까지 모든 경우의 수를 돌려서 비밀번호를 찾아보려고 합니다. 각 입력받은 비밀번호당 몇 번만에 알아낸지 출력하는 프로그램을 작성해주세요.
-```
+- 총 12칸으로 된 맵이 있습니다. ( 0번 index값은 항상 0 입니다. )
+- 레드마을에 사는 부르스는 0번에서 시작해서, **(2칸)** 또는 **(3칸)** 또는 **(현재 index \* 2칸)** 으로 점프 할 수 있습니다.
+- 12번 index 이상 지역에 도착 할 때 얻을 수 있는 최대점수를 출력 하세요.
 
 ## 2. 입력
-- 첫 줄: 비밀번호 개 수를 입력받습니다.
-- 다음 줄 부터: 4글자로 이루어진 비밀번호를 입력받습니다.
+- 1x12로 된 맵을 입력받습니다.
 
 ## 3. 출력
 
-- 각 입력받은 비밀번호당 몇 번만에 알아낸지 출력하는 프로그램을 작성해주세요.
+- 12번 index 이상 지역에 도착 할 때 얻을 수 있는 최대점수를 출력 하세요.
 
 ## 4. 예제 입력
 ```
-3
-AAAA
-AAAC
-ZBAB
+0 2 4 -5 -7 6 20 7 -10 -8  4 -1
 ```
 
 ## 5. 예제 출력
 
 ```
-1
-3
-440078
+21
 ```
 
 ## 6. 코드
 
 ```c++
-#include <iostream>
-#include <cstring>
-using namespace std;
 
-int cnt = 0;
-char path[5];
-char vect[1000][5];
-void dfs(int level, int idx) {
-    if (level == 4) {
-        cnt++;
-        if (strcmp(vect[idx], path) == 0) cout << cnt << "\n";
-        return;
-    }
-
-    for (char i = 'A'; i <= 'Z'; i++) {
-        path[level] = i;
-        dfs(level + 1, idx);
-        path[level] = 0;
-    }
-}
-
-int main()
-{
-    int n;
-    cin >> n;
-
-    for (int i = 0; i < n; i++) {
-        cin >> vect[i];
-    }
-
-    for (int i = 0; i < n; i++) {
-        cnt = 0;
-        dfs(0, i);
-    }
-
-    return 0;
-}
 ```
