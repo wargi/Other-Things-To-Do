@@ -5,11 +5,11 @@
 - 1x2 사이즈의 나무토막이 있습니다.
 - 3단까지 나무를 쌓는 방법은 아래와 같이 총 세가지 입니다.
 
-
+<img src="./Exam01.png" alt="Exam" style="zoom:105%;" />
 
 - 4단까지 나무를 쌓는 방법은 총 다섯가지 입니다.
 
-
+<img src="./Exam02.png" alt="Exam" style="zoom:105%;" />
 
 - **n단까지 나무를 쌓으려고 할때 가능한 방법수를 출력해주세요. ** **(Dynamic Programming 문제 입니다.)**
 
