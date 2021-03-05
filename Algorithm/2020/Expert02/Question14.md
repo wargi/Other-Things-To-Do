@@ -1,52 +1,89 @@
-# 금, 은, 동 뽑기 #
+# 자동 계산기 #
 
 ## 1. 문제
-- n명이 수영을 합니다.
-- 이 중에 1~3등을 뽑아 메달을 주는데 나올 수 있는 경우의 수는 몇 개인지 출력하는 프로그램을 작성해주세요.
+- '+' 와 '-' 기호가 들어있는 수식을 입력받고, 자동으로 계산해주는 프로그램을 작성 해 주세요.
+
+> **[힌트]**
+> Parsing을 하기 위한 메서드가 불충분하다면, 필요한 함수를 직접 구현하는 것이 좋습니다.
 
 ## 2. 입력
-- n명을 입력받습니다.
+- 수식을(문자열) 입력받습니다.
+
+> **[세부조건]**
+>
+> 1. 괄호는 없습니다.
+>
+> 2. 첫 번째 수는 양수 또는 음수가 될 수 있습니다.
+>
+> 3. '+'와 '-'이외 문자는 입력되지 않습니다.
+>
+> 4. 띄어쓰기 없이 입력이 됩니다.
+>
+> 5. 문자열 길이 최대값 : 1000
+>
+> 6. 최종 결과는 음수가 될 수 있습니다.
+>
+> 7. 첫번째 수가 양수라면 '+' 기호가 생략됩니다.
 
 ## 3. 출력
-- 경우의 수는 몇 개인지 출력해주세요.
+- 수식의 결과를 출력해주세요.
 
 ## 4. 예제 입력
 ```
-4
+100+100-50+30
 ```
 
 ## 5. 예제 출력
 ```
-24
+180
 ```
 
 ## 6. 코드
 
 ```c++
 #include <iostream>
+#include <vector>
+#include <string>
 using namespace std;
-
-int cnt = 0;
-void run(int start, int branch) {
-    if (start == 3) {
-        cnt++;
-        return;
-    }
-
-    for (int i = start; i < branch; i++) {
-        run(start + 1, branch);
-    }
-}
 
 int main()
 {
-    int n;
-    cin >> n;
+	string s;
+	vector<int> arr;
+	cin >> s;
 
-    run(0, n);
+	int size = s.length();
+	
+	int start = 0, sum = 0;
+	for (int i = 0; i < size; i++) {
+		if (i != 0 && (s[i] == '+' || s[i] == '-')) {
+			string res;
 
-    cout << cnt;
+			if(s[start] == '+' || s[start] == '-') res = s.substr(start + 1, i - start - 1);
+			else res = s.substr(start, i - start);
 
-    return 0;
+			int num = stoi(res);
+
+			if (s[start] == '-') sum -= num;
+			else sum += num;
+
+			start = i;
+		}
+	}
+
+	string res;
+
+	if (s[start] == '+' || s[start] == '-') res = s.substr(start + 1, size - start - 1);
+	else res = s.substr(start, size - start);
+
+	int num = stoi(res);
+
+	if (s[start] == '-') sum -= num;
+	else sum += num;
+
+	cout << sum;
+
+	return 0;
 }
+
 ```

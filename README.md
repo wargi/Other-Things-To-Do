@@ -50,7 +50,7 @@
 | | - | [카운팅 정렬과정 출력하기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Expert02/Question11.md) | 210304 |
 | | - | [금지 단어 수정 프로그램](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Expert02/Question12.md) | 210304 |
 | | - | [고결하고 완벽한 문자열 판단](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Expert02/Question13.md) | 210305 |
-| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Expert02/Question14.md) | 210305 |
+| | - | [자동 계산기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Expert02/Question14.md) | 210305 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Expert02/Question15.md) | 210306 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Expert02/Question16.md) | 210306 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Expert02/Question17.md) | 210307 |
