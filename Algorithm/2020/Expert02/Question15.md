@@ -1,115 +1,114 @@
-# 2차원 배열 돌리기 #
+# 괄호 계산 #
 
 ## 1. 문제
+
+- 중괄호 { } 와 대괄호 [ ]가 섞여있는 문자열이 있습니다.
+- 중괄호와 대괄호 안에는 숫자들이 적혀있습니다.
+
 ```
-1. 2차원 배열(3x3)을 두개(a, b)를 입력 받습니다.
-A: 1 1 1   1 2 3
-   2 2 2   1 2 3
-   3 3 3   1 2 3
-
-2. a배열을 왼쪽으로 몇 번 회전시켜야 b배열과 같은지 출력하는 프로그램을 작성하시오.
-
-ex)
-
-1회 회전 상태)
-1 2 3
-1 2 3
-1 2 3
-
-1회 회전후 b배열과 같으므로 1을 출력한다.
+ABC123[10]B{3}AT[20][10]BB{2}Q
 ```
 
-## 2. 입/출력
-- 입력: 2차원 배열(3x3)을 두개(a, b)를 입력 받습니다.
-- 출력: a배열을 왼쪽으로 몇 번 회전시켜야 b배열과 같은지 출력해주세요.
+- 왼쪽부터 오른쪽으로 Parsing을 하며, 중괄호 / 대괄호 안에 있는 숫자들로 연산을 하려고 합니다.
+- 대괄호[ ] 가 나오면 합을 구하면 되고, 중괄호{ } 가 나오면 곱을 구하면 됩니다.
 
-## 3. 예제 입력
 ```
-1 1 1
-2 2 2
-3 3 3
+위 예제에서는
+[10] {3} [20] [10] {2} 를 구할 수 있으며,
 
-1 2 3
-1 2 3
-1 2 3
+1. 0 + [10] = 10
+2. 10 x {3} = 30
+3. 30 + [20] = 50
+4. 50 + [10] = 60
+5. 60 x {2} = 120
+
+따라서 정답은 120 입니다.
+```
+
+## 2. 입력
+
+- 문자열을 입력받습니다.
+
+> **[세부조건]**
+>
+> 1. 1 <= n <= 10,000
+>
+> 2. 숫자는 모두 양수로 구성되어 있습니다.
+>
+> 3. 괄호가 부정확한 데이터는 입력되지 않습니다.
+>
+> 4. 괄호 안에는 모두 숫자로 구성되어 있습니다.
+
+## 3. 출력
+
+- Parsing 후 연산 결과를 출력 해 주세요.
+
+## 4. 예제 입력
+```
+ABC123[10]B{3}AT[20][10]BB{2}Q
 ```
 
 ## 4. 예제 출력
 ```
-1
+120
 ```
 
 ## 5. 코드
 ```c++
 #include <iostream>
+#include <vector>
+#include <string>
 using namespace std;
 
-struct Node {
-    int x, y;
-};
+int sum = 0;
 
-int a[3][3], b[3][3];
-int direct[9][2] = {
-    2, 0,
-    1, -1,
-    0, -2,
-    1, 1,
-    0, 0,
-    -1, -1,
-    0, 2,
-    -1, 1,
-    -2, 0
-};
+void add(string s) {
 
-void getLeft() {
-    int cnt = 0;
-    int temp[3][3];
-
-    for (int i = 0; i < 3; i++) {
-        for (int j = 0; j < 3; j++) {
-            int dy = i + direct[cnt][0];
-            int dx = j + direct[cnt++][1];
-
-            temp[dy][dx] = a[i][j];
-        }
-    }
-
-    for (int i = 0; i < 3; i++) {
-        for (int j = 0; j < 3; j++) {
-            a[i][j] = temp[i][j];
-        }
-    }
-}
-
-bool getSame() {
-    for (int i = 0; i < 3; i++) {
-        for (int j = 0; j < 3; j++) {
-            if (a[i][j] != b[i][j]) return false;
-        }
-    }
-    return true;
 }
 
 int main()
 {
-    for (int x = 0; x < 2; x++) {
-        for (int i = 0; i < 3; i++) {
-            for (int j = 0; j < 3; j++) {
-                if (!x) cin >> a[i][j];
-                else cin >> b[i][j];
-            }
-        }
-    }
+	string s;
+	cin >> s;
+	
+	int start = 0;
+	while (1) {
+		int a = s.find('[', start);
+		int b = s.find('{', start);
 
-    int r = 0;
-    while (true) {
-        r++;
-        getLeft();
-        if (getSame()) break;
-    }
+		if (a != -1 && b != -1) {
+			if (a < b) {
+				start = a + 1;
+				int c = s.find(']', a);
+				string res = s.substr(a + 1, c - a - 1);
+				sum += stoi(res);
+			}
+			else {
+				start = b + 1;
+				int d = s.find('}', b);
+				string res = s.substr(b + 1, d - b - 1);
+				sum *= stoi(res);
+			}
+		}
+		else if (b != -1) {
+			start = b + 1;
+			int d = s.find('}', b);
+			string res = s.substr(b + 1, d - b - 1);
+			sum *= stoi(res);
+		}
+		else if (a != -1) {
+			start = a + 1;
+			int c = s.find(']', a);
+			string res = s.substr(a + 1, c - a - 1);
+			sum += stoi(res);
+		}
+		else break;
+	}
 
-    cout << r;
+	cout << sum;
 
-    return 0;
+
+	return 0;
 }
+
 ```
