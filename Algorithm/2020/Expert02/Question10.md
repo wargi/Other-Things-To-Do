@@ -1,7 +1,7 @@
 # 레드마블 #
 
 ## 1. 문제
-<img src="./Array04.png" alt="Array" style="zoom:105%;" />
+<img src="./Array06.png" alt="Array" style="zoom:105%;" />
 
 - 총 12칸으로 된 맵이 있습니다. ( 0번 index값은 항상 0 입니다. )
 - 레드마을에 사는 부르스는 0번에서 시작해서, **(2칸)** 또는 **(3칸)** 또는 **(현재 index \* 2칸)** 으로 점프 할 수 있습니다.

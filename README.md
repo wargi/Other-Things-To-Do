@@ -37,7 +37,7 @@
 | | - | [세 가지 선택](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Expert01/Question23.md) | 210225 |
 | | - | [채널 선택](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Expert01/Question24.md) | 210226 |
 | | - | [섬 사이즈 구하기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Expert01/Question25.md) | 210226 |
-| | - | [가장 가까운 섬 찾기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Expert02/Question1.md) | 210227 |
+| | - | [천지창조](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Expert02/Question1.md) | 210227 |
 | | - | [정렬된 배열 합치기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Expert02/Question2.md) | 210227 |
 | | - | [화장실 대기시간 구하기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Expert02/Question3.md) | 210228 |
 | | - | [잔돈 교환](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Expert02/Question4.md) | 210228 |
@@ -54,13 +54,13 @@
 | | - | [괄호 계산](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Expert02/Question15.md) | 210306 |
 | | - | [E-mail 구분하기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Expert02/Question16.md) | 210306 |
 | | - | [영어 단어장](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Expert02/Question17.md) | 210307 |
-| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Expert02/Question18.md) | 210307 |
+| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Expert02/Question18.md) | 210308 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Expert02/Question19.md) | 210308 |
-| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Expert02/Question20.md) | 210308 |
+| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Expert02/Question20.md) | 210309 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Expert02/Question21.md) | 210309 |
-| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Expert02/Question22.md) | 210309 |
+| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Expert02/Question22.md) | 210310 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Expert02/Question23.md) | 210310 |
-| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Expert02/Question24.md) | 210310 |
+| |  |  |  |
 |  | Advanced 1 | [구조체 정렬하기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced01/Question1.md) | 201225 |
 |  | - | [Tree 01](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced01/Question2.md) | 201226 |
 |  | - | [배열 덧셈](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Advanced01/Question3.md) | 201226 |

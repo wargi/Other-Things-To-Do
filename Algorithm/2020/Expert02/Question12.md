@@ -5,7 +5,7 @@
 - 한 문자열을 입력받아주세요.
 - 그리고 아래 표를 참조하여, 정책에 맞게 **단어를 수정해주는 프로그램을 작성**해주세요.
 
-<img src="./Array06.png" alt="Array" style="zoom:77%;" />
+<img src="./Array07.png" alt="Array" style="zoom:77%;" />
 
 > **[힌트]**
 > replace 함수를 구현하면,

@@ -1,7 +1,7 @@
 # 정렬된 배열 합치기
 
 ## 1. 문제
-<img src="./Array02.png" alt="Array" style="zoom:77%;" />
+<img src="./Array02.png" alt="Array" style="zoom:106%;" />
 
 - **두 정렬된** 배열을 입력받습니다. (정렬되어있는 입력 데이터입니다)
 

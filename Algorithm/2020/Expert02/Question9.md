@@ -1,7 +1,7 @@
 # 아래로 점프!
 
 ## 1. 문제
-<img src="./Array04.png" alt="Array" style="zoom:105%;" />
+<img src="./Array05.png" alt="Array" style="zoom:105%;" />
 
 - 7x3 맵을 입력 받으세요.
 - (0,0) 좌표에 있는 개구리는 **↙↓↘로 한 칸 점프 할 수 있습니다. (벽으로 이동 불가)**

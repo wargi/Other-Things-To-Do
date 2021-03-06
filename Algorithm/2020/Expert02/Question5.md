@@ -7,7 +7,7 @@
 
 - 만약 6번의 회의가 있고, 아래의 그림과 같이 스케쥴을 입력받았다면, 최대 3번의 회의가 가능합니다.
 
-<img src="./Array02.png" alt="Array" style="zoom:77%;" />
+<img src="./Array03.png" alt="Array" style="zoom:106%;" />
 
 > - **[힌트]**
 > - 가장 일찍 끝나는 회의 먼저 선택하기
