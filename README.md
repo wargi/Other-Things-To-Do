@@ -53,7 +53,7 @@
 | | - | [자동 계산기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Expert02/Question14.md) | 210305 |
 | | - | [괄호 계산](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Expert02/Question15.md) | 210306 |
 | | - | [E-mail 구분하기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Expert02/Question16.md) | 210306 |
-| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Expert02/Question17.md) | 210307 |
+| | - | [영어 단어장](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Expert02/Question17.md) | 210307 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Expert02/Question18.md) | 210307 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Expert02/Question19.md) | 210308 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Expert02/Question20.md) | 210308 |

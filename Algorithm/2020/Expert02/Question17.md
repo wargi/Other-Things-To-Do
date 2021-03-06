@@ -1,77 +1,59 @@
-# 가장 작은 수 출력
+# 영어 단어장
 
 ## 1. 문제
-- 처음 입력 받을 숫자들의 개수 n을 입력받습니다.
-- 그 후에, n개의 숫자들을 이용하여 가장 작은 세자리 수를 만들어주는 프로그램을 작성하시오.
+- 태평이는 영어공부를 위해 단어들만 모아서 암기장을 만들어 보려고 합니다.
+- _(언더바)를 제외한 모든 단어들을 배열에 저장하고자 합니다.
+- **각 칸에 ' _ ' 를 기준으로 단어들을 string 배열에 parsing 해주세요.**
 
 ## 2. 입력
-- 첫 줄에 입력 받을 숫자들의 개수 n을 입력받고,
-- 다음 줄에 n개의 숫자들을 입력받습니다.
+- 문자열을 입력받습니다.
 
 ## 3. 출력
-- n개의 숫자들을 이용하여 가장 작은 세자리 수를 만들어 출력해주세요.
+- n각 칸에 ' _ ' 를 기준으로 단어들을 string 배열에 parsing 하고, 아래의 출력예제 포맷처럼 출력해주세요.
 
 ## 4. 예제 입력
 ```
-5
-0 0 0 0 5
+HOT_FRIED____CHICKEN_KFC_IS_BEST
 ```
 
 ## 5. 예제 출력
 ```
-093476
+1#HOT
+2#FRIED
+3#CHICKEN
+4#KFC
+5#IS
+6#BEST
 ```
 
-## 6. 예제 입력
-
-```
-4
-9 1 3 0
-```
-
-## 7. 예제 출력
-
-```
-103
-```
-
-## 8. 코드
+## 6. 코드
 
 ```c++
 #include <iostream>
+#include <vector>
+#include <string>
 using namespace std;
-
-int n, m = 9999;
-int check[1000] = { 0 };
-int* vect;
-
-void dfs(int level, int sum) {
-    if (level == 3) {
-        if (sum >= 100 && sum <= 999 && sum < m) m = sum;
-        
-        return;
-    }
-
-    for (int i = 0; i < n; i++) {
-        if (!check[i]) {
-            check[i] = 1;
-            dfs(level + 1, sum * 10 + vect[i]);
-            check[i] = 0;
-        }
-    }
-}
 
 int main()
 {
-    cin >> n;
-    vect = new int[n];
+	string s;
+	cin >> s;
 
-    for (int i = 0; i < n; i++) cin >> vect[i];
+	int cnt = 1;
+	string word = "";
+	for (int i = 0; i < s.length(); i++) {
+		if ('_' == s[i]) {
+			if (!word.empty()) cout << cnt++ << "#" << word << "\n";
+			word = "";
+		}
+		else {
+			word += s[i];
+		}
+	}
 
-    dfs(0, 0);
+	if (!word.empty()) cout << cnt++ << "#" << word;
 
-    cout << m;
-
-    return 0;
+	return 0;
 }
 ```
+
