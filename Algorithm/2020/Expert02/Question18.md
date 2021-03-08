@@ -42,6 +42,31 @@
 
 ## 6. 코드
 ```c++
+#include <iostream>
+#include <vector>
+#include <string>
+using namespace std;
 
+int main()
+{
+	string s;
+	cin >> s;
+
+	string word = "";
+	for (int i = 0; i < s.length(); i++) {
+		if (i == 0) word += s[i];
+		else if (s[i] == '(' && s[i - 1] == '(') continue;
+		else if (s[i] == ')' && s[i - 1] == ')') continue;
+		else if (i > 1 && s[i] == '^' && s[i - 1] == '^' && s[i - 2] == '^') continue;
+		else if (i > 1 && s[i] == '^' && s[i - 1] != '_' && s[i - 2] == '^') {
+			word[word.length() - 1] = '_';
+			word += '^';
+		}
+		else word += s[i];
+	}
+
+	cout << word;
+
+	return 0;
+}
 ```
-
