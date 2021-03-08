@@ -55,7 +55,7 @@
 | | - | [E-mail 구분하기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Expert02/Question16.md) | 210306 |
 | | - | [영어 단어장](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Expert02/Question17.md) | 210307 |
 | | - | [이모티콘 정리](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Expert02/Question18.md) | 210308 |
-| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Expert02/Question19.md) | 210308 |
+| | - | [죄수 번호 판별](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Expert02/Question19.md) | 210308 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Expert02/Question20.md) | 210309 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Expert02/Question21.md) | 210309 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Expert02/Question22.md) | 210310 |

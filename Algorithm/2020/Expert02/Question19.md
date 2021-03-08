@@ -1,79 +1,30 @@
-# 데이트 스케줄
+# 죄수 번호 판별
 
 ## 1. 문제
-- 3명의 이름을 입력받고, 순서대로 데이트를 할 상대를 선택해야 합니다.
-- 금 ~ 일요일 까지 총 3일간 3번의 데이트를 하는데, 가능한 경우의 수를 모두 출력해주세요.(같은 사람이 중복되어도 됩니다.)
+- **단어와 숫자**들이 번갈아가며 적혀있는 **한문장을 입력** 받습니다. ex) AB154CDEF112F4G5
+- **죄수명(대문자)과 사건번호(숫자)가 한세트**로 되어있지만, 띄어쓰기가 없기에 알아보기 힘듭니다.
+- 죄수명과 사건번호를 각각 Parsing하고 **사건번호에** **17을 더한 값으로** 출력 해주세요.
 
 ## 2. 입력
-- 3명의 이름을 입력받습니다.
+- 문자열을 입력받습니다.
 
 ## 3. 출력
-- 금 ~ 일요일 까지 총 3일간 3번의 데이트를 하는데, 가능한 경우의 수를 모두 출력해주세요.
+- 죄수명과 사건번호를 각각 Parsing하고 **사건번호에** **17을 더한 값으로** 출력 해주세요.
 
 ## 4. 예제 입력
 ```
-bob jason tom
+AB100CDEF112F4G5
 ```
 
 ## 5. 예제 출력
 ```
-bob bob bob
-bob bob jason
-bob bob tom
-bob jason bob
-bob jason jason
-bob jason tom
-bob tom bob
-bob tom jason
-bob tom tom
-jason bob bob
-jason bob jason
-jason bob tom
-jason jason bob
-jason jason jason
-jason jason tom
-jason tom bob
-jason tom jason
-jason tom tom
-tom bob bob
-tom bob jason
-tom bob tom
-tom jason bob
-tom jason jason
-tom jason tom
-tom tom bob
-tom tom jason
-tom tom tom
+AB#117
+CDEF#129
+F#21
+G#22
 ```
 
 ## 6. 코드
 ```c++
-#include <iostream>
-#include <string>
-using namespace std;
 
-string vect[3];
-string path[3];
-void dfs(int level) {
-    if (level == 3) {
-        for (int i = 0; i < 3; i++) cout << path[i] << " ";
-        cout << "\n";
-        return;
-    }
-
-    for (int i = 0; i < 3; i++) {
-        path[level] = vect[i];
-        dfs(level + 1);
-        path[level] = "";
-    }
-}
-
-int main()
-{
-    for (int i = 0; i < 3; i++) cin >> vect[i];
-
-    dfs(0);
-
-    return 0;
-}
 ```
