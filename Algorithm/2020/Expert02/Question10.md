@@ -28,5 +28,47 @@
 ## 6. 코드
 
 ```c++
+#include <iostream>
+using namespace std;
 
+int map[30];
+int direct[3] = { 2, 3, 2 };
+int scoreMap[30] = { 0 };
+int flagMap[12] = { 0 };
+
+void init()
+{
+    for (int i = 0; i < 12; i++) {
+        cin >> map[i];
+        scoreMap[i] = map[i];
+    }
+}
+
+int main()
+{
+    init();
+
+    int maxi = -21e8;
+
+    for (int i = 2; i < 12; i++) {
+
+        for (int t = 0; t < 2; t++) {
+            int dx = i + direct[t];
+            if (t == 2) dx = i * direct[t];
+
+            int temp = scoreMap[i] + map[dx];
+
+            if (scoreMap[dx] < temp || !flagMap[dx]) {
+                flagMap[dx] = 1;
+                scoreMap[dx] = temp;
+            }
+
+            if (dx > 11 && scoreMap[dx] > maxi) maxi = scoreMap[dx];
+        }
+    }
+    
+    cout << maxi;
+
+    return 0;
+}
 ```

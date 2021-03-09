@@ -26,5 +26,31 @@ G#22
 
 ## 6. 코드
 ```c++
+#include <iostream>
+#include <vector>
+#include <string>
+using namespace std;
+
+int main()
+{
+	string s, num;
+	cin >> s;
+
+	for (int i = 0; i < s.length(); i++) {
+		if ('A' <= s[i] && 'Z' >= s[i]) {
+			if (!num.empty()) cout << stoi(num) + 17 << "\n";
+			cout << s[i];
+			num = "";
+		}
+		else {
+			if (num.empty()) cout << "#";
+			num += s[i];
+		}
+	}
+
+	cout << stoi(num) + 17;
+
+	return 0;
+}
 
 ```

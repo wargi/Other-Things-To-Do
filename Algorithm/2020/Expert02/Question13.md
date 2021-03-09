@@ -49,5 +49,52 @@ OXXOO
 ## 6. 코드
 
 ```c++
+#include <iostream>
+#include <vector>
+#include <string>
+using namespace std;
+
+bool check(string s) {
+	int checkArr[2000] = { 0, };
+
+	for (int i = 0; i < s.length(); i++) {
+		checkArr[s[i]]++;
+		if (checkArr[s[i]] > 1) return false;
+	}
+	return true;
+}
+
+char find(string s) {
+	int sIndex = 0, eIndex = 0;
+
+	while (1) {
+		sIndex = s.find('<', eIndex);
+		eIndex = s.find('>', sIndex);
+
+		if (sIndex == -1 || eIndex == -1) break;
+
+		string res = s.substr(sIndex + 1, eIndex - sIndex - 1);
+
+		if (!check(res)) return 'X';
+	}
+	return 'O';
+}
+
+int main()
+{
+	int n;
+	string result = "";
+	cin >> n;
+
+	for (int i = 0; i < n; i++) {
+		string s;
+		cin >> s;
+		result += find(s);
+	}
+
+	cout << result;
+
+	return 0;
+}
 
 ```
