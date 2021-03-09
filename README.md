@@ -57,7 +57,7 @@
 | | - | [이모티콘 정리](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Expert02/Question18.md) | 210308 |
 | | - | [죄수 번호 판별](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Expert02/Question19.md) | 210308 |
 | | - | [웹 사이트 주소 판별](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Expert02/Question20.md) | 210309 |
-| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Expert02/Question21.md) | 210309 |
+| | - | [가장 긴 공통 문자열 찾기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Expert02/Question21.md) | 210309 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Expert02/Question22.md) | 210310 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Expert02/Question23.md) | 210310 |
 | |  |  |  |
