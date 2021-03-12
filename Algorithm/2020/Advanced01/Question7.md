@@ -11,7 +11,8 @@
 ```
 
 - 1 ~ 6까지의 숫자가 몇 개가 있는지 아래의 그림처럼 나타내주세요.
-- <img src="./Array02.png" alt="Array" style="zoom:100%;" />
+
+<img src="./Array02.png" alt="Array" style="zoom:100%;" />
 
 ## 2. 출력
 - 1 ~ 6까지의 숫자가 몇 개가 있는지 위의 예제처럼 나타내주세요.
