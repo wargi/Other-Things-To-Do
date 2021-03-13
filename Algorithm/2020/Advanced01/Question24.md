@@ -60,5 +60,27 @@ _____
 ## 8. 코드
 
 ```c++
+#include <iostream>
+using namespace std;
 
+int main() {
+	char map[5][6] = {
+		"_____",
+		"_____",
+		"_____",
+		"_____",
+		"_____",
+	};
+
+	int n, m;
+	cin >> n >> m;
+
+	for (int i = 0; i < 5; i++) {
+		if (n + i >= 5 || m - i < 0) break;
+		if (m - i != 0) map[i][n + i] = '0' + m - i;
+		cout << map[i] << "\n";
+	}
+
+	return 0;
+}
 ```
