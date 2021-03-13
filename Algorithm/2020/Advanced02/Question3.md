@@ -46,5 +46,40 @@ int graph[6][6] = {
 
 ## 6. 코드
 ```c++
+#include <iostream>
+using namespace std;
 
+int map[6][6] = {
+    0, 0, 1, 0, 2, 0,
+    5, 0, 3, 0, 0, 0,
+    0, 0, 0, 0, 0, 7,
+    2, 0, 0, 0, 8, 0,
+    0, 0, 9, 0, 0, 0,
+    4, 0, 0, 7, 0, 0
+};
+
+int sum = 0, check[6] = { 0 };
+
+void run(int now) {
+    cout << now << " " << sum << "\n";
+
+    for (int i = 0; i < 6; i++) {
+        if (map[now][i] > 0 && !check[i]) {
+            sum += map[now][i];
+            check[i] = 1;
+            run(i);
+        }
+    }
+}
+
+int main()
+{
+    int n;
+    cin >> n;
+
+    check[n] = 1;
+    run(n);
+
+    return 0;
+}
 ```
