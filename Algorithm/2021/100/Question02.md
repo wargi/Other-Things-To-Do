@@ -1,43 +1,37 @@
-# N to M
+# A-B
 
 ## 1. 문제
 
-- 재귀함수를 이용해 N부터 M까지 더하자.
+- 두 정수 A와 B를 입력받은 다음, A-B를 출력하는 프로그램을 작성하시오.
 
 ## 2. 입력
-- 첫 번째 줄: n과 m이 주어진다 ( 1 ≤ n, m ≤ 100,000 )
+- 첫째 줄에 A와 B가 주어진다. (0 < A, B < 10)
 
 ## 3. 출력
 
-- n부터 m까지 더한 값을 출력하라.
+- 첫째 줄에 A-B를 출력한다.
 
 
 ## 4. 예제 입력
 ```
-1 4
+3 2
 ```
 
 ## 5. 예제 출력
 ```
-10
+1
 ```
 
 ## 6. 코드
 
 ```c++
-#include <stdio.h>
+#include<stdio.h>
 
-int getSum(int n, int m) {
-  if(m == n) return n;
-  else return m + getSum(n, m-1);
-}
-
-int main() {
-  int n, m;
-  
-  scanf("%d %d", &n, &m);
-  printf("%d\n",getSum(n, m));
-  
-  return 0;
+void main()
+{
+int a, b;
+    
+    scanf("%d %d",&a,&b);
+    printf("%d",a-b);
 }
 ```
