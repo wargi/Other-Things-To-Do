@@ -132,3 +132,103 @@
 | | Graph | [최단 거리](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/Graph/Question01.md) | 190919 |
 | | - | [특정 최단 거리](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/Graph/Question02.md) | 190924 |
 | | - | [파티](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/Graph/Question03.md) | 190927 |
+|  | Basic | [Find the tail](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic01/Question1.md) | 200920 |
+|  | - | [문자의 수](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic01/Question2.md) | 200921 |
+|  | - | [문장에 'A' 추가하기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic01/Question3.md) | 200921 |
+|  | - | [두 배열의 합](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic01/Question4.md) | 200922 |
+| | - | [문자 제거하기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic01/Question5.md) | 200922 |
+| | - | [배열의 합 구하기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic01/Question6.md) | 200922 |
+| | - | [문장에 'W' 찾기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic01/Question7.md) | 200923 |
+| | - | [2중 for문](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic01/Question8.md) | 200923 |
+| | - | [알파벳 찾기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic01/Question9.md) | 200924 |
+| | - | [배열의 좌표 찾기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic01/Question10.md) | 200924 |
+| | - | [배열의 곱 구하기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic01/Question11.md) | 200925 |
+| | - | [글자 바꾸기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic01/Question12.md) | 200925 |
+| | - | [문장에서 인덱스 찾기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic01/Question13.md) | 200926 |
+| | - | [배열 색칠하기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic01/Question14.md) | 200926 |
+| | - | [두 개의 문자 찾기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic01/Question15.md) | 200927 |
+| | - | [3중 for](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic01/Question16.md) | 200927 |
+| | - | [해당 인덱스부터 숫자 찾기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic01/Question17.md) | 200927 |
+| | - | [마스킹 된 부분의 합 구하기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic01/Question18.md) | 200928 |
+| | - | [2차원 배열 위치 찾기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic01/Question19.md) | 200929 |
+| | - | [배열에서 숫자 찾기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic01/Question20.md) | 200929 |
+| | - | [마스크 배열의 비어있는 곳 찾기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic01/Question21.md) | 200930 |
+| | - | [마스킹 처리 후 값 찾기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic01/Question22.md) | 200930 |
+| | - | [알파뱃의 총 개수 찾기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic01/Question23.md) | 201001 |
+| | - | [인기투표](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic02/Question1.md) | 201001 |
+| | - | [7로 바꾸어 출력하기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic02/Question2.md) | 201002 |
+| | - | [비밀번호 맞추기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic02/Question3.md) | 201002 |
+| | - | [칼로리 계산](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic02/Question4.md) | 201003 |
+| | - | [컬러 찾기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic02/Question5.md) | 201003 |
+| | - | [마스킹 된 배열에서 min값과 index 찾기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic02/Question6.md) | 201004 |
+|  | - | [마스킹 배열 숫자 찾기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic02/Question7.md) | 201004 |
+| | - | [마스킹 된 값 더하기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic02/Question8.md) | 201005 |
+| | - | [오프셋 찾기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic02/Question9.md) | 201005 |
+| | - | [Favorite Menu](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic02/Question10.md) | 201006 |
+| | - | [범위 값 더하기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic02/Question11.md) | 201006 |
+| | - | [합격자 발표일](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic02/Question12.md) | 201007 |
+| | - | [동명이인](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic02/Question13.md) | 201007 |
+| | - | [보물 찾기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic02/Question14.md) | 201008 |
+| | - | [카드 종류](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic02/Question15.md) | 201008 |
+| | - | [직원 찾기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic02/Question16.md) | 201009 |
+|  | - | [없는 숫자 찾기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic02/Question17.md) | 201009 |
+|  | - | [빈도수 높은 알파벳 찾기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic02/Question18.md) | 201010 |
+|  | - | [블랙 리스트](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic02/Question19.md) | 201010 |
+|  | - | [알파벳 정렬하기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic02/Question20.md) | 201011 |
+|  | - | [기차에서 가족 찾기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic02/Question21.md) | 201011 |
+|  | - | [층 수 찾기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic02/Question22.md) | 201012 |
+|  | - | [카운팅 수 찾기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic02/Question23.md) | 201012 |
+|  | - | [가족 찾기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic03/Question1.md) | 201013 |
+|  | - | [도플갱어](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic03/Question2.md) | 201013 |
+|  | - | [빈도수 높은 알파벳 찾기 2](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic03/Question3.md) | 201014 |
+|  | - | [충치 체크](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic03/Question4.md) | 201014 |
+|  | Basic 2 | [양쪽에서 문자 찾기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic03/Question5.md) | 201015 |
+|  | - | [합격자 발표 2](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic03/Question6.md) | 201015 |
+|  | - | [WARGIPARK 찾기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic03/Question7.md) | 201016 |
+|  | - | [완벽하게 다른 문장 찾기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic03/Question8.md) | 201016 |
+|  | - | [중복 제거](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic03/Question9.md) | 201017 |
+|  | - | [글자 세기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic03/Question10.md) | 201017 |
+|  | - | [고스트 찾기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic03/Question11.md) | 201018 |
+|  | - | [좌표를 이용한 배열의 합 구하기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic03/Question12.md) | 201019 |
+|  | - | [구조체 익혀보기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic03/Question13.md) | 201019 |
+|  | - | [햄버거 주문하기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic03/Question14.md) | 201019 |
+|  | - | [포인터 익혀보기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic03/Question15.md) | 201020 |
+|  | - | [4x3 배열 만들기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic03/Question16.md) | 201020 |
+|  | - | [구조체 익혀보기 2](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic03/Question17.md) | 201021 |
+|  | - | [가장 큰 좌표 찾기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic03/Question18.md) | 201021 |
+|  | - | [폭탄 터트리기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic03/Question19.md) | 201022 |
+|  | - | [특정 구역의 합](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic03/Question20.md) | 201022 |
+|  | - | [a, b](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic03/Question21.md) | 201023 |
+|  | - | [내 주위 판별](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic03/Question22.md) | 201023 |
+|  | - | [배열 채우기 2](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic03/Question23.md) | 201024 |
+|  | - | [가로 세로 채우기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic01/Question24.md) | 201024 |
+| | - | [중복 제거 2](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic01/Question25.md) | 201025 |
+| | - | [배열 탐색하기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic02/Question24.md) | 201025 |
+| | - | [마스킹의 합](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic02/Question25.md) | 201026 |
+| | - | [기저조건 찾기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic03/Question24.md) | 201026 |
+| | - | [부메랑](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic03/Question25.md) | 201027 |
+| | - | [문워크](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic04/Question1.md) | 201027 |
+| | - | [2단 점프](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic04/Question2.md) | 201028 |
+| | - | [글자 출력하기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic04/Question3.md) | 201028 |
+| | - | [a to b](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic04/Question4.md) | 201029 |
+| | - | [부메랑 2](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic04/Question5.md) | 201030 |
+| | - | [n부터 0까지](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic04/Question6.md) | 201030 |
+| | - | [재귀 익혀보기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic04/Question7.md) | 201030 |
+| | - | [계단 내려가기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic04/Question8.md) | 201031 |
+| | - | [나누어 비교하기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic04/Question9.md) | 201031 |
+| | - | [중복 찾기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic04/Question10.md) | 201101 |
+| | - | [알파벳 출력하기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic04/Question11.md) | 201101 |
+| | - | [계단 내려가기 2](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic04/Question12.md) | 201102 |
+| | - | [계단 내려가기 3](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic04/Question13.md) | 201102 |
+| | - | [배열 합치기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic04/Question14.md) | 201103 |
+| | - | [패턴의 합](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic04/Question15.md) | 201103 |
+| | - | [트리 만들기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic04/Question16.md) | 201104 |
+| | - | [로그인](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic04/Question17.md) | 201104 |
+| | - | [트리 만들기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic04/Question18.md) | 201105 |
+| | - | [이진트리 만들기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic04/Question19.md) | 201105 |
+| | - | [긴 문장 가져오기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic04/Question20.md) | 201106 |
+| | - | [트리 재귀 Count](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic04/Question21.md) | 201106 |
+| | - | [글자 수 만큼 재귀 돌리기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic04/Question22.md) | 201107 |
+| | - | [저글링 이동](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic04/Question23.md) | 201107 |
+| | - | [A to B](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic04/Question24.md) | 201108 |
+| | - | [세로줄의 합](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Basic04/Question25.md) | 201108 |
