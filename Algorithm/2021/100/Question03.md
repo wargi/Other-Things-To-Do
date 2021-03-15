@@ -1,44 +1,36 @@
-# Sum Of Each Digit
+# A/B
 
 ## 1. 문제
 
-- 재귀함수를 이용하여 각 자릿수의 합을 구해보자.
+- 두 정수 A와 B를 입력받은 다음, A/B를 출력하는 프로그램을 작성하시오.
 
 ## 2. 입력
-- 첫 번째 줄: 한개의 정수가 주어진다.
+- 첫째 줄에 A와 B가 주어진다. (0 < A, B < 10)
 
 ## 3. 출력
 
-- 주어진 정수의 각 자릿수의 합을 출력하자.
+- 첫째 줄에 A/B를 출력한다. 실제 정답과 출력값의 절대오차 또는 상대오차가 10-9 이하이면 정답이다.
 
 
 ## 4. 예제 입력
 ```
-12345
+1 3
 ```
 
 ## 5. 예제출력
 
 ```
-15
+0.33333333333333333333333333333333
 ```
 
 ## 6. 코드
 
-```c++
-#include <stdio.h>
+```swift
+import Foundation
 
-int getDigitSum(int x) {
-  if(x < 10) return x;
-  else return (x % 10) + getDigitSum(x / 10);
-  
-}
+var ab = readLine()!
+let strArr = ab.components(separatedBy: " ")
 
-int main() {
-  int x;
-  
-  scanf("%d", &x);
-  printf("%d\n", getDigitSum(x));
-  return 0;
-}
+print(Double(strArr[0])! / Double(strArr[1])!)
 ```
+

@@ -16,7 +16,7 @@
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate04/Question20.md) |  |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate04/Question21.md) |  |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate04/Question22.md) |  |
-| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate04/Question23.md) |  |
-| | - | [A-B](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate04/Question24.md) |  |
+| | - | [A/B](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question03.md) |  |
+| | - | [A-B](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question02.md) |  |
 | | - | [A+B](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question01.md) |  |
 
