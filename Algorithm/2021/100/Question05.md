@@ -1,46 +1,124 @@
-# Factorial
+# 리모컨
 
 ## 1. 문제
 
-- N 팩토리얼 (N!)은 1부터 N까지의 곱으로 정의된다.
-- 예를 들어
-  - 3! = 1 x 2 x 3 = 6
-  - 4! = 1 x 2 x 3 x 4 = 24 이다.
-- N이 주어질 때, N!을 계산하는 프로그램을 작성하시오.  
+- 수빈이는 TV를 보고 있다.
+- 수빈이는 채널을 돌리려고 했지만, 버튼을 너무 세게 누르는 바람에, 일부 숫자 버튼이 고장났다.
+- 리모컨에는 버튼이 0부터 9까지 숫자, +와 -가 있다.
+- +를 누르면 현재 보고있는 채널에서 +1된 채널로 이동하고, -를 누르면 -1된 채널로 이동한다.
+- 채널 0에서 -를 누른 경우에는 채널이 변하지 않고, 채널은 무한대 만큼 있다.
+- 수빈이가 지금 이동하려고 하는 채널은 N이다.
+- 어떤 버튼이 고장났는지 주어졌을 때, 채널 N으로 이동하기 위해서 버튼을 최소 몇 번 눌러야하는지 구하는 프로그램을 작성하시오. 
+- 수빈이가 지금 보고 있는 채널은 100번이다.
 
 ## 2. 입력
-- 첫 번째 줄: 숫자 N이 주어진다. ( 1 ≤ N ≤ 10 )  
+- 첫째 줄에 수빈이가 이동하려고 하는 채널 N (0 ≤ N ≤ 500,000)이 주어진다.
+- 둘째 줄에는 고장난 버튼의 개수 M (0 ≤ M ≤ 10)이 주어진다.
+- 고장난 버튼이 있는 경우에는 셋째 줄에는 고장난 버튼이 주어지며, 같은 버튼이 여러 번 주어지는 경우는 없다.
 
 ## 3. 출력
 
-- 첫째 줄에 N!을 출력한다.
+- 첫째 줄에 채널 N으로 이동하기 위해 버튼을 최소 몇 번 눌러야 하는지를 출력한다.
 
 
 ## 4. 예제 입력
 ```
-4
+5457
+3
+6 7 8
 ```
 
 ## 5. 예제출력
 
 ```
-24
+6
 ```
 
-## 6. 코드
+## 6. 예제 입력
+
+```
+100
+5
+0 1 2 3 4
+```
+
+## 7. 예제출력
+
+```
+0
+```
+
+## 8. 예제 입력
+
+```
+500000
+8
+0 2 3 4 6 7 8 9
+```
+
+## 9. 예제출력
+
+```
+11117
+```
+
+## 10. 코드
 
 ```c++
-#include <stdio.h>
+#include <string>
+#include <iostream>
+#include <vector>
+#include <algorithm>
 
-int factorial(int n) {
-  if(n == 1) return 1;
-  else return n * factorial(n - 1);
+using namespace std;
+
+int N, mv;
+string ts;
+int sizeT;
+int vect[10] = { 0 };
+
+void run(int level, string ret) {
+    if (sizeT + 1 < level) return;
+    else if(ret.length() > 0) {
+        int temp = stoi(ret);
+        int result = abs(N - temp);
+        int st = to_string(temp).length();
+
+        result += st;
+        mv = min(mv, result);
+    }
+
+    for (int i = 0; i <= 9; i++) {
+        if (vect[i]) continue;
+        char t = '0' + i;
+        
+        run(level + 1, ret + t);
+    }
 }
 
 int main() {
-  int num;
-  scanf("%d", &num);
-  printf("%d", factorial(num));
-  return 0;
+    cin.tie();
+
+    int M;
+    cin >> N >> M;
+
+    ts = to_string(N);
+    sizeT = ts.length();
+
+    mv = abs(N - 100);
+
+    for (int i = 0; i < M; i++) {
+        int t;
+        cin >> t;
+
+        vect[t] = 1;
+    }
+
+    run(0, "");
+
+    cout << mv;
+
+
+    return 0;
 }
 ```

@@ -14,7 +14,7 @@
 |  | ---------------- | 2021 | ----------------- |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate04/Question19.md) |  |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate04/Question20.md) |  |
-| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate04/Question21.md) |  |
+| | - | [리모컨](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question05.md) |  |
 | | - | [약수](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question04.md) |  |
 | | - | [A/B](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question03.md) |  |
 | | - | [A-B](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question02.md) |  |
