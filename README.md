@@ -12,7 +12,7 @@
 | **알고리즘 & 자료구조** | ---------------- | -------------------------- | ----------------- |
 | | - | [2019 & 2020 Algorithm 풀어본 문제리스트](https://github.com/wargi/Etc/blob/master/1920_README.md) | - |
 |  | ---------------- | 2021 | ----------------- |
-| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2020/Intermediate04/Question19.md) |  |
+| | - | [단어의 개수](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question07.md) |  |
 | | - | [더하기 사이클](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question06.md) |  |
 | | - | [리모컨](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question05.md) |  |
 | | - | [약수](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question04.md) |  |

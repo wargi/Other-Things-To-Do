@@ -1,60 +1,82 @@
-# Mountain
+# 단어의 개수
 
 ## 1. 문제
 
-- 봉우리가 여러개인 산 모양을 출력한다.
-- 산 모양은 그림과 같고 좌우 대칭이다.
-
-![Mountain](./image/Mountain.jpg)
+- 영어 대소문자와 띄어쓰기만으로 이루어진 문자열이 주어진다.
+- 이 문자열에는 몇 개의 단어가 있을까?
+- 이를 구하는 프로그램을 작성하시오.
+- 단, 한 단어가 여러 번 등장하면 등장한 횟수만큼 모두 세어야 한다.
 
 ## 2. 입력
-- 첫 번째 줄에 숫자를 입력 받는다.
-- 숫자의 크기는 20보다 작은 자연수이다.
+- 첫 줄에 영어 대소문자와 띄어쓰기로 이루어진 문자열이 주어진다.
+- 이 문자열의 길이는 1,000,000을 넘지 않는다. 
+- 단어는 띄어쓰기 한 개로 구분되며, 공백이 연속해서 나오는 경우는 없다. 
+- 또한 문자열의 앞과 뒤에는 공백이 있을 수도 있다.
 
 ## 3. 출력
 
-- 출력 예의 형식으로 출력한다.
+- 첫째 줄에 단어의 개수를 출력한다.
 
 
 ## 4. 예제 입력
 ```
-3
+The Curious Case of Benjamin Button
 ```
 
 ## 5. 예제 출력
 ```
-1213121
+6
 ```
 
 ## 6. 예제 입력
 
 ```
-5
+ Mazatneunde Wae Teullyeoyo
 ```
 
 ## 7. 예제 출력
 
 ```
-1213121412131215121312141213121
+3
 ```
 
-## 8. 코드
+## 8. 예제 입력
+
+```
+Teullinika Teullyeotzi 
+```
+
+## 9. 예제 출력
+
+```
+2
+```
+
+## 10. 코드
 
 ```c++
-#include <stdio.h>
-int getMountain(int n) {
-  if(n == 1) printf("1");
-  else {
-    getMountain(n-1);
-    printf("%d", n);
-    getMountain(n-1);
-  }
-}
+#include <iostream>
+#include <string>
+#include <vector>
+using namespace std;
 
-int main() {
-  int num;
-  scanf("%d", &num);
-  getMountain(num);
-  return 0;
+int main()
+{
+	string s;
+	getline(cin, s);
+
+	int cnt = 0, flag = 1;
+	for (int i = 0; i < s.length(); i++) {
+		if (s[i] == ' ') {
+			flag = 1;
+			continue;
+		}
+		if (flag && (s[i] >= 65 && s[i] <= 123)) {
+			cnt++;
+			flag = 0;
+		}
+	}
+
+	cout << cnt;
 }
 ```
