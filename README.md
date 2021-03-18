@@ -12,25 +12,25 @@
 | **알고리즘 & 자료구조** | ---------------- | -------------------------- | ----------------- |
 | | - | [2019 & 2020 Algorithm 풀어본 문제리스트](https://github.com/wargi/Etc/blob/master/1920_README.md) | - |
 |  | ---------------- | 2021 | ----------------- |
-| |  | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question21.md) |  |
-| |  | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question20.md) |  |
-| |  | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question19.md) |  |
-| |  | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question18.md) |  |
-| |  | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question17.md) |  |
-| |  | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question16.md) |  |
-| |  | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question15.md) |  |
-| |  | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question14.md) |  |
-| |  | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question13.md) |  |
-| |  | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question12.md) |  |
-| |  | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question11.md) |  |
-| |  | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question10.md) |  |
-| |  | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question09.md) |  |
-| | - | [단어 공부](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question08.md) |  |
-| | - | [단어의 개수](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question07.md) |  |
-| | - | [더하기 사이클](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question06.md) |  |
-| | - | [리모컨](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question05.md) |  |
-| | - | [약수](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question04.md) |  |
-| | - | [A/B](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question03.md) |  |
-| | - | [A-B](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question02.md) |  |
-| | - | [A+B](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question01.md) |  |
+| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question21.md) |  |
+| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question20.md) |  |
+| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question19.md) |  |
+| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question18.md) |  |
+| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question17.md) |  |
+| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question16.md) |  |
+| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question15.md) |  |
+| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question14.md) |  |
+| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question13.md) |  |
+| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question12.md) |  |
+| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question11.md) |  |
+| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question10.md) |  |
+| | - | [부분수열의 합](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question09.md) | 210318 |
+| | - | [단어 공부](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question08.md) | 210317 |
+| | - | [단어의 개수](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question07.md) | 210317 |
+| | - | [더하기 사이클](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question06.md) | 210316 |
+| | - | [리모컨](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question05.md) | 210316 |
+| | - | [약수](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question04.md) | 210315 |
+| | - | [A/B](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question03.md) | 210315 |
+| | - | [A-B](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question02.md) | 210314 |
+| | - | [A+B](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question01.md) | 210314 |
 
