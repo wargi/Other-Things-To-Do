@@ -21,7 +21,7 @@
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question15.md) | 210321 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question14.md) | 210320 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question13.md) | 210320 |
-| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question12.md) | 210319 |
+| | - | [임시 반장 정하기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question12.md) | 210319 |
 | | - | [DFS와 BFS](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question11.md) | 210319 |
 | | - | [맞춰봐](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question10.md) | 210318 |
 | | - | [부분수열의 합](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question09.md) | 210318 |
