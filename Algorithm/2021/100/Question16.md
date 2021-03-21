@@ -1,123 +1,75 @@
-# 리모컨
+# 1로 만들기
 
 ## 1. 문제
 
-- 수빈이는 TV를 보고 있다.
-- 수빈이는 채널을 돌리려고 했지만, 버튼을 너무 세게 누르는 바람에, 일부 숫자 버튼이 고장났다.
-- 리모컨에는 버튼이 0부터 9까지 숫자, +와 -가 있다.
-- +를 누르면 현재 보고있는 채널에서 +1된 채널로 이동하고, -를 누르면 -1된 채널로 이동한다.
-- 채널 0에서 -를 누른 경우에는 채널이 변하지 않고, 채널은 무한대 만큼 있다.
-- 수빈이가 지금 이동하려고 하는 채널은 N이다.
-- 어떤 버튼이 고장났는지 주어졌을 때, 채널 N으로 이동하기 위해서 버튼을 최소 몇 번 눌러야하는지 구하는 프로그램을 작성하시오. 
-- 수빈이가 지금 보고 있는 채널은 100번이다.
+- 정수 X에 사용할 수 있는 연산은 다음과 같이 세 가지 이다.
+  1. X가 3으로 나누어 떨어지면, 3으로 나눈다.
+  2. X가 2로 나누어 떨어지면, 2로 나눈다.
+  3. 1을 뺀다.
+- 정수 N이 주어졌을 때, 위와 같은 연산 세 개를 적절히 사용해서 1을 만들려고 한다. 연산을 사용하는 횟수의 최솟값을 출력하시오.
 
 ## 2. 입력
-- 첫째 줄에 수빈이가 이동하려고 하는 채널 N (0 ≤ N ≤ 500,000)이 주어진다.
-- 둘째 줄에는 고장난 버튼의 개수 M (0 ≤ M ≤ 10)이 주어진다.
-- 고장난 버튼이 있는 경우에는 셋째 줄에는 고장난 버튼이 주어지며, 같은 버튼이 여러 번 주어지는 경우는 없다.
+- 첫째 줄에 1보다 크거나 같고, 106보다 작거나 같은 정수 N이 주어진다.
 
 ## 3. 출력
 
-- 첫째 줄에 채널 N으로 이동하기 위해 버튼을 최소 몇 번 눌러야 하는지를 출력한다.
+- 첫째 줄에 연산을 하는 횟수의 최솟값을 출력한다.
 
 
 ## 4. 예제 입력
 ```
-5457
-3
-6 7 8
+2
 ```
 
 ## 5. 예제출력
 
 ```
-6
+1
 ```
 
 ## 6. 예제 입력
 
 ```
-100
-5
-0 1 2 3 4
+10
 ```
 
 ## 7. 예제출력
 
 ```
-0
+3
 ```
 
-## 8. 예제 입력
-
-```
-500000
-8
-0 2 3 4 6 7 8 9
-```
-
-## 9. 예제출력
-
-```
-11117
-```
-
-## 10. 코드
+## 8. 코드
 
 ```c++
 #include <string>
 #include <iostream>
-#include <vector>
-#include <algorithm>
 
 using namespace std;
 
-int N, mv;
-string ts;
-int sizeT;
-int vect[10] = { 0 };
-
-void run(int level, string ret) {
-    if (sizeT + 1 < level) return;
-    else if(ret.length() > 0) {
-        int temp = stoi(ret);
-        int result = abs(N - temp);
-        int st = to_string(temp).length();
-
-        result += st;
-        mv = min(mv, result);
+int n;
+int mv = 21e8;
+void run(int n, int cnt) {
+    if (mv < cnt) return;
+    if (n == 1) {
+        mv = min(mv, cnt);
+        return;
     }
 
-    for (int i = 0; i <= 9; i++) {
-        if (vect[i]) continue;
-        char t = '0' + i;
-        
-        run(level + 1, ret + t);
-    }
+    if (n % 3 == 0) run(n / 3, cnt + 1);
+    if (n % 2 == 0) run(n / 2, cnt + 1);
+    run(n - 1, cnt + 1);
 }
 
 int main() {
-    cin.tie();
+    ios::sync_with_stdio(0);
+    cin.tie(NULL);
+    cout.tie(NULL);
+    cin >> n;
 
-    int M;
-    cin >> N >> M;
-
-    ts = to_string(N);
-    sizeT = ts.length();
-
-    mv = abs(N - 100);
-
-    for (int i = 0; i < M; i++) {
-        int t;
-        cin >> t;
-
-        vect[t] = 1;
-    }
-
-    run(0, "");
+    run(n, 0);
 
     cout << mv;
-
 
     return 0;
 }
