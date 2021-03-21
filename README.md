@@ -18,7 +18,7 @@
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question18.md) | 210322 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question17.md) | 210322 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question16.md) | 210321 |
-| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question15.md) | 210321 |
+| | - | [단어 수학](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question15.md) | 210321 |
 | | - | [두 수 비교하기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question14.md) | 210320 |
 | | - | [그룹 단어 체커](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question13.md) | 210320 |
 | | - | [임시 반장 정하기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question12.md) | 210319 |
