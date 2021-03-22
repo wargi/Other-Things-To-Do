@@ -15,7 +15,7 @@
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question21.md) | 210324 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question20.md) | 210323 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question19.md) | 210323 |
-| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question18.md) | 210322 |
+| | - | [평균](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question18.md) | 210322 |
 | | - | [날짜 계산](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question17.md) | 210322 |
 | | - | [1로 만들기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question16.md) | 210321 |
 | | - | [단어 수학](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question15.md) | 210321 |
