@@ -14,7 +14,7 @@
 |  | ---------------- | 최근 푼 문제들 | ----------------- |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question21.md) | 210324 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question20.md) | 210323 |
-| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question19.md) | 210323 |
+| | - | [수 이어 쓰기 1](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question19.md) | 210323 |
 | | - | [평균](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question18.md) | 210322 |
 | | - | [날짜 계산](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question17.md) | 210322 |
 | | - | [1로 만들기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question16.md) | 210321 |
