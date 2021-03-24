@@ -18,7 +18,7 @@
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question25.md) | 210326 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question24.md) | 210325 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question23.md) | 210325 |
-| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question22.md) | 210324 |
+| | - | [소수 구하기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question22.md) | 210324 |
 | | - | [2007년](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question21.md) | 210324 |
 | | - | [암호 만들기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question20.md) | 210323 |
 | | - | [수 이어 쓰기 1](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question19.md) | 210323 |
