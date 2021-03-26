@@ -1,82 +1,71 @@
-# 수 이어 쓰기 1
+# 소수 찾기
 
 ## 1. 문제
 
-- 1부터 N까지의 수를 이어서 쓰면 다음과 같이 새로운 하나의 수를 얻을 수 있다.
+- 주어진 수 N개 중에서 소수가 몇 개인지 찾아서 출력하는 프로그램을 작성하시오.
 
-  > 1234567891011121314151617181920212223...
-
-- 이렇게 만들어진 새로운 수는 몇 자리 수일까? 이 수의 자릿수를 구하는 프로그램을 작성하시오.
 
 ## 2. 입력
-- 첫째 줄에 N(1 ≤ N ≤ 100,000,000)이 주어진다.
+- 첫 줄에 수의 개수 N이 주어진다. N은 100이하이다. 다음으로 N개의 수가 주어지는데 수는 1,000 이하의 자연수이다.
 
 ## 3. 출력
 
-- 첫째 줄에 새로운 수의 자릿수를 출력한다.
+- 주어진 수들 중 소수의 개수를 출력한다.
 
 
 ## 4. 예제 입력
 ```
-5
+4
+1 3 5 7
 ```
 
 ## 5. 예제 출력
 ```
-5
+3
 ```
 
-## 6. 예제 입력
-
-```
-15
-```
-
-## 7. 예제 출력
-
-```
-21
-```
-
-## 8. 예제 입력
-
-```
-120
-```
-
-## 9. 예제 출력
-
-```
-252
-```
-
-## 10. 코드
+## 6. 코드
 
 ```c++
 #include <iostream>
-
 using namespace std;
 
-int main() {
-    cin.tie();
+int n;
+long int vect[1000] = { 0 };
+long int v[1000] = { 0 };
 
-    int n;
-    cin >> n;
-
-    int comp = 10;
-    int addValue = 1;
-    int sum = 0;
-
-    for (int i = 1; i <= n; i++) {
-        if (comp == i) {
-            comp *= 10;
-            addValue += 1;
-        }
-        sum += addValue;
+bool isPrime(int n) {
+    if (n < 2) {
+        return false;
     }
 
-    cout << sum;
+    for (int i = 2; i * i <= n; i++) {
+        if (n % i == 0) return false;
+    }
+
+    return true;
+}
+
+int main()
+{
+    cout.tie(NULL);
+    cin.tie(NULL);
+
+    int n;
+    int cnt = 0;
+
+    cin >> n;
+
+    for (int i = 0; i < n; i++) {
+        int t;
+        cin >> t;
+
+        if (isPrime(t)) cnt++;
+    }
+
+    cout << cnt;
 
     return 0;
 }
+  
 ```

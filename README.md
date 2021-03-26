@@ -15,7 +15,7 @@
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question28.md) | 210327 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question27.md) | 210327 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question26.md) | 210326 |
-| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question25.md) | 210326 |
+| | - | [소수 찾기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question25.md) | 210326 |
 | | - | [신입 사원](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question24.md) | 210325 |
 | | - | [회의실 배정](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question23.md) | 210325 |
 | | - | [소수 구하기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question22.md) | 210324 |
