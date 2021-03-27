@@ -13,7 +13,7 @@
 | | - | [2019 & 2020 Algorithm 풀어본 문제리스트](https://github.com/wargi/Etc/blob/master/1920_README.md) | - |
 |  | ---------------- | 최근 푼 문제들 | ----------------- |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question28.md) | 210327 |
-| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question27.md) | 210327 |
+| | - | [일곱 난쟁이](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question27.md) | 210327 |
 | | - | [로프](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question26.md) | 210326 |
 | | - | [소수 찾기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question25.md) | 210326 |
 | | - | [신입 사원](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question24.md) | 210325 |
