@@ -12,6 +12,34 @@
 | **알고리즘 & 자료구조** | ---------------- | -------------------------- | ----------------- |
 | | - | [2019 & 2020 Algorithm 풀어본 문제리스트](https://github.com/wargi/Etc/blob/master/1920_README.md) | - |
 |  | ---------------- | 최근 푼 문제들 | ----------------- |
+| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question56.md) | 210411 |
+| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question55.md) | 210410 |
+| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question54.md) | 210410 |
+| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question53.md) | 210409 |
+| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question52.md) | 210408 |
+| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question51.md) | 210408 |
+| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question50.md) | 210407 |
+| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question49.md) | 210407 |
+| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question48.md) | 210406 |
+| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question47.md) | 210406 |
+| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question46.md) | 210405 |
+| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question45.md) | 210405 |
+| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question44.md) | 210404 |
+| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question43.md) | 210404 |
+| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question42.md) | 210403 |
+| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question41.md) | 210403 |
+| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question40.md) | 210402 |
+| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question39.md) | 210402 |
+| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question38.md) | 210401 |
+| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question37.md) | 210401 |
+| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question36.md) | 210331 |
+| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question35.md) | 210331 |
+| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question34.md) | 210330 |
+| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question33.md) | 210330 |
+| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question32.md) | 210329 |
+| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question31.md) | 210329 |
+| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question30.md) | 210328 |
+| | - | [별 찍기 - 2 ](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question29.md) | 210328 |
 | | - | [별 찍기 - 1](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question28.md) | 210327 |
 | | - | [일곱 난쟁이](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question27.md) | 210327 |
 | | - | [로프](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question26.md) | 210326 |
