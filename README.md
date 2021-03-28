@@ -38,8 +38,8 @@
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question33.md) | 210330 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question32.md) | 210329 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question31.md) | 210329 |
-| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question30.md) | 210328 |
-| | - | [별 찍기 - 2 ](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question29.md) | 210328 |
+| | - | [별 찍기 - 3](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question30.md) | 210328 |
+| | - | [별 찍기 - 2](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question29.md) | 210328 |
 | | - | [별 찍기 - 1](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question28.md) | 210327 |
 | | - | [일곱 난쟁이](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question27.md) | 210327 |
 | | - | [로프](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question26.md) | 210326 |
