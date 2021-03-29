@@ -1,36 +1,51 @@
-# A/B
+# 별 찍기 - 4
 
 ## 1. 문제
 
-- 두 정수 A와 B를 입력받은 다음, A/B를 출력하는 프로그램을 작성하시오.
+- 첫째 줄에는 별 N개, 둘째 줄에는 별 N-1개, ..., N번째 줄에는 별 1개를 찍는 문제 하지만, 오른쪽을 기준으로 정렬한 별(예제 참고)을 출력하시오.
 
 ## 2. 입력
-- 첫째 줄에 A와 B가 주어진다. (0 < A, B < 10)
+- 첫째 줄에 N(1 ≤ N ≤ 100)이 주어진다.
 
 ## 3. 출력
 
-- 첫째 줄에 A/B를 출력한다. 실제 정답과 출력값의 절대오차 또는 상대오차가 10-9 이하이면 정답이다.
+- 첫째 줄부터 N번째 줄까지 차례대로 별을 출력한다.
 
 
 ## 4. 예제 입력
 ```
-1 3
+5
 ```
 
 ## 5. 예제출력
 
 ```
-0.33333333333333333333333333333333
+*****
+ ****
+  ***
+   **
+    *
 ```
 
 ## 6. 코드
 
 ```swift
-import Foundation
+#include<stdio.h>
 
-var ab = readLine()!
-let strArr = ab.components(separatedBy: " ")
+int main() {
+    int n;
+    scanf("%d", &n);
 
-print(Double(strArr[0])! / Double(strArr[1])!)
+    for (int i = 0; i < n; i++) {
+        for(int j = 0; j < i; j++)
+            printf(" ");
+        for(int j = i; j < n; j++)
+            printf("*");
+        
+        printf("\n");
+    }
+    
+    return 0;
+}
 ```
 
