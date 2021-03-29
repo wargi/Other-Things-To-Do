@@ -1,60 +1,52 @@
-# 약수
+# 별 찍기 - 5
 
 ## 1. 문제
-- 양수 A가 N의 진짜 약수가 되려면, N이 A의 배수이고, A가 1과 N이 아니어야 한다.
-- 어떤 수 N의 진짜 약수가 모두 주어질 때, N을 구하는 프로그램을 작성하시오.
+- 첫째 줄에는 별 1개, 둘째 줄에는 별 3개, ..., N번째 줄에는 별 2×N-1개를 찍는 문제
+- 별은 가운데를 기준으로 대칭이어야 한다.
 
 ## 2. 입력
-- 첫째 줄에 N의 진짜 약수의 개수가 주어진다.
-- 이 개수는 50보다 작거나 같은 자연수이다.
-- 둘째 줄에는 N의 진짜 약수가 주어진다.
-- 1,000,000보다 작거나 같고, 2보다 크거나 같은 자연수이고, 중복되지 않는다.
+- 첫째 줄에 N(1 ≤ N ≤ 100)이 주어진다.
 
 ## 3. 출력
 
-- 첫째 줄에 N을 출력한다.
-- N은 항상 32비트 부호있는 정수로 표현할 수 있다.
+- 첫째 줄부터 N번째 줄까지 차례대로 별을 출력한다.
 
 ## 4. 예제 입력
 ```
-2
-4 2
+5
 ```
 
 ## 5. 예제 출력
 ```
-8
+    *
+   ***
+  *****
+ *******
+*********
 ```
 
 ## 6. 코드
 
 ```c++
-#include <iostream>
-using namespace std;
+#include <stdio.h>
 
-int n;
-int vect[1000] = { 0 };
+int main() {
 
-int main()
-{
-    cout.tie(NULL);
-    cin.tie(NULL);
-
-    cin >> n;
-
-    int mx = 0;
-    int mn = 21e8;
-    for (int i = 0; i < n; i++) {
-        cin >> vect[i];
-        mx = max(mx, vect[i]);
-        mn = min(mn, vect[i]);
+  int a, i, j;
+  scanf("%d", &a);
+  
+  //Please Enter Your Code Here
+  for(i = 0; i < a; i++) {
+    for(j = 0; j < a + i; j++) {
+      if (j >= (a - i - 1)) {
+        printf("*");
+        continue;
+      }
+      printf(" ");
     }
-
+    printf("\n");
+  }
   
-    cout << mn * mx;
-    
-
-    return 0;
+  return 0;
 }
-  
 ```
