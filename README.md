@@ -32,7 +32,7 @@
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question39.md) | 210402 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question38.md) | 210401 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question37.md) | 210401 |
-| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question36.md) | 210331 |
+| | - | [점수계산](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question36.md) | 210331 |
 | | - | [검증수](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question35.md) | 210331 |
 | | - | [두 용액](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question34.md) | 210330 |
 | | - | [별 찍기 - 9](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question33.md) | 210330 |
