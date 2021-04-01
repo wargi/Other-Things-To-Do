@@ -1,30 +1,27 @@
-# 소수 구하기
+# 소수 찾기
 
 ## 1. 문제
 
-- M이상 N이하의 소수를 모두 출력하는 프로그램을 작성하시오.
+- 주어진 수 N개 중에서 소수가 몇 개인지 찾아서 출력하는 프로그램을 작성하시오.
+
 
 ## 2. 입력
-- 첫째 줄에 자연수 M과 N이 빈 칸을 사이에 두고 주어진다. (1 ≤ M ≤ N ≤ 1,000,000) 
-- M이상 N이하의 소수가 하나 이상 있는 입력만 주어진다.
+- 첫 줄에 수의 개수 N이 주어진다. N은 100이하이다. 다음으로 N개의 수가 주어지는데 수는 1,000 이하의 자연수이다.
 
 ## 3. 출력
 
-- 한 줄에 하나씩, 증가하는 순서대로 소수를 출력한다.
+- 주어진 수들 중 소수의 개수를 출력한다.
 
 
 ## 4. 예제 입력
 ```
-3 16
+4
+1 3 5 7
 ```
 
 ## 5. 예제 출력
 ```
 3
-5
-7
-11
-13
 ```
 
 ## 6. 코드
@@ -34,28 +31,39 @@
 using namespace std;
 
 int n;
-bool check[1000001] = { true, true, };
+long int vect[1000] = { 0 };
+long int v[1000] = { 0 };
+
+bool isPrime(int n) {
+    if (n < 2) {
+        return false;
+    }
+
+    for (int i = 2; i * i <= n; i++) {
+        if (n % i == 0) return false;
+    }
+
+    return true;
+}
 
 int main()
 {
     cout.tie(NULL);
     cin.tie(NULL);
 
-    int n, m;
+    int n;
+    int cnt = 0;
 
-    cin >> n >> m;
+    cin >> n;
 
-    for (int i = 2; i <= m; i++) {
-        if (check[i]) continue;
+    for (int i = 0; i < n; i++) {
+        int t;
+        cin >> t;
 
-        for (int j = i * 2; j <= m; j += i) {
-            check[j] = true;
-        }
+        if (isPrime(t)) cnt++;
     }
 
-    for (int i = n; i <= m; i++) {
-        if (!check[i]) cout << i << "\n";
-    }
+    cout << cnt;
 
     return 0;
 }

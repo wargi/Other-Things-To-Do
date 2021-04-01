@@ -1,71 +1,74 @@
-# 소수 찾기
+# 로프
 
 ## 1. 문제
 
-- 주어진 수 N개 중에서 소수가 몇 개인지 찾아서 출력하는 프로그램을 작성하시오.
-
+- N(1 ≤ N ≤ 100,000)개의 로프가 있다. 
+- 이 로프를 이용하여 이런 저런 물체를 들어올릴 수 있다. 
+- 각각의 로프는 그 굵기나 길이가 다르기 때문에 들 수 있는 물체의 중량이 서로 다를 수도 있다.
+- 하지만 여러 개의 로프를 병렬로 연결하면 각각의 로프에 걸리는 중량을 나눌 수 있다. 
+- k개의 로프를 사용하여 중량이 w인 물체를 들어올릴 때, 각각의 로프에는 모두 고르게 w/k 만큼의 중량이 걸리게 된다.
+- 각 로프들에 대한 정보가 주어졌을 때, 이 로프들을 이용하여 들어올릴 수 있는 물체의 최대 중량을 구해내는 프로그램을 작성하시오. 
+- 모든 로프를 사용해야 할 필요는 없으며, 임의로 몇 개의 로프를 골라서 사용해도 된다.
 
 ## 2. 입력
-- 첫 줄에 수의 개수 N이 주어진다. N은 100이하이다. 다음으로 N개의 수가 주어지는데 수는 1,000 이하의 자연수이다.
+- 첫째 줄에 정수 N이 주어진다. 
+- 다음 N개의 줄에는 각 로프가 버틸 수 있는 최대 중량이 주어진다. 
+- 이 값은 10,000을 넘지 않는 자연수이다.
 
 ## 3. 출력
 
-- 주어진 수들 중 소수의 개수를 출력한다.
+- 첫째 줄에 답을 출력한다.
 
 
 ## 4. 예제 입력
 ```
-4
-1 3 5 7
+2
+10
+15
 ```
 
 ## 5. 예제 출력
 ```
-3
+20
 ```
 
 ## 6. 코드
 
 ```c++
+#include <string>
 #include <iostream>
+#include <vector>
+#include <algorithm>
+
 using namespace std;
+vector<int> vect;
 
-int n;
-long int vect[1000] = { 0 };
-long int v[1000] = { 0 };
-
-bool isPrime(int n) {
-    if (n < 2) {
-        return false;
-    }
-
-    for (int i = 2; i * i <= n; i++) {
-        if (n % i == 0) return false;
-    }
-
-    return true;
-}
-
-int main()
-{
-    cout.tie(NULL);
-    cin.tie(NULL);
-
+int main() {
     int n;
-    int cnt = 0;
-
     cin >> n;
 
     for (int i = 0; i < n; i++) {
         int t;
         cin >> t;
 
-        if (isPrime(t)) cnt++;
+        vect.push_back(t);
     }
 
-    cout << cnt;
+    sort(vect.begin(), vect.end());
+    int maxValue = -21e8;
+
+    for (int i = 0; i < n; i++) {
+        int weight = vect[i];
+
+        int ret = weight * (n - i);
+
+        if (maxValue < ret) {
+            maxValue = ret;
+        }
+    }
+
+    cout << maxValue;
 
     return 0;
 }
-  
 ```

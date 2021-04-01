@@ -1,124 +1,56 @@
-# 리모컨
+# 별 찍기 - 9
 
 ## 1. 문제
-
-- 수빈이는 TV를 보고 있다.
-- 수빈이는 채널을 돌리려고 했지만, 버튼을 너무 세게 누르는 바람에, 일부 숫자 버튼이 고장났다.
-- 리모컨에는 버튼이 0부터 9까지 숫자, +와 -가 있다.
-- +를 누르면 현재 보고있는 채널에서 +1된 채널로 이동하고, -를 누르면 -1된 채널로 이동한다.
-- 채널 0에서 -를 누른 경우에는 채널이 변하지 않고, 채널은 무한대 만큼 있다.
-- 수빈이가 지금 이동하려고 하는 채널은 N이다.
-- 어떤 버튼이 고장났는지 주어졌을 때, 채널 N으로 이동하기 위해서 버튼을 최소 몇 번 눌러야하는지 구하는 프로그램을 작성하시오. 
-- 수빈이가 지금 보고 있는 채널은 100번이다.
+- 예제를 보고 규칙을 유추한 뒤에 별을 찍어 보세요.
 
 ## 2. 입력
-- 첫째 줄에 수빈이가 이동하려고 하는 채널 N (0 ≤ N ≤ 500,000)이 주어진다.
-- 둘째 줄에는 고장난 버튼의 개수 M (0 ≤ M ≤ 10)이 주어진다.
-- 고장난 버튼이 있는 경우에는 셋째 줄에는 고장난 버튼이 주어지며, 같은 버튼이 여러 번 주어지는 경우는 없다.
+- 첫째 줄에 N(1 ≤ N ≤ 100)이 주어진다.
 
 ## 3. 출력
 
-- 첫째 줄에 채널 N으로 이동하기 위해 버튼을 최소 몇 번 눌러야 하는지를 출력한다.
-
+- 첫째 줄부터 2×N-1번째 줄까지 차례대로 별을 출력한다.
 
 ## 4. 예제 입력
 ```
-5457
-3
-6 7 8
-```
-
-## 5. 예제출력
-
-```
-6
-```
-
-## 6. 예제 입력
-
-```
-100
 5
-0 1 2 3 4
 ```
 
-## 7. 예제출력
-
+## 5. 예제 출력
 ```
-0
-```
-
-## 8. 예제 입력
-
-```
-500000
-8
-0 2 3 4 6 7 8 9
-```
-
-## 9. 예제출력
-
-```
-11117
+*********
+ *******
+  *****
+   ***
+    *
+   ***
+  *****
+ *******
+*********
 ```
 
-## 10. 코드
+## 6. 코드
 
 ```c++
-#include <string>
-#include <iostream>
-#include <vector>
-#include <algorithm>
-
-using namespace std;
-
-int N, mv;
-string ts;
-int sizeT;
-int vect[10] = { 0 };
-
-void run(int level, string ret) {
-    if (sizeT + 1 < level) return;
-    else if(ret.length() > 0) {
-        int temp = stoi(ret);
-        int result = abs(N - temp);
-        int st = to_string(temp).length();
-
-        result += st;
-        mv = min(mv, result);
-    }
-
-    for (int i = 0; i <= 9; i++) {
-        if (vect[i]) continue;
-        char t = '0' + i;
-        
-        run(level + 1, ret + t);
-    }
-}
+#include<stdio.h>
 
 int main() {
-    cin.tie();
+    int n;
+    scanf("%d", &n);
 
-    int M;
-    cin >> N >> M;
-
-    ts = to_string(N);
-    sizeT = ts.length();
-
-    mv = abs(N - 100);
-
-    for (int i = 0; i < M; i++) {
-        int t;
-        cin >> t;
-
-        vect[t] = 1;
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < i; j++)
+            printf(" ");
+        for (int j = i*2; j < n*2-1; j++)
+            printf("*");
+        printf("\n");
     }
 
-    run(0, "");
-
-    cout << mv;
-
-
-    return 0;
+    for (int i = n - 1; i > 0; i--) {
+        for (int j = 1; j < i; j++)
+            printf(" ");
+        for (int j = i * 2 - 1; j <= n * 2 - 1; j++)
+            printf("*");
+        printf("\n");
+    }
 }
 ```
