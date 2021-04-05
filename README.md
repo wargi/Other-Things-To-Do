@@ -23,7 +23,7 @@
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question48.md) | 210406 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question47.md) | 210406 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question46.md) | 210405 |
-| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question45.md) | 210405 |
+| | - | [곱셈](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question45.md) | 210405 |
 | | - | [빙고](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question44.md) | 210404 |
 | | - | [숫자의 개수](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question43.md) | 210404 |
 | | - | [최댓값 - 2](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question42.md) | 210403 |

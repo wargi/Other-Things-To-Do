@@ -1,92 +1,50 @@
-# 회의실 배정
+# 곱셈
 
 ## 1. 문제
-- 한 개의 회의실이 있는데 이를 사용하고자 하는 N개의 회의에 대하여 회의실 사용표를 만들려고 한다.
-- 각 회의 I에 대해 시작시간과 끝나는 시간이 주어져 있고, 각 회의가 겹치지 않게 하면서 회의실을 사용할 수 있는 회의의 최대 개수를 찾아보자. 
-- 단, 회의는 한번 시작하면 중간에 중단될 수 없으며 한 회의가 끝나는 것과 동시에 다음 회의가 시작될 수 있다. 
-- 회의의 시작시간과 끝나는 시간이 같을 수도 있다. 
-- 이 경우에는 시작하자마자 끝나는 것으로 생각하면 된다.
+- (세 자리 수) × (세 자리 수)는 다음과 같은 과정을 통하여 이루어진다.
+
+![img](https://www.acmicpc.net/upload/images/f5NhGHVLM4Ix74DtJrwfC97KepPl27s%20(1).png)
+
+- (1)과 (2)위치에 들어갈 세 자리 자연수가 주어질 때 (3), (4), (5), (6)위치에 들어갈 값을 구하는 프로그램을 작성하시오.
 
 ## 2. 입력
-- 첫째 줄에 회의의 수 N(1 ≤ N ≤ 100,000)이 주어진다. 
-- 둘째 줄부터 N+1 줄까지 각 회의의 정보가 주어지는데 이것은 공백을 사이에 두고 회의의 시작시간과 끝나는 시간이 주어진다. 
-- 시작 시간과 끝나는 시간은 231-1보다 작거나 같은 자연수 또는 0이다.
+- 첫째 줄에 (1)의 위치에 들어갈 세 자리 자연수가, 둘째 줄에 (2)의 위치에 들어갈 세자리 자연수가 주어진다.
 
 ## 3. 출력
 
-- 첫째 줄에 최대 사용할 수 있는 회의의 최대 개수를 출력한다.
+- 첫째 줄부터 넷째 줄까지 차례대로 (3), (4), (5), (6)에 들어갈 값을 출력한다.
 
 ## 4. 예제 입력
 ```
-11
-1 4
-3 5
-0 6
-5 7
-3 8
-5 9
-6 10
-8 11
-8 12
-2 13
-12 14
+472
+385
 ```
 
 ## 5. 예제 출력
 ```
-4
+2360
+3776
+1416
+181720
 ```
 
 ## 6. 코드
 
 ```c++
-#include <string>
 #include <iostream>
-#include <vector>
-#include <algorithm>
-
 using namespace std;
 
-struct Node {
-    int start;
-    int end;
-};
+int main()
+{
+    int sum = 0;
+    int n, m;
+    cin >> n >> m;
 
-vector<Node> vect;
-
-bool compare(Node &i, Node &j) {
-    if (i.end < j.end) return true;
-    else if (i.end > j.end) return false;
-    else if (i.start < j.start) return true;
-    else return false;
-}
-
-int main() {
-    int n;
-    cin >> n;
-
-    for (int i = 0; i < n; i++) {
-        int t, m;
-        cin >> t >> m;
-
-        vect.push_back({ t, m });
+    int t = m;
+    for (int i = 0; i < 3; i++) {
+        cout << n * (t % 10) << "\n";
+        t = t / 10;
     }
-
-    int et = -1;
-    int cnt = 1;
-
-    sort(vect.begin(), vect.end(), compare);
-    et = vect[0].end;
-
-    for (int i = 1; i < n; i++) {
-        if (et <= vect[i].start) {
-            et = vect[i].end;
-            cnt++;
-        }
-    }
-
-    cout << cnt;
-
-    return 0;
+    cout << m * n;
 }
 ```
