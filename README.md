@@ -21,7 +21,7 @@
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question50.md) | 210407 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question49.md) | 210407 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question48.md) | 210406 |
-| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question47.md) | 210406 |
+| | - | [바이러스](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question47.md) | 210406 |
 | | - | [대표값](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question46.md) | 210405 |
 | | - | [곱셈](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question45.md) | 210405 |
 | | - | [빙고](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question44.md) | 210404 |
