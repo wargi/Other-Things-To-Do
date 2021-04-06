@@ -20,7 +20,7 @@
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question51.md) | 210408 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question50.md) | 210407 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question49.md) | 210407 |
-| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question48.md) | 210406 |
+| | - | [최대공약수와 최소공배수](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question48.md) | 210406 |
 | | - | [바이러스](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question47.md) | 210406 |
 | | - | [대표값](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question46.md) | 210405 |
 | | - | [곱셈](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question45.md) | 210405 |
