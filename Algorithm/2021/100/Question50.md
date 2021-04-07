@@ -1,88 +1,75 @@
-# 2007년
+# 문자열 반복
 
 ## 1. 문제
 
-- 오늘은 2007년 1월 1일 월요일이다.
-- 그렇다면 2007년 x월 y일은 무슨 요일일까? 이를 알아내는 프로그램을 작성하시오.
+- 문자열 S를 입력받은 후에, 각 문자를 R번 반복해 새 문자열 P를 만든 후 출력하는 프로그램을 작성하시오.
+- 즉, 첫 번째 문자를 R번 반복하고, 두 번째 문자를 R번 반복하는 식으로 P를 만들면 된다.
+- S에는 QR Code "alphanumeric" 문자만 들어있다.
+- QR Code "alphanumeric" 문자는 `0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ\$%*+-./:` 이다.
 
 ## 2. 입력
-- 첫째 줄에 빈 칸을 사이에 두고 x(1 ≤ x ≤ 12)와 y(1 ≤ y ≤ 31)이 주어진다.
-- 참고로 2007년에는 1, 3, 5, 7, 8, 10, 12월은 31일까지, 4, 6, 9, 11월은 30일까지, 2월은 28일까지 있다.
+- 첫째 줄에 테스트 케이스의 개수 T(1 ≤ T ≤ 1,000)가 주어진다.
+- 각 테스트 케이스는 반복 횟수 R(1 ≤ R ≤ 8), 문자열 S가 공백으로 구분되어 주어진다.
+- S의 길이는 적어도 1이며, 20글자를 넘지 않는다. 
 
 ## 3. 출력
 
-- 첫째 줄에 x월 y일이 무슨 요일인지에 따라 SUN, MON, TUE, WED, THU, FRI, SAT중 하나를 출력한다.
+- 각 테스트 케이스에 대해 P를 출력한다.
 
 
 ## 4. 예제 입력
 ```
-1 1
+2
+3 ABC
+5 /HTP
 ```
 
 ## 5. 예제 출력
 ```
-MON
+AAABBBCCC
+/////HHHHHTTTTTPPPPP
 ```
 
-## 6. 예제 입력
-
-```
-3 14
-```
-
-## 7. 예제 출력
-
-```
-WED
-```
-
-## 8. 예제 입력
-
-```
-9 2
-```
-
-## 9. 예제 출력
-
-```
-SUN
-```
-
-## 10. 예제 입력
-
-```
-12 25
-```
-
-## 11. 예제 출력
-
-```
-TUE
-```
-
-## 12. 코드
+## 6. 코드
 
 ```c++
-#include<stdio.h>
+#include <iostream>
+#include <string>
+#include <vector>
+using namespace std;
 
-int main() {
-    int n, m, sum = 0;
-    int arr[12] = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
-    
-    scanf("%d %d", &n, &m);
+struct CustomString {
+	int repeat;
+	string str;
+};
 
-    for (int i = 0; i < n - 1; i++) {
-        sum += arr[i];
-    }
+int main()
+{
+	int n, m[1000] = { 0 };
+	vector<CustomString> s;
+	cin >> n;
 
-    sum = (sum + m) % 7;
+	for (int i = 0; i < n; i++) {
+		CustomString t;
+		cin >> t.repeat >> t.str;
 
-    if (sum == 1) printf("MON");
-    else if (sum == 2) printf("TUE");
-    else if (sum == 3) printf("WED");
-    else if (sum == 4) printf("THU");
-    else if (sum == 5) printf("FRI");
-    else if (sum == 6) printf("SAT");
-    else printf("SUN");
+		s.push_back(t);
+	}
+	
+
+	for (int i = 0; i < s.size(); i++) {
+		for (int j = 0; j < s[i].str.length(); j++) {
+			for (int k = 0; k < s[i].repeat; k++) {
+				cout << s[i].str[j];
+			}
+		}
+		cout << "\n";
+	}
 }
 ```
+
+
+
+### #출처
+
+[백준 온라인 저지](https://www.acmicpc.net/problem/2675)
