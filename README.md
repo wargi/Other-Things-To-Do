@@ -16,7 +16,7 @@
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question55.md) | 210410 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question54.md) | 210410 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question53.md) | 210409 |
-| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question52.md) | 210408 |
+| | - | [N 찍기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question52.md) | 210408 |
 | | - | [구구단](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question51.md) | 210408 |
 | | - | [문자열 반복](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question50.md) | 210407 |
 | | - | [단지번호붙이기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question49.md) | 210407 |
