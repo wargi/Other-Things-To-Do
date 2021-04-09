@@ -12,10 +12,10 @@
 | **알고리즘 & 자료구조** | ---------------- | -------------------------- | ----------------- |
 | | - | [2019 & 2020 Algorithm 풀어본 문제리스트](https://github.com/wargi/Etc/blob/master/1920_README.md) | - |
 |  | ---------------- | 최근 푼 문제들 | ----------------- |
-| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question56.md) | 210411 |
+| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question56.md) | 210410 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question55.md) | 210410 |
-| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question54.md) | 210410 |
-| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question53.md) | 210409 |
+| | - | [설탕 배달](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question54.md) | 210409 |
+| | - | [윤년](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question53.md) | 210409 |
 | | - | [N 찍기](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question52.md) | 210408 |
 | | - | [구구단](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question51.md) | 210408 |
 | | - | [문자열 반복](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question50.md) | 210407 |
