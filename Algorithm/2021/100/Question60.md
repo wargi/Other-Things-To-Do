@@ -1,52 +1,84 @@
-# 별 찍기 - 5
+# 평균은 넘겠지
 
 ## 1. 문제
-- 첫째 줄에는 별 1개, 둘째 줄에는 별 3개, ..., N번째 줄에는 별 2×N-1개를 찍는 문제
-- 별은 가운데를 기준으로 대칭이어야 한다.
+- 대학생 새내기들의 90%는 자신이 반에서 평균은 넘는다고 생각한다.
+- 당신은 그들에게 슬픈 진실을 알려줘야 한다.
 
 ## 2. 입력
-- 첫째 줄에 N(1 ≤ N ≤ 100)이 주어진다.
+- 첫째 줄에는 테스트 케이스의 개수 C가 주어진다.
+- 둘째 줄부터 각 테스트 케이스마다 학생의 수 N(1 ≤ N ≤ 1000, N은 정수)이 첫 수로 주어지고, 이어서 N명의 점수가 주어진다.
+- 점수는 0보다 크거나 같고, 100보다 작거나 같은 정수이다.
 
 ## 3. 출력
 
-- 첫째 줄부터 N번째 줄까지 차례대로 별을 출력한다.
+- 각 케이스마다 한 줄씩 평균을 넘는 학생들의 비율을 반올림하여 소수점 셋째 자리까지 출력한다.
 
 ## 4. 예제 입력
 ```
 5
+5 50 50 70 80 100
+7 100 95 90 80 70 60 50
+3 70 90 80
+3 70 90 81
+9 100 99 98 97 96 95 94 93 91
 ```
 
 ## 5. 예제 출력
 ```
-    *
-   ***
-  *****
- *******
-*********
+40.000%
+57.143%
+33.333%
+66.667%
+55.556%
 ```
 
 ## 6. 코드
 
 ```c++
-#include <stdio.h>
+#include <iostream>
+#include <vector>
+using namespace std;
 
-int main() {
+int check[99];
+int main()
+{
+	int n;
+	vector<vector<int>> point;
+	vector<int> avg;
 
-  int a, i, j;
-  scanf("%d", &a);
-  
-  //Please Enter Your Code Here
-  for(i = 0; i < a; i++) {
-    for(j = 0; j < a + i; j++) {
-      if (j >= (a - i - 1)) {
-        printf("*");
-        continue;
-      }
-      printf(" ");
-    }
-    printf("\n");
-  }
-  
+	cin >> n;
+
+	for (int i = 0; i < n; i++) {
+		int m, sum = 0;
+		cin >> m;
+
+		vector<int> temp;
+		for (int j = 0; j < m; j++) {
+			int t;
+			cin >> t;
+
+			temp.push_back(t);
+			sum += t;
+		}
+		point.push_back(temp);
+		avg.push_back(sum / m);
+	}
+
+	for (int i = 0; i < n; i++) {
+		int p = 0, cnt = 0;
+		for (int j = 0; j < point[i].size(); j++) {
+			if (avg[i] < point[i][j]) p++;
+		}
+		float result = float(p) / float(point[i].size());
+		printf("%.3f%%\n", result * 100);
+	}
+	
   return 0;
 }
 ```
+
+
+
+### #출처
+
+- [백준 온라인 저지](https://www.acmicpc.net/problem/4344)
