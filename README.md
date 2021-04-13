@@ -35,7 +35,7 @@
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question64.md) | 210414 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question63.md) | 210414 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question62.md) | 210413 |
-| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question61.md) | 210413 |
+| | - | [1](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question61.md) | 210413 |
 | | - | [평균은 넘겠지](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question60.md) | 210412 |
 | | - | [사탕 게임](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question59.md) | 210412 |
 | | - | [나머지](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question58.md) | 210411 |

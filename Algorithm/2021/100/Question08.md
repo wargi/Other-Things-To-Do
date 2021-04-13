@@ -98,5 +98,6 @@ int main()
 	if (cnt >= 2) cout << "?";
 	else cout << char(idx);
 
+  return 0;
 }
 ```
