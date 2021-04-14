@@ -33,7 +33,7 @@
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question66.md) | 210415 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question65.md) | 210415 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question64.md) | 210414 |
-| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question63.md) | 210414 |
+| | - | [다이얼](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question63.md) | 210414 |
 | | - | [거스름돈](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question62.md) | 210413 |
 | | - | [1](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question61.md) | 210413 |
 | | - | [평균은 넘겠지](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question60.md) | 210412 |

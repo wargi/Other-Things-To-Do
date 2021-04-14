@@ -34,3 +34,8 @@ let strArr = ab.components(separatedBy: " ")
 print(Double(strArr[0])! / Double(strArr[1])!)
 ```
 
+
+
+### #출처
+
+- [백준 온라인 저지](https://www.acmicpc.net/problem/1008)

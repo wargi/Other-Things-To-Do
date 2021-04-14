@@ -114,5 +114,7 @@ int main()
 	}
 
 	cout << sum / float(n);
+  
+  return 0;
 }
 ```

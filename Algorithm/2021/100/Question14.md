@@ -71,6 +71,7 @@ int main()
 	else if (a < b) cout << "<";
 	else cout << "==";
 
+  return 0;
 }
 ```
 

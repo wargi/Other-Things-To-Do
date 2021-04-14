@@ -37,3 +37,9 @@ void main()
   return 0;
 }
 ```
+
+
+
+### #출처
+
+- [백준 온라인 저지](https://www.acmicpc.net/problem/1001)

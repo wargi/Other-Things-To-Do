@@ -120,8 +120,9 @@ int main()
             }
         }
     }
-
-
+  
     for (int i = 0; i < head; i++) cout << vect[i] << " ";
+  
+  	return 0;
 }
 ```
