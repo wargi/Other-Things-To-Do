@@ -31,7 +31,7 @@
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question68.md) | 210416 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question67.md) | 210416 |
 | | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question66.md) | 210415 |
-| | - | [](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question65.md) | 210415 |
+| | - | [골드바흐의 추측](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question65.md) | 210415 |
 | | - | [카잉 달력](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question64.md) | 210414 |
 | | - | [다이얼](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question63.md) | 210414 |
 | | - | [거스름돈](https://github.com/wargi/Other-Things-To-Do/blob/master/Algorithm/2021/100/Question62.md) | 210413 |
